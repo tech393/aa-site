@@ -65,20 +65,21 @@ body::before {
 main { position: relative; z-index: 1; }
 .wrap { max-width: var(--container); margin: 0 auto; padding: 0 var(--sp-6); }
 
-.utility-bar { background: var(--purple); color: white; padding: 8px 0; font-size: 12.5px; line-height: 1; position: relative; z-index: 50; }
-.utility-bar .wrap { max-width: 1400px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 24px; padding-left: 24px; padding-right: 24px; }
+.utility-bar { background: var(--purple); color: white; font-size: 12.5px; line-height: 1; position: relative; z-index: 50; }
+.utility-bar .wrap { max-width: 1200px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 24px; padding: 8px 24px; }
 .utility-bar .left { display: flex; align-items: center; gap: 20px; }
 .utility-bar a { color: rgba(255,255,255,0.9); text-decoration: none; margin-right: 0; }
 .utility-bar a:hover { color: var(--gold-light); }
 .utility-bar .right a { color: rgba(255,255,255,0.85); font-weight: 500; margin: 0; }
 
 .nav { background: var(--teal); color: white; position: sticky; top: 0; z-index: 40; }
-.nav .wrap { max-width: 1400px; padding: 16px 24px; display: flex; justify-content: space-between; align-items: center; gap: 24px; }
+.nav .wrap { max-width: 1200px; padding: 16px 24px; display: flex; justify-content: space-between; align-items: center; gap: 24px; }
 .brand { display: flex; align-items: center; gap: 12px; text-decoration: none; }
 .brand img { width: 64px; height: 64px; object-fit: contain; display: block; }
 .nav-links { display: flex; align-items: center; gap: 28px; }
 .nav-links a, .about-menu > button { font-family: var(--font-body); font-weight: 500; font-size: 13.5px; line-height: 1.25; letter-spacing: 0.01em; color: white; text-decoration: none; background: transparent; border: 0; cursor: pointer; }
 .nav-links a:not(.nav-cta):hover, .about-menu > button:hover { color: var(--gold-light); }
+.nav-actions { display: flex; align-items: center; gap: 12px; }
 .about-menu { position: relative; }
 .about-menu > button { display: flex; align-items: center; gap: 4px; }
 .about-menu .chevron { font-size: 10px; transition: transform 0.15s ease; }
@@ -88,8 +89,8 @@ main { position: relative; z-index: 1; }
 .about-dropdown ul { min-width: 240px; list-style: none; border: 1px solid rgba(42,26,15,0.1); background: white; border-radius: 6px; padding: 8px 0; box-shadow: 0 18px 40px rgba(42,26,15,0.18); }
 .about-dropdown a { display: block; padding: 10px 20px; color: var(--ink-soft); white-space: nowrap; }
 .about-dropdown a:hover { background: var(--cream); color: var(--teal); }
-.nav-links a.nav-cta { display: inline-block; background: var(--gold); color: white !important; padding: 10px 20px; border-radius: var(--radius-sm); font-size: 12px !important; font-weight: 500 !important; line-height: 1.25; }
-.nav-links a.nav-cta:hover { background: var(--gold-deep) !important; color: white !important; }
+.nav-cta { display: inline-block; background: var(--gold); color: white !important; padding: 10px 20px; border-radius: var(--radius-sm); font-family: var(--font-body); font-size: 12px !important; font-weight: 500 !important; line-height: 1.25; text-decoration: none; }
+.nav-cta:hover { background: var(--gold-deep) !important; color: white !important; }
 @media (max-width: 860px) {
   .nav .wrap { gap: var(--sp-4); }
   .nav-links { gap: var(--sp-4); flex-wrap: wrap; justify-content: flex-end; }
@@ -103,7 +104,7 @@ main { position: relative; z-index: 1; }
   .nav .wrap { align-items: flex-start; }
   .nav-links { max-width: 230px; gap: 10px 14px; }
   .nav-links a.login-link, .about-menu { display: none; }
-  .nav-cta { width: 100%; text-align: center; }
+  .nav-actions { display: none; }
 }
 
 /* HERO */
@@ -692,7 +693,9 @@ h1.display em { color: var(--teal); }
       <a href="https://awakenedacademy.com/free-gifts-for-you">Free Gifts</a>
       <a href="https://awakenedacademy.com/wall-of-gratitude">Reviews</a>
       <a href="https://awakenedacademy.mykajabi.com/login" class="login-link">Login</a>
-      <a href="https://awakenedacademy.com/spiritual-life-coach-certification#program-info" class="nav-cta" style="display:inline-block;background:#C9A04C;color:#fff;padding:10px 20px;border-radius:4px;font-size:12px;font-weight:500;line-height:1.25;">Download Free Brochure</a>
+    </div>
+    <div class="nav-actions">
+      <a href="https://awakenedacademy.com/spiritual-life-coach-certification#program-info" class="nav-cta">Download Free Brochure</a>
     </div>
   </div>
 </nav>
