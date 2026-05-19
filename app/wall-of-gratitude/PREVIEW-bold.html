@@ -78,7 +78,7 @@ main { position: relative; z-index: 1; }
 .brand img { width: 64px; height: 64px; object-fit: contain; display: block; }
 .nav-links { display: flex; align-items: center; gap: 28px; }
 .nav-links a, .about-menu > button { font-family: var(--font-body); font-weight: 500; font-size: 13.5px; line-height: 1.25; letter-spacing: 0.01em; color: white; text-decoration: none; background: transparent; border: 0; cursor: pointer; }
-.nav-links a:hover, .about-menu > button:hover { color: var(--gold-light); }
+.nav-links a:not(.nav-cta):hover, .about-menu > button:hover { color: var(--gold-light); }
 .about-menu { position: relative; }
 .about-menu > button { display: flex; align-items: center; gap: 4px; }
 .about-menu .chevron { font-size: 10px; transition: transform 0.15s ease; }
@@ -88,8 +88,8 @@ main { position: relative; z-index: 1; }
 .about-dropdown ul { min-width: 240px; list-style: none; border: 1px solid rgba(42,26,15,0.1); background: white; border-radius: 6px; padding: 8px 0; box-shadow: 0 18px 40px rgba(42,26,15,0.18); }
 .about-dropdown a { display: block; padding: 10px 20px; color: var(--ink-soft); white-space: nowrap; }
 .about-dropdown a:hover { background: var(--cream); color: var(--teal); }
-.nav-cta { background: var(--gold); color: white !important; padding: 10px 20px; border-radius: var(--radius-sm); font-size: 12px !important; font-weight: 500 !important; }
-.nav-cta:hover { background: var(--gold-deep) !important; color: white !important; }
+.nav-links a.nav-cta { display: inline-block; background: var(--gold); color: white !important; padding: 10px 20px; border-radius: var(--radius-sm); font-size: 12px !important; font-weight: 500 !important; line-height: 1.25; }
+.nav-links a.nav-cta:hover { background: var(--gold-deep) !important; color: white !important; }
 @media (max-width: 860px) {
   .nav .wrap { gap: var(--sp-4); }
   .nav-links { gap: var(--sp-4); flex-wrap: wrap; justify-content: flex-end; }
