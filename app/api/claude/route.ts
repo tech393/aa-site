@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
-import { anthropic, CLAUDE_MODEL, CLAUDE_MAX_TOKENS } from "@/lib/claude";
+import { getAnthropicClient, CLAUDE_MODEL, CLAUDE_MAX_TOKENS } from "@/lib/claude";
 import type { MessageParam } from "@anthropic-ai/sdk/resources/messages";
 
 export interface ClaudeRequestBody {
@@ -56,6 +56,7 @@ export async function POST(
       );
     }
 
+    const anthropic = getAnthropicClient();
     const response = await anthropic.messages.create({
       model: body.model ?? CLAUDE_MODEL,
       max_tokens: body.max_tokens ?? CLAUDE_MAX_TOKENS,
