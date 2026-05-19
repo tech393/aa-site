@@ -65,18 +65,19 @@ body::before {
 main { position: relative; z-index: 1; }
 .wrap { max-width: var(--container); margin: 0 auto; padding: 0 var(--sp-6); }
 
-.utility-bar { background: var(--purple); color: white; padding: 8px 0; font-size: 12.5px; position: relative; z-index: 50; }
-.utility-bar .wrap { max-width: 1400px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: var(--sp-3); }
-.utility-bar a { color: rgba(255,255,255,0.9); text-decoration: none; margin-right: var(--sp-5); }
+.utility-bar { background: var(--purple); color: white; padding: 8px 0; font-size: 12.5px; line-height: 1; position: relative; z-index: 50; }
+.utility-bar .wrap { max-width: 1400px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 24px; padding-left: 24px; padding-right: 24px; }
+.utility-bar .left { display: flex; align-items: center; gap: 20px; }
+.utility-bar a { color: rgba(255,255,255,0.9); text-decoration: none; margin-right: 0; }
 .utility-bar a:hover { color: var(--gold-light); }
 .utility-bar .right a { color: rgba(255,255,255,0.85); font-weight: 500; margin: 0; }
 
 .nav { background: var(--teal); color: white; position: sticky; top: 0; z-index: 40; }
-.nav .wrap { max-width: 1400px; padding-top: var(--sp-4); padding-bottom: var(--sp-4); display: flex; justify-content: space-between; align-items: center; gap: var(--sp-6); }
+.nav .wrap { max-width: 1400px; padding: 16px 24px; display: flex; justify-content: space-between; align-items: center; gap: 24px; }
 .brand { display: flex; align-items: center; gap: 12px; text-decoration: none; }
 .brand img { width: 64px; height: 64px; object-fit: contain; display: block; }
 .nav-links { display: flex; align-items: center; gap: 28px; }
-.nav-links a, .about-menu > button { font-family: var(--font-body); font-weight: 500; font-size: 13.5px; letter-spacing: 0.01em; color: white; text-decoration: none; background: transparent; border: 0; cursor: pointer; }
+.nav-links a, .about-menu > button { font-family: var(--font-body); font-weight: 500; font-size: 13.5px; line-height: 1.25; letter-spacing: 0.01em; color: white; text-decoration: none; background: transparent; border: 0; cursor: pointer; }
 .nav-links a:hover, .about-menu > button:hover { color: var(--gold-light); }
 .about-menu { position: relative; }
 .about-menu > button { display: flex; align-items: center; gap: 4px; }
@@ -87,7 +88,7 @@ main { position: relative; z-index: 1; }
 .about-dropdown ul { min-width: 240px; list-style: none; border: 1px solid rgba(42,26,15,0.1); background: white; border-radius: 6px; padding: 8px 0; box-shadow: 0 18px 40px rgba(42,26,15,0.18); }
 .about-dropdown a { display: block; padding: 10px 20px; color: var(--ink-soft); white-space: nowrap; }
 .about-dropdown a:hover { background: var(--cream); color: var(--teal); }
-.nav-cta { background: var(--gold); color: white !important; padding: 10px 20px; border-radius: var(--radius-sm); font-size: 12px; }
+.nav-cta { background: var(--gold); color: white !important; padding: 10px 20px; border-radius: var(--radius-sm); font-size: 12px !important; font-weight: 500 !important; }
 .nav-cta:hover { background: var(--gold-deep) !important; color: white !important; }
 @media (max-width: 860px) {
   .nav .wrap { gap: var(--sp-4); }
