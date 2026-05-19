@@ -11,7 +11,6 @@ flags:
   - "Pricing claim '$10,000+' for mindset coach certification, verify"
 ---
 
-# Top Strategies from a Renowned Mindset Coach for Personal and Professional Growth
 
 ## Understanding the Role of a Mindset Coach
 

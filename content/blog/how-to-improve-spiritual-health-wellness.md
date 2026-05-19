@@ -12,7 +12,6 @@ flags:
   - "Refers to rajayogaonline.com for free meditation resources, external link, verify before retaining"
 ---
 
-# 8 Ways to Improve Spiritual Health and Wellness
 
 ## Connect with Nature
 

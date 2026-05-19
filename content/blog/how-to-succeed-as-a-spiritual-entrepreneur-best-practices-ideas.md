@@ -13,7 +13,6 @@ flags:
   - "Refers to AA as 'premier international certification program', review"
 ---
 
-# How to Succeed as a Spiritual Entrepreneur: Best Practices & Ideas
 
 ## Key Takeaways
 

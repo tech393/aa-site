@@ -11,7 +11,6 @@ flags:
   - "Note: WebFetch returned summarized content; full per-section detail for each of the 15 signs was condensed in scrape, may want to revisit if/when WP site is accessible"
 ---
 
-# Top 15 Spiritual Awakening Signs You Need to Know
 
 A spiritual awakening is a profound transformation in awareness and perception, often described as the soul's cry for freedom. Below are 15 of the most common signs that you may be experiencing one.
 

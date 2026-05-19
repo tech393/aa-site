@@ -11,7 +11,6 @@ flags:
   - "Mentions 'personalized 1-on-1 coaching' as a program benefit, verify against canonical AA offer description"
 ---
 
-# How to Become a Spiritual Life Coach and Transform Lives Effectively
 
 ## Understanding the Role of a Spiritual Life Coach
 

@@ -12,7 +12,6 @@ flags:
   - "External link to Conscious Coach Hub blog included"
 ---
 
-# Top Spiritual Life Coach Training Programs for 2026
 
 ## Introduction
 

@@ -10,7 +10,6 @@ images: ["https://images.pexels.com/photos/7964495/pexels-photo-7964495.jpeg?aut
 flags: []
 ---
 
-# What Does a Spiritual Coach Actually Do?
 
 **Short Answer:** A spiritual coach helps people connect with their inner wisdom, move beyond limiting beliefs, and live in alignment with their higher purpose. Unlike therapists or life coaches, spiritual coaches guide deep, soul-centered transformation.
 

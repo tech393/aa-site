@@ -10,7 +10,6 @@ images: ["https://images.pexels.com/photos/7298695/pexels-photo-7298695.jpeg?aut
 flags: []
 ---
 
-# You Were Never Meant to Do It Alone: The Power of Saying "Please Do All That"
 
 There is a moment when you drop to your knees, hands open, heart cracked wide, and you whisper: *Please do all that.* It is in this moment, quiet, broken, surrendered, that the keys to divine manifestation, soulful success, and the kind of peace that no strategy alone can offer are placed in your palm.
 

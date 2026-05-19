@@ -10,7 +10,6 @@ images: ["https://images.pexels.com/photos/7514814/pexels-photo-7514814.jpeg?aut
 flags: []
 ---
 
-# Top Marketing for Coaches: Strategies to Attract Clients in 2025
 
 ## The Importance of Personal Branding for Coaches
 

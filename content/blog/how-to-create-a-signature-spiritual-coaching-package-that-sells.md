@@ -10,7 +10,6 @@ images: ["https://images.pexels.com/photos/5710614/pexels-photo-5710614.jpeg?aut
 flags: []
 ---
 
-# How to Create a Signature Spiritual Coaching Package That Sells (2026 Guide)
 
 ## Spiritual Coaching Packages vs. Hourly Sessions
 

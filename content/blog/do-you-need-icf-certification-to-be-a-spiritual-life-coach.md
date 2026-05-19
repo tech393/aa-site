@@ -13,7 +13,6 @@ flags:
   - "Claim 'pioneered this field', verify"
 ---
 
-# Do You Need ICF Certification to Be a Spiritual Life Coach?
 
 *The Truth About ICF Certification for Spiritual Coaches (And What Actually Matters)*
 

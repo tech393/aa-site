@@ -12,7 +12,6 @@ flags:
   - "Testimonials from Rita Andorinho, Lyne Johnson, Christy Sanger included, verify before reuse"
 ---
 
-# How to Start a Spiritual Coaching Business
 
 ## What Is a Spiritual Coaching Business?
 

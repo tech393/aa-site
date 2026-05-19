@@ -16,7 +16,6 @@ flags:
   - "8-level holistic approach mentioned, canonical is 7 pillars"
 ---
 
-# Top Spiritual Coaching Programs for 2026: Transform Your Life
 
 ## What Is a Spiritual Life Coach?
 

@@ -11,7 +11,6 @@ flags:
   - "Mentions 'Original International Spiritual Life Coach Certification', review against canonical AA positioning"
 ---
 
-# 15 Profitable Spiritual Business Ideas for Modern Entrepreneurs
 
 ## Business Models in the Spiritual Wellness Industry
 

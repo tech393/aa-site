@@ -13,7 +13,6 @@ flags:
   - "'$244/hour average coaching rate' and '126,050 active coaches globally', verify source"
 ---
 
-# The Ultimate Guide to Building a Successful Coaching Business
 
 ## Key Takeaways
 

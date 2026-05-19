@@ -12,7 +12,6 @@ flags:
   - "References Awakened Academy 'allows training access anytime for skill refreshment', verify"
 ---
 
-# What Is Spiritual Life Coaching? A Practical Guide to Transformational Guidance
 
 ## Understanding Spiritual Life Coaching
 

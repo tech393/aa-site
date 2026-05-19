@@ -13,7 +13,6 @@ flags:
   - "Real-life success stories use specific named people (Rebecca Moore, Sarah Louise Ryan, Monisha Edwards), verify these are appropriate to use in our content (likely third-party examples)"
 ---
 
-# Empowerment Coaching: How to Become the Best Coach You Can Be
 
 ## Key Takeaways
 

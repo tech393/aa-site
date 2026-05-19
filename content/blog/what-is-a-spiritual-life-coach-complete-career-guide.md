@@ -11,7 +11,6 @@ flags:
   - "Suggested pricing $75–$250 per session, $500–$2,000 packages, generally consistent with canonical guidance"
 ---
 
-# What is a Spiritual Life Coach? Complete Career Guide
 
 ## Understanding Spiritual Life Coaching
 

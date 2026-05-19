@@ -10,7 +10,6 @@ images: ["https://images.pexels.com/photos/9482553/pexels-photo-9482553.jpeg?aut
 flags: []
 ---
 
-# Is Spiritual Coaching Your Divine Calling?
 
 ## The Whisper of Destiny
 

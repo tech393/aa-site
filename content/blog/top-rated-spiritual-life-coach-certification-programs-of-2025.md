@@ -12,7 +12,6 @@ flags:
   - "'Lifetime access to course materials' mentioned, review against canonical refund/access policy"
 ---
 
-# Top Spiritual Life Coach Certification Programs to Elevate Your Career
 
 ## What is a Spiritual Life Coach?
 

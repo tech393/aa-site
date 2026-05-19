@@ -14,7 +14,6 @@ flags:
   - "Personal anecdote about Matthew West's 'Do Something' and Celebrate Recovery ministry, likely sourced/borrowed copy, verify"
 ---
 
-# Discover Your Spiritual Calling: 7 Signs & 5 Steps to a Meaningful Life
 
 ## Key Takeaways
 

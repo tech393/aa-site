@@ -13,7 +13,6 @@ flags:
   - "'35% of Americans identify as spiritual but not religious', verify source"
 ---
 
-# Is Spiritual Coaching a Legitimate Career? (2026 Guide)
 
 ## Short Answer
 

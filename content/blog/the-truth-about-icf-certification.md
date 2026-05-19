@@ -13,7 +13,6 @@ flags:
   - "Claim 'Before \"spiritual life coaching\" was a recognized category', review"
 ---
 
-# The Truth About ICF Certification
 
 *What Spiritually Called Coaches Deserve to Know*
 
