@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Your Unique Soul Purpose · Awakened Life Series · Awakened Academy</title>
+  <link rel="canonical" href="https://awakenedacademy.com/unique-soul-purpose/">
+  <link rel="icon" href="../images/16-aa-favicon.png" type="image/png">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta property="og:type" content="article">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:site_name" content="Awakened Academy®">
+  <meta property="og:title" content="Discover Your Unique Soul Purpose & Fulfill Your True Calling">
+  <meta property="og:description" content="Your Awakened Life starts with discovering your Unique Soul Purpose.">
+  <meta property="og:url" content="https://awakenedacademy.com/unique-soul-purpose/">
+  <meta property="og:image" content="https://awakenedacademy.com/wp-content/uploads/2016/10/Your-Unique-Soul-Purpose.png">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://player.vimeo.com">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,500;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --teal:#1A7A70; --teal-deep:#14635B;
+      --gold:#C9A961; --gold-deep:#A98B47; --gold-pale:#E8D4A0; --gold-glow:#D4B978;
+      --champagne:#D7BC85; --champagne-deep:#B89A65;
+      --cream:#F2E8D5; --cream-paper:#FBF5E8;
+      --ink:#2A1A0F; --ink-soft:rgba(42,26,15,0.72); --ink-muted:rgba(42,26,15,0.5);
+      --line:rgba(42,26,15,0.10);
+      --ease:cubic-bezier(0.16,1,0.3,1);
+    }
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{
+      font-family:'Inter',-apple-system,BlinkMacSystemFont,sans-serif;
+      font-size:17px;line-height:1.65;
+      color:var(--ink);background:var(--cream);
+      -webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;
+      position:relative;
+      font-feature-settings:'kern','liga';
+    }
+    /* Warm light from the top — kept from v12 */
+    body::before{
+      content:"";position:fixed;top:0;left:0;right:0;height:520px;pointer-events:none;z-index:0;
+      background:radial-gradient(ellipse 80% 50% at 50% 0%,rgba(201,169,97,0.13),transparent 70%);
+    }
+    /* Subtle paper grain — adds magic without effects */
+    body::after{
+      content:"";position:fixed;inset:0;pointer-events:none;z-index:0;
+      background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='240' height='240'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>");
+      opacity:0.04;
+    }
+    em,i{font-style:italic;color:var(--teal);font-family:'Fraunces',Georgia,serif;font-weight:400}
+    a{color:var(--teal);text-decoration:none;transition:color 200ms var(--ease)}
+    a:hover{color:var(--gold-deep)}
+    a:focus-visible,.btn:focus-visible,.pdf-link:focus-visible{outline:2px solid var(--gold);outline-offset:3px;border-radius:4px}
+
+    .page{position:relative;z-index:1;max-width:880px;margin:0 auto;padding:64px 32px 0}
+
+    /* MASTHEAD */
+    .masthead{text-align:center;padding-bottom:32px}
+    .masthead .logo{max-width:200px;width:50%;height:auto;display:block;margin:0 auto}
+    .masthead .ident{margin-top:16px;font-size:11px;letter-spacing:0.34em;text-transform:uppercase;color:var(--ink-muted);font-weight:500}
+    .masthead::after{content:"";display:block;width:32px;height:1px;background:var(--gold);margin:20px auto 0}
+
+    /* SERIES STRIP — film-still treatment with inner vignette + slow hover zoom */
+    .series-strip{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin:0 0 40px}
+    .strip-item{display:block;text-decoration:none;color:inherit;transition:opacity 200ms var(--ease)}
+    .strip-item .thumb{position:relative;aspect-ratio:145/99;background-color:var(--teal-deep);background-size:cover;background-position:center;border-radius:4px;overflow:hidden;filter:saturate(0.85);transition:filter 320ms var(--ease)}
+    .strip-item .thumb::after{content:"";position:absolute;inset:0;box-shadow:inset 0 0 50px rgba(26,15,8,0.45);pointer-events:none;border-radius:4px;transition:box-shadow 320ms var(--ease)}
+    .strip-item:hover .thumb{filter:none}
+    .strip-item:hover .thumb::after{box-shadow:inset 0 0 50px rgba(26,15,8,0.25)}
+    .strip-item .num{position:absolute;top:8px;left:12px;font-family:'Fraunces',Georgia,serif;font-style:italic;font-weight:500;font-size:18px;color:rgba(255,255,255,0.95);text-shadow:0 1px 4px rgba(0,0,0,0.55);line-height:1;letter-spacing:0.04em;z-index:1}
+    .strip-item .title{margin-top:10px;font-family:'Fraunces',Georgia,serif;font-style:italic;font-size:14px;color:var(--ink-muted);text-align:center;line-height:1.3;transition:color 200ms var(--ease)}
+    .strip-item:hover .title{color:var(--ink)}
+    .strip-item.current{pointer-events:none}
+    .strip-item.current .thumb{filter:none}
+    .strip-item.current .title{color:var(--ink)}
+    .strip-item.current .title::after{content:"";display:block;width:24px;height:1px;background:var(--gold);margin:6px auto 0}
+
+    /* VIDEO — warm halo via layered box-shadow */
+    .video{position:relative;padding-bottom:56.25%;height:0;background:var(--teal-deep);border-radius:4px;overflow:hidden;box-shadow:0 0 0 1px rgba(201,169,97,0.18),0 28px 64px -18px rgba(201,169,97,0.22),0 12px 32px -10px rgba(26,15,8,0.30)}
+    .video iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+
+    /* HERO — h1 with hairline gold rule, generous lede */
+    .hero{padding:72px 0 8px;text-align:center}
+    .hero h1{font-family:'Fraunces',Georgia,serif;font-weight:400;color:var(--ink);font-size:clamp(34px,5vw,58px);line-height:1.08;letter-spacing:-0.018em;margin:0 auto 0;max-width:18ch}
+    .hero h1 em{font-style:italic;font-weight:400}
+    .hero h1::after{content:"";display:block;width:32px;height:1px;background:var(--gold);margin:28px auto 0}
+    .hero .lede{font-size:19px;line-height:1.6;color:var(--ink-soft);max-width:580px;margin:28px auto 0}
+
+    /* DISCOVER bullets */
+    .discover{padding:48px 0 8px;display:flex;justify-content:center}
+    .discover ul{list-style:none;padding:0;margin:0;max-width:480px;text-align:left}
+    .discover li{padding:10px 0 10px 28px;position:relative;font-size:17px;color:var(--ink-soft);line-height:1.5}
+    .discover li::before{content:"";position:absolute;left:0;top:19px;width:6px;height:6px;border-radius:50%;background:var(--gold)}
+
+    /* PDF download — same rounded-rect treatment as buttons */
+    .pdf-wrap{text-align:center;margin-top:40px}
+    .pdf-link{display:inline-block;padding:15px 32px;background:transparent;color:var(--ink);border:1px solid var(--ink);border-radius:10px;font-size:12px;letter-spacing:0.20em;text-transform:uppercase;font-weight:600;transition:background 200ms var(--ease),color 200ms var(--ease)}
+    .pdf-link:hover{background:var(--ink);color:var(--cream)}
+
+    /* MAGIC NOTE (page 4) */
+    .magic-note{max-width:540px;margin:40px auto 0;padding:0 24px;font-family:'Fraunces',Georgia,serif;font-style:italic;font-size:16px;color:var(--ink-soft);line-height:1.7;text-align:center}
+
+    /* INVITATION — engagement question */
+    .invitation{padding:80px 0 8px;text-align:center}
+    .invitation h2{font-family:'Fraunces',Georgia,serif;font-weight:400;color:var(--ink);font-size:clamp(26px,3.6vw,42px);line-height:1.1;letter-spacing:-0.018em;margin:0 auto 20px;max-width:18ch}
+    .invitation h2 em{font-style:italic;font-weight:400}
+    .invitation-sub{font-size:17px;line-height:1.6;color:var(--ink-soft);max-width:540px;margin:0 auto}
+
+    /* COMMENTS — editorial archive treatment, no avatars (drops Gravatar 404 risk) */
+    .comments{padding:80px 0 24px;max-width:680px;margin:0 auto}
+    .comments-note{text-align:center;font-size:11px;letter-spacing:0.34em;text-transform:uppercase;color:var(--ink-muted);font-weight:500;margin-bottom:0}
+    .comments-note::after{content:"";display:block;width:24px;height:1px;background:var(--gold);margin:18px auto 36px}
+    .commentlist{list-style:none;padding:0;margin:0}
+    .commentlist > li{padding:32px 0;border-top:1px solid var(--line);text-align:center}
+    .commentlist > li:first-child{border-top:none;padding-top:8px}
+    .comment-body{display:block;padding:0 8px}
+    .comment_avatar{display:none}
+    .comment_postinfo{font-size:13px;color:var(--ink-muted);margin-bottom:14px}
+    .comment_postinfo .fn{display:block;color:var(--ink);font-family:'Fraunces',Georgia,serif;font-style:italic;font-size:22px;font-weight:500;margin-bottom:8px;letter-spacing:-0.005em}
+    .comment_postinfo .fn a{color:var(--ink)}
+    .comment_postinfo .fn a:hover{color:var(--gold-deep)}
+    .comment_postinfo .comment_date{display:block;color:var(--ink-muted);font-size:10.5px;font-family:'SF Mono','Menlo','Consolas',monospace;letter-spacing:0.14em;text-transform:uppercase}
+    .comment_postinfo .comment_date::before{content:" B7  ";opacity:0.7}
+    .comment_area{margin-top:16px}
+    .comment-content{color:var(--ink-soft);font-size:16px;line-height:1.75;max-width:540px;margin:0 auto;font-feature-settings:'kern','liga'}
+    .comment-content p{margin:0 0 14px}
+    .comment-content p:last-child{margin-bottom:0}
+
+    /* CINEMATIC CTA — golden-hour photo + warm sunset wash */
+    .cta-bleed{
+      position:relative;width:100%;margin:96px 0 0;padding:140px 32px;
+      color:var(--cream-paper);text-align:center;overflow:hidden;
+      background:
+        linear-gradient(120deg,rgba(168,86,28,0.50) 0%,rgba(60,28,8,0.78) 65%,rgba(20,10,4,0.85) 100%),
+        url('../images/Arielle-Video-Awakened-Certification-1024x577.png') center 40%/cover no-repeat;
+    }
+    .cta-bleed.final-cta{
+      background:
+        linear-gradient(120deg,rgba(184,108,40,0.42) 0%,rgba(60,28,8,0.74) 60%,rgba(18,8,2,0.85) 100%),
+        url('../images/Arielle-Video-Awakened-Certification-1024x577.png') center 40%/cover no-repeat;
+      padding:160px 32px;
+    }
+    /* Soft warm vignette inside the CTA — adds editorial film feel */
+    .cta-bleed::before{
+      content:"";position:absolute;inset:0;pointer-events:none;
+      background:radial-gradient(ellipse at center,transparent 30%,rgba(20,10,4,0.45) 100%);
+    }
+    .cta-inner{position:relative;z-index:1;max-width:880px;margin:0 auto}
+    .cta-eyebrow{font-family:'Inter',sans-serif;font-size:11px;letter-spacing:0.38em;text-transform:uppercase;color:var(--gold-glow);font-weight:500;margin-bottom:36px}
+    .cta-h2{font-family:'Fraunces',Georgia,serif;font-weight:400;color:var(--cream-paper);font-size:clamp(36px,5.6vw,64px);line-height:1.16;letter-spacing:-0.018em;margin:0 auto 30px;max-width:24ch}
+    .cta-h2 em{font-style:italic;font-weight:400;color:var(--gold-glow)}
+    .cta-sub{font-family:'Fraunces',Georgia,serif;font-style:italic;font-size:18px;line-height:1.55;color:rgba(242,232,213,0.85);max-width:600px;margin:0 auto 40px}
+    .cta-buttons{display:flex;gap:16px;justify-content:center;flex-wrap:wrap;margin-bottom:28px}
+    .btn{display:inline-block;padding:18px 36px;border-radius:10px;font-family:'Inter',sans-serif;font-size:12px;font-weight:600;letter-spacing:0.22em;text-transform:uppercase;text-decoration:none;transition:transform 200ms var(--ease),background 200ms var(--ease),color 200ms var(--ease),box-shadow 200ms var(--ease),border-color 200ms var(--ease);border:1.5px solid transparent}
+    .btn-primary{background:var(--champagne);color:var(--ink);box-shadow:0 8px 24px -8px rgba(215,188,133,0.50)}
+    .btn-primary:hover{background:var(--gold-glow);color:var(--ink);transform:translateY(-2px);box-shadow:0 14px 30px -8px rgba(215,188,133,0.70)}
+    .btn-secondary{background:transparent;color:var(--cream-paper);border-color:rgba(251,245,232,0.80)}
+    .btn-secondary:hover{background:var(--cream-paper);color:var(--ink);border-color:var(--cream-paper);transform:translateY(-2px)}
+    .cta-sig{margin-top:32px;font-family:'Inter',sans-serif;font-size:11px;letter-spacing:0.38em;text-transform:uppercase;color:var(--gold-glow);font-weight:500}
+
+    /* FOOTER — gold accent above */
+    .footer{position:relative;z-index:1;text-align:center;padding:48px 32px 56px;font-family:'Inter',sans-serif;font-size:11px;color:var(--ink-muted);letter-spacing:0.06em;background:var(--cream)}
+    .footer::before{content:"";display:block;width:32px;height:1px;background:var(--gold);margin:0 auto 28px;opacity:0.5}
+    .footer a{color:var(--ink-muted)}
+    .footer a:hover{color:var(--gold-deep)}
+
+    /* SECTION REVEAL on load — subtle, fast, restrained */
+    .hero,.discover,.invitation,.comments{opacity:0;transform:translateY(12px);animation:reveal 700ms var(--ease) forwards}
+    .hero{animation-delay:60ms}
+    .discover{animation-delay:140ms}
+    .invitation{animation-delay:200ms}
+    .comments{animation-delay:260ms}
+    @keyframes reveal{to{opacity:1;transform:translateY(0)}}
+
+    @media(max-width:768px){
+      .page{padding:40px 22px 0}
+      .masthead{padding-bottom:24px}
+      .series-strip{gap:10px;margin:0 0 32px}
+      .strip-item .num{font-size:16px;top:6px;left:10px}
+      .strip-item .title{font-size:12px;margin-top:8px}
+      .hero{padding:56px 0 4px}
+      .hero h1{font-size:clamp(28px,7vw,42px)}
+      .hero h1::after{margin-top:22px}
+      .hero .lede{margin-top:22px}
+      .invitation{padding:64px 0 4px}
+      .comments{padding:64px 0 24px}
+      .cta-bleed{padding:100px 22px}
+      .cta-bleed.final-cta{padding:120px 22px}
+      .cta-h2{font-size:32px}
+      .cta-buttons{flex-direction:column;align-items:stretch;max-width:340px;margin-left:auto;margin-right:auto}
+      .comment_postinfo .fn{font-size:19px}
+    }
+    @media(max-width:520px){
+      .series-strip{grid-template-columns:repeat(2,1fr);gap:12px}
+    }
+
+    /* Accessibility — respect reduced motion */
+    @media(prefers-reduced-motion:reduce){
+      *,*::before,*::after{animation-duration:0.01ms!important;animation-iteration-count:1!important;transition-duration:0.01ms!important;scroll-behavior:auto!important}
+      .hero,.discover,.invitation,.comments{opacity:1;transform:none}
+    }
+  </style>
+</head>
+<body>
+<main class="page">
+
+  <header class="masthead">
+    <img class="logo" src="../images/Logo-Green-Coaching-AA-green-long-100-.png" alt="Awakened Academy">
+    <p class="ident">Awakened Life Series &nbsp;·&nbsp; Video III</p>
+  </header>
+
+  <nav class="series-strip" aria-label="Video series navigation">
+    <a class="strip-item" href="/video-1/">
+      <div class="thumb" style="background-image:url('../images/V1-nav.jpg');"><span class="num">I</span></div>
+      <div class="title">Behind the Curtain</div>
+    </a>
+    <a class="strip-item" href="/the-3-worlds/">
+      <div class="thumb" style="background-image:url('../images/V2-nav.jpg');"><span class="num">II</span></div>
+      <div class="title">The Three Worlds</div>
+    </a>
+    <a class="strip-item current" href="/unique-soul-purpose/" aria-current="page">
+      <div class="thumb" style="background-image:url('../images/unique-soul-purpose.jpg');"><span class="num">III</span></div>
+      <div class="title">Your Soul Purpose</div>
+    </a>
+    <a class="strip-item" href="/freedom/">
+      <div class="thumb" style="background-image:url('../images/V3-nav.jpg');"><span class="num">IV</span></div>
+      <div class="title">Freedom</div>
+    </a>
+  </nav>
+
+  <section class="video">
+    <iframe
+      src="https://player.vimeo.com/video/188222820?dnt=1&app_id=122963"
+      title="Your Unique Soul Purpose"
+      allow="autoplay; fullscreen; picture-in-picture"
+      allowfullscreen></iframe>
+  </section>
+
+  <section class="hero">
+    <h1>Discover your <em>unique soul purpose</em> &mdash; and fulfill your true calling</h1>
+    <p class="lede">Your Awakened Life begins when you remember why you came. This is how to find the thread.</p>
+  </section>
+
+  <section class="discover">
+    <ul>
+      <li>The Current Call of the Times</li>
+      <li>How to break free from the three roadblocks that keep spiritual, empathic people trapped</li>
+      <li>How you can discover your Unique Soul Purpose and begin living your Awakened Life</li>
+    </ul>
+    <div class="pdf-wrap"><a class="pdf-link" href="../images/Guide-to-Discover-Your-Unique-Soul-Purpose.pdf" target="_blank" rel="noopener">Download the Soul Purpose Discovery Guide</a></div>
+  </section>
+  
+
+  <section class="invitation">
+    <h2>What is <em>your</em> calling, your passion?</h2>
+    <p class="invitation-sub">When we bring consciousness to what our true calling is, we invoke our Unique Soul Purpose.</p>
+  </section>
+
+  <section class="comments" id="comments">
+    <p class="comments-note">Comments on these videos</p>
+    <ol class="commentlist">
+					<li class="comment even thread-even depth-1" id="li-comment-1734">
+		<article id="comment-1734" class="comment-body clearfix">
+			<div class="comment_avatar">
+					<img alt='Sara Sandin' src='https://secure.gravatar.com/avatar/f3f285f8632270d10f05c51c74239782eb1837546d3e49e0e8128530f1758f21?s=80&#038;d=mm&#038;r=g' class='avatar avatar-80 photo' />			</div>
+			<div class="comment_postinfo">
+					<span class="fn">Sara Sandin</span>				<span class="comment_date">
+					on June 5, 2018 at 8:05 pm				</span>
+												</div>
+			<div class="comment_area">
+				<div class="comment-content clearfix">
+				<p>My purpose in life is to help people develope and grow and as a result of that live happy, peaceful and fulfilling lives. </p>
+<p>Love your videos so much!</p>
+<p>Much love ❤️,<br />
+/Sara</p>
+				</div>
+			</div>
+		</article>
+		</li>
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-985">
+		<article id="comment-985" class="comment-body clearfix">
+			<div class="comment_avatar">
+					<img alt='Heather' src='https://secure.gravatar.com/avatar/e9accfcd554426d66b4b240f1e808cecfdd431ed11976697f2c7042c96627bb5?s=80&#038;d=mm&#038;r=g' class='avatar avatar-80 photo' />			</div>
+			<div class="comment_postinfo">
+					<span class="fn">Heather</span>				<span class="comment_date">
+					on September 20, 2017 at 1:57 pm				</span>
+												</div>
+			<div class="comment_area">
+				<div class="comment-content clearfix">
+				<p>Everyday I wake up now with the same goal&#8230;To be a good human being&#8230;and help encourage others that are struggling and remind them that they are going to be ok.  There was a time when I could not do this even for myself and the pain in my soul seemed unbearable.  And I will forever be grateful for the kind words of encouragement from others that kept me going, that reminded me that I was going to be ok.  If I can help one person not give up or help one person feel better in their soul then my pain and suffering was not for nothing.   My pain is my purpose.<br />
+Thank you for being there for others, I would love to speak with you about the awakened academy and how I can share my story.  I&#8217;m trying to write a book about my journey through addiction bUT I don&#8217;t know where to start.</p>
+				</div>
+			</div>
+		</article>
+		</li>
+	<li class="comment even thread-even depth-1" id="li-comment-958">
+		<article id="comment-958" class="comment-body clearfix">
+			<div class="comment_avatar">
+					<img alt='Cherise M Fraser' src='https://secure.gravatar.com/avatar/4f51aea54d26dce0cbf9b9caba962747bfe04c84fff50799bd763ab8af73d42a?s=80&#038;d=mm&#038;r=g' class='avatar avatar-80 photo' />			</div>
+			<div class="comment_postinfo">
+					<span class="fn">Cherise M Fraser</span>				<span class="comment_date">
+					on August 24, 2017 at 8:39 pm				</span>
+												</div>
+			<div class="comment_area">
+				<div class="comment-content clearfix">
+				<p>My calling as an empath and healer under the guidance of the Lord is to reach out to those who are hurting around me, meet them where they are at and bring them forward into their own path of healing and prosperity. Just as I have done in my own life.</p>
+				</div>
+			</div>
+		</article>
+		</li>
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-943">
+		<article id="comment-943" class="comment-body clearfix">
+			<div class="comment_avatar">
+					<img alt='Kristin Fein' src='https://secure.gravatar.com/avatar/57079220e3ba3e508e136bb66e5060a8b311075be6cbf43cd41fc172ab0302bc?s=80&#038;d=mm&#038;r=g' class='avatar avatar-80 photo' />			</div>
+			<div class="comment_postinfo">
+					<span class="fn"><a href="https://www.releaseandrefreshyoga.com" class="url" rel="ugc external nofollow">Kristin Fein</a></span>				<span class="comment_date">
+					on August 12, 2017 at 3:13 am				</span>
+												</div>
+			<div class="comment_area">
+				<div class="comment-content clearfix">
+				<p>I envision helping people around the world through online and in person meetings.  I see the best in people and bring out their innate abilities.   I am here to inspire others to believe in their true, eternal selves &#8211; beings of freedom, joy and peace by experiencing their true nature through energetic connection, meditation and guided imagery.</p>
+				</div>
+			</div>
+		</article>
+		</li>
+	<li class="comment even thread-even depth-1" id="li-comment-877">
+		<article id="comment-877" class="comment-body clearfix">
+			<div class="comment_avatar">
+					<img alt='Dena Irby' src='https://secure.gravatar.com/avatar/843d9ae3f04a18f6513b092b7b9f07aaa6d2305aed916214d8464ce3289b4ca1?s=80&#038;d=mm&#038;r=g' class='avatar avatar-80 photo' />			</div>
+			<div class="comment_postinfo">
+					<span class="fn">Dena Irby</span>				<span class="comment_date">
+					on July 10, 2017 at 5:37 pm				</span>
+												</div>
+			<div class="comment_area">
+				<div class="comment-content clearfix">
+				<p>I believe my callings is to to help individuals; whether it be through spiritual counseling, writibg a book, or just support, I feel deeply that is where I am suppose to be.</p>
+				</div>
+			</div>
+		</article>
+		</li>
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-662">
+		<article id="comment-662" class="comment-body clearfix">
+			<div class="comment_avatar">
+					<img alt='Estelle Steenkamp' src='https://secure.gravatar.com/avatar/f043cfdb5745bcb417b4201bf39eaf8555a3d56791f0893cc6f4aeea4fabd59a?s=80&#038;d=mm&#038;r=g' class='avatar avatar-80 photo' />			</div>
+			<div class="comment_postinfo">
+					<span class="fn"><a href="https://Website" class="url" rel="ugc external nofollow">Estelle Steenkamp</a></span>				<span class="comment_date">
+					on October 31, 2016 at 5:50 pm				</span>
+												</div>
+			<div class="comment_area">
+				<div class="comment-content clearfix">
+				<p>Watching your videos and listening to how much truth and authenticity the two of you emanate makes me calm, like I&#8217;m sitting next to a river and everything just flows beautifully in this chaotic world.  I&#8217;m still working my way through what my purpose really is, and are asking for guidance and clarity every day.  I love working with different foods and learning how it contributes to raising our vibration and restoring  our physiology  (and psychology) to optimum functionality and how it should be.   You could say I like playing with my food.  🙂<br />
+I have a thirst for learning how the ancients lived and what they knew with regards to consciousness and holistic health etc and the REAL truth of our potential and who and what we really are up until all this knowledge had been twisted and corrupted and humanity has been kept in the dark and been deceived for so many years.  I want to bring this truth to people so there is just less confusion and more understanding because I believe if the building blocks of knowledge is build on truth, the real truth, there will already be so much less suffering and so much more hope in becoming the best versions of ourselves.  I feel I&#8217;m getting closer to truth and understanding every day,  little by little, and it gives me confidence.  There is so much I still have to learn of course but love this process, I&#8217;m still a baby in all of this, but I feel the veil is lifting day by day for me, really thankful for this and for listening to you two.</p>
+				</div>
+			</div>
+		</article>
+</li>
+	<li class="comment odd alt thread-even depth-1" id="li-comment-654">
+		<article id="comment-654" class="comment-body clearfix">
+			<div class="comment_avatar">
+					<img alt='Veeke Verstraete' src='https://secure.gravatar.com/avatar/69627c473b9bcad4556f91ff8187dc52a7e264576a26f4aac0898f30e4cdb36c?s=80&#038;d=mm&#038;r=g' class='avatar avatar-80 photo' />			</div>
+			<div class="comment_postinfo">
+					<span class="fn">Veeke Verstraete</span>				<span class="comment_date">
+					on October 28, 2016 at 4:14 pm				</span>
+												</div>
+			<div class="comment_area">
+				<div class="comment-content clearfix">
+				<p>These videos are amazing with lots of beautiful content,  so many useful guidelines, definitely motivating and &#8230;&#8230; funny too 🙂<br />
+So feeling greatful and inspired! &lt;3 &lt;3 </p>
+<p>My calling is to really BE someone, to find my truth and help others find theirs&#8230;. I love meditation, knowledge, coaching, learning, teaching, hatha-yoga, juices, music, dance, nature&#8230;.&lt;3</p>
+				</div>
+			</div>
+		</article>
+</li>
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-635">
+		<article id="comment-635" class="comment-body clearfix">
+			<div class="comment_avatar">
+					<img alt='Daina Bukele' src='https://secure.gravatar.com/avatar/0f4eaa1d45b8753eb63c3922d19f868fd0a404efab0924b96222fde2500bc536?s=80&#038;d=mm&#038;r=g' class='avatar avatar-80 photo' />			</div>
+			<div class="comment_postinfo">
+					<span class="fn">Daina Bukele</span>				<span class="comment_date">
+					on October 22, 2016 at 10:05 pm				</span>
+												</div>
+			<div class="comment_area">
+				<div class="comment-content clearfix">
+				<p>My passion is related to creating beautiful environment and space where everybody would feel welcome like a dearest guest\good old friend and where their weared minds could rest and heart would sing. Be it a cafe with nourishing foods/atmosphere/music and events or a shop with the most beatiful local organic foods or early morning activities\exercises to ignite a day in the nearest park or my building rooftop for anyone who wants to join.</p>
+<p>Many thanks for being such an inspiration, Michael and Arielle!</p>
+				</div>
+			</div>
+		</article>
+</li>
+	<li class="comment odd alt thread-even depth-1" id="li-comment-633">
+		<article id="comment-633" class="comment-body clearfix">
+			<div class="comment_avatar">
+					<img alt='Elle Dammers' src='https://secure.gravatar.com/avatar/b1e2bc8e33dd9c23dc9fed9c09d8cba394b88793999481b3d9006a8ec9b8415e?s=80&#038;d=mm&#038;r=g' class='avatar avatar-80 photo' />			</div>
+			<div class="comment_postinfo">
+					<span class="fn">Elle Dammers</span>				<span class="comment_date">
+					on October 21, 2016 at 7:25 pm				</span>
+												</div>
+			<div class="comment_area">
+				<div class="comment-content clearfix">
+				<p>What a Awesome video with amazing insights, tools, &amp; wisdom ~from two Beautiful Awesome light bringers  &amp; spirits !! Thank you for sharing &amp; delivering some truly  powerful &amp; inspiring  very helpful  guidance !!  Extremely useful &amp; rite on !!!  Thank  you for all the Love &amp; Light !!  My calling ~I feel is to shine and bring out the best in people &amp; help them bring out the best in themselves  ~thru healing modalities &amp; communication ! wishing you Both The Very Best !!<br />
+ Love Light &amp; Blessings to all !  Elle</p>
+				</div>
+			</div>
+		</article>
+</li>
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-630">
+		<article id="comment-630" class="comment-body clearfix">
+			<div class="comment_avatar">
+					<img alt='Lydia' src='https://secure.gravatar.com/avatar/9dcd40575655e033acad0a91a951c51085ffc43d6904d0ff8517454ef3220c58?s=80&#038;d=mm&#038;r=g' class='avatar avatar-80 photo' />			</div>
+			<div class="comment_postinfo">
+					<span class="fn">Lydia</span>				<span class="comment_date">
+					on October 21, 2016 at 12:17 pm				</span>
+												</div>
+			<div class="comment_area">
+				<div class="comment-content clearfix">
+				<p>Love hanging out here , and love your videos! Thank you for creating and sharing so high quality content :)) Much love</p>
+				</div>
+			</div>
+		</article>
+</li>
+	<li class="comment odd alt thread-even depth-1" id="li-comment-629">
+		<article id="comment-629" class="comment-body clearfix">
+			<div class="comment_avatar">
+					<img alt='Rachashael' src='https://secure.gravatar.com/avatar/6896a586e3cf89e29ff483e138407504d3a10c8c5413376ec3677f3eab790a8f?s=80&#038;d=mm&#038;r=g' class='avatar avatar-80 photo' />			</div>
+			<div class="comment_postinfo">
+					<span class="fn">Rachashael</span>				<span class="comment_date">
+					on October 21, 2016 at 3:41 am				</span>
+												</div>
+			<div class="comment_area">
+				<div class="comment-content clearfix">
+				<p>My calling is I feel such compassion for people and I see the soul of them and the good in them and that each one deserves the very very best in life.  I want to help people discover their worth and their power and help them receive all they truly deserve which is the best.  I wrote something years ago that expresses this.  </p>
+<p>Yes, we as brothers, with our candles lighted, went down to the depths of hell and we prayed for all.</p>
+<p>To be able to pulled others from their own personal hell and into a life of love and happiness while I indeed pull my own self out of my own is true power</p>
+				</div>
+			</div>
+		</article>
+</li>
+    </ol>
+  </section>
+
+</main>
+
+<section class="cta-bleed">
+  <div class="cta-inner">
+    <p class="cta-eyebrow">Take The Next Step</p>
+    <h2 class="cta-h2">Schedule your free call &mdash; and discover how you can <em>do meaningful work</em>, make a great living, and have time to enjoy the life you love.</h2>
+    <p class="cta-sub">Even if you&rsquo;ve failed before. Even if you lack confidence. This call is here to show you what&rsquo;s possible.</p>
+    <div class="cta-buttons">
+      <a class="btn btn-primary" href="https://awakenedacademy.com/schedule" target="_blank" rel="noopener">Schedule A Free Clarity Call</a>
+      <a class="btn btn-secondary" href="/freedom/">Watch Video IV &rarr;</a>
+    </div>
+    
+  </div>
+</section>
+
+
+<footer class="footer">
+  &copy; 2026 Awakened Academy&reg; &nbsp;·&nbsp; <a href="https://awakenedacademy.com/privacy/">Privacy</a> &nbsp;·&nbsp; <a href="https://awakenedacademy.com/terms/">Terms</a>
+</footer>
+
+</body>
+</html>

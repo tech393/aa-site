@@ -1,0 +1,215 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* === AWAKENED ACADEMY BRAND TOKENS v2.1 (Brand-Spec.html, May 2026) === */
+  --teal:        #0F5F55;
+  --teal-deep:   #0A4F46;
+  --teal-soft:   #2D9085;
+  --teal-dark:   #0A4F46; /* legacy alias */
+
+  --gold:        #C9A04C;
+  --gold-deep:   #9F7E38;
+  --gold-pale:   #E8D4A0;
+  --gold-light:  #DCBA70;
+  --gold-lt:     #DCBA70; /* legacy alias */
+  --gold-dk:     #9F7E38; /* legacy alias */
+
+  --cream:       #F2E8D5;
+  --cream-paper: #FBF5E8;
+  --bg:          #F2E8D5; /* legacy alias → cream */
+  --warm:        #FBF5E8; /* legacy alias → cream-paper */
+
+  --ink:         #2A1A0F;
+  --ink-soft:    rgba(42, 26, 15, 0.72);
+  --ink-muted:   rgba(42, 26, 15, 0.55);
+  --ink2:        rgba(42, 26, 15, 0.72); /* legacy alias */
+  --soft:        rgba(42, 26, 15, 0.55); /* legacy alias */
+
+  --navy:        #0F1A38;
+  --plum:        #421E33; /* utility bar bg, deep premium accent */
+  --purple:      #6B1157;
+  --rose:        #C47E7E; /* decorative tertiary only */
+  --magenta:     #421E33; /* legacy alias → plum (utility bar) */
+}
+
+@layer base {
+  html {
+    -webkit-text-size-adjust: 100%;
+    text-rendering: optimizeLegibility;
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    html:focus-within {
+      scroll-behavior: smooth;
+    }
+  }
+
+  body {
+    @apply bg-bg text-ink antialiased font-sans;
+    font-weight: 400;
+    line-height: 1.65;
+    letter-spacing: -0.003em;
+  }
+
+  /* Display-font discipline (Brand-Spec.html §02):
+     Fraunces is reserved for hero + h1 + h2. h3, h4, lede, body, eyebrows,
+     buttons, captions all stay in Inter. Display font is rare and earned. */
+  h1, h2 {
+    @apply font-serif;
+    font-weight: 400;
+    letter-spacing: -0.015em;
+  }
+  h3, h4, h5, h6 {
+    @apply font-sans;
+    font-weight: 600;
+  }
+
+  /* Italic em accent in headings inherits color from parent so it works on
+     both light backgrounds (becomes ink) and dark heroes (becomes cream).
+     For brand-accent (gold) on em, set className="text-gold-light" inline. */
+  h1 em, h2 em {
+    font-style: italic;
+    color: inherit;
+    font-weight: 400;
+    font-variation-settings: 'opsz' 144, 'SOFT' 100, 'WONK' 1;
+  }
+}
+
+@layer components {
+  /* Buttons (Brand-Spec.html §04): sans-serif, sentence case (NOT uppercase),
+     weight 500, 4px radius, no drop shadow, subtle translateY on hover. */
+  .btn-teal {
+    @apply inline-flex items-center justify-center transition;
+    font-family: 'Inter', system-ui, sans-serif;
+    font-weight: 500;
+    font-size: 15px;
+    letter-spacing: -0.005em;
+    padding: 14px 24px;
+    background: var(--teal);
+    color: #ffffff;
+    border-radius: 4px;
+    border: 0;
+    text-transform: none;
+  }
+  .btn-teal:hover {
+    background: var(--teal-deep);
+    transform: translateY(-1px);
+  }
+
+  .btn-gold {
+    @apply inline-flex items-center justify-center transition;
+    font-family: 'Inter', system-ui, sans-serif;
+    font-weight: 500;
+    font-size: 15px;
+    letter-spacing: -0.005em;
+    padding: 14px 24px;
+    background: var(--gold);
+    color: var(--ink);
+    border-radius: 4px;
+    border: 0;
+    text-transform: none;
+  }
+  .btn-gold:hover {
+    background: var(--gold-deep);
+    color: #ffffff;
+    transform: translateY(-1px);
+  }
+
+  .btn-ghost-teal {
+    @apply inline-flex items-center justify-center transition;
+    font-family: 'Inter', system-ui, sans-serif;
+    font-weight: 500;
+    font-size: 15px;
+    letter-spacing: -0.005em;
+    padding: 13px 23px;
+    background: transparent;
+    color: var(--teal);
+    border: 1px solid var(--teal);
+    border-radius: 4px;
+    text-transform: none;
+  }
+  .btn-ghost-teal:hover {
+    background: var(--teal);
+    color: #ffffff;
+  }
+
+  /* Eyebrow (Brand-Spec.html §03): Inter 600 / 12px / 0.28em / gold-deep. */
+  .eyebrow {
+    @apply inline-block uppercase;
+    font-family: 'Inter', system-ui, sans-serif;
+    font-size: 12px;
+    letter-spacing: 0.28em;
+    color: var(--gold-deep);
+    font-weight: 600;
+  }
+
+  .gold-line {
+    width: 32px;
+    height: 1px;
+    margin: 0 auto;
+    background: var(--gold);
+  }
+
+  .panel-warm {
+    background: var(--cream-paper);
+    border-radius: 8px;
+  }
+
+  .fade-in {
+    opacity: 0;
+    transform: translateY(18px);
+    transition: opacity .8s ease, transform .8s ease;
+  }
+  .fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* Subtle hero text shadow for legibility on photo backgrounds.
+     Brand-Spec.html §08: text-shadow 0 1px 2px rgba(0,0,0,0.2) only on
+     hero overlay text, never on body content. Apply with the .hero-text
+     utility on h1 / p inside photo-hero sections. */
+  .hero-text {
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.25);
+  }
+
+  /* Cursive accent for emotional moments (one per page max).
+     Brand-Spec.html §17: rose color, 4-5rem, always paired with eyebrow above
+     and supporting line below. Reserved for home hero, about, opt-in pages. */
+  .cursive {
+    font-family: 'Allison', 'BonVivant', cursive;
+    color: var(--rose);
+    line-height: 1.1;
+  }
+
+  /* Premium blog article body (Brand-Spec.html §24).
+     Drop cap on first paragraph, gold-sparkle bullets, breathing space. */
+  .has-drop-cap > p:first-of-type::first-letter {
+    font-family: 'Fraunces', Georgia, serif;
+    font-weight: 500;
+    font-size: 5em;
+    line-height: 0.85;
+    float: left;
+    padding: 0.06em 0.12em 0 0;
+    color: var(--teal);
+  }
+  /* Replace default bullet markers with the gold sparkle (✦). */
+  .article-body ul {
+    list-style: none;
+    padding-left: 0;
+  }
+  .article-body ul > li {
+    position: relative;
+    padding-left: 28px;
+  }
+  .article-body ul > li::before {
+    content: "✦";
+    position: absolute;
+    left: 0;
+    top: 0.3em;
+    color: var(--gold);
+    font-size: 0.75em;
+  }
+}
