@@ -23,7 +23,11 @@ function normalizeHtml(html: string) {
     .replaceAll('href="video/', 'href="/video/')
     .replaceAll("url(video/", "url(/video/")
     .replaceAll("'video/", "'/video/")
-    .replaceAll('"video/', '"/video/');
+    .replaceAll('"video/', '"/video/')
+    .replaceAll(
+      "https://awakenedacademy.com/certification",
+      "https://awakenedacademy.com/spiritual-life-coach-certification"
+    );
 }
 
 export function GET() {

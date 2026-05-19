@@ -65,21 +65,45 @@ body::before {
 main { position: relative; z-index: 1; }
 .wrap { max-width: var(--container); margin: 0 auto; padding: 0 var(--sp-6); }
 
-.utility-bar { background: var(--ink); color: var(--cream); padding: 10px 0; font-size: var(--fs-caption); position: relative; z-index: 50; }
-.utility-bar .wrap { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: var(--sp-3); }
-.utility-bar a { color: rgba(242,232,213,0.85); text-decoration: none; margin-right: var(--sp-5); }
-.utility-bar a:hover { color: var(--cream); }
-.utility-bar .right a { color: var(--gold-light); font-weight: 500; margin: 0; }
+.utility-bar { background: var(--purple); color: white; padding: 8px 0; font-size: 12.5px; position: relative; z-index: 50; }
+.utility-bar .wrap { max-width: 1400px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: var(--sp-3); }
+.utility-bar a { color: rgba(255,255,255,0.9); text-decoration: none; margin-right: var(--sp-5); }
+.utility-bar a:hover { color: var(--gold-light); }
+.utility-bar .right a { color: rgba(255,255,255,0.85); font-weight: 500; margin: 0; }
 
-.nav { background: var(--cream-paper); border-bottom: 1px solid var(--line); position: sticky; top: 0; z-index: 40; }
-.nav .wrap { padding-top: var(--sp-4); padding-bottom: var(--sp-4); display: flex; justify-content: space-between; align-items: center; }
-.brand { font-family: var(--font-display); font-weight: 500; font-size: 1.25rem; color: var(--teal); text-decoration: none; }
-.nav-links { display: flex; align-items: center; gap: var(--sp-5); }
-.nav-links a { font-family: var(--font-body); font-weight: 500; font-size: var(--fs-small); color: var(--ink); text-decoration: none; }
-.nav-links a:hover { color: var(--teal); }
-.nav-cta { background: var(--teal); color: white !important; padding: 10px 20px; border-radius: var(--radius-sm); font-size: 14px; }
-.nav-cta:hover { background: var(--teal-deep) !important; color: white !important; }
-@media (max-width: 720px) { .nav-links a:not(.nav-cta) { display: none; } }
+.nav { background: var(--teal); color: white; position: sticky; top: 0; z-index: 40; }
+.nav .wrap { max-width: 1400px; padding-top: var(--sp-4); padding-bottom: var(--sp-4); display: flex; justify-content: space-between; align-items: center; gap: var(--sp-6); }
+.brand { display: flex; align-items: center; gap: 12px; text-decoration: none; }
+.brand img { width: 64px; height: 64px; object-fit: contain; display: block; }
+.nav-links { display: flex; align-items: center; gap: 28px; }
+.nav-links a, .about-menu > button { font-family: var(--font-body); font-weight: 500; font-size: 13.5px; letter-spacing: 0.01em; color: white; text-decoration: none; background: transparent; border: 0; cursor: pointer; }
+.nav-links a:hover, .about-menu > button:hover { color: var(--gold-light); }
+.about-menu { position: relative; }
+.about-menu > button { display: flex; align-items: center; gap: 4px; }
+.about-menu .chevron { font-size: 10px; transition: transform 0.15s ease; }
+.about-menu:hover .chevron { transform: rotate(180deg); }
+.about-dropdown { visibility: hidden; opacity: 0; position: absolute; left: 50%; top: 100%; transform: translateX(-50%); padding-top: 8px; transition: opacity 0.15s ease; }
+.about-menu:hover .about-dropdown { visibility: visible; opacity: 1; }
+.about-dropdown ul { min-width: 240px; list-style: none; border: 1px solid rgba(42,26,15,0.1); background: white; border-radius: 6px; padding: 8px 0; box-shadow: 0 18px 40px rgba(42,26,15,0.18); }
+.about-dropdown a { display: block; padding: 10px 20px; color: var(--ink-soft); white-space: nowrap; }
+.about-dropdown a:hover { background: var(--cream); color: var(--teal); }
+.nav-cta { background: var(--gold); color: white !important; padding: 10px 20px; border-radius: var(--radius-sm); font-size: 12px; }
+.nav-cta:hover { background: var(--gold-deep) !important; color: white !important; }
+@media (max-width: 860px) {
+  .nav .wrap { gap: var(--sp-4); }
+  .nav-links { gap: var(--sp-4); flex-wrap: wrap; justify-content: flex-end; }
+  .nav-links a, .about-menu > button { font-size: 13px; }
+  .brand img { width: 48px; height: 48px; }
+}
+@media (max-width: 640px) {
+  .utility-bar .wrap { justify-content: center; text-align: center; }
+  .utility-bar .left a:nth-child(2) { display: none; }
+  .utility-bar .right { display: none; }
+  .nav .wrap { align-items: flex-start; }
+  .nav-links { max-width: 230px; gap: 10px 14px; }
+  .nav-links a.login-link, .about-menu { display: none; }
+  .nav-cta { width: 100%; text-align: center; }
+}
 
 /* HERO */
 .hero { position: relative; padding: var(--sp-10) 0 var(--sp-9); border-bottom: 1px solid var(--line); overflow: hidden; }
@@ -640,19 +664,34 @@ h1.display em { color: var(--teal); }
       <a href="tel:+19289637286">📞 928-963-7286</a>
       <a href="mailto:success@awakenedacademy.com">✉ success@awakenedacademy.com</a>
     </div>
-    <div class="right"><a href="https://awakenedacademy.com/featured-coaches">Find a Coach →</a></div>
+    <div class="right"><a href="https://awakenedacademy.com/schedule">Book a Call →</a></div>
   </div>
 </div>
 
 <nav class="nav">
   <div class="wrap">
-    <a href="https://awakenedacademy.com" class="brand">Awakened Academy®</a>
+    <a href="https://awakenedacademy.com" class="brand" aria-label="Awakened Academy home">
+      <img src="/images/logo-white.png" alt="Awakened Academy">
+    </a>
     <div class="nav-links">
-      <a href="https://awakenedacademy.com/about">About</a>
-      <a href="https://awakenedacademy.com/certification">Get Certified</a>
-      <a href="#wall-stories">Stories</a>
+      <a href="https://awakenedacademy.com">Home</a>
+      <div class="about-menu">
+        <button type="button">About <span class="chevron">▾</span></button>
+        <div class="about-dropdown">
+          <ul>
+            <li><a href="https://awakenedacademy.com/about">About</a></li>
+            <li><a href="https://awakenedacademy.com/origin-story">Origin Story</a></li>
+            <li><a href="https://awakenedacademy.com/where-we-are-coming-from">Where We Are Coming From</a></li>
+            <li><a href="https://awakenedacademy.com/awakened-academy-success-stories">Success Stories</a></li>
+            <li><a href="https://awakenedacademy.com/wall-of-gratitude">Wall of Gratitude</a></li>
+          </ul>
+        </div>
+      </div>
+      <a href="https://awakenedacademy.com/spiritual-life-coach-certification">Get Certified</a>
       <a href="https://awakenedacademy.com/free-gifts-for-you">Free Gifts</a>
-      <a href="https://awakenedacademy.com/book-a-call" class="nav-cta">Book a call</a>
+      <a href="https://awakenedacademy.com/wall-of-gratitude">Reviews</a>
+      <a href="https://awakenedacademy.mykajabi.com/login" class="login-link">Login</a>
+      <a href="https://awakenedacademy.com/spiritual-life-coach-certification#program-info" class="nav-cta">Download Free Brochure</a>
     </div>
   </div>
 </nav>
