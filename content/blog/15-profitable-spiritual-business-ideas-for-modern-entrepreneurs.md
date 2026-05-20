@@ -1,10 +1,10 @@
 ---
-title: "15 Profitable Spiritual Business Ideas for Modern Entrepreneurs"
+title: "15 Spiritual Business Ideas That Actually Make Money (2026)"
 slug: "15-profitable-spiritual-business-ideas-for-modern-entrepreneurs"
 url: "https://awakenedacademy.com/15-profitable-spiritual-business-ideas-for-modern-entrepreneurs/"
 date: ""
 author: "Michael Mackintosh"
-description: "Fifteen profitable spiritual business ideas spanning healing, coaching, intuitive arts, and holistic health for modern entrepreneurs."
+description: "From spiritual coaching to crystal healing to Reiki — 15 real business ideas ranked by income potential. Find the one that fits your gifts."
 hero_image: "https://images.pexels.com/photos/4729528/pexels-photo-4729528.jpeg?auto=compress&cs=tinysrgb&w=1600"
 images: ["https://images.pexels.com/photos/11435013/pexels-photo-11435013.jpeg?auto=compress&cs=tinysrgb&w=1600", "https://images.pexels.com/photos/8436574/pexels-photo-8436574.jpeg?auto=compress&cs=tinysrgb&w=1600"]
 flags:

@@ -1,10 +1,10 @@
 ---
-title: "How to Create a Signature Spiritual Coaching Package That Sells (2026 Guide)"
+title: "How to Create a Spiritual Coaching Package That Sells"
 slug: "how-to-create-a-signature-spiritual-coaching-package-that-sells"
 url: "https://awakenedacademy.com/how-to-create-a-signature-spiritual-coaching-package-that-sells/"
 date: "2025-05-27"
 author: "Michael Mackintosh"
-description: "Step-by-step framework for building a signature spiritual coaching package, naming, structuring, pricing, and launching with sacred strategy."
+description: "Stop charging by the hour. Build a signature coaching package with the right name, price, and structure — and launch it to aligned clients."
 hero_image: "https://images.pexels.com/photos/5147281/pexels-photo-5147281.jpeg?auto=compress&cs=tinysrgb&w=1600"
 images: ["https://images.pexels.com/photos/5710614/pexels-photo-5710614.jpeg?auto=compress&cs=tinysrgb&w=1600", "https://images.pexels.com/photos/7680054/pexels-photo-7680054.jpeg?auto=compress&cs=tinysrgb&w=1600"]
 flags: []

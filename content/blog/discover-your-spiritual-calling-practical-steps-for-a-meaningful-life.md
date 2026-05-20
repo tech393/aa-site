@@ -1,10 +1,10 @@
 ---
-title: "Discover Your Spiritual Calling: 7 Signs & 5 Steps to a Meaningful Life"
+title: "How to Discover Your Spiritual Calling: 7 Signs and 5 Steps"
 slug: "discover-your-spiritual-calling-practical-steps-for-a-meaningful-life"
 url: "https://awakenedacademy.com/discover-your-spiritual-calling-practical-steps-for-a-meaningful-life/"
 date: ""
 author: "Michael Mackintosh"
-description: "Seven signs your soul is calling you to awaken, plus five practical steps to recognize, embrace, and live out your spiritual calling and Dharma."
+description: "Seven signs your soul is calling you toward something bigger — and five practical steps to recognize it, claim it, and start living it."
 hero_image: "https://images.pexels.com/photos/1442973/pexels-photo-1442973.jpeg?auto=compress&cs=tinysrgb&w=1600"
 images: ["https://images.pexels.com/photos/28995953/pexels-photo-28995953.jpeg?auto=compress&cs=tinysrgb&w=1600", "https://images.pexels.com/photos/9159657/pexels-photo-9159657.jpeg?auto=compress&cs=tinysrgb&w=1600"]
 flags:
