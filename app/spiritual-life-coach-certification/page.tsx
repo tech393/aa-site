@@ -151,6 +151,91 @@ export default function CertPage() {
         </div>
       </section>
 
+      {/* WHAT IS SPIRITUAL LIFE COACH CERTIFICATION */}
+      <section className="bg-bg">
+        <div className="mx-auto max-w-wide px-6 py-20">
+          <Reveal>
+            <div className="mx-auto max-w-3xl">
+              <span className="eyebrow">The Certification</span>
+              <h2 className="mt-3 font-serif text-[clamp(28px,5vw,42px)] text-ink">
+                What Is Spiritual Life Coach Certification?
+              </h2>
+              <div className="gold-line mt-6" />
+              <div className="mt-8 space-y-5 text-[17px] leading-[1.85] text-ink2">
+                <p>
+                  Spiritual life coach certification is a structured training that qualifies you to guide
+                  others through spiritual transitions — purpose discovery, life direction, inner work,
+                  and building a coaching practice that reflects your values.
+                </p>
+                <p>
+                  It differs from general life coaching in focus. Where traditional coaching tends to
+                  target goals and performance, spiritual life coaching works with a person's relationship
+                  to meaning, calling, and the deeper questions that drive how they live and work.
+                </p>
+                <p>
+                  Awakened Academy's certification trains you across seven dimensions of this work: your
+                  inner foundation, the coaching craft, your dharma, creative expression, wealth, business
+                  systems, and client enrollment — everything needed to become a practising coach, not
+                  just a certificate holder.
+                </p>
+              </div>
+            </div>
+          </Reveal>
+        </div>
+      </section>
+
+      {/* HOW TO BECOME A CERTIFIED SPIRITUAL LIFE COACH */}
+      <section className="bg-warm">
+        <div className="mx-auto max-w-wide px-6 py-20">
+          <Reveal>
+            <div className="text-center">
+              <span className="eyebrow">Your Path</span>
+              <h2 className="mt-3 font-serif text-[clamp(28px,5vw,42px)] text-ink">
+                How To Become A Certified Spiritual Life Coach
+              </h2>
+              <div className="gold-line mt-6" />
+            </div>
+          </Reveal>
+
+          <ol className="mt-14 grid gap-8 md:grid-cols-3">
+            {[
+              {
+                step: "1",
+                label: "Book a discovery call",
+                body: "Talk with us. We'll walk through your situation, what you're called to, and whether Awakened Academy is the right fit. No pressure.",
+              },
+              {
+                step: "2",
+                label: "Enrol and begin the 7-pillar curriculum",
+                body: "Start with Pillar I at your own pace. The curriculum is 100% self-paced — 3–18 months depending on how fast you move.",
+              },
+              {
+                step: "3",
+                label: "Complete, get certified, start coaching",
+                body: "Finish the program, receive your certification, and start taking clients. Most students see their first paying client within 60 days of starting.",
+              },
+            ].map((item) => (
+              <Reveal key={item.step}>
+                <li className="flex flex-col rounded-md border border-ink/10 bg-white p-8 shadow-sm">
+                  <div className="font-serif text-[42px] leading-none text-gold/50">{item.step}</div>
+                  <div className="mt-4 font-serif text-[20px] leading-[1.3] text-ink">{item.label}</div>
+                  <p className="mt-3 flex-1 text-[15px] leading-[1.7] text-ink2">{item.body}</p>
+                </li>
+              </Reveal>
+            ))}
+          </ol>
+
+          <Reveal>
+            <p className="mt-12 text-center text-[16px] text-ink2">
+              Ready to take the first step?{" "}
+              <Link href="/schedule" className="font-medium text-teal underline-offset-2 hover:underline">
+                Book a discovery call →
+              </Link>
+            </p>
+          </Reveal>
+        </div>
+      </section>
+
       {/* WHAT YOU'LL EXPERIENCE, 17 image bands */}
       <section className="bg-warm">
         <div className="mx-auto max-w-widest px-6 py-16 text-center">
