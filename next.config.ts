@@ -242,6 +242,10 @@ const config: NextConfig = {
     { source: "/ep-template/too-many-projects-but-no-real-focus-or-results", destination: "/ep", permanent: true },
       // === Renamed essay: 2025 → 2026 ===
       { source: "/why-the-world-desperately-needs-spiritual-coaches-in-2025", destination: "/why-the-world-desperately-needs-spiritual-coaches-in-2026", permanent: true },
+      // === Year-based comparison posts consolidated into evergreen slug (May 2026) ===
+      { source: "/top-spiritual-coaching-programs-for-2026-transform-your-life", destination: "/best-spiritual-life-coach-certification-programs", permanent: true },
+      { source: "/top-rated-spiritual-life-coach-certification-programs-of-2025", destination: "/best-spiritual-life-coach-certification-programs", permanent: true },
+      { source: "/top-spiritual-life-coach-training-programs-for-2026", destination: "/best-spiritual-life-coach-certification-programs", permanent: true },
       // === Security hardening: block residual WP-admin/login/content paths post-migration ===
       { source: "/wp-admin", destination: "/", permanent: false },
       { source: "/wp-admin/:path*", destination: "/", permanent: false },
