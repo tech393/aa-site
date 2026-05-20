@@ -5,3 +5,7 @@
 node_modules
 *.tsbuildinfo
 npm-debug.log*
+*.zip
+*.docx
+*.xlsx
+*.pdf
