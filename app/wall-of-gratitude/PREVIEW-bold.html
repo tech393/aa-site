@@ -5121,26 +5121,6 @@ const TESTIMONIALS = [
     source: '/Michael pasted 2026-05-19 — Sacred Session testimonial'
   },
 ];
-const VIDEO_TESTIMONIALS = [
-  {
-    id: 'video-1',
-    youtubeId: 'RgrhK8i0ul4',
-    name: 'Awakened Academy Graduate',
-    caption: 'Speaking about the program in their own words.'
-  },
-  {
-    id: 'video-2',
-    youtubeId: 'Ku2Yhb8PA7I',
-    name: 'Awakened Academy Graduate',
-    caption: 'Speaking about the program in their own words.'
-  }
-  // NOTE for Dan — 2 more video testimonials exist as MP4 files in
-  // Google Drive (/Testimonial Video/ folder, IDs:
-  //   1IRP7ndE3DE52UKk5trDxORMAsDf5js-g  (Amaia Madrid Part 1.mp4, 73MB)
-  //   1p0ETgcKwL1vf_8g5Go2fJ08sAavGcteh  (Amaia Madrid Part 2.mp4, 72MB)
-  // Upload them to YouTube (unlisted is fine) and add two entries here
-  // with the new youtubeIds. The grid will auto-expand.
-];
 const INSIGHT_TIMER_LIVE_REVIEWS = [
   { name: 'AECIO Flávio Costa', location: 'LISBON, PORTUGAL', rating: 4.8, track: 'Subconscious Reprogramming Meditation', text: 'Another powerful and inspiring meditation—guiding me to envision the life ahead. Grateful beyond words for this sacred journey within, and for being part of the unfolding human story. Thank you, thank you, thank you. Miracles are truly unfolding.', timeAgo: '4 months ago' },
   { name: 'Cynthia Henry', location: 'RANCHO CORDOVA', rating: 4.6, track: 'Manifest Faster: Bless Others’ Success', text: 'Oh my. This is lovely and powerful. By focusing on what I want for several people I love I felt transformed from a whole set of upset feelings about myself and situation. I’m no longer bogged down. I feel more connected and beneficial to them and infused with the good energy I was sending them. A life lesson I would have said I knew. Thank you; blessings to you.', timeAgo: '10 months ago' },
@@ -5911,20 +5891,6 @@ function renderInsightTimer() {
   } else { btn.style.display = 'none'; }
 }
 
-function renderVideos() {
-  document.getElementById('videoGrid').innerHTML = VIDEO_TESTIMONIALS.map((v, i) => `
-    <div class="video-card reveal" style="animation-delay:${Math.min(i*0.08, 0.3)}s">
-      <a href="https://www.youtube.com/watch?v=${esc(v.youtubeId)}" target="_blank" rel="noopener" class="video-frame">
-        <img src="img/videos/${esc(v.youtubeId)}.jpg" alt="${esc(v.name)}" onerror="this.src='https://i.ytimg.com/vi/${esc(v.youtubeId)}/hqdefault.jpg'" />
-        <div class="video-play"></div>
-      </a>
-      <div class="video-meta">
-        <div class="video-name">${esc(v.name)}</div>
-        <div class="video-caption">${esc(v.caption)}</div>
-      </div>
-    </div>`).join('');
-}
-
 function renderAmazon() {
   document.getElementById('amzGrid').innerHTML = AMAZON_REVIEWS.map((r, i) => {
     const body = r.body.length > 280 ? r.body.slice(0, 280) + '…' : r.body;
@@ -5978,18 +5944,6 @@ const VIDEO_WALL = [
   { type: 'mp4', src: 'video/testimonial-3.mp4', poster: 'img/videos/testimonial-3.jpg', who: 'Mia Garces', outcome: "So grateful for Awakened Academy.", title: "Mia Garces" },
   { id: '966068244', type: 'vimeo', who: 'Awakened Academy', outcome: "The Awakened Academy experience, in their own words.", title: "The Awakened Academy experience" }
 ];
-function renderVideoWall() {
-  const grid = document.getElementById('videoWallGrid');
-  if (!grid) return;
-  grid.innerHTML = VIDEO_WALL.map((v, i) => `
-    <div class="video-wall-card reveal" style="animation-delay:${Math.min(i*0.06, 0.3)}s" onclick="playVimeo(this, '${v.id}')">
-      <div class="vw-poster" style="background-image: linear-gradient(180deg, rgba(15,26,56,0.25) 0%, rgba(15,26,56,0.85) 100%), url('https://vumbnail.com/${v.id}.jpg'); background-size: cover; background-position: center;">
-        <div class="vw-play">▶</div>
-        <div class="vw-title">${v.title}</div>
-      </div>
-    </div>`).join('');
-}
-
 function playMp4(cardEl, src, poster) {
   cardEl.innerHTML = `<video controls autoplay preload="metadata" poster="${poster}" style="position:absolute;inset:0;width:100%;height:100%;background:var(--ink);"><source src="${src}" type="video/mp4"/></video>`;
 }
