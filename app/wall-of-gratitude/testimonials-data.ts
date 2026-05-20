@@ -215,7 +215,7 @@ export const TESTIMONIALS: Testimonial[] = [
       '4 online courses published. Meditations played 900,000 times. I own my time, mentally, emotionally, financially.',
     quote:
       "Today, I experience joy by fulfilling my mission and doing meaningful work. I am a spiritual mentor who helps beautiful souls to find their way back home, to their hearts. I published four online courses, several guided meditations that have been played almost 400 thousand times, and feel confident to launch my YouTube channel.\n\nI am now the owner of my time. I have a great return not only financially but most importantly mentally, emotionally, and spiritually. Michael and Arielle brilliantly teach us how to become more resourceful in order to gain spiritual knowledge and practice it wisely. They help us to become humble, teachable and to use our unconditional love as our biggest instrument of work.\n\nFrom the bottom of my heart, I would like to express my deepest love for the Awakened Academy. Arielle & Michael became angels in my life. Their love, compassionate listening, and wisdom are admirable. I will be forever grateful for them as they helped me heal my past and to build the future that I truly desired. More than anything they helped me see the abundant power within myself.\n\nAfter many years of coming back home not only exhausted but uninspired and depressed, I said enough! I decided to work hard and take responsibility for my life, leaving the old me behind. I feel a sense of constant lightness now. I thought that only the monks of Tibet could feel this or people who have been on a spiritual journey for a long time. It's magical! Every day is a new opportunity to study and serve with love.",
-    photoSrc: '/img/testimonials/Lyne-Johnson.jpg',
+    photoSrc: '/img/testimonials/Lyne-Johnson-Jan-2021.jpg',
     source: '/Context/Awakened_Academy_Master_Testimonials.md',
     statBlock: { value: '900K+', label: 'meditation plays · 4 courses published' }
   },
@@ -2057,7 +2057,7 @@ export const TESTIMONIALS: Testimonial[] = [
     pullQuote: 'I just had a client sign up to work with me for $1500!!!',
     quote:
       "I truly have so much gratitude in my heart for you, you are amazing!! I want to thank you for the motivation and let you know that I just had a client sign up to work with me for $1500!!! Yay!!! I'm very grateful to you and God I know the momentum will continue!! Much Love & Many, Many Blessings my friend ;-)).",
-    photoSrc: null,
+    photoSrc: '/img/testimonials/Screen-Shot-2014-10-22-at-4.18.06-PM-optimized.png',
     outcomeTag: 'Signed $1500 client',
     source: '/Michael pasted 2026-05-19'
   },
