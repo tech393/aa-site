@@ -19,38 +19,38 @@ import {
 } from "@/lib/cert-data";
 
 export const metadata: Metadata = {
-  title: { absolute: "Spiritual Life Coach Certification | Awakened Academy" },
+  title: { absolute: "Spiritual Life Coach Certification — Become Certified | Awakened Academy" },
   description:
-    "Become a certified spiritual life coach with Awakened Academy. 14 transformation modules. 650+ coaches certified in 25+ countries. Live a spiritual life and make a great living.",
+    "Become a certified spiritual life coach online. 650+ coaches certified in 25+ countries since 2012. 14 transformation modules. 100% self-paced. Download the free brochure.",
   alternates: { canonical: "/spiritual-life-coach-certification" },
   openGraph: {
-    title: "Spiritual Life Coach Certification | Awakened Academy",
+    title: "Spiritual Life Coach Certification — Become Certified | Awakened Academy",
     description:
-      "Become a certified spiritual life coach with Awakened Academy. 14 transformation modules. 650+ coaches certified in 25+ countries. Live a spiritual life and make a great living.",
+      "Become a certified spiritual life coach online. 650+ coaches certified in 25+ countries since 2012. 14 transformation modules. 100% self-paced. Download the free brochure.",
     url: `${SITE.url}/spiritual-life-coach-certification`,
   },
 };
 
 // 17 image-bands, one image per benefit (sourced from the WP cert page).
 // `side` controls which side the white card sits on so the subject stays visible.
-const BANDS: { image: string; side: "left" | "right"; imagePosition?: string }[] = [
-  { image: "/images/bands/woman-on-mountain-top.jpg",                          side: "left",  imagePosition: "center top" }, // 1. Tap into your unique gifts
-  { image: "/images/bands/Michael-Chair-2.jpg",                                side: "left",  imagePosition: "right top"  }, // 2. 1-on-1 access to Michael
-  { image: "/images/bands/group-meditation.jpg",                               side: "left",  imagePosition: "center top" }, // 3. Join a new generation
-  { image: "/images/bands/hands-over.jpg",                                     side: "right" },                              // 4. Real loving connection
-  { image: "/images/bands/woman-on-grass-2.jpg",                               side: "left",  imagePosition: "center top" }, // 5. Genuine confidence
-  { image: "/images/bands/coffee-sunset.jpg",                                  side: "right" },                              // 6. Be spiritual and wealthy
-  { image: "/images/bands/shutterstock_117237259-e1778524710805.jpg",          side: "left"  },                              // 7. Coach others while transforming yourself
-  { image: "/images/bands/Arielle_Writing-Hero-2.png",                         side: "right", imagePosition: "left top"   }, // 8. Proven holistic teaching methods
-  { image: "/images/bands/purple-pink-mountains.jpg",                          side: "left"  },                              // 9. Be on the leading edge
-  { image: "/images/bands/wave-sunset.jpg",                                    side: "right" },                              // 10. Reclaim your time
-  { image: "/images/bands/woman-on-mac.jpg",                                   side: "left",  imagePosition: "center top" }, // 11. Live and work from anywhere
-  { image: "/images/bands/team-success.jpg",                                   side: "right" },                              // 12. Finish what you start
-  { image: "/images/bands/plains-sunset.jpg",                                  side: "left"  },                              // 13. Learn from the pioneer
-  { image: "/images/bands/WOMAN-LOTUS-POOL.jpg",                               side: "right", imagePosition: "center top" }, // 14. From information to transformation
-  { image: "/images/bands/shutterstock_648757249-e1778524833119.jpg",          side: "left"  },                              // 15. Unique soul purpose framework
-  { image: "/images/bands/tablet.jpg",                                         side: "right" },                              // 16. Course material yours to keep
-  { image: "/images/bands/woman-with-tablet.jpg",                              side: "left",  imagePosition: "center top" }, // 17. Built for the long run
+const BANDS: { image: string; side: "left" | "right"; imagePosition?: string; imageAlt: string }[] = [
+  { image: "/images/bands/woman-on-mountain-top.jpg",                          side: "left",  imagePosition: "center top", imageAlt: "Woman standing on a mountain peak at sunrise" },
+  { image: "/images/bands/Michael-Chair-2.jpg",                                side: "left",  imagePosition: "right top",  imageAlt: "Michael Mackintosh seated during a one-on-one coaching session" },
+  { image: "/images/bands/group-meditation.jpg",                               side: "left",  imagePosition: "center top", imageAlt: "Group of people in a seated outdoor meditation circle" },
+  { image: "/images/bands/hands-over.jpg",                                     side: "right",                              imageAlt: "Two pairs of hands held gently together" },
+  { image: "/images/bands/woman-on-grass-2.jpg",                               side: "left",  imagePosition: "center top", imageAlt: "Woman sitting on grass in peaceful contemplation" },
+  { image: "/images/bands/coffee-sunset.jpg",                                  side: "right",                              imageAlt: "Person enjoying coffee at golden hour with a scenic view" },
+  { image: "/images/bands/shutterstock_117237259-e1778524710805.jpg",          side: "left",                               imageAlt: "Person in a mindful moment of self-reflection outdoors" },
+  { image: "/images/bands/Arielle_Writing-Hero-2.png",                         side: "right", imagePosition: "left top",   imageAlt: "Arielle Hecht writing at a desk" },
+  { image: "/images/bands/purple-pink-mountains.jpg",                          side: "left",                               imageAlt: "Purple and pink mountain range at dusk" },
+  { image: "/images/bands/wave-sunset.jpg",                                    side: "right",                              imageAlt: "Ocean wave rolling in at sunset" },
+  { image: "/images/bands/woman-on-mac.jpg",                                   side: "left",  imagePosition: "center top", imageAlt: "Woman working on a laptop from a bright home workspace" },
+  { image: "/images/bands/team-success.jpg",                                   side: "right",                              imageAlt: "Team celebrating a shared achievement together" },
+  { image: "/images/bands/plains-sunset.jpg",                                  side: "left",                               imageAlt: "Wide open plains lit by a golden sunset" },
+  { image: "/images/bands/WOMAN-LOTUS-POOL.jpg",                               side: "right", imagePosition: "center top", imageAlt: "Woman in lotus meditation pose by a still pool" },
+  { image: "/images/bands/shutterstock_648757249-e1778524833119.jpg",          side: "left",                               imageAlt: "Person in a reflective posture with sunlight streaming in" },
+  { image: "/images/bands/tablet.jpg",                                         side: "right",                              imageAlt: "Tablet displaying digital course materials" },
+  { image: "/images/bands/woman-with-tablet.jpg",                              side: "left",  imagePosition: "center top", imageAlt: "Woman reading course content on a tablet" },
 ];
 
 export default function CertPage() {
@@ -81,7 +81,7 @@ export default function CertPage() {
             </Reveal>
             <Reveal>
               <h1 className="mt-6 font-serif text-[clamp(36px,5.8vw,60px)] leading-[1.05]">
-                Transform your <em className="text-gold-light">spiritual journey</em> into a calling
+                Spiritual Life Coach Certification — Transform Your <em className="text-gold-light">Calling</em> Into a Career
               </h1>
             </Reveal>
             <Reveal>
@@ -157,7 +157,7 @@ export default function CertPage() {
           <Reveal>
             <span className="eyebrow">What You'll Experience</span>
             <h2 className="mt-3 font-serif text-[clamp(28px,5vw,42px)] text-ink">
-              A complete training across <em>every dimension</em>
+              What You'll Learn in This <em>Spiritual Life Coach Certification</em>
             </h2>
             <div className="gold-line mt-6" />
           </Reveal>
@@ -168,7 +168,7 @@ export default function CertPage() {
             <BenefitBand
               key={b.title}
               image={BANDS[i].image}
-              imageAlt=""
+              imageAlt={BANDS[i].imageAlt}
               title={b.title}
               body={b.body}
               side={BANDS[i].side}
@@ -223,7 +223,7 @@ export default function CertPage() {
             <div className="text-center">
               <span className="eyebrow">The Curriculum</span>
               <h2 className="mt-3 font-serif text-[clamp(28px,5vw,42px)] text-ink">
-                The <em>Seven Awakened Pillars</em>
+                The Certification Curriculum: <em>Seven Awakened Pillars</em>
               </h2>
               <div className="gold-line mt-6" />
               <p className="mx-auto mt-6 max-w-2xl text-[16px] leading-[1.7] text-ink2">
@@ -366,7 +366,7 @@ export default function CertPage() {
         </div>
       </section>
 
-      <FAQ items={FAQ_ITEMS} />
+      <FAQ items={FAQ_ITEMS} title="Spiritual Coaching Certification FAQs" />
 
       <StickyCTABar
         title="Become a Certified Spiritual Life Coach"
