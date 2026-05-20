@@ -1,0 +1,1260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Your Dharma Code — Find What Makes You Different as a Coach</title>
+<meta name="description" content="A personalized reading that names your specific gifts, the people you're meant to help, and what makes you different from every other coach out there. Personalized to your birth chart and delivered within 24 hours. $17.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400;1,500&family=Cinzel:wght@400;500;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg-base: #1E0E3A;
+    --bg-mid: #2A1555;
+    --bg-raised: #3B1D6B;
+    --bg-glow: #5C2F9B;
+    --gold: #D4A94F;
+    --gold-bright: #F2D08A;
+    --gold-deep: #9E7C35;
+    --amethyst: #A864C7;
+    --amethyst-deep: #6B2D8E;
+    --rose: #D4A5B8;
+    --rose-soft: rgba(212, 165, 184, 0.35);
+    --cream: #FCF5E8;
+    --cream-muted: #E5D8BD;
+    --muted: #A697B8;
+    --serif: 'Cormorant Garamond', Georgia, serif;
+    --display: 'Cinzel', 'Cormorant Garamond', serif;
+    --body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--bg-base);
+    color: var(--cream);
+    font-family: var(--body);
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 1.8;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+    position: relative;
+  }
+
+  /* Rich cosmic background — aurora nebula */
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background:
+      radial-gradient(ellipse 80% 60% at 20% 10%, rgba(168, 100, 199, 0.35), transparent 60%),
+      radial-gradient(ellipse 70% 50% at 85% 75%, rgba(212, 165, 184, 0.15), transparent 60%),
+      radial-gradient(ellipse 60% 40% at 50% 40%, rgba(107, 45, 142, 0.4), transparent 70%),
+      radial-gradient(ellipse 90% 90% at 50% 100%, rgba(30, 14, 58, 0.6), transparent 70%);
+    pointer-events: none;
+    z-index: 0;
+    animation: aurora 30s ease-in-out infinite alternate;
+  }
+
+  @keyframes aurora {
+    0% { transform: translate(0, 0) scale(1); }
+    50% { transform: translate(-2%, 1%) scale(1.05); }
+    100% { transform: translate(1%, -1%) scale(1); }
+  }
+
+  /* Star field */
+  .stars {
+    position: fixed; inset: 0; pointer-events: none; z-index: 1;
+  }
+  .stars::before, .stars::after {
+    content: '';
+    position: absolute; inset: 0;
+    background-image:
+      radial-gradient(1.5px 1.5px at 15% 25%, rgba(255,255,255,0.85), transparent),
+      radial-gradient(1px 1px at 60% 70%, rgba(242, 208, 138, 0.7), transparent),
+      radial-gradient(2px 2px at 80% 20%, rgba(255,255,255,0.8), transparent),
+      radial-gradient(1px 1px at 35% 85%, rgba(255,255,255,0.6), transparent),
+      radial-gradient(1.5px 1.5px at 90% 50%, rgba(242, 208, 138, 0.7), transparent),
+      radial-gradient(1px 1px at 10% 60%, rgba(255,255,255,0.65), transparent),
+      radial-gradient(2.5px 2.5px at 45% 15%, rgba(242, 208, 138, 0.8), transparent),
+      radial-gradient(1px 1px at 70% 40%, rgba(255,255,255,0.7), transparent),
+      radial-gradient(1px 1px at 25% 50%, rgba(255,255,255,0.5), transparent),
+      radial-gradient(1.5px 1.5px at 55% 95%, rgba(242, 208, 138, 0.6), transparent),
+      radial-gradient(1px 1px at 5% 90%, rgba(255,255,255,0.6), transparent),
+      radial-gradient(1px 1px at 95% 85%, rgba(212, 165, 184, 0.6), transparent);
+    background-repeat: repeat;
+    background-size: 450px 450px;
+    opacity: 0.75;
+  }
+  .stars::after {
+    background-size: 700px 700px;
+    animation: twinkle 5s ease-in-out infinite;
+    opacity: 0.55;
+  }
+  @keyframes twinkle { 0%, 100% { opacity: 0.3; } 50% { opacity: 0.8; } }
+
+  main, header, section, footer { position: relative; z-index: 2; }
+
+  .container { max-width: 800px; margin: 0 auto; padding: 0 30px; }
+  .container-narrow { max-width: 700px; margin: 0 auto; padding: 0 30px; }
+
+  /* TYPOGRAPHY */
+  h1, h2, h3 {
+    font-family: var(--serif);
+    font-weight: 400;
+    letter-spacing: -0.01em;
+    color: var(--cream);
+    line-height: 1.2;
+  }
+
+  h1 {
+    font-size: clamp(2.3rem, 6vw, 3.4rem);
+    font-weight: 400;
+    margin-bottom: 1.5rem;
+    letter-spacing: -0.015em;
+  }
+  h1 em { font-style: italic; color: var(--gold-bright); font-weight: 500; }
+
+  h2 {
+    font-size: clamp(1.8rem, 4.4vw, 2.3rem);
+    margin: 0 auto 1.7rem;
+    max-width: 640px;
+  }
+  h2.centered { text-align: center; }
+  h2 em { font-style: italic; color: var(--gold-bright); }
+
+  h3 {
+    font-size: 1.12rem;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+    color: var(--gold-bright);
+    font-family: var(--body);
+    letter-spacing: 0.01em;
+  }
+
+  p {
+    margin-bottom: 1.4rem;
+    color: var(--cream-muted);
+    font-size: 1.05rem;
+  }
+  p.lead {
+    font-size: 1.2rem;
+    color: var(--cream);
+    line-height: 1.65;
+    font-weight: 300;
+  }
+
+  em.gold { color: var(--gold-bright); font-style: italic; font-weight: 400; }
+  strong { color: var(--cream); font-weight: 500; }
+
+  /* ORNAMENTAL DIVIDERS */
+  .divider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 22px;
+    margin: 3.2rem auto;
+    max-width: 360px;
+    color: var(--gold);
+  }
+  .divider-line {
+    flex: 1;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--gold), transparent);
+  }
+  .divider-ornament {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--gold-bright);
+    font-size: 0.9rem;
+    letter-spacing: 0.15em;
+  }
+  .divider-ornament svg {
+    width: 26px; height: 26px;
+    opacity: 0.95;
+  }
+
+  /* ========== HERO ========== */
+  .hero {
+    min-height: 94vh;
+    display: flex; align-items: center; justify-content: center;
+    text-align: center; padding: 80px 28px 70px;
+    position: relative;
+  }
+  .hero-inner { max-width: 780px; position: relative; z-index: 3; }
+
+  /* Zodiac wheel behind hero */
+  .zodiac-wheel {
+    position: absolute;
+    top: 50%; left: 50%;
+    width: min(90vw, 620px);
+    height: min(90vw, 620px);
+    transform: translate(-50%, -50%);
+    opacity: 0.16;
+    z-index: 1;
+    pointer-events: none;
+    animation: slowSpin 180s linear infinite;
+  }
+  @keyframes slowSpin {
+    from { transform: translate(-50%, -50%) rotate(0deg); }
+    to { transform: translate(-50%, -50%) rotate(360deg); }
+  }
+
+  .hero-eyebrow {
+    font-family: var(--display);
+    font-size: 0.74rem;
+    letter-spacing: 0.44em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 2.2rem;
+    opacity: 0.95;
+  }
+
+  .hero-sub {
+    font-size: clamp(1.08rem, 2.3vw, 1.22rem);
+    color: var(--cream);
+    margin-bottom: 2.8rem;
+    line-height: 1.65;
+    max-width: 600px;
+    margin-left: auto; margin-right: auto;
+    font-weight: 300;
+    opacity: 0.92;
+  }
+
+  .hero-sigil {
+    width: 110px; height: 110px;
+    margin: 0 auto 2.4rem;
+    display: block;
+    position: relative;
+    filter: drop-shadow(0 0 24px rgba(242, 208, 138, 0.5));
+  }
+
+  /* Celestial row: sun - moon - triple goddess */
+  .celestial-row {
+    display: flex; align-items: center; justify-content: center;
+    gap: 30px; margin-bottom: 1.8rem;
+    opacity: 0.85;
+  }
+  .celestial-row svg { width: 28px; height: 28px; }
+
+  /* ========== CTA ========== */
+  .cta-wrapper { text-align: center; margin: 2rem 0 1rem; }
+
+  .cta-button {
+    display: inline-block;
+    font-family: var(--display);
+    font-size: 0.9rem;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    color: var(--bg-base);
+    background: linear-gradient(135deg, #F2D08A 0%, #D4A94F 45%, #A8852C 100%);
+    padding: 22px 46px;
+    border: none;
+    border-radius: 3px;
+    text-decoration: none;
+    cursor: pointer;
+    font-weight: 600;
+    box-shadow:
+      0 0 0 1px rgba(242, 208, 138, 0.45),
+      0 0 50px rgba(212, 169, 79, 0.4),
+      0 0 90px rgba(168, 100, 199, 0.3),
+      0 6px 24px rgba(0, 0, 0, 0.6);
+    transition: all 0.35s ease;
+    position: relative;
+  }
+  .cta-button:hover {
+    transform: translateY(-2px);
+    box-shadow:
+      0 0 0 1px rgba(242, 208, 138, 0.7),
+      0 0 70px rgba(242, 208, 138, 0.55),
+      0 0 120px rgba(168, 100, 199, 0.5),
+      0 8px 32px rgba(0, 0, 0, 0.7);
+  }
+
+  .cta-cap {
+    display: block;
+    margin-top: 1.3rem;
+    font-size: 0.9rem;
+    letter-spacing: 0.03em;
+    color: var(--cream-muted);
+    font-style: italic;
+    font-family: var(--serif);
+  }
+  .cta-cap em { color: var(--gold-bright); font-style: normal; font-weight: 500; }
+
+  /* ========== SECTIONS ========== */
+  section {
+    padding: 75px 0;
+    position: relative;
+  }
+  section.mid {
+    background: linear-gradient(180deg,
+      transparent,
+      rgba(59, 29, 107, 0.45) 15%,
+      rgba(59, 29, 107, 0.45) 85%,
+      transparent);
+  }
+  section.deep {
+    background: linear-gradient(180deg,
+      transparent,
+      rgba(107, 45, 142, 0.3) 10%,
+      rgba(107, 45, 142, 0.35) 50%,
+      rgba(107, 45, 142, 0.3) 90%,
+      transparent);
+  }
+
+  /* Constellation accent overlays on some sections */
+  .constellation-overlay {
+    position: absolute;
+    opacity: 0.25;
+    pointer-events: none;
+    z-index: 0;
+  }
+  .constellation-overlay.top-right {
+    top: 30px; right: 20px;
+    width: 140px; height: 140px;
+  }
+  .constellation-overlay.bottom-left {
+    bottom: 30px; left: 20px;
+    width: 120px; height: 120px;
+  }
+
+  .section-eyebrow {
+    font-family: var(--display);
+    font-size: 0.72rem;
+    letter-spacing: 0.4em;
+    text-transform: uppercase;
+    color: var(--gold);
+    text-align: center;
+    margin-bottom: 1.4rem;
+    opacity: 0.95;
+  }
+
+  .section-sigil {
+    width: 60px; height: 60px;
+    margin: 0 auto 1.2rem;
+    display: block;
+    opacity: 0.9;
+    filter: drop-shadow(0 0 12px rgba(242, 208, 138, 0.4));
+  }
+
+  /* ========== LEARN LIST ========== */
+  .learn-list {
+    list-style: none;
+    counter-reset: learn-counter;
+    margin: 2.4rem 0;
+  }
+
+  .learn-list li {
+    counter-increment: learn-counter;
+    position: relative;
+    padding-left: 68px;
+    margin-bottom: 2.2rem;
+  }
+
+  .learn-list li::before {
+    content: counter(learn-counter);
+    position: absolute;
+    left: 0; top: -2px;
+    width: 46px; height: 46px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--gold-bright);
+    font-family: var(--serif);
+    font-style: italic;
+    font-size: 1.45rem;
+    font-weight: 500;
+    background:
+      radial-gradient(circle, rgba(168, 100, 199, 0.3), rgba(107, 45, 142, 0.15));
+    border: 1px solid var(--gold);
+    border-radius: 50%;
+    box-shadow:
+      0 0 18px rgba(168, 100, 199, 0.4),
+      inset 0 0 12px rgba(242, 208, 138, 0.1);
+  }
+
+  .learn-list li h3 {
+    margin-bottom: 0.5rem;
+    font-size: 1.12rem;
+    letter-spacing: 0.02em;
+    color: var(--gold-bright);
+  }
+  .learn-list li p {
+    margin-bottom: 0;
+    font-size: 1rem;
+    line-height: 1.7;
+    color: var(--cream-muted);
+  }
+
+  /* ========== COMPARISON TABLE ========== */
+  .comparison-wrap {
+    margin: 2.8rem auto 1.2rem;
+    max-width: 880px;
+    position: relative;
+  }
+  .comparison-wrap::before, .comparison-wrap::after {
+    content: '✦';
+    position: absolute;
+    color: var(--gold);
+    font-size: 1.4rem;
+    top: -14px;
+  }
+  .comparison-wrap::before { left: 50%; transform: translateX(-130px); }
+  .comparison-wrap::after { left: 50%; transform: translateX(110px); }
+
+  .comparison-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    background:
+      radial-gradient(ellipse at center, rgba(107, 45, 142, 0.3), rgba(30, 14, 58, 0.5));
+    border: 1px solid rgba(212, 169, 79, 0.3);
+    border-radius: 6px;
+    overflow: hidden;
+    font-family: var(--body);
+    box-shadow:
+      0 0 40px rgba(168, 100, 199, 0.15),
+      inset 0 0 40px rgba(107, 45, 142, 0.2);
+  }
+
+  .comparison-table thead th {
+    background: rgba(30, 14, 58, 0.7);
+    color: var(--cream-muted);
+    font-family: var(--display);
+    font-size: 0.72rem;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    font-weight: 500;
+    padding: 20px 14px;
+    text-align: center;
+    border-bottom: 1px solid rgba(212, 169, 79, 0.3);
+    vertical-align: middle;
+    line-height: 1.3;
+  }
+
+  .comparison-table thead th.feature-col {
+    text-align: left;
+    font-family: var(--body);
+    letter-spacing: 0.06em;
+    color: var(--muted);
+    font-size: 0.68rem;
+    width: 28%;
+  }
+
+  .comparison-table thead th.highlight {
+    background: linear-gradient(180deg, rgba(168, 100, 199, 0.55), rgba(107, 45, 142, 0.35));
+    color: var(--gold-bright);
+    font-size: 0.82rem;
+    letter-spacing: 0.14em;
+    position: relative;
+    text-shadow: 0 0 12px rgba(242, 208, 138, 0.3);
+  }
+  .comparison-table thead th.highlight::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-left: 1.5px solid rgba(242, 208, 138, 0.6);
+    border-right: 1.5px solid rgba(242, 208, 138, 0.6);
+    border-top: 1.5px solid rgba(242, 208, 138, 0.6);
+    pointer-events: none;
+  }
+  .comparison-table thead th.highlight::after {
+    content: '✦';
+    position: absolute;
+    top: -10px; left: 50%; transform: translateX(-50%);
+    font-size: 1rem;
+    color: var(--gold-bright);
+    background: var(--bg-base);
+    padding: 0 6px;
+  }
+
+  .comparison-table tbody td {
+    padding: 18px 14px;
+    text-align: center;
+    border-bottom: 1px solid rgba(212, 169, 79, 0.15);
+    font-size: 0.96rem;
+    color: var(--cream-muted);
+    vertical-align: middle;
+  }
+
+  .comparison-table tbody tr:last-child td {
+    border-bottom: none;
+  }
+
+  .comparison-table tbody td.feature-col {
+    text-align: left;
+    color: var(--cream);
+    font-family: var(--serif);
+    font-size: 1.05rem;
+    font-style: italic;
+    font-weight: 400;
+    padding-left: 22px;
+  }
+
+  .comparison-table tbody td.highlight {
+    background: rgba(168, 100, 199, 0.2);
+    color: var(--gold-bright);
+    font-weight: 500;
+    position: relative;
+  }
+  .comparison-table tbody td.highlight::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-left: 1.5px solid rgba(242, 208, 138, 0.6);
+    border-right: 1.5px solid rgba(242, 208, 138, 0.6);
+    pointer-events: none;
+  }
+  .comparison-table tbody tr:last-child td.highlight::before {
+    border-bottom: 1.5px solid rgba(242, 208, 138, 0.6);
+  }
+
+  .comparison-table .price {
+    font-family: var(--serif);
+    font-size: 1.18rem;
+    font-style: italic;
+    font-weight: 500;
+  }
+  .comparison-table .highlight .price {
+    color: var(--gold-bright);
+    font-size: 1.5rem;
+    font-style: normal;
+    font-weight: 500;
+    text-shadow: 0 0 10px rgba(242, 208, 138, 0.4);
+  }
+
+  .check {
+    color: var(--gold-bright);
+    font-size: 1.3rem;
+    font-weight: 600;
+    display: inline-block;
+    text-shadow: 0 0 10px rgba(242, 208, 138, 0.5);
+  }
+  .cross {
+    color: var(--muted);
+    font-size: 1rem;
+    opacity: 0.5;
+  }
+  .partial {
+    color: var(--cream-muted);
+    font-size: 0.85rem;
+    font-style: italic;
+    font-family: var(--serif);
+    opacity: 0.75;
+  }
+
+  .comparison-caption {
+    text-align: center;
+    font-family: var(--serif);
+    font-style: italic;
+    color: var(--cream-muted);
+    font-size: 1rem;
+    margin-top: 1.6rem;
+  }
+
+  /* COMPARISON MOBILE */
+  @media (max-width: 720px) {
+    .comparison-table thead th {
+      font-size: 0.6rem;
+      letter-spacing: 0.08em;
+      padding: 14px 6px;
+    }
+    .comparison-table thead th.highlight { font-size: 0.68rem; }
+    .comparison-table thead th.feature-col {
+      font-size: 0.58rem;
+      width: 30%;
+    }
+    .comparison-table tbody td {
+      padding: 13px 6px;
+      font-size: 0.82rem;
+    }
+    .comparison-table tbody td.feature-col {
+      font-size: 0.9rem;
+      padding-left: 12px;
+      line-height: 1.4;
+    }
+    .comparison-table .price { font-size: 0.95rem; }
+    .comparison-table .highlight .price { font-size: 1.15rem; }
+    .partial { font-size: 0.72rem; }
+    .check { font-size: 1.05rem; }
+  }
+
+  /* ========== OFFER ========== */
+  .offer-box {
+    max-width: 580px;
+    margin: 2.8rem auto;
+    padding: 54px 40px;
+    background:
+      radial-gradient(ellipse at top, rgba(168, 100, 199, 0.4), transparent 60%),
+      radial-gradient(ellipse at bottom, rgba(212, 165, 184, 0.1), transparent 60%),
+      rgba(30, 14, 58, 0.7);
+    border: 1.5px solid var(--gold);
+    border-radius: 4px;
+    text-align: center;
+    position: relative;
+    box-shadow:
+      0 0 50px rgba(168, 100, 199, 0.25),
+      0 0 100px rgba(107, 45, 142, 0.2),
+      inset 0 0 60px rgba(107, 45, 142, 0.15);
+  }
+  .offer-box::before, .offer-box::after {
+    content: '✦';
+    position: absolute;
+    color: var(--gold-bright);
+    font-size: 1.4rem;
+    text-shadow: 0 0 12px rgba(242, 208, 138, 0.6);
+  }
+  .offer-box::before {
+    top: -14px; left: 50%; transform: translateX(-50%);
+    background: var(--bg-base); padding: 0 14px;
+  }
+  .offer-box::after {
+    bottom: -14px; left: 50%; transform: translateX(-50%);
+    background: var(--bg-base); padding: 0 14px;
+  }
+
+  .price-big {
+    font-family: var(--serif);
+    font-size: 4.6rem;
+    font-weight: 500;
+    color: var(--gold-bright);
+    line-height: 1;
+    margin: 0.5rem 0;
+    letter-spacing: -0.02em;
+    text-shadow: 0 0 24px rgba(242, 208, 138, 0.4);
+  }
+  .price-big .dollar {
+    font-size: 2.5rem;
+    vertical-align: top;
+    margin-right: 4px;
+    font-weight: 400;
+  }
+
+  .price-label {
+    font-family: var(--display);
+    font-size: 0.74rem;
+    letter-spacing: 0.38em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 0.5rem;
+  }
+
+  .offer-detail {
+    font-size: 1rem;
+    color: var(--cream-muted);
+    line-height: 1.75;
+    margin: 0.9rem 0;
+  }
+
+  .guarantee {
+    margin: 2rem 0 0;
+    padding: 1.5rem 0 0;
+    border-top: 1px solid rgba(212, 169, 79, 0.3);
+    font-family: var(--serif);
+    font-style: italic;
+    color: var(--cream);
+    line-height: 1.6;
+    font-size: 1.1rem;
+  }
+  .guarantee strong {
+    display: block;
+    font-style: normal;
+    font-family: var(--body);
+    font-size: 0.75rem;
+    letter-spacing: 0.34em;
+    text-transform: uppercase;
+    color: var(--gold-bright);
+    margin-bottom: 0.9rem;
+    font-weight: 500;
+  }
+
+  /* ========== FAQ ========== */
+  .faq { margin: 2.2rem 0; }
+  .faq-item {
+    padding: 1.6rem 0;
+    border-bottom: 1px solid rgba(212, 169, 79, 0.2);
+  }
+  .faq-item:last-child { border-bottom: none; }
+  .faq-q {
+    font-family: var(--serif);
+    font-size: 1.22rem;
+    color: var(--gold-bright);
+    margin-bottom: 0.6rem;
+    font-weight: 500;
+    font-style: italic;
+  }
+  .faq-a {
+    font-size: 1.02rem;
+    color: var(--cream-muted);
+    margin: 0;
+    line-height: 1.75;
+  }
+
+  .author { max-width: 640px; margin: 0 auto; }
+
+  /* ========== P.S. ========== */
+  .ps {
+    max-width: 600px;
+    margin: 3rem auto 1.8rem;
+    padding: 2.2rem 2.4rem;
+    border-left: 2px solid var(--gold);
+    background:
+      linear-gradient(90deg, rgba(168, 100, 199, 0.15), transparent);
+    font-family: var(--serif);
+    font-size: 1.18rem;
+    line-height: 1.7;
+    color: var(--cream);
+    font-style: italic;
+    position: relative;
+  }
+  .ps strong {
+    font-style: normal;
+    font-family: var(--body);
+    font-size: 0.78rem;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: var(--gold-bright);
+    display: block;
+    margin-bottom: 0.8rem;
+    font-weight: 500;
+  }
+
+  .signoff {
+    text-align: center;
+    font-family: var(--serif);
+    font-style: italic;
+    font-size: 1.2rem;
+    color: var(--gold-bright);
+    margin: 2.2rem 0 3.2rem;
+  }
+
+  footer {
+    padding: 50px 20px 60px;
+    text-align: center;
+    font-size: 0.82rem;
+    color: var(--muted);
+    letter-spacing: 0.08em;
+    line-height: 1.9;
+    border-top: 1px solid rgba(212, 169, 79, 0.2);
+    margin-top: 40px;
+  }
+  footer .glyph-row {
+    font-family: var(--display);
+    color: var(--gold-bright);
+    letter-spacing: 0.45em;
+    margin-bottom: 1.2rem;
+    font-size: 1rem;
+  }
+
+  /* ========== ANIMATIONS ========== */
+  .fade-in {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 1.1s ease, transform 1.1s ease;
+  }
+  .fade-in.visible { opacity: 1; transform: translateY(0); }
+
+  @media (max-width: 640px) {
+    body { font-size: 16.5px; line-height: 1.75; }
+    p { font-size: 1rem; }
+    section { padding: 55px 0; }
+    .hero { min-height: 88vh; padding: 55px 22px 45px; }
+    .hero-eyebrow { font-size: 0.66rem; letter-spacing: 0.34em; }
+    .zodiac-wheel { width: 105vw; height: 105vw; opacity: 0.12; }
+    .cta-button { padding: 19px 32px; font-size: 0.8rem; letter-spacing: 0.24em; }
+    .offer-box { padding: 40px 26px; margin: 2.2rem 10px; }
+    .price-big { font-size: 3.6rem; }
+    .ps { padding: 1.6rem 1.5rem; margin: 2.4rem 10px 1rem; }
+    .learn-list li { padding-left: 58px; }
+    .learn-list li::before { width: 40px; height: 40px; font-size: 1.25rem; }
+    .constellation-overlay { display: none; }
+  }
+</style>
+</head>
+<body>
+
+<div class="stars" aria-hidden="true"></div>
+
+<!-- ==================== HERO ==================== -->
+<header class="hero">
+  <!-- Zodiac wheel in background -->
+  <svg class="zodiac-wheel" viewBox="0 0 400 400" aria-hidden="true">
+    <defs>
+      <linearGradient id="zodGold" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="#F2D08A"/>
+        <stop offset="100%" stop-color="#9E7C35"/>
+      </linearGradient>
+    </defs>
+    <!-- Outer rings -->
+    <circle cx="200" cy="200" r="195" fill="none" stroke="url(#zodGold)" stroke-width="0.8"/>
+    <circle cx="200" cy="200" r="168" fill="none" stroke="url(#zodGold)" stroke-width="0.5"/>
+    <circle cx="200" cy="200" r="140" fill="none" stroke="url(#zodGold)" stroke-width="0.6"/>
+    <circle cx="200" cy="200" r="85" fill="none" stroke="url(#zodGold)" stroke-width="0.5"/>
+    <!-- 12 division lines -->
+    <g stroke="url(#zodGold)" stroke-width="0.5" opacity="0.7">
+      <line x1="200" y1="32" x2="200" y2="368"/>
+      <line x1="32" y1="200" x2="368" y2="200"/>
+      <line x1="81" y1="81" x2="319" y2="319"/>
+      <line x1="319" y1="81" x2="81" y2="319"/>
+      <line x1="116" y1="42" x2="284" y2="358"/>
+      <line x1="284" y1="42" x2="116" y2="358"/>
+      <line x1="42" y1="116" x2="358" y2="284"/>
+      <line x1="42" y1="284" x2="358" y2="116"/>
+    </g>
+    <!-- Zodiac glyphs around the wheel -->
+    <g fill="url(#zodGold)" font-family="Cormorant Garamond, serif" font-size="20" text-anchor="middle" dominant-baseline="middle">
+      <text x="200" y="58">♈</text>
+      <text x="284" y="80">♉</text>
+      <text x="340" y="140">♊</text>
+      <text x="360" y="200">♋</text>
+      <text x="340" y="260">♌</text>
+      <text x="284" y="320">♍</text>
+      <text x="200" y="348">♎</text>
+      <text x="116" y="320">♏</text>
+      <text x="60" y="260">♐</text>
+      <text x="40" y="200">♑</text>
+      <text x="60" y="140">♒</text>
+      <text x="116" y="80">♓</text>
+    </g>
+    <!-- Center pentagram-like sigil -->
+    <g stroke="url(#zodGold)" stroke-width="0.8" fill="none" opacity="0.9">
+      <circle cx="200" cy="200" r="50"/>
+      <path d="M 200 155 L 242.7 225 L 157.3 225 Z"/>
+      <path d="M 200 245 L 242.7 175 L 157.3 175 Z"/>
+    </g>
+    <circle cx="200" cy="200" r="3" fill="#F2D08A"/>
+  </svg>
+
+  <div class="hero-inner">
+
+    <!-- Celestial row: moon — sun — moon -->
+    <div class="celestial-row" aria-hidden="true">
+      <svg viewBox="0 0 32 32" fill="none">
+        <path d="M20 4 A12 12 0 1 0 20 28 A9 9 0 0 1 20 4 Z" fill="url(#celGold1)" opacity="0.9"/>
+        <defs><linearGradient id="celGold1"><stop offset="0%" stop-color="#F2D08A"/><stop offset="100%" stop-color="#D4A94F"/></linearGradient></defs>
+      </svg>
+      <svg viewBox="0 0 40 40" fill="none">
+        <defs><radialGradient id="sunGlow"><stop offset="0%" stop-color="#F2D08A"/><stop offset="100%" stop-color="#D4A94F"/></radialGradient></defs>
+        <g stroke="url(#sunGlow)" stroke-width="1" stroke-linecap="round">
+          <line x1="20" y1="4" x2="20" y2="10"/>
+          <line x1="20" y1="30" x2="20" y2="36"/>
+          <line x1="4" y1="20" x2="10" y2="20"/>
+          <line x1="30" y1="20" x2="36" y2="20"/>
+          <line x1="9" y1="9" x2="13" y2="13"/>
+          <line x1="27" y1="27" x2="31" y2="31"/>
+          <line x1="9" y1="31" x2="13" y2="27"/>
+          <line x1="27" y1="13" x2="31" y2="9"/>
+        </g>
+        <circle cx="20" cy="20" r="7" fill="url(#sunGlow)"/>
+        <circle cx="20" cy="20" r="3" fill="#1E0E3A"/>
+      </svg>
+      <svg viewBox="0 0 32 32" fill="none">
+        <path d="M12 4 A12 12 0 1 1 12 28 A9 9 0 0 0 12 4 Z" fill="url(#celGold2)" opacity="0.9"/>
+        <defs><linearGradient id="celGold2"><stop offset="0%" stop-color="#D4A94F"/><stop offset="100%" stop-color="#F2D08A"/></linearGradient></defs>
+      </svg>
+    </div>
+
+    <!-- Primary sigil: flower of life with central eye -->
+    <svg class="hero-sigil" viewBox="0 0 120 120" aria-hidden="true">
+      <defs>
+        <linearGradient id="sigilGold" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stop-color="#F2D08A"/>
+          <stop offset="100%" stop-color="#9E7C35"/>
+        </linearGradient>
+        <radialGradient id="sigilGlow">
+          <stop offset="0%" stop-color="#A864C7" stop-opacity="0.6"/>
+          <stop offset="100%" stop-color="#A864C7" stop-opacity="0"/>
+        </radialGradient>
+      </defs>
+      <circle cx="60" cy="60" r="56" fill="url(#sigilGlow)"/>
+      <circle cx="60" cy="60" r="56" fill="none" stroke="url(#sigilGold)" stroke-width="0.7"/>
+      <circle cx="60" cy="60" r="44" fill="none" stroke="url(#sigilGold)" stroke-width="0.5" opacity="0.7"/>
+      <!-- 6-petal flower of life -->
+      <g stroke="url(#sigilGold)" stroke-width="0.9" fill="none" opacity="0.95">
+        <circle cx="60" cy="42" r="18"/>
+        <circle cx="60" cy="78" r="18"/>
+        <circle cx="44.4" cy="51" r="18"/>
+        <circle cx="75.6" cy="51" r="18"/>
+        <circle cx="44.4" cy="69" r="18"/>
+        <circle cx="75.6" cy="69" r="18"/>
+        <circle cx="60" cy="60" r="18"/>
+      </g>
+      <!-- Inner star -->
+      <g stroke="#F2D08A" stroke-width="0.7" fill="none" opacity="0.95">
+        <path d="M 60 48 L 70 70 L 48 56 L 72 56 L 50 70 Z"/>
+      </g>
+      <circle cx="60" cy="60" r="2" fill="#F2D08A"/>
+      <!-- Cardinal stars -->
+      <g fill="#F2D08A" opacity="0.95">
+        <circle cx="60" cy="6" r="1.4"/>
+        <circle cx="60" cy="114" r="1.4"/>
+        <circle cx="6" cy="60" r="1.4"/>
+        <circle cx="114" cy="60" r="1.4"/>
+      </g>
+    </svg>
+
+    <div class="hero-eyebrow">Your Dharma Code</div>
+
+    <h1>Find out <em>what makes you different</em> from every other coach out there.</h1>
+
+    <p class="hero-sub">A personal reading that names your specific gifts, the people you're here to help, and what makes you <em class="gold">you</em> — so you can stop copying everyone else and finally build something that's actually yours. Calculated from your exact birth chart and delivered within 24 hours.</p>
+
+    <div class="cta-wrapper">
+      <a href="#offer" class="cta-button">Get My Reading</a>
+      <span class="cta-cap"><em>$17</em> · Delivered within 24 hours · Full refund, keep it either way</span>
+    </div>
+  </div>
+</header>
+
+<!-- ==================== HER MOMENT ==================== -->
+<section>
+  <!-- Constellation overlay -->
+  <svg class="constellation-overlay top-right" viewBox="0 0 140 140" aria-hidden="true">
+    <g stroke="#F2D08A" stroke-width="0.5" fill="#F2D08A" opacity="0.8">
+      <line x1="20" y1="30" x2="55" y2="50"/>
+      <line x1="55" y1="50" x2="80" y2="40"/>
+      <line x1="80" y1="40" x2="110" y2="70"/>
+      <line x1="55" y1="50" x2="70" y2="90"/>
+      <line x1="70" y1="90" x2="100" y2="110"/>
+      <circle cx="20" cy="30" r="1.8"/>
+      <circle cx="55" cy="50" r="2"/>
+      <circle cx="80" cy="40" r="1.5"/>
+      <circle cx="110" cy="70" r="2"/>
+      <circle cx="70" cy="90" r="1.7"/>
+      <circle cx="100" cy="110" r="1.5"/>
+    </g>
+  </svg>
+
+  <div class="container-narrow fade-in">
+    <p class="lead">You've always known you're meant to help people. Coaching. Healing. Guiding. Some version of that.</p>
+    <p>But you look at everyone else already doing it — the coaches, the healers, the teachers — and you wonder: <em class="gold">what do I actually have that's different?</em> Why would anyone pick me?</p>
+    <p>So you try to sound like them. You copy their offers. You borrow their language. And nothing feels right — because you're trying to be a version of someone else instead of the thing you actually are.</p>
+  </div>
+
+  <div class="divider">
+    <span class="divider-line"></span>
+    <span class="divider-ornament">
+      <svg viewBox="0 0 26 26" fill="none" aria-hidden="true">
+        <path d="M 13 2 L 15 11 L 24 13 L 15 15 L 13 24 L 11 15 L 2 13 L 11 11 Z" fill="#F2D08A"/>
+      </svg>
+    </span>
+    <span class="divider-line"></span>
+  </div>
+</section>
+
+<!-- ==================== THE REAL PROBLEM ==================== -->
+<section class="mid">
+  <div class="container-narrow fade-in">
+    <h2 class="centered">The problem isn't that you're <em>not gifted.</em></h2>
+    <p>You are. You've known it your whole life. People come to you for advice. Friends tell you you should be a coach. You've read the books, done the trainings, sat with the teachers.</p>
+    <p>The problem is that nobody has ever told you — <strong>specifically</strong> — what your gifts actually are.</p>
+    <p>Personality tests put you in broad categories. Certifications teach you someone else's method. Books describe people in general. And every time you try to figure out what makes <em class="gold">you</em> different, you end up more confused than when you started.</p>
+    <p>You've been trying to find yourself from the outside in. It only works from the inside out.</p>
+  </div>
+</section>
+
+<!-- ==================== WHAT IT IS ==================== -->
+<section>
+  <div class="container-narrow fade-in">
+    <!-- Small sacred geometry ornament -->
+    <svg class="section-sigil" viewBox="0 0 60 60" aria-hidden="true">
+      <defs>
+        <linearGradient id="smallGold"><stop offset="0%" stop-color="#F2D08A"/><stop offset="100%" stop-color="#9E7C35"/></linearGradient>
+      </defs>
+      <circle cx="30" cy="30" r="26" fill="none" stroke="url(#smallGold)" stroke-width="0.6" opacity="0.8"/>
+      <g stroke="url(#smallGold)" stroke-width="0.5" fill="none" opacity="0.8">
+        <circle cx="30" cy="18" r="12"/>
+        <circle cx="30" cy="42" r="12"/>
+        <circle cx="19.6" cy="24" r="12"/>
+        <circle cx="40.4" cy="24" r="12"/>
+        <circle cx="19.6" cy="36" r="12"/>
+        <circle cx="40.4" cy="36" r="12"/>
+      </g>
+      <circle cx="30" cy="30" r="1.5" fill="#F2D08A"/>
+    </svg>
+
+    <div class="section-eyebrow">What It Is</div>
+    <h2 class="centered">A personal reading that <em>names the specific thing</em> that makes you different.</h2>
+    <p>Your Dharma Code is a personalized reading — a PDF of around thirteen pages — delivered to your inbox within 24 hours of ordering.</p>
+    <p>It's calculated from the exact moment and place you were born. The astronomy is the same precise data that traditional astrology uses. But instead of giving you astrology-speak, we translate it into the only two things that actually matter: <strong>who you are</strong>, and <strong>what to do about it.</strong></p>
+    <p>It's built by Michael Mackintosh, who has spent twenty years helping people figure out what they're uniquely good at and build a career around it.</p>
+  </div>
+</section>
+
+<!-- ==================== WHAT YOU'LL LEARN ==================== -->
+<section class="deep">
+  <!-- Constellation overlay -->
+  <svg class="constellation-overlay bottom-left" viewBox="0 0 120 120" aria-hidden="true">
+    <g stroke="#D4A5B8" stroke-width="0.5" fill="#F2D08A" opacity="0.75">
+      <line x1="15" y1="20" x2="45" y2="35"/>
+      <line x1="45" y1="35" x2="75" y2="25"/>
+      <line x1="45" y1="35" x2="55" y2="75"/>
+      <line x1="55" y1="75" x2="90" y2="90"/>
+      <line x1="75" y1="25" x2="105" y2="50"/>
+      <circle cx="15" cy="20" r="1.6"/>
+      <circle cx="45" cy="35" r="2"/>
+      <circle cx="75" cy="25" r="1.6"/>
+      <circle cx="55" cy="75" r="1.8"/>
+      <circle cx="90" cy="90" r="1.5"/>
+      <circle cx="105" cy="50" r="1.5"/>
+    </g>
+  </svg>
+
+  <div class="container-narrow fade-in">
+    <div class="section-eyebrow">What You'll Learn</div>
+    <h2 class="centered">After you read your Dharma Code, you'll know <em>exactly:</em></h2>
+
+    <ol class="learn-list">
+      <li>
+        <h3>Your specific personality type — in two words</h3>
+        <p>Not a broad category. Not "INFJ" or "Generator." Two words that name how you actually work — like <em class="gold">The Steady Alchemist</em>, <em class="gold">The Charged Connector</em>, or <em class="gold">The Quiet Visionary</em>. You'll recognize yourself the moment you read it.</p>
+      </li>
+
+      <li>
+        <h3>Your three strongest gifts</h3>
+        <p>The things you're naturally good at — the ones you've probably been dismissing because they come too easily to feel like gifts. Named, each one, with a description specific enough that you'll forward it to your friends.</p>
+      </li>
+
+      <li>
+        <h3>The one pattern that keeps tripping you up</h3>
+        <p>The specific thing that's been getting in your way — in relationships, in money, in finishing what you start. Named so clearly you'll catch yourself doing it within the week.</p>
+      </li>
+
+      <li>
+        <h3>The exact kind of person you're meant to help</h3>
+        <p>Not "women over 40." Not "high achievers." The specific kind of person your combination of gifts is built to serve — and why they'll pick you over anyone else once you know how to describe it.</p>
+      </li>
+
+      <li>
+        <h3>The kind of work that actually fits you</h3>
+        <p>The shape of your ideal offer. What you should be known for. The direction that makes sense for you — not a copy of what someone else is already doing.</p>
+      </li>
+
+      <li>
+        <h3>Where you are in your life right now</h3>
+        <p>The chapter you're in, in real years. What's ending. What's starting. What's coming in the next twelve months — so you stop fighting the current and start moving with it.</p>
+      </li>
+
+      <li>
+        <h3>Five specific things to do this week</h3>
+        <p>Not generic advice. Five actions tied to your exact wiring and where you are right now. Things you can start tomorrow morning.</p>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<!-- ==================== COMPARISON CHART ==================== -->
+<section>
+  <div class="container fade-in">
+    <div class="section-eyebrow">How It Compares</div>
+    <h2 class="centered">Every other reading tells you <em>who you are.</em><br>Yours tells you <em>what to do about it.</em></h2>
+    <p style="text-align: center; max-width: 580px; margin: 0 auto 2rem;">Here's how your Dharma Code stacks up against the readings you've probably already paid for — or the ones you've been thinking about trying.</p>
+
+    <div class="comparison-wrap">
+      <table class="comparison-table">
+        <thead>
+          <tr>
+            <th class="feature-col">&nbsp;</th>
+            <th class="highlight">Your<br>Dharma Code</th>
+            <th>Traditional<br>Astrology</th>
+            <th>Human<br>Design</th>
+            <th>Gene<br>Keys</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="feature-col">Price</td>
+            <td class="highlight"><span class="price">$17</span></td>
+            <td><span class="price">$150–$300</span></td>
+            <td><span class="price">$100–$300</span></td>
+            <td><span class="price">$50–$400</span></td>
+          </tr>
+          <tr>
+            <td class="feature-col">Delivery</td>
+            <td class="highlight"><strong>Within 24 hours</strong></td>
+            <td>1–4 weeks</td>
+            <td>Days to a week</td>
+            <td>Days</td>
+          </tr>
+          <tr>
+            <td class="feature-col">Your specific gifts, named</td>
+            <td class="highlight"><span class="check">✓</span></td>
+            <td><span class="cross">✗</span></td>
+            <td><span class="partial">partial</span></td>
+            <td><span class="partial">partial</span></td>
+          </tr>
+          <tr>
+            <td class="feature-col">The people you're meant to help</td>
+            <td class="highlight"><span class="check">✓</span></td>
+            <td><span class="cross">✗</span></td>
+            <td><span class="cross">✗</span></td>
+            <td><span class="cross">✗</span></td>
+          </tr>
+          <tr>
+            <td class="feature-col">The work that actually fits you</td>
+            <td class="highlight"><span class="check">✓</span></td>
+            <td><span class="cross">✗</span></td>
+            <td><span class="cross">✗</span></td>
+            <td><span class="cross">✗</span></td>
+          </tr>
+          <tr>
+            <td class="feature-col">The pattern that keeps tripping you up</td>
+            <td class="highlight"><span class="check">✓</span></td>
+            <td><span class="cross">✗</span></td>
+            <td><span class="cross">✗</span></td>
+            <td><span class="partial">partial</span></td>
+          </tr>
+          <tr>
+            <td class="feature-col">Specific actions for this week</td>
+            <td class="highlight"><span class="check">✓</span></td>
+            <td><span class="cross">✗</span></td>
+            <td><span class="cross">✗</span></td>
+            <td><span class="cross">✗</span></td>
+          </tr>
+          <tr>
+            <td class="feature-col">In plain English</td>
+            <td class="highlight"><span class="check">✓</span></td>
+            <td><span class="cross">✗</span></td>
+            <td><span class="cross">✗</span></td>
+            <td><span class="cross">✗</span></td>
+          </tr>
+        </tbody>
+      </table>
+      <p class="comparison-caption">More depth. A fraction of the price. And it's in your inbox within a day, not weeks.</p>
+    </div>
+  </div>
+
+  <div class="divider">
+    <span class="divider-line"></span>
+    <span class="divider-ornament">
+      <svg viewBox="0 0 26 26" fill="none" aria-hidden="true">
+        <path d="M 13 2 L 15 11 L 24 13 L 15 15 L 13 24 L 11 15 L 2 13 L 11 11 Z" fill="#F2D08A"/>
+      </svg>
+    </span>
+    <span class="divider-line"></span>
+  </div>
+</section>
+
+<!-- ==================== MICHAEL ==================== -->
+<section class="mid">
+  <div class="container-narrow fade-in author">
+    <div class="section-eyebrow">Who Built This</div>
+    <h2 class="centered">Michael Mackintosh has been doing this for <em>twenty years.</em></h2>
+    <p>He's the founder of Awakened Academy. Author of <em class="gold">The Dharma Keys</em> and <em class="gold">Entranced</em>. The teacher behind more than 85,000 five-star meditation reviews on Insight Timer. Over a thousand people have graduated his coaching certification, in twenty-five countries.</p>
+    <p>He built your Dharma Code because after twenty years of sitting across from people, the same pattern kept repeating: smart, gifted, spiritually-wired people — stuck at the edge of the work they were meant to do — because nobody had ever told them what their actual gifts were, or what made them different.</p>
+    <p>Your Dharma Code fixes that in one reading.</p>
+    <p style="font-size: 0.92rem; font-style: italic; color: var(--muted); margin-top: 2rem; font-family: var(--serif); line-height: 1.7;">Your Dharma Code is created by a system Michael built over twenty years — his dharma-coaching framework, applied to your exact birth chart. Every reading is then run and reviewed by our team before it reaches you, which is why it arrives within 24 hours rather than instantly.</p>
+  </div>
+</section>
+
+<!-- ==================== OFFER ==================== -->
+<section id="offer">
+  <div class="container-narrow fade-in">
+    <div class="section-eyebrow">The Founding Reader Price</div>
+    <h2 class="centered">The full reading. <em>Seventeen dollars.</em></h2>
+    <p style="text-align: center; max-width: 580px; margin: 0 auto 1.6rem;">A traditional astrology reading costs between $150 and $300 and takes weeks. Human Design is similar. Gene Keys, similar. The Dharma Code is $17 and reaches you within 24 hours. It's $17 because this is the founding-reader window, and we want it in as many hands as possible while it's new.</p>
+
+    <div class="offer-box">
+      <div class="price-label">Founding Reader Price</div>
+      <div class="price-big"><span class="dollar">$</span>17</div>
+      <p class="offer-detail">Personal reading · Around 13 pages · PDF<br>Delivered within 24 hours · Read once, keep forever</p>
+
+      <div class="cta-wrapper">
+        <a href="#offer" class="cta-button">Get My Reading</a>
+        <span class="cta-cap"><em>$17</em> · Delivered within 24 hours · Full refund, keep it either way</span>
+      </div>
+
+      <div class="guarantee">
+        <strong>Our Guarantee</strong>
+        No forms. No questions. No why.<br>
+        30 days. Keep the reading either way.
+      </div>
+    </div>
+
+    <p style="text-align: center; font-style: italic; color: var(--muted); font-family: var(--serif); margin-top: 1.5rem; font-size: 1rem;">The founding-reader price won't stay here. Once the next wave goes out, it moves up.</p>
+  </div>
+</section>
+
+<!-- ==================== FAQ ==================== -->
+<section class="deep">
+  <div class="container-narrow fade-in">
+    <div class="section-eyebrow">Common Questions</div>
+    <h2 class="centered">The honest <em>answers.</em></h2>
+
+    <div class="faq">
+      <div class="faq-item">
+        <div class="faq-q">What exactly do I get?</div>
+        <p class="faq-a">A personalized PDF reading of around 13 pages, emailed to you within 24 hours of ordering. It names your personality type, your three strongest gifts, the pattern holding you back, the kind of person you're meant to help, the work that fits you, where you are in your life right now, and five specific actions to take this week. Plain English throughout.</p>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q">Why is it only $17?</div>
+        <p class="faq-a">Because it's the founding-reader price. A personalized reading with this much depth — calculated from your exact birth chart — would normally cost far more, and soon it will. We're holding it at $17 during the founding-reader window because we want it in as many hands as possible while it's new. Once the next wave goes out, the price moves.</p>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q">Is this AI-generated?</div>
+        <p class="faq-a">Your Dharma Code is created by a system Michael built over twenty years — a specialized AI trained on his dharma-coaching framework, applied to the precise astronomical data of your birth chart. Every reading is then run and reviewed by our team before it's sent, which is why it takes up to 24 hours rather than arriving instantly. The chart is real, the framework is twenty years deep, and the reading is genuinely personal to you.</p>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q">What if I don't know my exact birth time?</div>
+        <p class="faq-a">No problem. If you don't have your exact time, we use a noon default and flag a couple of the smaller details as approximate. The core of the reading — your type, your gifts, your pattern, the people you're meant to help, the kind of work that fits you, and your timing — doesn't depend on the exact minute. If you want the full precision later, your birth certificate is the easiest source.</p>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q">How is this different from Human Design or a regular astrology reading?</div>
+        <p class="faq-a">Human Design tells you your type. Astrology tells you your placements. Both describe who you are. Your Dharma Code tells you who you are <em class="gold">and</em> what to do about it — specifically, in plain language, with a clear direction for your work and your life. Descriptions are beautiful. They aren't enough on their own.</p>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q">What if the reading doesn't land for me?</div>
+        <p class="faq-a">Email us within 30 days. Your money comes back. No forms. No questions. You keep the reading either way.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== FINAL CTA + PS ==================== -->
+<section>
+  <div class="container-narrow fade-in">
+    <h2 class="centered">Stop trying to figure out <em>what makes you different.</em></h2>
+    <p style="text-align: center; max-width: 540px; margin: 0 auto 2rem;">Your Dharma Code was built to tell you — specifically, in plain English, delivered within 24 hours.</p>
+
+    <div class="cta-wrapper" style="margin-top: 1.5rem;">
+      <a href="#offer" class="cta-button">Send Me My Dharma Code</a>
+      <span class="cta-cap"><em>$17</em> · Delivered within 24 hours · Full refund, keep it either way</span>
+    </div>
+
+    <div class="ps">
+      <strong>P.S.</strong>
+      You're not scattered. You're not generic. You're not another person trying to copy someone else's blueprint. You just haven't been named yet. That's what this does. That's all it does. And it turns out, that's enough.
+    </div>
+
+    <p class="signoff">Lots of love,<br>Michael 🙏</p>
+  </div>
+</section>
+
+<footer>
+  <div class="glyph-row">♈ ♋ ♎ ♑ · ☉ ☽ · ♉ ♌ ♏ ♒</div>
+  Awakened Academy® · Dharma Keys<br>
+  Teaching dharma since 2012 · Pioneered since 2004
+</footer>
+
+<script>
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) entry.target.classList.add('visible');
+    });
+  }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+  document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+</script>
+
+</body>
+</html>
+
