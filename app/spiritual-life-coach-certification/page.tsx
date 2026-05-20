@@ -81,7 +81,7 @@ export default function CertPage() {
             </Reveal>
             <Reveal>
               <h1 className="mt-6 font-serif text-[clamp(36px,5.8vw,60px)] leading-[1.05]">
-                Spiritual Life Coach Certification — Transform Your <em className="text-gold-light">Calling</em> Into a Career
+                Spiritual Life Coach Certification: Transform Your <em className="text-gold-light">Calling</em> Into a Career
               </h1>
             </Reveal>
             <Reveal>
@@ -164,7 +164,7 @@ export default function CertPage() {
               <div className="mt-8 space-y-5 text-[17px] leading-[1.85] text-ink2">
                 <p>
                   Spiritual life coach certification is a structured training that qualifies you to guide
-                  others through spiritual transitions — purpose discovery, life direction, inner work,
+                  others through spiritual transitions: purpose discovery, life direction, inner work,
                   and building a coaching practice that reflects your values.
                 </p>
                 <p>
@@ -175,7 +175,7 @@ export default function CertPage() {
                 <p>
                   Awakened Academy's certification trains you across seven dimensions of this work: your
                   inner foundation, the coaching craft, your dharma, creative expression, wealth, business
-                  systems, and client enrollment — everything needed to become a practising coach, not
+                  systems, and client enrollment, everything needed to become a practising coach, not
                   just a certificate holder.
                 </p>
               </div>
@@ -207,12 +207,12 @@ export default function CertPage() {
               {
                 step: "2",
                 label: "Enrol and begin the 7-pillar curriculum",
-                body: "Start with Pillar I at your own pace. The curriculum is 100% self-paced — 3–18 months depending on how fast you move.",
+                body: "Start with Pillar I at your own pace. The curriculum is 100% self-paced, 3 to 18 months depending on how fast you move.",
               },
               {
                 step: "3",
                 label: "Complete, get certified, start coaching",
-                body: "Finish the program, receive your certification, and start taking clients. Most students see their first paying client within 60 days of starting.",
+                body: "Finish the program, receive your certification, and start taking clients.",
               },
             ].map((item) => (
               <Reveal key={item.step}>
