@@ -7,6 +7,7 @@
 ## ✅ DONE — Ready for cutover
 
 ### Infrastructure
+- ✅ **GitHub remote live** — `https://github.com/tech393/aa-site` (private). Vercel connected to GitHub; every `git push origin master` auto-deploys to production. Michael added as collaborator with Write access.
 - ✅ **Tailwind brand tokens applied** from `Brand-Tokens-Round1.md`. Teal `#1A7A70`, Gold `#C9A961`, Cream, Navy, Blush, Fraunces + Inter. Backwards-compat aliases kept so existing class names still resolve.
 - ✅ **182 per-URL 301 redirects** from `NEXT-CONFIG-REDIRECTS.js` deployed in `next.config.ts`, plus 6 security-hardening rules for residual WP paths (`/wp-admin`, `/wp-login.php`, `/wp-content`, `/wp-includes`, `/xmlrpc.php`).
 - ✅ **Spot-checks verified** (308 = modern equivalent of 301; SEO equity preserved):
