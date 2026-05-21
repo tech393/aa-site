@@ -6,7 +6,7 @@ hero_image: ""
 images: []
 primary_cta:
   label: "Email Us"
-  destination: "mailto:reviewbook@awakenedacademy.com"
+  destination: "mailto:success@awakenedacademy.com"
 form_present: false
 form_target: ""
 embedded_video: ""
@@ -18,7 +18,7 @@ flags:
 
 ## Request a free book
 
-Email us at [reviewbook@awakenedacademy.com](mailto:reviewbook@awakenedacademy.com) to request your free book.
+Email us at [success@awakenedacademy.com](mailto:success@awakenedacademy.com) to request your free book.
 
 Awakened Academy has always loved reading, writing, and sharing books that support spiritual growth, service, meaningful work, and a soul-aligned life.
 
