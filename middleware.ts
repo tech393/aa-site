@@ -26,6 +26,14 @@ export function middleware(request: NextRequest) {
   if (
     pathname === "/boutique" ||
     pathname.startsWith("/boutique/") ||
+    pathname === "/wp-admin" ||
+    pathname.startsWith("/wp-admin/") ||
+    pathname === "/wp-content" ||
+    pathname.startsWith("/wp-content/") ||
+    pathname === "/wp-includes" ||
+    pathname.startsWith("/wp-includes/") ||
+    pathname === "/wp-login.php" ||
+    pathname === "/xmlrpc.php" ||
     SPAM_PATH_TERMS.some((term) => pathname.includes(term))
   ) {
     return new NextResponse(null, {

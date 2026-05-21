@@ -245,13 +245,7 @@ const config: NextConfig = {
       { source: "/top-spiritual-coaching-programs-for-2026-transform-your-life", destination: "/best-spiritual-life-coach-certification-programs", permanent: true },
       { source: "/top-rated-spiritual-life-coach-certification-programs-of-2025", destination: "/best-spiritual-life-coach-certification-programs", permanent: true },
       { source: "/top-spiritual-life-coach-training-programs-for-2026", destination: "/best-spiritual-life-coach-certification-programs", permanent: true },
-      // === Security hardening: block residual WP-admin/login/content paths post-migration ===
-      { source: "/wp-admin", destination: "/", permanent: false },
-      { source: "/wp-admin/:path*", destination: "/", permanent: false },
-      { source: "/wp-login.php", destination: "/", permanent: false },
-      { source: "/wp-content/:path*", destination: "/", permanent: false },
-      { source: "/wp-includes/:path*", destination: "/", permanent: false },
-      { source: "/xmlrpc.php", destination: "/", permanent: false },
+      // Residual WordPress paths are handled by middleware with 410 Gone.
     ];
   },
 };
