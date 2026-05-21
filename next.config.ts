@@ -152,8 +152,7 @@ const config: NextConfig = {
     { source: "/working-with-awakened-academy", destination: "/jobs", permanent: true },
     // Matrix opt-in page
     { source: "/welcome-to-awakened-academy-you", destination: "/", permanent: true },
-    // 🚨 HACK SPAM - delete from WP immediately
-    { source: "/modafinil-top-user-stories", destination: "/", permanent: true },
+    // Known hack-spam URLs are handled by middleware with 410 Gone.
     // WordPress default placeholder
     { source: "/sample-page", destination: "/", permanent: true },
     // Lorem ipsum test page
