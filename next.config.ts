@@ -19,6 +19,8 @@ const config: NextConfig = {
     { source: "/theawakenedlife", destination: "/dont-die-with-your-song-inside", permanent: true },
     // Reviews consolidated into Wall of Gratitude (May 2026 — 47-card grid replaced by 313-testimonial WOG rebuild)
     { source: "/awakened-academy-reviews", destination: "/wall-of-gratitude", permanent: true },
+    // Spiritual business ideas consolidated to canonical SEO slug (May 2026 — pillar post per SEO content calendar)
+    { source: "/15-profitable-spiritual-business-ideas-for-modern-entrepreneurs", destination: "/spiritual-business-ideas", permanent: true },
     // Affiliate program retired until sales page exists; restore URL when ready
     { source: "/awakened-academy-affiliate-program", destination: "/", permanent: true },
     // Cleaner URL
