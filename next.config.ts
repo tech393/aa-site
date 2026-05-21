@@ -204,6 +204,8 @@ const config: NextConfig = {
     { source: "/referral-gifts", destination: "/", permanent: true },
     // Internal SOP
     { source: "/guests", destination: "/", permanent: true },
+    { source: "/privacy-policy", destination: "/privacy", permanent: true },
+    { source: "/terms-of-service", destination: "/terms", permanent: true },
     // Old book sales
     { source: "/getitdone", destination: "/ep", permanent: true },
     { source: "/snow-day", destination: "/", permanent: true },

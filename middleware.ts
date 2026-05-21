@@ -34,6 +34,8 @@ export function middleware(request: NextRequest) {
     pathname.startsWith("/wp-includes/") ||
     pathname === "/wp-login.php" ||
     pathname === "/xmlrpc.php" ||
+    pathname === "/wpt-testimonial" ||
+    pathname.startsWith("/wpt-testimonial/") ||
     SPAM_PATH_TERMS.some((term) => pathname.includes(term))
   ) {
     return new NextResponse(null, {
