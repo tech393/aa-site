@@ -81,7 +81,7 @@ export default function CertPage() {
             </Reveal>
             <Reveal>
               <h1 className="mt-6 font-serif text-[clamp(36px,5.8vw,60px)] leading-[1.05]">
-                Spiritual Life Coach Certification: Transform Your <em className="text-gold-light">Calling</em> Into a Career
+                Spiritual Life Coach Certification in Sedona
               </h1>
             </Reveal>
             <Reveal>
