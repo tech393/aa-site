@@ -51,7 +51,7 @@ Start here:
 
 - [Michael Mackintosh's books page](https://michaelmackintosh.com/read-books/)
 - [Michael Mackintosh on Goodreads](https://www.goodreads.com/author/list/7853497.Michael_Mackintosh)
-- [Search Amazon for Michael Mackintosh books](https://www.amazon.com/s?k=Michael+Mackintosh+books)
+- [Search Amazon for Michael Mackintosh books](https://www.amazon.com/s?k=Michael+Mackintosh&crid=3ABHGM16DER72&sprefix=michael+mackintosh%2Caps%2C221&ref=nb_sb_noss_1)
 
 ## Need help finding a specific book?
 
