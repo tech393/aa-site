@@ -75,6 +75,35 @@ export default function TwentyOneDayChallengePage() {
         </div>
       </section>
 
+      <section className="bg-plum text-white">
+        <div className="mx-auto max-w-5xl px-6 py-20">
+          <Reveal>
+            <div className="text-center">
+              <span className="eyebrow !text-gold-lt">Watch first</span>
+              <h2 className="mt-3 font-serif text-[clamp(28px,5vw,42px)] leading-tight">
+                How to bring your project to life in 21 days or less
+              </h2>
+              <p className="mx-auto mt-5 max-w-2xl text-[16px] leading-[1.75] text-white/85">
+                Michael explains the heart of the challenge and why completion is a spiritual practice.
+              </p>
+            </div>
+          </Reveal>
+          <Reveal>
+            <div className="mx-auto mt-10 max-w-4xl overflow-hidden rounded-md border border-white/15 bg-black shadow-2xl">
+              <div className="relative aspect-video w-full">
+                <iframe
+                  src="https://player.vimeo.com/video/138700321?title=0&byline=0&portrait=0"
+                  title="21 Day Challenge video with Michael Mackintosh"
+                  allow="autoplay; fullscreen; picture-in-picture"
+                  allowFullScreen
+                  className="absolute inset-0 h-full w-full"
+                />
+              </div>
+            </div>
+          </Reveal>
+        </div>
+      </section>
+
       <section className="bg-warm">
         <div className="mx-auto max-w-widest px-6 py-20">
           <Reveal>
