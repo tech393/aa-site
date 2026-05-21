@@ -132,8 +132,6 @@ const config: NextConfig = {
     { source: "/realize-your-dharma-your-best-life-ever", destination: "/dharma", permanent: true },
     { source: "/survey-gifts", destination: "/free-gifts-for-you", permanent: true },
     { source: "/gifts", destination: "/free-gifts-for-you", permanent: true },
-    // Defunct offer
-    { source: "/21-day-challenge", destination: "/", permanent: true },
     { source: "/3-worlds", destination: "/the-3-worlds", permanent: true },
     // /the-3-worlds, /unique-soul-purpose, /video-1 are now the v13 Awakened Life video pages (static HTML in /public/)
     // /awakened-life is the opt-in landing; its old [slug] subpaths redirect to the new root video URLs
