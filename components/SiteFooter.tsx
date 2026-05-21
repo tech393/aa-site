@@ -33,6 +33,7 @@ export default function SiteFooter() {
             <li><Link href="/origin-story" className="hover:text-gold-lt">Origin Story</Link></li>
             <li><Link href="/spiritual-life-coach-certification" className="hover:text-gold-lt">Get Certified</Link></li>
             <li><Link href="/blog" className="hover:text-gold-lt">Blog</Link></li>
+            <li><Link href="/books" className="hover:text-gold-lt">Books</Link></li>
             <li><Link href="/dharma" className="hover:text-gold-lt">Dharma</Link></li>
             <li><Link href="/ep" className="hover:text-gold-lt">Enlightenedpreneurs</Link></li>
             <li><Link href="/introvert" className="hover:text-gold-lt">Softly Powerful</Link></li>
