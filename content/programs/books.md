@@ -2,7 +2,7 @@
 title: "Books"
 slug: "books"
 url: "https://awakenedacademy.com/books/"
-hero_image: ""
+hero_image: "/images/michael-beach.jpg"
 images: []
 primary_cta:
   label: "Email Us"
