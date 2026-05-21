@@ -1,7 +1,7 @@
 ---
 title: "Books"
-slug: "review-books"
-url: "https://awakenedacademy.com/review-books/"
+slug: "books"
+url: "https://awakenedacademy.com/books/"
 hero_image: ""
 images: []
 primary_cta:
