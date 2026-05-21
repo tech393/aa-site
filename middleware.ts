@@ -23,7 +23,11 @@ const SPAM_PATH_TERMS = [
 export function middleware(request: NextRequest) {
   const pathname = request.nextUrl.pathname.toLowerCase();
 
-  if (SPAM_PATH_TERMS.some((term) => pathname.includes(term))) {
+  if (
+    pathname === "/boutique" ||
+    pathname.startsWith("/boutique/") ||
+    SPAM_PATH_TERMS.some((term) => pathname.includes(term))
+  ) {
     return new NextResponse(null, {
       status: 410,
       headers: {
