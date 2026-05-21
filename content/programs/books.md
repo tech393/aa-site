@@ -16,13 +16,46 @@ flags:
 
 # Books
 
-## Request a free book
+## Books by Michael Mackintosh
 
-Email us at [success@awakenedacademy.com](mailto:success@awakenedacademy.com) to request your free book.
+Michael Mackintosh has written and published books on spiritual awakening, dharma, meditation, manifestation, freedom, productivity, and the inner life behind meaningful work.
 
-Awakened Academy has always loved reading, writing, and sharing books that support spiritual growth, service, meaningful work, and a soul-aligned life.
+Here are the main titles we found from Michael's book listings and related author pages:
 
-If you found this page while looking for one of Michael or Arielle's books, email us and our team will point you in the right direction.
+- **Why The Law Of Attraction Doesn't Work For Most People**  
+  A deeper look at manifesting your heart's true desires rather than chasing ego-based wants.
+
+- **The Dharma Keys**  
+  108 ways to awaken your path with a heart and reconnect with your true purpose.
+
+- **The Golden Life**  
+  A guide to working less, stressing less, simplifying life, and doing more of what you love.
+
+- **How to Know God**  
+  Written by Michael Mackintosh and Arielle Hecht, a spiritual guide to feeling your own relationship with the Divine.
+
+- **Weightless**  
+  A guide for women with a higher purpose who want to get on mission and lose weight naturally.
+
+- **Get It Done**  
+  The 21-day mind hack system to double your productivity and finish what you start.
+
+- **Into The Silent Realm**  
+  A spiritual book about remembering who you are beyond the surface self.
+
+## Find the books
+
+Some titles appear on Amazon, Audible, Goodreads, and Michael's own book page. Availability can change by country and format.
+
+Start here:
+
+- [Michael Mackintosh's books page](https://michaelmackintosh.com/read-books/)
+- [Michael Mackintosh on Goodreads](https://www.goodreads.com/author/list/7853497.Michael_Mackintosh)
+- [Search Amazon for Michael Mackintosh books](https://www.amazon.com/s?k=Michael+Mackintosh+books)
+
+## Need help finding a specific book?
+
+Email us at [success@awakenedacademy.com](mailto:success@awakenedacademy.com) and our team will point you in the right direction.
 
 ## Related resources
 
