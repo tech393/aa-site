@@ -189,7 +189,7 @@ const config: NextConfig = {
     { source: "/diary", destination: "/blog", permanent: true },
     { source: "/god-book", destination: "/free-gifts-for-you", permanent: true },
     { source: "/you-ebook", destination: "/free-gifts-for-you", permanent: true },
-    { source: "/review-books", destination: "/", permanent: true },
+    { source: "/books", destination: "/review-books", permanent: true },
     // Dated 2016
     { source: "/review-copy", destination: "/", permanent: true },
     // Defunct merch
