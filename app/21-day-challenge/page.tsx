@@ -283,9 +283,9 @@ export default function TwentyOneDayChallengePage() {
             </div>
             <div className="mx-auto mt-10 max-w-xl overflow-hidden rounded-md border border-teal/20 bg-white p-5 shadow-md md:p-6">
               <GHLForm
-                formId={GHL.forms.enlightenedpreneurs.id}
-                formName="21 Day Challenge"
-                height={GHL.forms.enlightenedpreneurs.height}
+                formId={GHL.forms.twentyOneDayChallenge.id}
+                formName={GHL.forms.twentyOneDayChallenge.name}
+                height={GHL.forms.twentyOneDayChallenge.height}
               />
             </div>
             <p className="mt-5 text-center text-[12px] tracking-wide text-soft">

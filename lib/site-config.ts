@@ -26,6 +26,7 @@ export const GHL = {
     certification: { id: "o7aHhza1LwO05HOinyNz", name: "Certification Page", height: 537 },
     dharma: { id: "aOOIbE3NIvQrAmKp7h5K", name: "Discover Your Dharma", height: 580 },
     enlightenedpreneurs: { id: "6rTeJbPFUr4A0xDtch2Y", name: "Enlightenedpreneurs", height: 580 },
+    twentyOneDayChallenge: { id: "rvLvT4aWLhS6qRRiJcou", name: "21 Day Challenge", height: 884 },
     softlyPowerful: { id: "XMpfPDgqmz2fjd45bhYc", name: "Softly Powerful", height: 580 },
     awakenedLife: { id: "I063KZl5QBU8udCFoCJb", name: "awakened life", height: 540 },
   },
