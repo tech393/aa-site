@@ -20,27 +20,25 @@ flags:
 
 Michael Mackintosh has written and published books on spiritual awakening, dharma, meditation, manifestation, freedom, productivity, and the inner life behind meaningful work.
 
-Here are the main titles we found from Michael's book listings and related author pages:
-
-- **Why The Law Of Attraction Doesn't Work For Most People**  
+- [**Why The Law Of Attraction Doesn't Work For Most People**](https://www.amazon.com/s?k=Michael+Mackintosh+Why+The+Law+Of+Attraction+Doesn%27t+Work+For+Most+People)  
   A deeper look at manifesting your heart's true desires rather than chasing ego-based wants.
 
-- **The Dharma Keys**  
+- [**The Dharma Keys**](https://www.amazon.com/s?k=Michael+Mackintosh+The+Dharma+Keys)  
   108 ways to awaken your path with a heart and reconnect with your true purpose.
 
-- **The Golden Life**  
+- [**The Golden Life**](https://www.amazon.com/s?k=Michael+Mackintosh+The+Golden+Life)  
   A guide to working less, stressing less, simplifying life, and doing more of what you love.
 
-- **How to Know God**  
+- [**How to Know God**](https://www.amazon.com/s?k=Michael+Mackintosh+Arielle+Hecht+How+to+Know+God)  
   Written by Michael Mackintosh and Arielle Hecht, a spiritual guide to feeling your own relationship with the Divine.
 
-- **Weightless**  
+- [**Weightless**](https://www.amazon.com/s?k=Michael+Mackintosh+Weightless)  
   A guide for women with a higher purpose who want to get on mission and lose weight naturally.
 
-- **Get It Done**  
+- [**Get It Done**](https://www.amazon.com/s?k=Michael+Mackintosh+Get+It+Done)  
   The 21-day mind hack system to double your productivity and finish what you start.
 
-- **Into The Silent Realm**  
+- [**Into The Silent Realm**](https://www.amazon.com/s?k=Michael+Mackintosh+Into+The+Silent+Realm)  
   A spiritual book about remembering who you are beyond the surface self.
 
 ## Find the books
