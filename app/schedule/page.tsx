@@ -16,19 +16,38 @@ export const metadata: Metadata = {
   },
 };
 
-const TESTIMONIALS = [
-  {
-    name: "Pearl Fidler",
-    quote: "It felt like a call with an old friend and I felt absolutely lit up inside.",
-  },
+type Testimonial = { name: string; role: string; quote: string; photo?: string };
+
+const TESTIMONIALS: Testimonial[] = [
   {
     name: "Kyli Vandemark",
-    quote: "I have literally jumped timelines in my healing and my business in a matter of 6 months.",
+    role: "Booked a call → now certified",
+    quote:
+      "I instantly felt at home. They helped me find my soul purpose, and I've jumped timelines in just 6 months! If you're debating scheduling your alignment call, do it!",
+    photo: "/img/testimonials/Kyli-Vandemark.jpg",
   },
   {
-    name: "Anonymous",
-    quote: "The call changed my trajectory. She just saw me. She heard me, and she felt my spirit.",
+    name: "Pearl Fidler",
+    role: "Sacred Alignment Call participant",
+    quote:
+      "The call changed my trajectory. I felt seen, heard, and inspired to make a real impact in the world. It felt like a call with an old friend, and I felt absolutely lit up inside.",
   },
+  {
+    name: "Rakhee C. Patel",
+    role: "Pharmacist of 17 years → Spiritual Life Coach",
+    quote:
+      "I'm working with 3 clients a day. No more 9-5. I'm living my Dharma and it feels like a dream come true.",
+    photo: "/img/testimonials/Rakhee-Patel.jpg",
+  },
+];
+
+// Real graduate photos (from /public/images/grads) for the hero social-proof row.
+const GRAD_AVATARS = [
+  "/images/grads/grad-1104758.jpg",
+  "/images/grads/grad-2530364.jpg",
+  "/images/grads/grad-3776447.jpg",
+  "/images/grads/grad-4560483.jpg",
+  "/images/grads/grad-676629.jpg",
 ];
 
 export default function SchedulePage() {
@@ -43,48 +62,67 @@ export default function SchedulePage() {
           priority
           className="-z-10 object-cover object-center"
         />
-        <div className="absolute inset-0 -z-10 bg-gradient-to-b from-black/15 via-black/25 to-black/55" />
+        {/* Stronger overlay so the white type stays legible over the bright sunrise. */}
+        <div className="absolute inset-0 -z-10 bg-gradient-to-b from-black/45 via-black/40 to-black/65" />
 
-        <div className="mx-auto max-w-widest px-6 pb-24 pt-24 text-center md:pb-32 md:pt-32">
+        <div className="mx-auto max-w-widest px-6 pb-28 pt-20 text-center md:pb-36 md:pt-24">
           <Reveal>
             <div className="mx-auto inline-flex flex-col items-center">
-              <div className="font-serif text-[10px] uppercase tracking-[0.36em] text-white/90">
+              <div className="font-serif text-[12px] uppercase tracking-[0.34em] text-white">
                 Awakened Academy<span className="text-gold-lt">®</span>
               </div>
-              <div className="mt-3 font-serif text-[clamp(20px,3vw,30px)] font-light text-white">
-                Spiritual Coaching
-              </div>
-              <div className="mt-1 text-[11px] uppercase tracking-[0.22em] text-white/80">
-                Certification &amp; Online Business Academy
-              </div>
-              <div className="mt-3 h-px w-24 bg-white/40" />
-              <div className="mt-3 text-[10px] uppercase tracking-[0.28em] text-white/70">
-                For deep, empathic souls who are ready for freedom
+              <div className="mt-2.5 text-[11px] uppercase tracking-[0.24em] text-white/80">
+                Spiritual Coaching Certification &amp; Online Business Academy
               </div>
             </div>
           </Reveal>
 
           <Reveal>
-            <h1 className="mx-auto mt-16 max-w-4xl font-serif text-[clamp(28px,5.5vw,52px)] font-light leading-[1.15] text-white">
-              Live A Spiritual Life, <em className="text-white">Do Meaningful Work</em> and Make A Great Living
+            <h1 className="hero-text mx-auto mt-10 max-w-4xl font-serif text-[clamp(30px,5.5vw,54px)] font-light leading-[1.12] text-white">
+              Live a spiritual life, <em className="text-gold-lt">do meaningful work</em> and make a great living
             </h1>
           </Reveal>
 
           <Reveal>
-            <p className="mx-auto mt-7 max-w-3xl text-[clamp(15px,2vw,18px)] leading-[1.65] text-white/95 drop-shadow">
-              <a href="#calendar" className="font-semibold text-white underline decoration-white/60 underline-offset-4 hover:decoration-white">
-                2026 June Enrolment Open Now
-              </a>
-              {" — "}
-              Only 2 spots available, apply now to step into a life of purpose, abundance, and freedom.
+            <p className="hero-text mx-auto mt-6 max-w-2xl text-[clamp(15px,2vw,18px)] leading-[1.65] text-white/90">
+              For deep, empathic souls who are ready for freedom. Book your free
+              Sacred Alignment Call and discover whether Awakened Academy is your next step.
             </p>
+          </Reveal>
+
+          <Reveal>
+            <a
+              href="#calendar"
+              className="mt-8 inline-flex items-center gap-2.5 rounded-full border border-gold-lt/70 bg-black/20 px-5 py-2.5 text-[12px] font-medium uppercase tracking-[0.16em] text-white backdrop-blur-sm transition hover:bg-black/30"
+            >
+              <span aria-hidden className="inline-block h-1.5 w-1.5 rounded-full bg-gold-lt" />
+              2026 June enrolment open · only 8 spots per month
+            </a>
+          </Reveal>
+
+          <Reveal>
+            <div className="mt-10 flex flex-wrap items-center justify-center gap-x-4 gap-y-3">
+              <div className="flex -space-x-3">
+                {GRAD_AVATARS.map((src) => (
+                  <div
+                    key={src}
+                    className="relative h-10 w-10 overflow-hidden rounded-full border-2 border-white/85 shadow-md"
+                  >
+                    <Image src={src} alt="" fill sizes="40px" className="object-cover" />
+                  </div>
+                ))}
+              </div>
+              <span className="hero-text text-[13.5px] text-white/90">
+                Join 650+ certified coaches in 25+ countries
+              </span>
+            </div>
           </Reveal>
         </div>
       </section>
 
       {/* CALENDAR, large white card overlapping the hero */}
       <section id="calendar" className="relative scroll-mt-20 bg-bg">
-        <div className="mx-auto -mt-16 max-w-widest px-6 md:-mt-24">
+        <div className="mx-auto -mt-12 max-w-widest px-6 md:-mt-16">
           <Reveal>
             <div className="overflow-hidden rounded-lg border border-ink/10 bg-white p-4 shadow-2xl md:p-8">
               <div className="mb-6 text-center">
@@ -143,7 +181,7 @@ export default function SchedulePage() {
 
           <Reveal>
             <div className="mt-16 text-center">
-              <span className="eyebrow">From recent students</span>
+              <span className="eyebrow">From students who started with a call</span>
             </div>
           </Reveal>
 
@@ -151,13 +189,25 @@ export default function SchedulePage() {
             {TESTIMONIALS.map((t) => (
               <Reveal key={t.name}>
                 <figure className="flex h-full flex-col rounded-md border border-ink/10 bg-white p-7 shadow-sm">
-                  <div className="text-3xl font-serif leading-none text-gold">"</div>
-                  <blockquote className="mt-2 flex-1 text-[15.5px] leading-[1.7] text-ink2">
+                  <div className="flex items-center gap-4">
+                    {t.photo ? (
+                      <div className="relative h-14 w-14 flex-none overflow-hidden rounded-full border-2 border-gold/30 shadow-sm">
+                        <Image src={t.photo} alt={t.name} fill sizes="56px" className="object-cover" />
+                      </div>
+                    ) : (
+                      <div className="flex h-14 w-14 flex-none items-center justify-center rounded-full bg-gold/20 font-serif text-2xl text-gold-dark">
+                        {t.name.charAt(0)}
+                      </div>
+                    )}
+                    <figcaption>
+                      <div className="text-[14px] font-medium text-ink">{t.name}</div>
+                      <div className="mt-0.5 text-[11.5px] leading-tight text-soft">{t.role}</div>
+                    </figcaption>
+                  </div>
+                  <div className="mt-5 text-3xl font-serif leading-none text-gold">"</div>
+                  <blockquote className="mt-1 flex-1 text-[15px] leading-[1.7] text-ink2">
                     {t.quote}
                   </blockquote>
-                  <figcaption className="mt-6 text-[12px] font-medium text-teal">
-                    {t.name}
-                  </figcaption>
                 </figure>
               </Reveal>
             ))}
