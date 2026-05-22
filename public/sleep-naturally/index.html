@@ -1,0 +1,1033 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Sleep Naturally — Awakened Academy</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet" />
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    background: #0d0e1a;
+    color: #e8e6f0;
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* ── GHL OVERRIDE RESETS ── Force our styles over GHL's defaults ── */
+  #sn-page-wrapper * {
+    box-sizing: border-box !important;
+  }
+
+  /* Force ALL text inside our wrapper to centre by default */
+  #sn-page-wrapper p,
+  #sn-page-wrapper h1,
+  #sn-page-wrapper h2,
+  #sn-page-wrapper h3,
+  #sn-page-wrapper h4,
+  #sn-page-wrapper span,
+  #sn-page-wrapper li,
+  #sn-page-wrapper blockquote {
+    text-align: center !important;
+  }
+
+  /* Story section paragraphs stay left-aligned */
+  #sn-page-wrapper .sn-story-text p,
+  #sn-page-wrapper .sn-story-text h2,
+  #sn-page-wrapper .sn-story-text blockquote {
+    text-align: left !important;
+  }
+
+  /* GHL injects its own column/row divs — override those too */
+  .custom-code-container p,
+  .custom-code-container h1,
+  .custom-code-container h2,
+  .custom-code-container h3,
+  .custom-code-container h4,
+  .custom-code-container span,
+  .custom-code-container li,
+  .custom-code-container blockquote {
+    text-align: center !important;
+  }
+  .custom-code-container .sn-story-text p,
+  .custom-code-container .sn-story-text h2,
+  .custom-code-container .sn-story-text blockquote {
+    text-align: left !important;
+  }
+  #sn-page-wrapper img {
+    display: block !important;
+    max-width: 100% !important;
+    height: auto !important;
+  }
+  #sn-page-wrapper .sn-hero-bg img,
+  #sn-page-wrapper .sn-quote-band img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    position: absolute !important;
+    inset: 0 !important;
+  }
+  #sn-page-wrapper .sn-story-img {
+    width: 100% !important;
+    height: auto !important;
+    max-height: 480px !important;
+    object-fit: cover !important;
+    position: static !important;
+    display: block !important;
+  }
+
+  /* ── GHL FULL-WIDTH BREAKOUT ── */
+  #sn-page-wrapper {
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+    width: 100vw;
+    max-width: 100vw;
+    background: #0d0e1a;
+    overflow-x: hidden;
+  }
+
+  a { text-decoration: none; }
+
+  /* ── FADE UP ANIMATION ── */
+  .fade-up {
+    opacity: 0;
+    transform: translateY(28px);
+    transition: opacity 0.85s ease, transform 0.85s ease;
+  }
+  .fade-up.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* ── NAV ── */
+  .sn-nav {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.1rem 5vw;
+    background: linear-gradient(to bottom, rgba(13,14,26,0.97), transparent);
+  }
+  .sn-nav-logo {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    font-size: 1.05rem;
+    color: #c4b5e8;
+    letter-spacing: 0.04em;
+  }
+  .sn-nav-cta {
+    display: inline-block;
+    background: linear-gradient(135deg, #7c6fcd, #a78bda);
+    color: #fff;
+    font-family: 'Lato', sans-serif;
+    font-weight: 900;
+    font-size: 0.65rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    padding: 0.7rem 1.6rem;
+    border-radius: 3rem;
+    transition: opacity 0.2s;
+  }
+  .sn-nav-cta:hover { opacity: 0.88; }
+
+  /* ── HERO ── */
+  .sn-hero {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+  .sn-hero-bg {
+    position: absolute;
+    inset: 0;
+  }
+  .sn-hero-bg img {
+    width: 100%; height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+  .sn-hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom, rgba(13,14,26,0.45) 0%, rgba(13,14,26,0.7) 50%, rgba(13,14,26,1) 100%);
+  }
+  .sn-hero-glow {
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse at 50% 40%, rgba(124,111,205,0.1) 0%, transparent 65%);
+    pointer-events: none;
+  }
+  .sn-hero-content {
+    position: relative;
+    z-index: 10;
+    text-align: center;
+    max-width: 100%;
+    margin: 0;
+    padding: 7rem 5vw 5rem;
+  }
+  .sn-eyebrow {
+    font-family: 'Lato', sans-serif;
+    font-size: 0.65rem;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: #a78bda;
+    margin-bottom: 1.6rem;
+  }
+  .sn-h1 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 900;
+    font-size: clamp(2.8rem, 7vw, 5.5rem);
+    line-height: 1.07;
+    color: #f0eef8;
+    margin-bottom: 1.4rem;
+    max-width: 100%;
+  }
+  .sn-h1 .grad {
+    background: linear-gradient(135deg, #c4b5e8, #a78bda);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  .sn-hero-sub {
+    font-size: clamp(1rem, 2vw, 1.2rem);
+    line-height: 1.8;
+    color: #b0aac8;
+    max-width: 700px;
+    margin: 0 auto 2.5rem;
+  }
+  .sn-btn-primary {
+    display: inline-block;
+    background: linear-gradient(135deg, #7c6fcd, #a78bda);
+    color: #fff;
+    font-family: 'Lato', sans-serif;
+    font-weight: 900;
+    font-size: 0.75rem;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    padding: 1.15rem 2.8rem;
+    border-radius: 3rem;
+    box-shadow: 0 0 50px rgba(124,111,205,0.4), 0 4px 20px rgba(0,0,0,0.4);
+    transition: transform 0.25s ease, opacity 0.25s ease;
+    border: none;
+    cursor: pointer;
+  }
+  .sn-btn-primary:hover { transform: translateY(-2px); opacity: 0.93; }
+  .sn-trust-strip {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.2rem 2rem;
+    margin-top: 2rem;
+    font-size: 0.62rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: #3d3858;
+  }
+
+  /* ── SECTIONS ── */
+  .sn-section { padding: 5.5rem 0; }
+  .sn-section-alt { background: #0d0e1a; }
+  .sn-inner { max-width: 780px; margin: 0 auto; padding: 0 5vw; text-align: center; }
+  .sn-inner-wide { max-width: 1100px; margin: 0 auto; padding: 0 5vw; text-align: center; }
+
+  .sn-section-label {
+    font-size: 0.65rem;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: #a78bda;
+    margin-bottom: 1.1rem;
+    text-align: center !important;
+    display: block;
+  }
+  .sn-h2 {
+    font-family: 'Playfair Display', serif !important;
+    font-weight: 700 !important;
+    font-size: clamp(1.55rem, 3.5vw, 2.35rem) !important;
+    line-height: 1.22 !important;
+    color: #f0eef8 !important;
+    margin-bottom: 1.75rem;
+    text-align: center !important;
+  }
+  .sn-body {
+    font-size: clamp(0.9rem, 1.5vw, 1.05rem);
+    line-height: 1.88;
+    color: #9e99b8;
+    text-align: center !important;
+  }
+  .sn-body p + p { margin-top: 1.2rem; }
+  .sn-body em { color: #c4b5e8; font-style: italic; }
+  .sn-body strong { color: #d4cff0; font-weight: 700; }
+
+  .sn-divider {
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(167,139,218,0.3), transparent);
+    margin: 2.25rem 0;
+  }
+  .sn-blockquote {
+    border-left: 2px solid #7c6fcd;
+    padding-left: 1.5rem;
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 1.1rem;
+    color: #c4b5e8;
+    line-height: 1.65;
+  }
+  .sn-blockquote-attr {
+    padding-left: 1.5rem;
+    margin-top: 0.65rem;
+    font-size: 0.62rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: #3d3858;
+  }
+
+  /* ── 8 DIMENSIONS GRID ── */
+  .sn-dim-grid {
+    display: grid !important;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    margin-top: 3rem;
+    text-align: left;
+  }
+  @media (min-width: 680px) {
+    .sn-dim-grid { grid-template-columns: 1fr 1fr; }
+  }
+  @media (min-width: 1100px) {
+    .sn-dim-grid { grid-template-columns: 1fr 1fr 1fr 1fr; }
+  }
+  .sn-dim-card {
+    display: flex;
+    gap: 1.25rem;
+    padding: 1.5rem;
+    border-radius: 0.85rem;
+    background: #14152a;
+    border: 1px solid rgba(124,111,205,0.15);
+    transition: border-color 0.3s, background 0.3s;
+  }
+  .sn-dim-card:hover {
+    border-color: rgba(124,111,205,0.4);
+    background: #171830;
+  }
+  .sn-dim-num {
+    font-family: 'Playfair Display', serif;
+    font-weight: 900;
+    font-size: 1.55rem;
+    line-height: 1;
+    background: linear-gradient(135deg, #7c6fcd, #a78bda);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    flex-shrink: 0;
+    padding-top: 2px;
+  }
+  .sn-dim-label {
+    font-size: 0.6rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: #7c6fcd;
+    margin-bottom: 0.3rem;
+  }
+  .sn-dim-benefit {
+    font-family: 'Playfair Display', serif;
+    font-weight: 600;
+    font-size: 0.95rem;
+    color: #e8e6f0;
+    line-height: 1.35;
+    margin-bottom: 0.45rem;
+  }
+  .sn-dim-desc {
+    font-size: 0.78rem;
+    color: #5a5575;
+    line-height: 1.65;
+  }
+
+  /* ── QUOTE BAND ── */
+  .sn-quote-band {
+    position: relative;
+    height: 260px;
+    overflow: hidden;
+    width: 100%;
+  }
+  @media (min-width: 680px) { .sn-quote-band { height: 340px; } }
+  .sn-quote-band img {
+    width: 100%; height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+  .sn-quote-band-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(13,14,26,0.62);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1.5rem;
+  }
+  .sn-quote-band-text {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: clamp(1.05rem, 2.5vw, 1.65rem);
+    color: #e8e6f0;
+    text-align: center;
+    line-height: 1.55;
+    max-width: 620px;
+  }
+  .sn-quote-band-text .grad {
+    background: linear-gradient(135deg, #c4b5e8, #a78bda);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  /* ── STORY ── */
+  .sn-story-grid {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 3rem;
+    align-items: center;
+    text-align: left !important;
+  }
+  @media (min-width: 780px) {
+    .sn-story-grid { grid-template-columns: 1fr 1fr !important; }
+  }
+  .sn-story-grid .sn-body { text-align: left !important; }
+  .sn-story-grid .sn-h2 { text-align: left !important; }
+  .sn-story-grid .sn-section-label { text-align: left !important; }
+  .sn-story-img {
+    width: 100% !important;
+    border-radius: 1rem;
+    object-fit: cover !important;
+    max-height: 480px;
+    border: 1px solid rgba(124,111,205,0.2);
+    display: block !important;
+    position: static !important;
+  }
+
+  /* ── TESTIMONIALS ── */
+  .sn-testi-grid {
+    display: grid !important;
+    grid-template-columns: 1fr;
+    gap: 1.1rem;
+    margin-top: 3rem;
+    text-align: left;
+  }
+  @media (min-width: 780px) {
+    .sn-testi-grid { grid-template-columns: 1fr 1fr 1fr; }
+  }
+  @media (min-width: 1100px) {
+    .sn-testi-grid { grid-template-columns: 1fr 1fr 1fr; }
+  }
+  .sn-testi-card {
+    padding: 1.75rem;
+    border-radius: 1rem;
+    background: #14152a;
+    border: 1px solid rgba(124,111,205,0.15);
+    display: flex;
+    flex-direction: column;
+  }
+  .sn-testi-quote-mark {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    color: #7c6fcd;
+    line-height: 1;
+    margin-bottom: 0.9rem;
+  }
+  .sn-testi-text {
+    font-size: 0.85rem;
+    line-height: 1.78;
+    color: #9e99b8;
+    flex: 1;
+    margin-bottom: 1.4rem;
+  }
+  .sn-testi-name { font-weight: 700; font-size: 0.85rem; color: #e8e6f0; }
+  .sn-testi-detail { font-size: 0.72rem; color: #3d3858; margin-top: 0.2rem; }
+
+  /* ── WHAT CHANGES ── */
+  .sn-changes-list { margin-top: 2.25rem; display: flex !important; flex-direction: column; gap: 0.7rem; text-align: left; }
+  .sn-change-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem 1.4rem;
+    border-radius: 0.75rem;
+    background: #14152a;
+    border: 1px solid rgba(124,111,205,0.12);
+  }
+  .sn-change-icon { color: #7c6fcd; font-size: 1rem; flex-shrink: 0; }
+  .sn-change-text { font-size: 0.93rem; color: #d4cff0; font-weight: 400; }
+
+  /* ── OFFER ── */
+  .sn-offer-box {
+    border-radius: 1.25rem;
+    padding: 2.5rem 2rem;
+    text-align: center;
+    background: linear-gradient(135deg, #14152a, #1a1b35);
+    border: 1px solid rgba(124,111,205,0.35);
+    box-shadow: 0 0 60px rgba(124,111,205,0.1);
+    margin-bottom: 1.5rem;
+  }
+  .sn-offer-label {
+    font-size: 0.65rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: #4a4565;
+    margin-bottom: 0.4rem;
+  }
+  .sn-price {
+    font-family: 'Playfair Display', serif;
+    font-weight: 900;
+    font-size: 4.5rem;
+    line-height: 1;
+    background: linear-gradient(135deg, #c4b5e8, #a78bda);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  .sn-price-note {
+    font-size: 0.72rem;
+    color: #2d2a3a;
+    margin-bottom: 2rem;
+    margin-top: 0.3rem;
+  }
+  .sn-btn-offer {
+    display: block;
+    width: 100%;
+    background: linear-gradient(135deg, #7c6fcd, #a78bda);
+    color: #fff;
+    font-family: 'Lato', sans-serif;
+    font-weight: 900;
+    font-size: 0.75rem;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    padding: 1.2rem 2rem;
+    border-radius: 3rem;
+    box-shadow: 0 0 50px rgba(124,111,205,0.45), 0 6px 20px rgba(0,0,0,0.4);
+    border: none;
+    cursor: pointer;
+    transition: transform 0.25s ease, opacity 0.25s ease;
+    text-align: center;
+  }
+  .sn-btn-offer:hover { transform: translateY(-2px); opacity: 0.93; }
+  .sn-secure-strip {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.8rem 1.5rem;
+    margin-top: 1.25rem;
+    font-size: 0.62rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: #2d2a3a;
+  }
+  .sn-offer-note {
+    text-align: center;
+    font-size: 0.78rem;
+    color: #3d3858;
+    line-height: 1.7;
+  }
+
+  /* ── GUARANTEE ── */
+  .sn-guarantee { text-align: center; }
+  .sn-guarantee-icon {
+    width: 3.5rem; height: 3.5rem;
+    border-radius: 50%;
+    background: rgba(124,111,205,0.12);
+    border: 1px solid rgba(124,111,205,0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.5rem;
+    font-size: 1.3rem;
+  }
+
+  /* ── FAQ ── */
+  .sn-faq-list { display: flex !important; flex-direction: column; gap: 0.7rem; margin-top: 2.5rem; text-align: left; }
+  .sn-faq-item {
+    border-radius: 0.85rem;
+    overflow: hidden;
+    background: #14152a;
+    border: 1px solid rgba(124,111,205,0.15);
+  }
+  .sn-faq-trigger {
+    width: 100%;
+    text-align: left;
+    padding: 1.25rem 1.5rem;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 1rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #d4cff0;
+  }
+  .sn-faq-q {
+    font-family: 'Playfair Display', serif;
+    font-weight: 600;
+    font-size: 0.93rem;
+    line-height: 1.4;
+    color: #d4cff0;
+    text-align: left;
+  }
+  .sn-faq-icon {
+    color: #7c6fcd;
+    font-size: 1.4rem;
+    line-height: 1;
+    flex-shrink: 0;
+    margin-top: 1px;
+    transition: transform 0.25s;
+  }
+  .sn-faq-body {
+    display: none;
+    padding: 0 1.5rem 1.25rem;
+    font-size: 0.85rem;
+    line-height: 1.78;
+    color: #9e99b8;
+  }
+  .sn-faq-item.open .sn-faq-body { display: block; }
+  .sn-faq-item.open .sn-faq-icon { transform: rotate(45deg); }
+
+  /* ── FINAL CTA ── */
+  .sn-final-cta {
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .sn-final-glow {
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse at 50% 60%, rgba(124,111,205,0.07) 0%, transparent 65%);
+    pointer-events: none;
+  }
+  .sn-ps {
+    font-size: 0.83rem;
+    color: #3d3858;
+    line-height: 1.8;
+    margin-top: 0.75rem;
+  }
+  .sn-ps strong { color: #4a4565; }
+
+  /* ── FOOTER ── */
+  .sn-footer {
+    padding: 2.5rem 5vw;
+    text-align: center;
+    background: #0d0e1a;
+    border-top: 1px solid rgba(124,111,205,0.08);
+  }
+  .sn-footer-logo {
+    font-family: 'Playfair Display', serif;
+    color: #a78bda;
+    font-size: 1rem;
+    font-weight: 700;
+    margin-bottom: 0.4rem;
+  }
+  .sn-footer-copy { font-size: 0.7rem; color: #1e1c2e; }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 480px) {
+    .sn-nav-cta { display: none; }
+    .sn-offer-box { padding: 2rem 1.25rem; }
+  }
+</style>
+</head>
+<body>
+<div id="sn-page-wrapper">
+
+<!-- NAV -->
+<nav class="sn-nav">
+  <span class="sn-nav-logo">Sleep Naturally</span>
+  <a href="#offer" class="sn-nav-cta">Get Instant Access</a>
+</nav>
+
+<!-- ══ HERO ══ -->
+<section class="sn-hero">
+  <div class="sn-hero-bg">
+    <img src="https://d2xsxph8kpxj0f.cloudfront.net/310519663183269599/EsUkm6EmWnfGaG67XrPrqz/sleep-hero-v2-cLaC8QKitjNyBbqa3jQHsY.webp" alt="Peaceful bedroom at night" />
+    <div class="sn-hero-overlay"></div>
+    <div class="sn-hero-glow"></div>
+  </div>
+  <div class="sn-hero-content fade-up">
+    <p class="sn-eyebrow">Awakened Academy &middot; Sleep Naturally</p>
+    <h1 class="sn-h1">
+      Wake up tomorrow<br />
+      <span class="grad">feeling like yourself</span> again.
+    </h1>
+    <p class="sn-hero-sub">
+      Clear head. Calm body. Energy for the people you love.<br />
+      Deep, natural sleep &mdash; every night.
+    </p>
+    <a href="#offer" class="sn-btn-primary">Yes &mdash; I Want to Sleep Naturally &rarr;</a>
+    <div class="sn-trust-strip">
+      <span>&#10022; Complete Holistic Program</span>
+      <span>&#10022; 8 Dimensions of Sleep</span>
+      <span>&#10022; 30-Day Guarantee</span>
+      <span>&#10022; Instant Access</span>
+    </div>
+  </div>
+</section>
+
+<!-- ══ EMPATHY ══ -->
+<section class="sn-section">
+  <div class="sn-inner fade-up">
+    <p class="sn-section-label">If this sounds familiar</p>
+    <h2 class="sn-h2">You&rsquo;re not a bad sleeper.<br />You&rsquo;re an exhausted person<br />who hasn&rsquo;t found the real answer yet.</h2>
+    <div class="sn-body">
+      <p>You lie awake while the rest of the world sleeps. Your mind runs through things you can&rsquo;t resolve. You watch the clock. You calculate how many hours you have left if you fall asleep right now.</p>
+      <p>You&rsquo;ve tried things. Maybe a lot of things. And some of them helped, a little, for a while. But nothing has stuck. And somewhere along the way, a quiet thought crept in: <em>maybe this is just how I am now.</em></p>
+      <p>It isn&rsquo;t. And the reason nothing has worked isn&rsquo;t that you haven&rsquo;t found the right technique. It&rsquo;s that sleep isn&rsquo;t a one-dimensional problem &mdash; and every solution you&rsquo;ve tried has only addressed one piece of it.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ══ WHY ══ -->
+<section class="sn-section sn-section-alt">
+  <div class="sn-inner fade-up">
+    <p class="sn-section-label">The real reason</p>
+    <h2 class="sn-h2">Sleep is a whole-life experience.<br />Most solutions treat it like a single problem.</h2>
+    <div class="sn-body">
+      <p>Your nervous system, your thoughts, your feelings, your relationships, your sense of purpose &mdash; all of it shapes the quality of your rest, every single night. If any one of these is out of balance, sleep is disrupted. No matter what else you do.</p>
+      <p>That&rsquo;s why you can do everything &ldquo;right&rdquo; &mdash; the routine, the darkness, the no-screens rule &mdash; and still lie awake. You&rsquo;ve addressed one or two dimensions. The others are still running.</p>
+      <p><strong>Sleep Naturally is a complete holistic program that works on all eight dimensions simultaneously. Not a technique. Not a tip. A complete return to the natural sleep you were born to have.</strong></p>
+    </div>
+    <div class="sn-divider"></div>
+    <blockquote class="sn-blockquote">
+      &ldquo;Deep, natural sleep is not a skill to be learned. It is a natural state to be returned to.&rdquo;
+    </blockquote>
+    <p class="sn-blockquote-attr">&mdash; Michael McIntosh, Awakened Academy</p>
+  </div>
+</section>
+
+<!-- ══ 8 DIMENSIONS ══ -->
+<section class="sn-section">
+  <div class="sn-inner-wide fade-up">
+    <div style="text-align:center; margin-bottom: 3rem;">
+      <p class="sn-section-label">Eight dimensions. One complete transformation.</p>
+      <h2 class="sn-h2" style="margin-bottom:0;">Here&rsquo;s what changes when you address<br />every part of the picture.</h2>
+    </div>
+    <div class="sn-dim-grid">
+
+      <div class="sn-dim-card">
+        <div class="sn-dim-num">01</div>
+        <div>
+          <p class="sn-dim-label">Your Nervous System</p>
+          <p class="sn-dim-benefit">You stop fighting sleep and start trusting your body again.</p>
+          <p class="sn-dim-desc">The moment your nervous system feels safe, sleep happens on its own &mdash; just as it was always meant to.</p>
+        </div>
+      </div>
+
+      <div class="sn-dim-card">
+        <div class="sn-dim-num">02</div>
+        <div>
+          <p class="sn-dim-label">Your Environment</p>
+          <p class="sn-dim-benefit">Your bedroom becomes a place you actually want to be at night.</p>
+          <p class="sn-dim-desc">A few quiet changes to your surroundings send powerful signals to your body that it&rsquo;s safe to let go.</p>
+        </div>
+      </div>
+
+      <div class="sn-dim-card">
+        <div class="sn-dim-num">03</div>
+        <div>
+          <p class="sn-dim-label">Your Mind</p>
+          <p class="sn-dim-benefit">The thoughts that keep you awake finally have somewhere to go.</p>
+          <p class="sn-dim-desc">A simple nightly practice clears the mental backlog so your mind arrives at bedtime genuinely ready to rest.</p>
+        </div>
+      </div>
+
+      <div class="sn-dim-card">
+        <div class="sn-dim-num">04</div>
+        <div>
+          <p class="sn-dim-label">Your Emotional Life</p>
+          <p class="sn-dim-benefit">You stop carrying the day&rsquo;s weight into the night.</p>
+          <p class="sn-dim-desc">Feelings that haven&rsquo;t been acknowledged don&rsquo;t disappear &mdash; they surface at 2am. Learning to meet them changes everything.</p>
+        </div>
+      </div>
+
+      <div class="sn-dim-card">
+        <div class="sn-dim-num">05</div>
+        <div>
+          <p class="sn-dim-label">Your Body</p>
+          <p class="sn-dim-benefit">Your body becomes your ally in sleep, not something to manage.</p>
+          <p class="sn-dim-desc">How you move and nourish yourself during the day quietly shapes what happens when you close your eyes.</p>
+        </div>
+      </div>
+
+      <div class="sn-dim-card">
+        <div class="sn-dim-num">06</div>
+        <div>
+          <p class="sn-dim-label">Your Relationships</p>
+          <p class="sn-dim-benefit">You stop bringing unresolved tension to bed with you.</p>
+          <p class="sn-dim-desc">The quality of your connections follows you into the night. Addressing this dimension is often the most transformative of all.</p>
+        </div>
+      </div>
+
+      <div class="sn-dim-card">
+        <div class="sn-dim-num">07</div>
+        <div>
+          <p class="sn-dim-label">Your Purpose</p>
+          <p class="sn-dim-benefit">The low hum of unease that no technique could quiet finally settles.</p>
+          <p class="sn-dim-desc">Living out of alignment with what matters most creates a restlessness that goes deeper than any sleep tip can reach.</p>
+        </div>
+      </div>
+
+      <div class="sn-dim-card">
+        <div class="sn-dim-num">08</div>
+        <div>
+          <p class="sn-dim-label">Your Whole Self</p>
+          <p class="sn-dim-benefit">You become someone who simply sleeps &mdash; naturally, every night.</p>
+          <p class="sn-dim-desc">When every dimension is in harmony, sleep stops being a problem you manage and becomes something that just happens.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══ QUOTE BAND ══ -->
+<div class="sn-quote-band">
+  <img src="https://d2xsxph8kpxj0f.cloudfront.net/310519663183269599/EsUkm6EmWnfGaG67XrPrqz/sleep-calm-v2-3RDXGEQgk7oyqmMktPpeRT.webp" alt="" />
+  <div class="sn-quote-band-overlay">
+    <p class="sn-quote-band-text">
+      &ldquo;Thirty years of working with people who couldn&rsquo;t sleep.<br />
+      <span class="grad">This is what actually works.&rdquo;</span>
+    </p>
+  </div>
+</div>
+
+<!-- ══ MICHAEL'S STORY ══ -->
+<section class="sn-section sn-section-alt">
+  <div class="sn-inner-wide fade-up">
+    <div class="sn-story-grid">
+      <div>
+        <img src="https://d2xsxph8kpxj0f.cloudfront.net/310519663183269599/EsUkm6EmWnfGaG67XrPrqz/sleep-michael_6e67c4bb.jpg" alt="Michael McIntosh" class="sn-story-img" />
+      </div>
+      <div>
+        <p class="sn-section-label">Your guide</p>
+        <h2 class="sn-h2">Michael McIntosh</h2>
+        <div class="sn-body">
+          <p>Michael McIntosh has spent 30 years practicing and teaching meditation, and pioneered a form of spiritual life coaching in 2004. In that time, more people have come to him with sleep problems than almost any other issue.</p>
+          <p>He noticed something that most sleep experts miss: the people who couldn&rsquo;t sleep weren&rsquo;t just dealing with a sleep problem. They were carrying unresolved tension in their relationships, their work, their emotional lives. Fixing the bedroom wasn&rsquo;t enough. Neither was the breathing technique.</p>
+          <p>Over years of working with real people, he developed a program that addresses all eight dimensions simultaneously. The results were consistent &mdash; not because of any single secret, but because he had finally stopped treating sleep as an isolated problem.</p>
+          <p><em>&ldquo;I have slept deeply and peacefully almost every night for years. Not because I am special &mdash; but because I understand what sleep actually needs.&rdquo;</em></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ TESTIMONIALS ══ -->
+<section class="sn-section">
+  <div class="sn-inner-wide fade-up">
+    <div style="text-align:center; margin-bottom: 1rem;">
+      <p class="sn-section-label">Real experiences</p>
+      <h2 class="sn-h2" style="margin-bottom:0;">What people are saying</h2>
+    </div>
+    <div class="sn-testi-grid">
+      <div class="sn-testi-card">
+        <div class="sn-testi-quote-mark">&ldquo;</div>
+        <p class="sn-testi-text">I&rsquo;ve been sleeping through the night for the first time in years. I didn&rsquo;t realise how much of my sleep problem was emotional until I started working through this. It&rsquo;s been genuinely life-changing.</p>
+        <div>
+          <p class="sn-testi-name">Sarah M.</p>
+          <p class="sn-testi-detail">Struggled with insomnia for 7 years</p>
+        </div>
+      </div>
+      <div class="sn-testi-card">
+        <div class="sn-testi-quote-mark">&ldquo;</div>
+        <p class="sn-testi-text">The breathing practice worked the very first night. But the real shift came a few weeks in, when I understood why I&rsquo;d been waking at 3am. I sleep like I did as a child now.</p>
+        <div>
+          <p class="sn-testi-name">James T.</p>
+          <p class="sn-testi-detail">Executive, father of three</p>
+        </div>
+      </div>
+      <div class="sn-testi-card">
+        <div class="sn-testi-quote-mark">&ldquo;</div>
+        <p class="sn-testi-text">I&rsquo;m a doctor. I&rsquo;ve read all the research. Nothing I&rsquo;d tried had worked. What this does differently is address the whole person. I wish I&rsquo;d found it years ago.</p>
+        <div>
+          <p class="sn-testi-name">Dr. Rachel K.</p>
+          <p class="sn-testi-detail">Physician, 12 years of disrupted sleep</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ WHAT CHANGES ══ -->
+<section class="sn-section sn-section-alt">
+  <div class="sn-inner fade-up">
+    <div style="text-align:center; margin-bottom: 0.5rem;">
+      <p class="sn-section-label">What your life looks like on the other side</p>
+      <h2 class="sn-h2">This is what you&rsquo;re really looking for.</h2>
+    </div>
+    <div class="sn-changes-list">
+      <div class="sn-change-item"><span class="sn-change-icon">&#10022;</span><p class="sn-change-text">You fall asleep without lying there waiting</p></div>
+      <div class="sn-change-item"><span class="sn-change-icon">&#10022;</span><p class="sn-change-text">You stop waking at 2am with your mind running</p></div>
+      <div class="sn-change-item"><span class="sn-change-icon">&#10022;</span><p class="sn-change-text">You wake up before the alarm, actually rested</p></div>
+      <div class="sn-change-item"><span class="sn-change-icon">&#10022;</span><p class="sn-change-text">You have energy for the people and things you love</p></div>
+      <div class="sn-change-item"><span class="sn-change-icon">&#10022;</span><p class="sn-change-text">You stop dreading bedtime</p></div>
+      <div class="sn-change-item"><span class="sn-change-icon">&#10022;</span><p class="sn-change-text">You feel like yourself again</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ OFFER ══ -->
+<section id="offer" class="sn-section">
+  <div class="sn-inner fade-up">
+    <div style="text-align:center; margin-bottom: 2.5rem;">
+      <p class="sn-section-label">The complete program</p>
+      <h2 class="sn-h2" style="font-size: clamp(1.8rem, 4vw, 2.6rem); margin-bottom: 0.6rem;">Sleep Naturally</h2>
+      <p style="font-size: 0.93rem; color: #5a5575; line-height: 1.75; max-width: 100%; margin: 0 auto;">A complete holistic program that addresses every dimension of your life that affects sleep &mdash; so that deep, natural rest becomes your normal again.</p>
+    </div>
+
+    <div class="sn-offer-box">
+      <p class="sn-offer-label">Your investment today</p>
+      <p class="sn-price">$27</p>
+      <p class="sn-price-note">One-time payment &middot; Instant access &middot; No subscription</p>
+      <!-- REPLACE href="#" WITH YOUR CHECKOUT URL -->
+      <a href="#" class="sn-btn-offer">Yes &mdash; I Want to Sleep Naturally Tonight &rarr;</a>
+      <div class="sn-secure-strip">
+        <span>&#128274; Secure Checkout</span>
+        <span>&#10022; 30-Day Guarantee</span>
+        <span>&#10022; Instant Access</span>
+      </div>
+    </div>
+
+    <p class="sn-offer-note">The program includes the complete audio journey, a companion workbook and sleep diary, and bonus sessions on technology, dream interpretation, and the science behind why this approach works.</p>
+  </div>
+</section>
+
+<!-- ══ GUARANTEE ══ -->
+<section class="sn-section sn-section-alt">
+  <div class="sn-inner fade-up">
+    <div class="sn-guarantee">
+      <div class="sn-guarantee-icon">&#10022;</div>
+      <p class="sn-section-label">The 30-Day Deep Rest Guarantee</p>
+      <h2 class="sn-h2">Sleep better, or you don&rsquo;t pay.</h2>
+      <p class="sn-body" style="max-width: 100%;">Try the program for 30 days. Work through it. Use the tools. If you&rsquo;re not sleeping more deeply and waking up more rested than you have in years, simply send an email for a full refund. No questions asked.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ══ FAQ ══ -->
+<section class="sn-section">
+  <div class="sn-inner fade-up">
+    <div style="text-align:center;">
+      <p class="sn-section-label">Questions</p>
+      <h2 class="sn-h2">Answered honestly</h2>
+    </div>
+    <div class="sn-faq-list">
+
+      <div class="sn-faq-item">
+        <button class="sn-faq-trigger" onclick="toggleFaq(this)">
+          <span class="sn-faq-q">I&rsquo;ve tried so many things. Why would this be any different?</span>
+          <span class="sn-faq-icon">+</span>
+        </button>
+        <div class="sn-faq-body">Because everything you&rsquo;ve tried before addressed one part of the picture. A technique for your mind. A supplement for your body. A routine for your evenings. This works because it addresses every dimension of your life that affects sleep &mdash; all at once. When even one of those dimensions is out of balance, sleep is disrupted no matter what else you do. That&rsquo;s the reason nothing has worked. And that&rsquo;s what this changes.</div>
+      </div>
+
+      <div class="sn-faq-item">
+        <button class="sn-faq-trigger" onclick="toggleFaq(this)">
+          <span class="sn-faq-q">What if I&rsquo;m just a bad sleeper?</span>
+          <span class="sn-faq-icon">+</span>
+        </button>
+        <div class="sn-faq-body">You&rsquo;re not. You slept effortlessly as a child. The capacity is still there &mdash; it&rsquo;s just been buried under accumulated tension, unresolved feelings, and a nervous system that no longer feels safe enough to let go. This program is about removing what&rsquo;s in the way, not learning a new skill.</div>
+      </div>
+
+      <div class="sn-faq-item">
+        <button class="sn-faq-trigger" onclick="toggleFaq(this)">
+          <span class="sn-faq-q">How quickly will I notice a difference?</span>
+          <span class="sn-faq-icon">+</span>
+        </button>
+        <div class="sn-faq-body">Most people notice something within the first few nights. The nervous system practices can be used tonight. The deeper shift &mdash; where sleep becomes your natural state again &mdash; typically unfolds over four to eight weeks as you work through all eight dimensions.</div>
+      </div>
+
+      <div class="sn-faq-item">
+        <button class="sn-faq-trigger" onclick="toggleFaq(this)">
+          <span class="sn-faq-q">Is this too spiritual for me?</span>
+          <span class="sn-faq-icon">+</span>
+        </button>
+        <div class="sn-faq-body">The program works across eight dimensions, and the deeper ones are just a part of it. The practical tools &mdash; the nervous system practices, the environmental changes, the mental clearing &mdash; work completely on their own. Many people who don&rsquo;t consider themselves spiritual find the deeper work to be the most effective, not because of belief, but because it reaches a level that other approaches simply don&rsquo;t.</div>
+      </div>
+
+      <div class="sn-faq-item">
+        <button class="sn-faq-trigger" onclick="toggleFaq(this)">
+          <span class="sn-faq-q">How much time does this take?</span>
+          <span class="sn-faq-icon">+</span>
+        </button>
+        <div class="sn-faq-body">You&rsquo;re not adding to your day. The program is designed to be listened to as you&rsquo;re winding down or falling asleep &mdash; using the time you&rsquo;re already spending trying to sleep. And the tools are cumulative. Even the first session gives you something you can use that same night.</div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══ FINAL CTA ══ -->
+<section class="sn-section sn-final-cta">
+  <div class="sn-final-glow"></div>
+  <div class="sn-inner fade-up" style="position:relative; z-index:1;">
+    <p class="sn-section-label" style="text-align:center;">You deserve to sleep</p>
+    <h2 class="sn-h2" style="text-align:center; font-size: clamp(1.7rem, 4vw, 2.6rem);">Tonight could be the night<br />everything changes.</h2>
+    <p class="sn-body" style="text-align:center; max-width:100%; margin-bottom: 2.5rem;">The first tools in the program can be used tonight. The deeper transformation unfolds over the weeks that follow. It begins the moment you decide to address the whole picture &mdash; not just one more piece of it.</p>
+
+    <!-- REPLACE href="#" WITH YOUR CHECKOUT URL -->
+    <div style="text-align:center; margin-bottom: 1.25rem;">
+      <a href="#" class="sn-btn-primary">Yes &mdash; I Want to Sleep Naturally Tonight &rarr;</a>
+    </div>
+    <p style="text-align:center; font-size:0.72rem; color:#2d2a3a; margin-bottom: 2.5rem;">One-time payment &middot; Instant access &middot; 30-day money-back guarantee</p>
+
+    <div class="sn-divider"></div>
+
+    <p class="sn-ps"><strong>P.S.</strong> You are completely protected by the 30-Day Deep Rest Guarantee. If you work through the program and don&rsquo;t sleep better, you receive a full refund. The only risk is staying exactly where you are.</p>
+    <p class="sn-ps"><strong>P.P.S.</strong> This isn&rsquo;t another technique to add to the pile. It&rsquo;s the understanding of why nothing else has worked &mdash; and the complete system to change that.</p>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="sn-footer">
+  <p class="sn-footer-logo">Sleep Naturally</p>
+  <p class="sn-footer-copy">&copy; 2025 Awakened Academy &middot; Michael McIntosh &middot; All rights reserved</p>
+</footer>
+</div><!-- end sn-page-wrapper -->
+
+<script>
+  // FAQ accordion
+  function toggleFaq(btn) {
+    var item = btn.closest('.sn-faq-item');
+    var isOpen = item.classList.contains('open');
+    document.querySelectorAll('.sn-faq-item.open').forEach(function(el) { el.classList.remove('open'); });
+    if (!isOpen) item.classList.add('open');
+  }
+
+  // Fade-up on scroll
+  var fadeEls = document.querySelectorAll('.fade-up');
+  var observer = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.06 });
+  fadeEls.forEach(function(el) { observer.observe(el); });
+
+  // Smooth scroll for anchor links
+  document.querySelectorAll('a[href^="#"]').forEach(function(a) {
+    a.addEventListener('click', function(e) {
+      var target = document.querySelector(this.getAttribute('href'));
+      if (target) { e.preventDefault(); target.scrollIntoView({ behavior: 'smooth' }); }
+    });
+  });
+</script>
+
+</body>
+</html>

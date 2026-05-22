@@ -252,6 +252,15 @@ const config: NextConfig = {
       // Residual WordPress paths are handled by middleware with 410 Gone.
     ];
   },
+  /**
+   * Clean-URL rewrites for standalone static landing pages served from /public.
+   * /sleep-naturally -> public/sleep-naturally/index.html (Sleep Naturally sales page).
+   */
+  async rewrites() {
+    return [
+      { source: "/sleep-naturally", destination: "/sleep-naturally/index.html" },
+    ];
+  },
 };
 
 export default config;
