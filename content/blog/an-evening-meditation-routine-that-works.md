@@ -5,8 +5,10 @@ url: "https://awakenedacademy.com/an-evening-meditation-routine-that-works/"
 date: "2024-12-12"
 author: "Michael Mackintosh"
 description: "A practical, sustainable evening meditation routine for spiritual people. The setup, the practice, and the small details that make it stick."
-hero_image: "/images/blog/evening-meditation-dusk-ocean.jpg"
-images: ["https://images.pexels.com/photos/16179212/pexels-photo-16179212.jpeg?auto=compress&cs=tinysrgb&w=1600"]
+hero_image: "/images/blog/evening-meditation-golden-dusk.jpg"
+images:
+  - "/images/blog/evening-meditation-starry-night.jpg"
+  - "/images/blog/evening-meditation-dusk-ocean.jpg"
 flags: []
 ---
 

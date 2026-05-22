@@ -5,7 +5,7 @@ url: "https://awakenedacademy.com/fear-is-in-your-thoughts/"
 date: "2024-07-05"
 author: "Michael Mackintosh"
 description: "Fear isn't a wall outside of you, it's a wave inside your mind. A short reflection on watching fear without obeying it."
-hero_image: "https://images.pexels.com/photos/35810749/pexels-photo-35810749.jpeg?auto=compress&cs=tinysrgb&w=1600"
+hero_image: "/images/blog/fear-misty-lake.jpg"
 images: ["https://images.pexels.com/photos/36605869/pexels-photo-36605869.jpeg?auto=compress&cs=tinysrgb&w=1600"]
 flags: []
 ---

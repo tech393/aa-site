@@ -5,7 +5,7 @@ url: "https://awakenedacademy.com/live-each-day-as-if-it-was-your-last/"
 date: "2024-08-12"
 author: "Michael Mackintosh"
 description: "On the discipline of remembering you will die. Why ordinary days are the gift, and how to actually live one as if it counted."
-hero_image: "https://images.pexels.com/photos/30669567/pexels-photo-30669567.jpeg?auto=compress&cs=tinysrgb&w=1600"
+hero_image: "/images/blog/live-each-day-lone-tree.jpg"
 images: ["https://images.pexels.com/photos/14710861/pexels-photo-14710861.jpeg?auto=compress&cs=tinysrgb&w=1600"]
 flags: []
 ---

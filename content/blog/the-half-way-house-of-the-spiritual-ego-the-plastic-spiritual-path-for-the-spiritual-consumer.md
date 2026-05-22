@@ -5,7 +5,7 @@ url: "https://awakenedacademy.com/the-half-way-house-of-the-spiritual-ego-the-pl
 date: "2024-10-22"
 author: "Michael Mackintosh"
 description: "A direct look at the trap of spiritual consumerism, the spiritual ego, and the half-way house where many seekers get stuck before real awakening."
-hero_image: "https://images.pexels.com/photos/5386056/pexels-photo-5386056.jpeg?auto=compress&cs=tinysrgb&w=1600"
+hero_image: "/images/blog/spiritual-ego-lavender-field.jpg"
 images: ["https://images.pexels.com/photos/11754778/pexels-photo-11754778.jpeg?auto=compress&cs=tinysrgb&w=1600"]
 flags: []
 ---

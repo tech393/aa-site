@@ -5,8 +5,8 @@ url: "https://awakenedacademy.com/how-to-become-a-spiritual-life-coach-in-simple
 date: ""
 author: "Michael Mackintosh"
 description: "Simple-step guide to becoming a spiritual life coach: certification, niche selection, business setup, marketing, and personal growth."
-hero_image: "https://images.pexels.com/photos/2569794/pexels-photo-2569794.jpeg?auto=compress&cs=tinysrgb&w=1600"
-images: ["https://images.pexels.com/photos/14797773/pexels-photo-14797773.jpeg?auto=compress&cs=tinysrgb&w=1600", "https://images.pexels.com/photos/6929186/pexels-photo-6929186.jpeg?auto=compress&cs=tinysrgb&w=1600"]
+hero_image: "/images/blog/becoming-coach-sunset.jpg"
+images: []
 flags:
   - "Mentions 'personalized 1-on-1 coaching' as a program benefit, verify against canonical AA offer description"
 ---
@@ -41,6 +41,8 @@ Your personal spiritual journey and the challenges you have overcome can signifi
 Continuous education keeps you current with trends and enhances your skills as a spiritual life coach. Engaging in workshops and webinars introduces new techniques and perspectives that enrich your coaching practice.
 
 Personal growth is crucial for a successful spiritual life coach. By continuously developing yourself and focusing on spiritual growth, you can better assist clients in achieving their transformational goals.
+
+![](https://images.pexels.com/photos/14797773/pexels-photo-14797773.jpeg?auto=compress&cs=tinysrgb&w=1600)
 
 ## Setting Up Your Spiritual Coaching Business
 
@@ -89,6 +91,8 @@ Consistency in your marketing efforts builds momentum for client acquisition. St
 Regular check-ins with clients reinforce relationships and ensure ongoing satisfaction. Transparent communication maintains trust and rapport, creating a safe space for open dialogue.
 
 Investing in self-development enables spiritual coaches to create deeper connections with clients, enhancing the coaching relationship's effectiveness.
+
+![](https://images.pexels.com/photos/6929186/pexels-photo-6929186.jpeg?auto=compress&cs=tinysrgb&w=1600)
 
 ## Personal and Professional Growth as a Spiritual Coach
 

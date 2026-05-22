@@ -5,7 +5,7 @@ url: "https://awakenedacademy.com/secrets-and-mastery-the-1-secret-behind-all-se
 date: "2025-01-22"
 author: "Michael Mackintosh"
 description: "On the one principle that runs through every wisdom tradition, every mastery, and every awakened life. Why most secrets aren't really secret, and what is."
-hero_image: "https://images.pexels.com/photos/18201948/pexels-photo-18201948.jpeg?auto=compress&cs=tinysrgb&w=1600"
+hero_image: "/images/blog/secrets-mastery-valley.jpg"
 images: ["https://images.pexels.com/photos/15126628/pexels-photo-15126628.jpeg?auto=compress&cs=tinysrgb&w=1600"]
 flags: []
 ---

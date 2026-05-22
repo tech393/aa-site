@@ -5,7 +5,7 @@ url: "https://awakenedacademy.com/is-spiritual-coaching-your-divine-calling/"
 date: ""
 author: "Michael Mackintosh"
 description: "A deep exploration of the soul-level signs and inner whispers that point you toward a calling in spiritual coaching."
-hero_image: "https://images.pexels.com/photos/4534577/pexels-photo-4534577.jpeg?auto=compress&cs=tinysrgb&w=1600"
+hero_image: "/images/blog/divine-calling-cotton-grass.jpg"
 images: ["https://images.pexels.com/photos/9482553/pexels-photo-9482553.jpeg?auto=compress&cs=tinysrgb&w=1600", "https://images.pexels.com/photos/9317118/pexels-photo-9317118.jpeg?auto=compress&cs=tinysrgb&w=1600"]
 flags: []
 ---

@@ -5,7 +5,7 @@ url: "https://awakenedacademy.com/follow-the-signs-how-i-used-loa-to-move-to-haw
 date: "2024-11-20"
 author: "Michael Mackintosh"
 description: "A personal story about following synchronicity, listening to your inner voice, and the advanced law-of-attraction principle most teachers leave out."
-hero_image: "https://images.pexels.com/photos/4143778/pexels-photo-4143778.jpeg?auto=compress&cs=tinysrgb&w=1600"
+hero_image: "/images/blog/follow-signs-green-hills.jpg"
 images: ["https://images.pexels.com/photos/6900840/pexels-photo-6900840.jpeg?auto=compress&cs=tinysrgb&w=1600"]
 flags: []
 ---

@@ -5,7 +5,7 @@ url: "https://awakenedacademy.com/top-benefits-of-spiritual-coaching-transform-y
 date: ""
 author: "Michael Mackintosh"
 description: "Explore the personal, emotional, and spiritual benefits of working with a spiritual coach, and how to become one yourself."
-hero_image: "https://images.pexels.com/photos/132184/pexels-photo-132184.jpeg?auto=compress&cs=tinysrgb&w=1600"
+hero_image: "/images/blog/spiritual-coaching-benefits-sunflower.jpg"
 images: ["https://images.pexels.com/photos/7913329/pexels-photo-7913329.jpeg?auto=compress&cs=tinysrgb&w=1600", "https://images.pexels.com/photos/5333856/pexels-photo-5333856.jpeg?auto=compress&cs=tinysrgb&w=1600"]
 flags: []
 ---
