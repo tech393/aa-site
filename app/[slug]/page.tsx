@@ -153,6 +153,22 @@ function BlogPostView({ post }: { post: ReturnType<typeof getBlogPost> & {} }) {
             <MarkdownBody>{post.body}</MarkdownBody>
           </div>
 
+          {/* FREE GIFTS CTA, soft top-of-funnel lead magnet */}
+          <Reveal>
+            <div className="mx-auto mt-14 flex max-w-[62ch] flex-col items-center gap-5 rounded-md border border-gold/30 bg-gradient-to-br from-gold/10 to-warm p-7 text-center sm:flex-row sm:text-left">
+              <div className="flex-1">
+                <span className="eyebrow">Free gifts for you</span>
+                <h3 className="mt-2 font-serif text-[clamp(20px,2.6vw,24px)] leading-[1.25] text-ink">
+                  Free guided meditations &amp; soul-purpose guides
+                </h3>
+                <p className="mt-2 text-[14.5px] leading-[1.6] text-ink2">
+                  A handpicked collection to help you uncover your purpose and begin the inner work. Free, no cost.
+                </p>
+              </div>
+              <Link href="/free-gifts-for-you" className="btn-teal shrink-0">Get your free gifts</Link>
+            </div>
+          </Reveal>
+
           {/* INLINE CTA, mid-article style break-out card */}
           <Reveal>
             <div className="mx-auto mt-16 max-w-[62ch] rounded-md border border-teal/30 bg-gradient-to-br from-teal/5 to-gold/10 p-8 text-center">

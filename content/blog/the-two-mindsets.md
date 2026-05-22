@@ -6,7 +6,12 @@ date: "2026-05-22"
 author: "Michael Mackintosh"
 description: "The single belief that decides who builds the life they dream about, and who only ever talks about it."
 hero_image: "/images/golden-light.jpg"
-images: []
+images:
+  - "/images/woman-lotus-beach-gold.jpg"
+  - "/images/story/divine-light.jpg"
+  - "/images/story/nature-lights.jpg"
+  - "/images/woman-on-top-full.jpg"
+  - "/images/story/ocean-waves.jpg"
 ---
 
 When I was ten years old, my mum asked if I wanted to learn tennis.
