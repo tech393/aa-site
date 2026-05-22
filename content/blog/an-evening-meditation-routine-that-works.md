@@ -5,7 +5,7 @@ url: "https://awakenedacademy.com/an-evening-meditation-routine-that-works/"
 date: "2024-12-12"
 author: "Michael Mackintosh"
 description: "A practical, sustainable evening meditation routine for spiritual people. The setup, the practice, and the small details that make it stick."
-hero_image: "https://images.pexels.com/photos/7267700/pexels-photo-7267700.jpeg?auto=compress&cs=tinysrgb&w=1600"
+hero_image: "/images/woman-lotus-beach-gold.jpg"
 images: ["https://images.pexels.com/photos/16179212/pexels-photo-16179212.jpeg?auto=compress&cs=tinysrgb&w=1600"]
 flags: []
 ---
@@ -91,7 +91,3 @@ Have a relaxing conversation with someone you love
 Write a letter to yourself, reflecting on your day
 
 Go over the things of the day… what worked? what didn’t? Consciously release the things that didn’t work, forgive, release, and clear the slate of your mind for the next day.
-
-[easy-share buttons=”facebook,twitter” counters=0 native=”no”]
-
-[Click here to Get 3 Free Guided Meditations and learn how to Raise Your Vibration With The Ascention Toolkit](https://awakenedacademy.clickfunnels.com/optin_box/q7lpy2a5ali1dlkd)
