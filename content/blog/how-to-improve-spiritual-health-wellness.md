@@ -6,7 +6,7 @@ date: ""
 author: "Michael Mackintosh"
 description: "Eight practices that actually improve your spiritual health — from meditation and breathwork to journaling and gratitude. Start with one today."
 hero_image: "/images/blog/spiritual-wellness-mountain-river.jpg"
-images: ["https://images.pexels.com/photos/7596959/pexels-photo-7596959.jpeg?auto=compress&cs=tinysrgb&w=1600", "https://images.pexels.com/photos/6958255/pexels-photo-6958255.jpeg?auto=compress&cs=tinysrgb&w=1600"]
+images: ["/images/blog/spiritual-wellness-body-1.jpg", "/images/blog/spiritual-wellness-body-2.jpg"]
 flags:
   - "Original author byline on live page was 'Lindsey Akey, Awakened Academy', overriding to Michael Mackintosh per migration instructions"
 ---

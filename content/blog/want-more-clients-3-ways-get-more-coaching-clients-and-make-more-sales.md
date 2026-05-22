@@ -5,7 +5,7 @@ url: "https://awakenedacademy.com/want-more-clients-3-ways-get-more-coaching-cli
 date: "2025-02-20"
 author: "Michael Mackintosh"
 description: "Three honest, dharma-aligned ways to grow your coaching practice. No sleazy funnels, no manufactured scarcity, no pressure."
-hero_image: "https://images.pexels.com/photos/6929159/pexels-photo-6929159.jpeg?auto=compress&cs=tinysrgb&w=1600"
+hero_image: "/images/blog/want-more-clients-dawn-valley.jpg"
 images: ["https://images.pexels.com/photos/4031712/pexels-photo-4031712.jpeg?auto=compress&cs=tinysrgb&w=1600"]
 flags: []
 ---

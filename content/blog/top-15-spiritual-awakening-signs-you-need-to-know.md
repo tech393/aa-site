@@ -6,7 +6,7 @@ date: ""
 author: "Michael Mackintosh"
 description: "Fifteen common signs of spiritual awakening, from heightened intuition to the dark night of the soul and a call to serve."
 hero_image: "/images/blog/spiritual-awakening-above-clouds.jpg"
-images: ["https://images.pexels.com/photos/14924762/pexels-photo-14924762.jpeg?auto=compress&cs=tinysrgb&w=1600", "https://images.pexels.com/photos/5093950/pexels-photo-5093950.jpeg?auto=compress&cs=tinysrgb&w=1600"]
+images: ["/images/blog/awakening-signs-body-1.jpg", "/images/blog/awakening-signs-body-2.jpg"]
 flags:
   - "Note: WebFetch returned summarized content; full per-section detail for each of the 15 signs was condensed in scrape, may want to revisit if/when WP site is accessible"
 ---

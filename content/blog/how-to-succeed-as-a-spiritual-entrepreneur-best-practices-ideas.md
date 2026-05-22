@@ -5,7 +5,7 @@ url: "https://awakenedacademy.com/how-to-succeed-as-a-spiritual-entrepreneur-bes
 date: ""
 author: "Michael Mackintosh"
 description: "A guide to thriving as a spiritual entrepreneur, values, mindset, profitable business models, and practical steps to start."
-hero_image: "https://images.pexels.com/photos/27176841/pexels-photo-27176841.jpeg?auto=compress&cs=tinysrgb&w=1600"
+hero_image: "/images/blog/spiritual-entrepreneur-golden-field.jpg"
 images: ["https://images.pexels.com/photos/36730142/pexels-photo-36730142.jpeg?auto=compress&cs=tinysrgb&w=1600", "https://images.pexels.com/photos/8279058/pexels-photo-8279058.jpeg?auto=compress&cs=tinysrgb&w=1600"]
 flags:
   - "Uses 'non-negotiable foundations' language re. core values, review per CCH voice guidance (soften 'non-negotiable' framing)"

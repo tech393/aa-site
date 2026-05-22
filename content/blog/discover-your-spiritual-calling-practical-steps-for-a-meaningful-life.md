@@ -6,7 +6,7 @@ date: ""
 author: "Michael Mackintosh"
 description: "Seven signs your soul is calling you toward something bigger — and five practical steps to recognize it, claim it, and start living it."
 hero_image: "/images/blog/spiritual-calling-summit.jpg"
-images: ["https://images.pexels.com/photos/28995953/pexels-photo-28995953.jpeg?auto=compress&cs=tinysrgb&w=1600", "https://images.pexels.com/photos/9159657/pexels-photo-9159657.jpeg?auto=compress&cs=tinysrgb&w=1600"]
+images: ["/images/blog/spiritual-calling-body-1.jpg", "/images/blog/spiritual-calling-body-2.jpg"]
 flags:
   - "Article blends Christian/biblical framing (Jeremiah, Romans, Matthew, Ephesians, Isaiah scriptural refs; Holy Spirit, Celebrate Recovery) with non-dual/Vedic terms (Dharma, Higher Self, nishkama karma), review for audience fit"
   - "Uses 'non-negotiable' language, review per CCH voice guidance"
