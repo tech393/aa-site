@@ -5,7 +5,7 @@ url: "https://awakenedacademy.com/transform-your-life-effective-meditation-for-a
 date: ""
 author: "Michael Mackintosh"
 description: "Essential meditation techniques for spiritual awakening, guided meditation, breath awareness, mantras, and creating a sacred practice."
-hero_image: "https://images.pexels.com/photos/6712291/pexels-photo-6712291.jpeg?auto=compress&cs=tinysrgb&w=1600"
+hero_image: "/images/blog/meditation-awakening-sunrise.jpg"
 images: ["https://images.pexels.com/photos/7169653/pexels-photo-7169653.jpeg?auto=compress&cs=tinysrgb&w=1600", "https://images.pexels.com/photos/3822625/pexels-photo-3822625.jpeg?auto=compress&cs=tinysrgb&w=1600"]
 flags: []
 ---

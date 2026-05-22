@@ -5,7 +5,7 @@ url: "https://awakenedacademy.com/manifesting-abundance/"
 date: "2025-03-08"
 author: "Michael Mackintosh"
 description: "A complete guide to manifesting abundance with spiritual integrity. The principles, practices, and inner work that turn aspirations into a life of real prosperity."
-hero_image: "https://images.pexels.com/photos/13865884/pexels-photo-13865884.jpeg?auto=compress&cs=tinysrgb&w=1600"
+hero_image: "/images/blog/manifesting-abundance-dusk.jpg"
 images: ["https://images.pexels.com/photos/7080555/pexels-photo-7080555.jpeg?auto=compress&cs=tinysrgb&w=1600"]
 flags: []
 ---

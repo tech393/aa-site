@@ -5,7 +5,7 @@ url: "https://awakenedacademy.com/spiritual-practices-for-development-and-growth
 date: "2026-05-20"
 author: "Michael Mackintosh"
 description: "A complete list of spiritual practices for personal growth — from spiritual walking and prayer to meditation, yoga, and journaling. Includes guidance for children too."
-hero_image: "https://images.pexels.com/photos/1051838/pexels-photo-1051838.jpeg?auto=compress&cs=tinysrgb&w=1600"
+hero_image: "/images/blog/spiritual-growth-forest-path.jpg"
 images: ["https://images.pexels.com/photos/3822622/pexels-photo-3822622.jpeg?auto=compress&cs=tinysrgb&w=1600", "https://images.pexels.com/photos/4056723/pexels-photo-4056723.jpeg?auto=compress&cs=tinysrgb&w=1600"]
 flags: []
 ---

@@ -5,7 +5,7 @@ url: "https://awakenedacademy.com/top-spiritual-healing-meditation-techniques-fo
 date: ""
 author: "Michael Mackintosh"
 description: "Holistic spiritual healing meditation techniques that integrate mind, body, and soul, guided meditation, divine vibrations, and source energy healing."
-hero_image: "https://images.pexels.com/photos/3544322/pexels-photo-3544322.jpeg?auto=compress&cs=tinysrgb&w=1600"
+hero_image: "/images/blog/healing-meditation-zen-stones.jpg"
 images: ["https://images.pexels.com/photos/5573584/pexels-photo-5573584.jpeg?auto=compress&cs=tinysrgb&w=1600", "https://images.pexels.com/photos/6998231/pexels-photo-6998231.jpeg?auto=compress&cs=tinysrgb&w=1600"]
 flags: []
 ---

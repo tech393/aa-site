@@ -5,7 +5,7 @@ url: "https://awakenedacademy.com/how-to-improve-spiritual-health-wellness/"
 date: ""
 author: "Michael Mackintosh"
 description: "Eight practices that actually improve your spiritual health — from meditation and breathwork to journaling and gratitude. Start with one today."
-hero_image: "https://images.pexels.com/photos/4811133/pexels-photo-4811133.jpeg?auto=compress&cs=tinysrgb&w=1600"
+hero_image: "/images/blog/spiritual-wellness-mountain-river.jpg"
 images: ["https://images.pexels.com/photos/7596959/pexels-photo-7596959.jpeg?auto=compress&cs=tinysrgb&w=1600", "https://images.pexels.com/photos/6958255/pexels-photo-6958255.jpeg?auto=compress&cs=tinysrgb&w=1600"]
 flags:
   - "Original author byline on live page was 'Lindsey Akey, Awakened Academy', overriding to Michael Mackintosh per migration instructions"

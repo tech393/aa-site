@@ -5,7 +5,7 @@ url: "https://awakenedacademy.com/top-15-spiritual-awakening-signs-you-need-to-k
 date: ""
 author: "Michael Mackintosh"
 description: "Fifteen common signs of spiritual awakening, from heightened intuition to the dark night of the soul and a call to serve."
-hero_image: "https://images.pexels.com/photos/1084563/pexels-photo-1084563.jpeg?auto=compress&cs=tinysrgb&w=1600"
+hero_image: "/images/blog/spiritual-awakening-above-clouds.jpg"
 images: ["https://images.pexels.com/photos/14924762/pexels-photo-14924762.jpeg?auto=compress&cs=tinysrgb&w=1600", "https://images.pexels.com/photos/5093950/pexels-photo-5093950.jpeg?auto=compress&cs=tinysrgb&w=1600"]
 flags:
   - "Note: WebFetch returned summarized content; full per-section detail for each of the 15 signs was condensed in scrape, may want to revisit if/when WP site is accessible"

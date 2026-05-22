@@ -5,7 +5,7 @@ url: "https://awakenedacademy.com/how-to-discover-your-soul-purpose-essential-st
 date: ""
 author: "Michael Mackintosh"
 description: "Practical steps to discover your soul purpose: self-awareness, intuition, overcoming limiting beliefs, and living authentically."
-hero_image: "https://images.pexels.com/photos/268134/pexels-photo-268134.jpeg?auto=compress&cs=tinysrgb&w=1600"
+hero_image: "/images/blog/soul-purpose-golden-meadow.jpg"
 images: ["https://images.pexels.com/photos/12062758/pexels-photo-12062758.jpeg?auto=compress&cs=tinysrgb&w=1600", "https://images.pexels.com/photos/6830875/pexels-photo-6830875.jpeg?auto=compress&cs=tinysrgb&w=1600"]
 flags: []
 ---

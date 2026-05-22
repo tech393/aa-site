@@ -5,7 +5,7 @@ url: "https://awakenedacademy.com/discover-your-spiritual-calling-practical-step
 date: ""
 author: "Michael Mackintosh"
 description: "Seven signs your soul is calling you toward something bigger — and five practical steps to recognize it, claim it, and start living it."
-hero_image: "https://images.pexels.com/photos/1442973/pexels-photo-1442973.jpeg?auto=compress&cs=tinysrgb&w=1600"
+hero_image: "/images/blog/spiritual-calling-summit.jpg"
 images: ["https://images.pexels.com/photos/28995953/pexels-photo-28995953.jpeg?auto=compress&cs=tinysrgb&w=1600", "https://images.pexels.com/photos/9159657/pexels-photo-9159657.jpeg?auto=compress&cs=tinysrgb&w=1600"]
 flags:
   - "Article blends Christian/biblical framing (Jeremiah, Romans, Matthew, Ephesians, Isaiah scriptural refs; Holy Spirit, Celebrate Recovery) with non-dual/Vedic terms (Dharma, Higher Self, nishkama karma), review for audience fit"
