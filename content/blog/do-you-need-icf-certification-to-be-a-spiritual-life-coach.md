@@ -5,8 +5,8 @@ url: "https://awakenedacademy.com/do-you-need-icf-certification-to-be-a-spiritua
 date: "2025-12-15"
 author: "Michael Mackintosh"
 description: "The truth about ICF certification for spiritual coaches, what it is, what it isn't, and what actually matters for transformational coaching."
-hero_image: "https://images.pexels.com/photos/7059622/pexels-photo-7059622.jpeg?auto=compress&cs=tinysrgb&w=1600"
-images: ["https://images.pexels.com/photos/7713369/pexels-photo-7713369.jpeg?auto=compress&cs=tinysrgb&w=1600", "https://images.pexels.com/photos/9829305/pexels-photo-9829305.jpeg?auto=compress&cs=tinysrgb&w=1600"]
+hero_image: "/images/blog/icf-sea-sunrise.jpg"
+images: []
 flags:
   - "Claim 'Founded in 2004' and '20+ years of proven methodology', review against canonical AA founding-year wording"
   - "URGENT: Explicit non-ICF disclosure included, verify this is the desired position now that ICA is being set up in parallel"
@@ -66,6 +66,8 @@ For spiritually-called individuals already struggling with self-doubt, the crede
 
 Spiritually-oriented clients often seek practitioners outside corporate paradigms. "ICF Certified" may signal the generic, corporate approach they're trying to avoid.
 
+![](https://images.pexels.com/photos/7713369/pexels-photo-7713369.jpeg?auto=compress&cs=tinysrgb&w=1600)
+
 ## What Actually Makes a Great Spiritual Life Coach
 
 **Depth of Your Own Inner Work**, Clients transform in your presence to the degree that you've transformed yourself.
@@ -87,6 +89,8 @@ Evaluation questions:
 - Will I learn a real methodology for transformation?
 - What results do graduates create?
 - Is this training aligned with how I want to serve?
+
+![](https://images.pexels.com/photos/9829305/pexels-photo-9829305.jpeg?auto=compress&cs=tinysrgb&w=1600)
 
 ## ICF Accredited vs Non-Accredited Programs: Which Is Right for You?
 

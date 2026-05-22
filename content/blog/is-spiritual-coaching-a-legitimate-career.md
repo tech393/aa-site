@@ -5,8 +5,8 @@ url: "https://awakenedacademy.com/is-spiritual-coaching-a-legitimate-career/"
 date: "2025-06-05"
 author: "Michael Mackintosh"
 description: "Yes, spiritual coaching is a legitimate, impactful, and financially sustainable career path. Here's the 2026 guide to why."
-hero_image: "https://images.pexels.com/photos/27176749/pexels-photo-27176749.jpeg?auto=compress&cs=tinysrgb&w=1600"
-images: ["https://images.pexels.com/photos/33175650/pexels-photo-33175650.jpeg?auto=compress&cs=tinysrgb&w=1600", "https://images.pexels.com/photos/8279814/pexels-photo-8279814.jpeg?auto=compress&cs=tinysrgb&w=1600"]
+hero_image: "/images/blog/legitimate-career-gaze.jpg"
+images: ["/images/blog/legitimate-career-hammock.jpg", "/images/blog/legitimate-career-birds.jpg"]
 flags:
   - "Income claim '$3K–$15K+ monthly' for full-time coaches, review for substantiation"
   - "Wellness industry sizing '$4.4T', verify source"

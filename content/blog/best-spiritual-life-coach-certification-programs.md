@@ -5,8 +5,8 @@ url: "https://awakenedacademy.com/best-spiritual-life-coach-certification-progra
 date: "2026-05-20"
 author: "Michael Mackintosh"
 description: "Compare the best spiritual life coach certification programs side by side — depth of training, business support, accreditation, cost, and track record."
-hero_image: "https://images.pexels.com/photos/7363292/pexels-photo-7363292.jpeg?auto=compress&cs=tinysrgb&w=1600"
-images: ["https://images.pexels.com/photos/246885/pexels-photo-246885.jpeg?auto=compress&cs=tinysrgb&w=1600", "https://images.pexels.com/photos/7925558/pexels-photo-7925558.jpeg?auto=compress&cs=tinysrgb&w=1600"]
+hero_image: "/images/blog/cert-programs-yoga-sunset.jpg"
+images: ["/images/blog/cert-programs-mountain-sunrise.jpg", "/images/blog/cert-programs-lake.jpg"]
 flags:
   - "Review 'since 2004' claim against canonical AA founding-year wording before each publish cycle"
   - "Pricing ranges — verify against live checkout before each publish cycle"

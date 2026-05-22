@@ -5,8 +5,8 @@ url: "https://awakenedacademy.com/25-profitable-spiritual-coaching-niche-ideas-f
 date: "2025-05-26"
 author: "Michael Mackintosh"
 description: "Twenty-five profitable spiritual coaching niche ideas for 2026 across mindfulness, energy healing, intuition, life transitions, and divine feminine work."
-hero_image: "https://images.pexels.com/photos/17139410/pexels-photo-17139410.jpeg?auto=compress&cs=tinysrgb&w=1600"
-images: ["https://images.pexels.com/photos/6252137/pexels-photo-6252137.jpeg?auto=compress&cs=tinysrgb&w=1600", "https://images.pexels.com/photos/6512228/pexels-photo-6512228.jpeg?auto=compress&cs=tinysrgb&w=1600"]
+hero_image: "/images/blog/niche-ideas-poppy-field.jpg"
+images: ["/images/blog/niche-ideas-meadow-flowers.jpg", "/images/blog/niche-ideas-lotus.jpg"]
 flags: []
 ---
 

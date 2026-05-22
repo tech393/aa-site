@@ -5,8 +5,8 @@ url: "https://awakenedacademy.com/how-to-create-a-signature-spiritual-coaching-p
 date: "2025-05-27"
 author: "Michael Mackintosh"
 description: "Stop charging by the hour. Build a signature coaching package with the right name, price, and structure — and launch it to aligned clients."
-hero_image: "https://images.pexels.com/photos/5147281/pexels-photo-5147281.jpeg?auto=compress&cs=tinysrgb&w=1600"
-images: ["https://images.pexels.com/photos/5710614/pexels-photo-5710614.jpeg?auto=compress&cs=tinysrgb&w=1600", "https://images.pexels.com/photos/7680054/pexels-photo-7680054.jpeg?auto=compress&cs=tinysrgb&w=1600"]
+hero_image: "/images/blog/signature-package-moon.jpg"
+images: ["/images/blog/signature-package-daisies.jpg", "/images/blog/signature-package-dusk-grass.jpg"]
 flags: []
 ---
 
