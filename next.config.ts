@@ -21,6 +21,8 @@ const config: NextConfig = {
     { source: "/awakened-academy-reviews", destination: "/wall-of-gratitude", permanent: true },
     // Spiritual business ideas consolidated to canonical SEO slug (May 2026 — pillar post per SEO content calendar)
     { source: "/15-profitable-spiritual-business-ideas-for-modern-entrepreneurs", destination: "/spiritual-business-ideas", permanent: true },
+    // Sacred Session CTA target (Two Mindsets post) routes to booking page until a dedicated page exists. Temporary 302.
+    { source: "/sacred-session", destination: "/book-a-call", permanent: false },
     // Affiliate program retired until sales page exists; restore URL when ready
     { source: "/awakened-academy-affiliate-program", destination: "/", permanent: true },
     // Cleaner URL
