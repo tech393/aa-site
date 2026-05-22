@@ -27,10 +27,11 @@ const TESTIMONIALS: Testimonial[] = [
     photo: "/img/testimonials/Kyli-Vandemark.jpg",
   },
   {
-    name: "Pearl Fidler",
-    role: "Sacred Alignment Call participant",
+    name: "Dina Andrews",
+    role: "Energy Healing Practitioner, California",
     quote:
-      "The call changed my trajectory. I felt seen, heard, and inspired to make a real impact in the world. It felt like a call with an old friend, and I felt absolutely lit up inside.",
+      "They are fully present when I speak to them. I feel really heard. They really care about ME. What a wonderful feeling!",
+    photo: "/img/testimonials/Dina-Andrews.jpg",
   },
   {
     name: "Rakhee C. Patel",
@@ -122,7 +123,7 @@ export default function SchedulePage() {
 
       {/* CALENDAR, large white card overlapping the hero */}
       <section id="calendar" className="relative scroll-mt-20 bg-bg">
-        <div className="mx-auto -mt-12 max-w-widest px-6 md:-mt-16">
+        <div className="mx-auto -mt-12 max-w-widest px-6 pb-16 md:-mt-16 md:pb-20">
           <Reveal>
             <div className="overflow-hidden rounded-lg border border-ink/10 bg-white p-4 shadow-2xl md:p-8">
               <div className="mb-6 text-center">
@@ -138,20 +139,20 @@ export default function SchedulePage() {
               <GHLCalendar calendarId={GHL.calendars.bookACall.id} title="Schedule Your Sacred Alignment Call" />
             </div>
           </Reveal>
-
-          <p className="mt-6 text-center text-[12.5px] text-soft">
-            Trouble loading the calendar? Email{" "}
-            <a href="mailto:success@awakenedacademy.com" className="text-teal underline hover:text-teal-soft">
-              success@awakenedacademy.com
-            </a>{" "}
-            and we'll book you manually.
-          </p>
         </div>
       </section>
 
       {/* WHAT HAPPENS ON THE CALL */}
       <section className="bg-warm">
         <div className="mx-auto max-w-widest px-6 py-20">
+          <p className="mb-16 text-center text-[12.5px] text-soft">
+            Trouble loading the calendar? Email{" "}
+            <a href="mailto:success@awakenedacademy.com" className="text-teal underline hover:text-teal-soft">
+              success@awakenedacademy.com
+            </a>{" "}
+            and we'll book you manually.
+          </p>
+
           <Reveal>
             <div className="text-center">
               <span className="eyebrow">What to expect</span>
