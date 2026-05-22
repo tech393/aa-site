@@ -49,7 +49,29 @@ export default async function ContentPage({ params }: { params: Promise<{ slug: 
   notFound();
 }
 
+// Split the article body at the H2 heading nearest the midpoint so the free-gifts
+// CTA can sit mid-article. Returns [top, bottom]; bottom is "" when the post is too
+// short to split cleanly (the CTA then falls after the body).
+function splitBodyAtMiddle(body: string): [string, string] {
+  const lines = body.split("\n");
+  const headings: number[] = [];
+  let inFence = false;
+  for (let i = 0; i < lines.length; i++) {
+    if (/^```/.test(lines[i])) inFence = !inFence;
+    if (!inFence && /^##\s+/.test(lines[i])) headings.push(i);
+  }
+  const candidates = headings.filter((i) => i > 0);
+  if (candidates.length === 0) return [body, ""];
+  const mid = lines.length / 2;
+  let best = candidates[0];
+  for (const i of candidates) {
+    if (Math.abs(i - mid) < Math.abs(best - mid)) best = i;
+  }
+  return [lines.slice(0, best).join("\n"), lines.slice(best).join("\n")];
+}
+
 function BlogPostView({ post }: { post: ReturnType<typeof getBlogPost> & {} }) {
+  const [bodyTop, bodyBottom] = splitBodyAtMiddle(post.body);
   const articleSchema = {
     "@context": "https://schema.org",
     "@type": "Article",
@@ -148,14 +170,14 @@ function BlogPostView({ post }: { post: ReturnType<typeof getBlogPost> & {} }) {
             </div>
           </Reveal>
 
-          {/* BODY with drop cap on first paragraph */}
+          {/* BODY, top half (drop cap on first paragraph) */}
           <div className="mt-10 has-drop-cap">
-            <MarkdownBody>{post.body}</MarkdownBody>
+            <MarkdownBody>{bodyTop}</MarkdownBody>
           </div>
 
-          {/* FREE GIFTS CTA, soft top-of-funnel lead magnet */}
+          {/* FREE GIFTS CTA, placed mid-article */}
           <Reveal>
-            <div className="mx-auto mt-14 flex max-w-[62ch] flex-col items-center gap-5 rounded-md border border-gold/30 bg-gradient-to-br from-gold/10 to-warm p-7 text-center sm:flex-row sm:text-left">
+            <div className="mx-auto my-14 flex max-w-[62ch] flex-col items-center gap-5 rounded-md border border-gold/30 bg-gradient-to-br from-gold/10 to-warm p-7 text-center sm:flex-row sm:text-left">
               <div className="flex-1">
                 <span className="eyebrow">Free gifts for you</span>
                 <h3 className="mt-2 font-serif text-[clamp(20px,2.6vw,24px)] leading-[1.25] text-ink">
@@ -168,6 +190,13 @@ function BlogPostView({ post }: { post: ReturnType<typeof getBlogPost> & {} }) {
               <Link href="/free-gifts-for-you" className="btn-teal shrink-0">Get your free gifts</Link>
             </div>
           </Reveal>
+
+          {/* BODY, bottom half */}
+          {bodyBottom && (
+            <div>
+              <MarkdownBody>{bodyBottom}</MarkdownBody>
+            </div>
+          )}
 
           {/* INLINE CTA, mid-article style break-out card */}
           <Reveal>
