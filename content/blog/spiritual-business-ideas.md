@@ -5,7 +5,7 @@ url: "https://awakenedacademy.com/spiritual-business-ideas/"
 date: "2026-05-21"
 author: "Michael Mackintosh"
 description: "Fifteen spiritual business ideas that earn real money without compromising your integrity, plus how to choose the one that is actually yours."
-hero_image: "/images/golden-light.jpg"
+hero_image: "/images/blog/spiritual-business-ideas-yoga.jpg"
 images: ["/images/woman-lotus-beach-gold.jpg", "/images/story/divine-light.jpg"]
 ---
 

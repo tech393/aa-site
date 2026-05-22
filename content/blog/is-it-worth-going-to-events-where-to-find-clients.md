@@ -5,14 +5,12 @@ url: "https://awakenedacademy.com/is-it-worth-going-to-events-where-to-find-clie
 date: "2025-01-29"
 author: "Michael Mackintosh"
 description: "The honest answer on networking events for spiritual coaches, plus the channels that actually bring clients who resonate with your work."
-hero_image: "https://images.pexels.com/photos/9843805/pexels-photo-9843805.jpeg?auto=compress&cs=tinysrgb&w=1600"
-images: ["https://images.pexels.com/photos/4226122/pexels-photo-4226122.jpeg?auto=compress&cs=tinysrgb&w=1600"]
+hero_image: "/images/blog/events-yoga-beach.jpg"
+images: ["/images/blog/events-yoga-silhouette.jpg"]
 flags: []
 ---
 
 Many of our students ask us if it’s worth going to these events to network / hustle and find clients. This is what were found works best… Let us know your thoughts in the comments below. Lots of love Arielle and Michael
-
-Subscribe To Our Youtube Channel
 
 ## Full Transcription (not edited)
 

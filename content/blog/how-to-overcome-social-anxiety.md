@@ -10,13 +10,11 @@ images: ["https://images.pexels.com/photos/12740470/pexels-photo-12740470.jpeg?a
 flags: []
 ---
 
-If you’re an **[empathic](https://introvertspring.com/10-signs-empath/)** being you are probably a highly sensitive being, too. Sensitive people often find themselves feeling super stressed out, even panicked in social situations – thus causing social anxiety especially in situations where there are loads of unfamiliar people, with a lot going on all at once. It can overwhelm you to the point where the mere idea of having to talk with a new person may feel paralyzing. It can make you want to just run from it all and go hide!
-
-***[Click here to read our article about “How To Stop Feeling Overwhelmed.”](../how-to-stop-feeling-overwhelmed-i-cannot-believe-its-this-easy/index.html)***
+If you’re an **empathic** being you are probably a highly sensitive being, too. Sensitive people often find themselves feeling super stressed out, even panicked in social situations – thus causing social anxiety especially in situations where there are loads of unfamiliar people, with a lot going on all at once. It can overwhelm you to the point where the mere idea of having to talk with a new person may feel paralyzing. It can make you want to just run from it all and go hide!
 
 Well, it doesn’t have to be that way! So, how to overcome social anxiety? Let’s talk about what’s causing social anxiety first.
 
-[ ](https://awakenedacademy.com/wp-content/uploads/2015/12/How-to-overcome-social-anxiety.jpg)So much of what we experience in a [state of anxiety](https://socialanxietyinstitute.org/what-is-social-anxiety) may seem uber real at the time. But, in actuality, much of what we find ourselves feeling anxious or even afraid of has little to do with the present moment.
+So much of what we experience in a state of anxiety may seem uber real at the time. But, in actuality, much of what we find ourselves feeling anxious or even afraid of has little to do with the present moment.
 
 Let’s examine this. What are some of the thoughts that go through our minds when we are starting to stress out say at a party: “Will anyone really want to talk to me?” “I never know what to say when people want to know more about me. I’m just not that interesting.” “Everyone else looks so much cooler than me! Why did I wear these clothes?”  “What if I make a fool of myself?” “I can’t breathe, I’m so freaked out!”
 
@@ -76,15 +74,10 @@ This powerful, proven method can and will:
 
 As you listen to this, take your time to absorb what you’re learning deeply. This method is simple, yet profound. You have to apply what you learn for it to work. See for yourself how much better you feel, and how your life and relationships improve when you start using this!
 
-[Click here to download audio](../wp-content/uploads/2015/11/Experience-Ease-and-Grace-In-Social-Situations-Give-and-Receive-Blessings.mp3) (NOTE: It may take a few seconds for this audio to load.)
-
+_(Audio coming soon.)_ 
 If you are – then you’ll LOVE this **free course for introverts**. We’re living in a highly extraverted, outwardly focused world that’s driving straight off a cliff at 195mph. The world needs YOU to be who you are, to stay gentle and true to yourself.
 
-## *Click here to access ‘Softly Powerful’ mini-course for FREE*
-
-Share it with them. Just clicking share below can change someone’s life 🙂
-
-[easy-share buttons=”facebook,twitter” counters=0 native=”no”]
+## *[Click here to access ‘Softly Powerful’ mini-course for FREE](/introvert)*
 
 Wonderful words or should I say energy, I am grateful to you and
 

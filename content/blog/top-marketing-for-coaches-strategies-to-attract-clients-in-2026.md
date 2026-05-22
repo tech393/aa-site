@@ -1,10 +1,10 @@
 ---
-title: "Top Marketing for Coaches: Strategies to Attract Clients in 2025"
-slug: "top-marketing-for-coaches-strategies-to-attract-clients-in-2025"
-url: "https://awakenedacademy.com/top-marketing-for-coaches-strategies-to-attract-clients-in-2025/"
+title: "Top Marketing for Coaches: Strategies to Attract Clients in 2026"
+slug: "top-marketing-for-coaches-strategies-to-attract-clients-in-2026"
+url: "https://awakenedacademy.com/top-marketing-for-coaches-strategies-to-attract-clients-in-2026/"
 date: ""
 author: "Michael Mackintosh"
-description: "Ten proven marketing strategies for coaches in 2025, personal branding, free sessions, social media, email, webinars, networking, SEO, and success stories."
+description: "Ten proven marketing strategies for coaches in 2026, personal branding, free sessions, social media, email, webinars, networking, SEO, and success stories."
 hero_image: "https://images.pexels.com/photos/3785395/pexels-photo-3785395.jpeg?auto=compress&cs=tinysrgb&w=1600"
 images: ["https://images.pexels.com/photos/7514814/pexels-photo-7514814.jpeg?auto=compress&cs=tinysrgb&w=1600", "https://images.pexels.com/photos/6954220/pexels-photo-6954220.jpeg?auto=compress&cs=tinysrgb&w=1600"]
 flags: []

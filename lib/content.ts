@@ -190,7 +190,7 @@ const BLOG_ORDER: string[] = [
   "do-you-need-icf-certification-to-be-a-spiritual-life-coach",
   "is-spiritual-coaching-a-legitimate-career",
   "how-to-create-a-signature-spiritual-coaching-package-that-sells",
-  "top-marketing-for-coaches-strategies-to-attract-clients-in-2025",
+  "top-marketing-for-coaches-strategies-to-attract-clients-in-2026",
   "is-it-worth-going-to-events-where-to-find-clients",
   "10-signs-youre-meant-to-be-a-spiritual-coach",
   "is-spiritual-coaching-your-divine-calling",
