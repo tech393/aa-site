@@ -5,8 +5,8 @@ url: "https://awakenedacademy.com/you-were-never-meant-to-do-it-alone-the-power-
 date: ""
 author: "Michael Mackintosh"
 description: "A devotional piece on surrender and divine delegation, how the prayer 'Please do all that' shifts spiritual entrepreneurs out of striving and into co-creation."
-hero_image: "https://images.pexels.com/photos/13870010/pexels-photo-13870010.jpeg?auto=compress&cs=tinysrgb&w=1600"
-images: ["https://images.pexels.com/photos/7298695/pexels-photo-7298695.jpeg?auto=compress&cs=tinysrgb&w=1600", "https://images.pexels.com/photos/4061219/pexels-photo-4061219.jpeg?auto=compress&cs=tinysrgb&w=1600"]
+hero_image: "/images/blog/alone-arms-open-sunset.jpg"
+images: ["/images/blog/alone-yoga-purple.jpg", "/images/blog/alone-lotus.jpg"]
 flags: []
 ---
 

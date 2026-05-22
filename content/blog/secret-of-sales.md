@@ -5,8 +5,8 @@ url: "https://awakenedacademy.com/secret-of-sales/"
 date: "2025-02-03"
 author: "Michael Mackintosh"
 description: "Spiritual sales without the sleaze. How to enroll clients as service, not pressure, and build a coaching practice on integrity."
-hero_image: "https://images.pexels.com/photos/9064361/pexels-photo-9064361.jpeg?auto=compress&cs=tinysrgb&w=1600"
-images: ["https://images.pexels.com/photos/6077554/pexels-photo-6077554.jpeg?auto=compress&cs=tinysrgb&w=1600"]
+hero_image: "/images/blog/secret-of-sales-soaring-bird.jpg"
+images: ["/images/blog/secret-of-sales-temple-sunset.jpg"]
 flags: []
 ---
 

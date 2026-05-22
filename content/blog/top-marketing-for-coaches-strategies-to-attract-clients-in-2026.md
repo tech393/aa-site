@@ -5,8 +5,8 @@ url: "https://awakenedacademy.com/top-marketing-for-coaches-strategies-to-attrac
 date: ""
 author: "Michael Mackintosh"
 description: "Ten proven marketing strategies for coaches in 2026, personal branding, free sessions, social media, email, webinars, networking, SEO, and success stories."
-hero_image: "https://images.pexels.com/photos/3785395/pexels-photo-3785395.jpeg?auto=compress&cs=tinysrgb&w=1600"
-images: ["https://images.pexels.com/photos/7514814/pexels-photo-7514814.jpeg?auto=compress&cs=tinysrgb&w=1600", "https://images.pexels.com/photos/6954220/pexels-photo-6954220.jpeg?auto=compress&cs=tinysrgb&w=1600"]
+hero_image: "/images/blog/top-marketing-mountain-path.jpg"
+images: ["/images/blog/top-marketing-meditation-mudra.jpg", "/images/blog/top-marketing-arms-open-ocean.jpg"]
 flags: []
 ---
 
