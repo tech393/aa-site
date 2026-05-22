@@ -170,8 +170,43 @@ export function getProgramPage(slug: string): ProgramPage | null {
   };
 }
 
+// Curated blog index order by SEO/funnel value: Tier 1 buyer intent, then Tier 2
+// supporting, then everything else alphabetically. Grounded in the AA keyword list.
+const BLOG_ORDER: string[] = [
+  // Tier 1, commercial / buyer intent
+  "spiritual-business-ideas",
+  "how-to-become-a-spiritual-life-coach-in-simple-steps",
+  "what-is-a-spiritual-life-coach-complete-career-guide",
+  "want-more-clients-3-ways-get-more-coaching-clients-and-make-more-sales",
+  "how-to-start-a-spiritual-coaching-business",
+  "what-does-a-spiritual-coach-actually-do",
+  "best-spiritual-life-coach-certification-programs",
+  // Tier 2, supporting / mid-funnel
+  "how-to-succeed-as-a-spiritual-entrepreneur-best-practices-ideas",
+  "the-ultimate-guide-to-building-a-successful-coaching-business",
+  "25-profitable-spiritual-coaching-niche-ideas-for-2026",
+  "what-is-spiritual-life-coaching-a-practical-guide-to-transformational-guidance",
+  "the-truth-about-icf-certification",
+  "do-you-need-icf-certification-to-be-a-spiritual-life-coach",
+  "is-spiritual-coaching-a-legitimate-career",
+  "how-to-create-a-signature-spiritual-coaching-package-that-sells",
+  "top-marketing-for-coaches-strategies-to-attract-clients-in-2025",
+  "is-it-worth-going-to-events-where-to-find-clients",
+  "10-signs-youre-meant-to-be-a-spiritual-coach",
+  "is-spiritual-coaching-your-divine-calling",
+];
+
+export function orderBlogSlugs(slugs: string[]): string[] {
+  const rank = new Map(BLOG_ORDER.map((s, i) => [s, i] as const));
+  return [...slugs].sort((a, b) => {
+    const ra = rank.get(a) ?? Number.MAX_SAFE_INTEGER;
+    const rb = rank.get(b) ?? Number.MAX_SAFE_INTEGER;
+    return ra !== rb ? ra - rb : a.localeCompare(b);
+  });
+}
+
 export function getAllBlogPosts(): BlogPost[] {
-  return getAllBlogSlugs()
+  return orderBlogSlugs(getAllBlogSlugs())
     .map((slug) => getBlogPost(slug))
     .filter((p): p is BlogPost => p !== null);
 }
