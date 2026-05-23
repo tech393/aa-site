@@ -4,10 +4,10 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Sleep Naturally — Wake Up Feeling Like Yourself Again</title>
-<meta name="description" content="A complete program for the real reasons you can't sleep. Sleep better within 30 nights, or you don't pay. From Michael Mackintosh.">
+<meta name="description" content="A complete program for the real reasons you can't sleep. Sleep better within 30 nights, or get a full refund and keep the course. From Michael Mackintosh.">
 <link rel="canonical" href="https://awakenedacademy.com/sleep-naturally">
 <meta property="og:title" content="Sleep Naturally — Wake Up Feeling Like Yourself Again">
-<meta property="og:description" content="A complete program for the real reasons you can't sleep. Sleep better within 30 nights, or you don't pay. From Michael Mackintosh.">
+<meta property="og:description" content="A complete program for the real reasons you can't sleep. Sleep better within 30 nights, or get a full refund and keep the course. From Michael Mackintosh.">
 <meta property="og:type" content="website">
 <meta property="og:image" content="https://awakenedacademy.com/sleep-naturally/rebuild-assets/hero.jpg">
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800;900&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -115,6 +115,8 @@
   .split .col-img img{ width:100%; border-radius:16px; border:1px solid var(--line); }
   .split .col-txt{ flex:1; }
 
+  .signature{ font-family:'Playfair Display',serif; font-size:21px; font-weight:700; color:var(--lilac); margin-top:20px; }
+
   /* ── GUARANTEE BAND ── */
   .gband .col-txt .gbadge{
     display:inline-flex; align-items:center; justify-content:center;
@@ -125,12 +127,13 @@
 
   /* ── TESTIMONIALS ── */
   .t-head{ text-align:center; margin-bottom:44px; }
-  .t-grid{ display:grid; grid-template-columns:1fr; gap:22px; }
-  .t-card{ background:var(--card); border:1px solid var(--line); border-radius:14px; padding:30px; }
-  .t-card .stars{ color:#F6C76A; font-size:17px; letter-spacing:3px; margin-bottom:14px; }
-  .t-card .quote{ font-size:19px; font-weight:500; color:var(--ink); line-height:1.7; margin-bottom:16px; }
-  .t-card .who{ font-size:16px; font-weight:700; color:var(--white); }
-  .t-foot{ text-align:center; margin-top:28px; font-size:15px; color:var(--ink-soft); }
+  .t-intro{ font-size:18px; color:var(--ink-soft); max-width:600px; margin:14px auto 0; line-height:1.6; }
+  .t-grid{ display:grid; grid-template-columns:1fr; gap:20px; }
+  .t-card{ background:var(--card); border:1px solid var(--line); border-radius:14px; padding:28px; }
+  .t-card .stars{ color:#F6C76A; font-size:16px; letter-spacing:3px; margin-bottom:13px; }
+  .t-card .quote{ font-size:18px; font-weight:500; color:var(--ink); line-height:1.65; margin-bottom:15px; }
+  .t-card .who{ font-size:15px; font-weight:700; color:var(--white); }
+  .t-foot{ text-align:center; margin-top:30px; font-size:15px; color:var(--ink-soft); }
 
   /* ── QUOTE IMAGE BREAK ── */
   .imgbreak{ position:relative; height:380px; overflow:hidden; }
@@ -172,7 +175,7 @@
   .tick .ic{ color:var(--green); font-size:23px; font-weight:800; flex-shrink:0; line-height:1.3; }
   .tick p{ font-size:20px; font-weight:600; color:var(--white); line-height:1.5; }
 
-  /* ── ABOUT ── */
+  /* ── ABOUT / STORY ── */
   .about-photo{ width:100%; border-radius:18px; border:1px solid var(--line); }
   .stats{ display:flex; flex-wrap:wrap; gap:14px; margin-top:24px; }
   .stat{ background:var(--card); border:1px solid var(--line); border-radius:10px; padding:18px 20px; text-align:center; flex:1; min-width:104px; }
@@ -192,7 +195,12 @@
   .offer-list .it{ font-size:18px; font-weight:700; color:var(--white); }
   .offer-list .id{ font-size:16px; font-weight:450; color:var(--ink-soft); }
   .price-new{ font-family:'Playfair Display',serif; font-size:78px; font-weight:900; color:var(--lilac); line-height:1; }
-  .price-note{ font-size:16px; font-weight:600; color:var(--ink-soft); margin:8px 0 28px; }
+  .price-note{ font-size:16px; font-weight:600; color:var(--ink-soft); margin:8px 0 22px; }
+  .offer-guarantee{
+    background:rgba(116,216,164,0.1); border:1px solid rgba(116,216,164,0.3);
+    border-radius:10px; padding:14px 18px; margin-bottom:22px;
+    font-size:16px; font-weight:700; color:var(--green);
+  }
 
   /* ── FAQ ── */
   .faq-item{ background:var(--card); border:1px solid var(--line); border-radius:12px; margin-bottom:12px; overflow:hidden; }
@@ -222,6 +230,21 @@
   .center{ text-align:center; }
   .cta-strip{ text-align:center; padding:30px 0 0; }
 
+  /* ── WALL OF REVIEWS ── */
+  .wall-head{ text-align:center; margin-bottom:40px; }
+  .wall{ column-count:3; column-gap:18px; }
+  .w-card{
+    break-inside:avoid; -webkit-column-break-inside:avoid;
+    background:var(--card); border:1px solid var(--line);
+    border-radius:12px; padding:19px 21px; margin:0 0 18px;
+  }
+  .w-stars{ color:#F6C76A; font-size:13px; letter-spacing:2px; margin-bottom:9px; }
+  .w-q{ font-size:16px; font-weight:450; color:var(--ink); line-height:1.6; margin-bottom:10px; }
+  .w-n{ font-size:14px; font-weight:700; color:var(--lilac); }
+  .wall-foot{ text-align:center; margin-top:32px; font-size:15px; color:var(--ink-soft); }
+  @media(max-width:900px){ .wall{ column-count:2; } }
+  @media(max-width:600px){ .wall{ column-count:1; } }
+
   /* ── RESPONSIVE ── */
   @media(min-width:760px){
     .t-grid{ grid-template-columns:1fr 1fr 1fr; }
@@ -246,7 +269,7 @@
 
 <!-- ════ TOP BAR ════ -->
 <div class="topbar">
-  <strong>Sleep better within 30 nights — or you don't pay.</strong>&nbsp; Full refund. No questions.
+  <strong>Sleep better within 30 nights, or you don't pay.</strong>&nbsp; Full refund. No questions.
 </div>
 
 <!-- ════ HERO ════ -->
@@ -257,7 +280,7 @@
     <p class="eyebrow">A complete sleep program from Michael Mackintosh</p>
     <h1>Wake up tomorrow feeling like yourself again.</h1>
     <p class="sub">Clear head. Calm body. Energy for the people you love. Deep, natural sleep, every night.</p>
-    <a href="https://www.awakened.academy/offers/aYLRotYo" class="btn">Yes — I want to sleep naturally →</a>
+    <a href="https://www.awakened.academy/offers/aYLRotYo" class="btn">Yes, I want to sleep naturally →</a>
     <p class="price-line"><span class="new">Today: $27</span> &nbsp;·&nbsp; one-time &nbsp;·&nbsp; instant access</p>
     <p class="badges"><span>30-night guarantee</span><span>Instant access</span><span>Works on any device</span></p>
   </div>
@@ -306,78 +329,6 @@
   </div>
 </section>
 
-<!-- ════ TESTIMONIALS ════ -->
-<section>
-  <div class="wide">
-    <div class="t-head">
-      <p class="eyebrow">What people are saying</p>
-      <h2 class="big">Thousands of people, finally sleeping again.</h2>
-    </div>
-    <div class="t-grid">
-      <div class="t-card">
-        <div class="stars">★★★★★</div>
-        <p class="quote">"I have insomnia — but I fall asleep every time I listen."</p>
-        <p class="who">Verified review, Insight Timer</p>
-      </div>
-      <div class="t-card">
-        <div class="stars">★★★★★</div>
-        <p class="quote">"I lay tossing and turning until I put this on at 2am. I can't believe I didn't hear it all the way through."</p>
-        <p class="who">Kayla, Sarasota</p>
-      </div>
-      <div class="t-card">
-        <div class="stars">★★★★★</div>
-        <p class="quote">"Sent me straight back to sleep after trying several other meditations that hadn't helped."</p>
-        <p class="who">Charles C.</p>
-      </div>
-      <div class="t-card">
-        <div class="stars">★★★★★</div>
-        <p class="quote">"It took maybe an hour before I could sleep. With this, minutes."</p>
-        <p class="who">Ansar Mehmood</p>
-      </div>
-      <div class="t-card">
-        <div class="stars">★★★★★</div>
-        <p class="quote">"My go-to sleep meditation. It never fails to calm my nervous system and settle me down."</p>
-        <p class="who">Deedee Walker</p>
-      </div>
-      <div class="t-card">
-        <div class="stars">★★★★★</div>
-        <p class="quote">"Every night I listen and almost immediately fall into a deep sleep. This has been amazing for my overall mental health."</p>
-        <p class="who">Lisa Rowe</p>
-      </div>
-    </div>
-    <p class="t-foot">Verified five-star reviews of Michael's sleep meditations on Insight Timer.</p>
-  </div>
-</section>
-
-<!-- ════ GUARANTEE ════ -->
-<section class="alt">
-  <div class="wide">
-    <div class="split gband">
-      <div class="col-img"><img src="/sleep-naturally/rebuild-assets/guarantee.jpg" alt="Full moon over a calm night sky"></div>
-      <div class="col-txt">
-        <span class="gbadge">✦</span>
-        <p class="eyebrow">The 30-night deep rest guarantee</p>
-        <h2 class="big">Sleep better, or you don't pay.</h2>
-        <p class="body" style="margin-bottom:0;">Try the program for 30 nights. Use the tools. If you're not sleeping more deeply and waking more rested than you have in years, send one email for a full refund. No questions asked. The only risk is staying exactly where you are.</p>
-      </div>
-    </div>
-    <div class="cta-strip">
-      <a href="https://www.awakened.academy/offers/aYLRotYo" class="btn">Get Sleep Naturally tonight — $27 →</a>
-    </div>
-  </div>
-</section>
-
-<!-- ════ QUOTE IMAGE BREAK ════ -->
-<div class="imgbreak">
-  <img src="/sleep-naturally/rebuild-assets/quote.jpg" alt="Moonlit clouds at night">
-  <div class="ov">
-    <blockquote>
-      "Deep, natural sleep is not a skill to be learned. It is a natural state to be returned to."
-      <span class="attr">— Michael Mackintosh</span>
-    </blockquote>
-  </div>
-</div>
-
 <!-- ════ THE REAL REASON ════ -->
 <section>
   <div class="wide">
@@ -385,8 +336,8 @@
       <div class="col-img"><img src="/sleep-naturally/rebuild-assets/why.jpg" alt="Starlit night sky"></div>
       <div class="col-txt">
         <p class="eyebrow">The real reason you can't sleep</p>
-        <h2 class="big">The truth is, sleep is complicated.</h2>
-        <p class="body">It was never one problem with one fix. Your sleep is shaped by eight different things: your nervous system, your environment, your thoughts, your emotions, your body, your relationships, your purpose, and how they all fit together.</p>
+        <h2 class="big">Your sleep isn't one problem. It's eight.</h2>
+        <p class="body">It's shaped by eight different things: your nervous system, your environment, your thoughts, your emotions, your body, your relationships, your purpose, and how they all fit together.</p>
         <p class="body" style="margin-bottom:0;">When even one of them is off, your sleep suffers. That's why you can do everything "right" and still lie awake at 2am. You've handled one or two. The rest are still keeping you up.</p>
       </div>
     </div>
@@ -474,21 +425,109 @@
     </div>
 
     <div class="cta-strip">
-      <a href="https://www.awakened.academy/offers/aYLRotYo" class="btn">Yes — I want to sleep naturally →</a>
+      <a href="https://www.awakened.academy/offers/aYLRotYo" class="btn">Yes, I want to sleep naturally →</a>
     </div>
   </div>
 </section>
 
-<!-- ════ ABOUT MICHAEL ════ -->
+<!-- ════ TESTIMONIALS ════ -->
 <section>
+  <div class="wide">
+    <div class="t-head">
+      <p class="eyebrow">What people are saying</p>
+      <h2 class="big">Thousands of people, finally sleeping again.</h2>
+      <p class="t-intro">Sleep Naturally is built on the guided sleep method behind Michael's meditations. Here's what people say about it.</p>
+    </div>
+    <div class="t-grid">
+      <div class="t-card">
+        <div class="stars">★★★★★</div>
+        <p class="quote">"I have insomnia, but I fall asleep every time I listen. Thank you!"</p>
+        <p class="who">Cindy</p>
+      </div>
+      <div class="t-card">
+        <div class="stars">★★★★★</div>
+        <p class="quote">"This is the best sleep meditation I have ever used. It consistently works. It is truly heavy, deep sleep that you find."</p>
+        <p class="who">Kate Can</p>
+      </div>
+      <div class="t-card">
+        <div class="stars">★★★★★</div>
+        <p class="quote">"Sent me straight back to sleep after trying several other meditations that hadn't helped. Just what I needed."</p>
+        <p class="who">Ruth</p>
+      </div>
+      <div class="t-card">
+        <div class="stars">★★★★★</div>
+        <p class="quote">"Every night I listen and almost immediately fall into a deep sleep. This has been amazing for my overall mental health."</p>
+        <p class="who">Crystal Winters, Chicago</p>
+      </div>
+      <div class="t-card">
+        <div class="stars">★★★★★</div>
+        <p class="quote">"I don't know what happened, but I woke up feeling rested and ready to start my day. Adding this to my nightly routine."</p>
+        <p class="who">Shelita</p>
+      </div>
+      <div class="t-card">
+        <div class="stars">★★★★★</div>
+        <p class="quote">"I fell asleep quickly and slept soundly until morning. That's rare for me. Thank you!"</p>
+        <p class="who">Stacy, Denver</p>
+      </div>
+      <div class="t-card">
+        <div class="stars">★★★★★</div>
+        <p class="quote">"I actually don't remember. I fell asleep too fast. Must be great!"</p>
+        <p class="who">Stefanie, Vancouver</p>
+      </div>
+      <div class="t-card">
+        <div class="stars">★★★★★</div>
+        <p class="quote">"Incredibly relaxing. So easy to fall asleep, even after a busy day with my head not calm."</p>
+        <p class="who">Karen, Atlanta</p>
+      </div>
+      <div class="t-card">
+        <div class="stars">★★★★★</div>
+        <p class="quote">"My absolute favorite. I've listened so many times and only ever heard the full thing once. Works like a charm."</p>
+        <p class="who">Cristi</p>
+      </div>
+      <div class="t-card">
+        <div class="stars">★★★★★</div>
+        <p class="quote">"I usually wake up and have to do another just to get back to sleep. Not last night."</p>
+        <p class="who">Jan Cadwell, New Jersey</p>
+      </div>
+      <div class="t-card">
+        <div class="stars">★★★★★</div>
+        <p class="quote">"My favorite meditation to fall asleep to. Even my kids use it and ask for it."</p>
+        <p class="who">Anabel, Massachusetts</p>
+      </div>
+      <div class="t-card">
+        <div class="stars">★★★★★</div>
+        <p class="quote">"Very relaxing. I was asleep before it was over, and woke up feeling ready for another nice day."</p>
+        <p class="who">Richard Metts</p>
+      </div>
+    </div>
+    <p class="t-foot">A few of the 13,500+ five-star reviews for Michael's sleep meditations on Insight Timer.</p>
+  </div>
+</section>
+
+<!-- ════ QUOTE IMAGE BREAK ════ -->
+<div class="imgbreak">
+  <img src="/sleep-naturally/rebuild-assets/quote.jpg" alt="Moonlit clouds at night">
+  <div class="ov">
+    <blockquote>
+      "Deep, natural sleep is not a skill to be learned. It is a natural state to be returned to."
+      <span class="attr">— Michael Mackintosh</span>
+    </blockquote>
+  </div>
+</div>
+
+<!-- ════ WHY I MADE THIS — Michael's story ════ -->
+<section class="alt">
   <div class="wide">
     <div class="split">
       <div class="col-img"><img src="/sleep-naturally/rebuild-assets/michael.jpg" alt="Michael Mackintosh" class="about-photo"></div>
       <div class="col-txt">
-        <p class="eyebrow">Your guide</p>
-        <h2 class="big" style="font-size:clamp(1.8rem,3.8vw,2.5rem);">Michael Mackintosh</h2>
-        <p class="body" style="font-size:19px;">Michael has spent 28 years practicing and teaching meditation. In that time, more people have come to him with sleep problems than almost any other issue.</p>
-        <p class="body" style="font-size:19px; margin-bottom:0;">He noticed what most sleep experts miss: the people who couldn't sleep weren't dealing with a sleep problem alone. They were carrying unresolved tension in their relationships, their work, their emotional lives. So he built a program that addresses all eight dimensions at once.</p>
+        <p class="eyebrow">Why I made this</p>
+        <h2 class="big" style="font-size:clamp(1.7rem,3.6vw,2.4rem);">I built Sleep Naturally because I couldn't sleep either.</h2>
+        <p class="body" style="font-size:19px;">This was never theory for me. For a long stretch of my life, sleep was the hardest part of my day. A tired body, and a mind that would not switch off. I tried the usual things. None of them held.</p>
+        <p class="body" style="font-size:19px;">What changed everything was the day I stopped hunting for one fix. I sat down and wrote out every single thing that was keeping me awake. My nervous system. The thoughts I hadn't finished with. The feelings I'd pushed down. The parts of my life that didn't feel settled.</p>
+        <p class="body" style="font-size:19px;">There were eight of them. I worked through them one at a time, and my sleep came back. Now I sleep deeply and naturally, almost every night.</p>
+        <p class="body" style="font-size:19px; margin-bottom:0;">Sleep Naturally is that exact process, in order. Everything I found, tested on myself first. That's why I made it. Because I know what it is to lie awake at 3am, and I know it does not have to stay that way.</p>
+        <p class="signature">— Michael Mackintosh</p>
         <div class="stats">
           <div class="stat"><div class="sn">28</div><div class="sd">Years teaching</div></div>
           <div class="stat"><div class="sn">3.5M</div><div class="sd">Downloads</div></div>
@@ -500,7 +539,7 @@
 </section>
 
 <!-- ════ OFFER ════ -->
-<section class="alt" id="offer">
+<section id="offer">
   <div class="wrap">
     <div class="offer-box">
       <p class="eyebrow">The complete program</p>
@@ -508,15 +547,35 @@
       <div class="offer-list">
         <div class="row"><span class="ck">✓</span><span><span class="it">The complete sleep solution.</span> <span class="id">Guided audio sessions across every dimension of your sleep, made to play as you drift off.</span></span></div>
         <div class="row"><span class="ck">✓</span><span><span class="it">The companion workbook & sleep diary.</span> <span class="id">A simple structure for your mornings and nights.</span></span></div>
-        <div class="row"><span class="ck">✓</span><span><span class="it">Your personal AI Sleep Mentor.</span> <span class="id">Tell it what's keeping you up. It points you to the right session — even at 3am.</span></span></div>
+        <div class="row"><span class="ck">✓</span><span><span class="it">Your personal AI Sleep Mentor.</span> <span class="id">Tell it what's keeping you up. It points you to the right session, even at 3am.</span></span></div>
         <div class="row"><span class="ck">✓</span><span><span class="it">The Deep Sleep Naturally book.</span> <span class="id">Short chapters, each a specific answer. PDF and EPUB.</span></span></div>
         <div class="row"><span class="ck">✓</span><span><span class="it">Bonus sessions.</span> <span class="id">Technology and sleep, dream interpretation, and the science.</span></span></div>
         <div class="row"><span class="ck">✓</span><span><span class="it">Lifetime access on any device.</span> <span class="id">Yours to keep. Return to any session whenever you need it.</span></span></div>
       </div>
       <div class="price-new">$27</div>
       <p class="price-note">One-time payment. Instant access. No subscription.</p>
-      <a href="https://www.awakened.academy/offers/aYLRotYo" class="btn btn-full">Yes — I want to sleep naturally tonight →</a>
+      <div class="offer-guarantee">✦ Sleep better within 30 nights, or get a full refund and keep the course anyway.</div>
+      <a href="https://www.awakened.academy/offers/aYLRotYo" class="btn btn-full">Yes, I want to sleep naturally tonight →</a>
       <p class="badges" style="margin-top:20px; font-size:14px;"><span>🔒 Secure checkout</span><span>30-night guarantee</span><span>Instant access</span></p>
+    </div>
+  </div>
+</section>
+
+<!-- ════ GUARANTEE ════ -->
+<section class="alt">
+  <div class="wide">
+    <div class="split gband">
+      <div class="col-img"><img src="/sleep-naturally/rebuild-assets/guarantee.jpg" alt="Full moon over a calm night sky"></div>
+      <div class="col-txt">
+        <span class="gbadge">✦</span>
+        <p class="eyebrow">The 30-night deep rest guarantee</p>
+        <h2 class="big">Sleep better, or you don't pay.</h2>
+        <p class="body">Try the program for 30 nights. Use the tools. If you're not sleeping more deeply and waking more rested than you have in years, email us and we'll refund every penny.</p>
+        <p class="body" style="margin-bottom:0;">And you keep the course anyway. Every session, the book, all of it stays yours. That's how sure we are this works.</p>
+      </div>
+    </div>
+    <div class="cta-strip">
+      <a href="https://www.awakened.academy/offers/aYLRotYo" class="btn">Get Sleep Naturally tonight for $27 →</a>
     </div>
   </div>
 </section>
@@ -542,14 +601,63 @@
         <div class="faq-a">Most people notice something within the first few nights. The nervous system practices can be used tonight. The deeper shift, where sleep becomes your natural state again, typically unfolds over four to eight weeks as you work through all eight dimensions.</div>
       </div>
       <div class="faq-item">
+        <button class="faq-q" onclick="this.parentElement.classList.toggle('open')"><span>What if it doesn't work for me?</span><span class="faq-tog">+</span></button>
+        <div class="faq-a">Then you pay nothing. Try the full program for 30 nights. If you're not sleeping better, email us and we'll refund every penny, and you keep the course anyway. There is no way to lose by trying it.</div>
+      </div>
+      <div class="faq-item">
         <button class="faq-q" onclick="this.parentElement.classList.toggle('open')"><span>Is this too spiritual for me?</span><span class="faq-tog">+</span></button>
-        <div class="faq-a">The practical tools — the nervous system practices, the environmental changes, the mental clearing — work completely on their own. Many people who don't consider themselves spiritual find the deeper work to be the most effective, not because of belief, but because it reaches a level other approaches simply don't.</div>
+        <div class="faq-a">The practical tools work completely on their own: the nervous system practices, the environmental changes, the mental clearing. Many people who don't consider themselves spiritual find the deeper work to be the most effective, not because of belief, but because it reaches a level other approaches simply don't.</div>
       </div>
       <div class="faq-item">
         <button class="faq-q" onclick="this.parentElement.classList.toggle('open')"><span>How much time does this take?</span><span class="faq-tog">+</span></button>
         <div class="faq-a">You're not adding to your day. The program is designed to be listened to as you wind down or fall asleep, using the time you're already spending trying to sleep. Even the first session gives you something you can use that same night.</div>
       </div>
     </div>
+  </div>
+</section>
+
+<!-- ════ WALL OF REVIEWS ════ -->
+<section class="alt">
+  <div class="wide">
+    <div class="wall-head">
+      <p class="eyebrow">More from Insight Timer</p>
+      <h2 class="big">Dozens more, from people who finally sleep.</h2>
+    </div>
+    <div class="wall">
+      <div class="w-card"><div class="w-stars">★★★★★</div><p class="w-q">"Thank you. I really liked your meditation. I was able to fall asleep quickly."</p><p class="w-n">Carolyn Campbell, Florida</p></div>
+      <div class="w-card"><div class="w-stars">★★★★★</div><p class="w-q">"Just what I needed after oral surgery. Thank you."</p><p class="w-n">Magda, Walnut Creek</p></div>
+      <div class="w-card"><div class="w-stars">★★★★★</div><p class="w-q">"Thank you for sharing this wonderful meditation. I found it very helpful and calming. Many blessings."</p><p class="w-n">Dianne, Australia</p></div>
+      <div class="w-card"><div class="w-stars">★★★★★</div><p class="w-q">"Beautiful, and very helpful in preparing me for sleep."</p><p class="w-n">Patterson Fardell</p></div>
+      <div class="w-card"><div class="w-stars">★★★★★</div><p class="w-q">"It was very calming. I fell asleep early in the meditation. Thank you."</p><p class="w-n">Laura, Cleveland</p></div>
+      <div class="w-card"><div class="w-stars">★★★★★</div><p class="w-q">"This meditation is so effective for getting me back to sleep."</p><p class="w-n">Paula, Ashford, UK</p></div>
+      <div class="w-card"><div class="w-stars">★★★★★</div><p class="w-q">"Fell asleep very quickly. Thank you for sharing this meditation."</p><p class="w-n">Sloth Slowly, Wisconsin</p></div>
+      <div class="w-card"><div class="w-stars">★★★★★</div><p class="w-q">"I fall asleep to this one all the time. Thank you so much."</p><p class="w-n">Anastasia Aixi</p></div>
+      <div class="w-card"><div class="w-stars">★★★★★</div><p class="w-q">"It worked. I don't recall hearing much of it. Thank you."</p><p class="w-n">Susan, Whitley Bay, UK</p></div>
+      <div class="w-card"><div class="w-stars">★★★★★</div><p class="w-q">"Wonderful, calming and transformative. I've used this meditation countless times while going to sleep. What a gift."</p><p class="w-n">Gina, Minnesota</p></div>
+      <div class="w-card"><div class="w-stars">★★★★★</div><p class="w-q">"Very helpful, and perfectly calming for a busy mind. Thanks."</p><p class="w-n">Chris, Delaware</p></div>
+      <div class="w-card"><div class="w-stars">★★★★★</div><p class="w-q">"Thank you for this gentle pathway, which always leads me back into peaceful, quiet, refreshing sleep."</p><p class="w-n">Margaret, Australia</p></div>
+      <div class="w-card"><div class="w-stars">★★★★★</div><p class="w-q">"Very relaxing. This is one of my favourites. Definitely top of my list."</p><p class="w-n">A Saf, Glasgow, UK</p></div>
+      <div class="w-card"><div class="w-stars">★★★★★</div><p class="w-q">"That is wonderful. I plan to do it for 40 days."</p><p class="w-n">Joy V, Rimrock</p></div>
+      <div class="w-card"><div class="w-stars">★★★★★</div><p class="w-q">"Thank you so much. I really enjoyed that, and I will be back."</p><p class="w-n">Janette Bendle, Australia</p></div>
+      <div class="w-card"><div class="w-stars">★★★★★</div><p class="w-q">"This is a great meditation. I will use it all the time. Thank you."</p><p class="w-n">Denise, Muscat, Oman</p></div>
+      <div class="w-card"><div class="w-stars">★★★★★</div><p class="w-q">"Thank you for making the sleep version of this. I already listen to the other one every night, so this is ideal, and even better."</p><p class="w-n">Trixie R</p></div>
+      <div class="w-card"><div class="w-stars">★★★★★</div><p class="w-q">"I'm coming back to this one. Always looking for what actually helps me sleep, and this one did just that."</p><p class="w-n">Suparna Malhotra, London</p></div>
+      <div class="w-card"><div class="w-stars">★★★★★</div><p class="w-q">"This was very deeply relaxing. I will come to it again when I want a gentle meditation into sleep."</p><p class="w-n">Teresa</p></div>
+      <div class="w-card"><div class="w-stars">★★★★★</div><p class="w-q">"Incredibly soothing. I love your voice and the pace. Exactly the style I need to transition into deep sleep."</p><p class="w-n">Jamiela Sungkar, Perth</p></div>
+      <div class="w-card"><div class="w-stars">★★★★★</div><p class="w-q">"This was extremely effective. I fell asleep very quickly. Thank you."</p><p class="w-n">Brigitte Duffy, UK</p></div>
+      <div class="w-card"><div class="w-stars">★★★★★</div><p class="w-q">"So amazing. I've fallen asleep to this so many times."</p><p class="w-n">Joss, Sydney</p></div>
+      <div class="w-card"><div class="w-stars">★★★★★</div><p class="w-q">"So wonderfully relaxing, with feelings of peace and wellbeing."</p><p class="w-n">Paul, Chester, UK</p></div>
+      <div class="w-card"><div class="w-stars">★★★★★</div><p class="w-q">"Excellent. One of my favourites for getting back to sleep."</p><p class="w-n">Jackie Holman, Australia</p></div>
+      <div class="w-card"><div class="w-stars">★★★★★</div><p class="w-q">"Very relaxing meditation, with a calming, smooth voice. Thank you."</p><p class="w-n">Cherylin, Geelong</p></div>
+      <div class="w-card"><div class="w-stars">★★★★★</div><p class="w-q">"Fell asleep right away."</p><p class="w-n">Taryn</p></div>
+      <div class="w-card"><div class="w-stars">★★★★★</div><p class="w-q">"Oh Michael, thank you so much. Many positive vibes from this one."</p><p class="w-n">Elsie</p></div>
+      <div class="w-card"><div class="w-stars">★★★★★</div><p class="w-q">"Good meditation to go to bed with. I slept well last night. Thank you."</p><p class="w-n">Christina Mitchell, France</p></div>
+      <div class="w-card"><div class="w-stars">★★★★★</div><p class="w-q">"Completely relaxed and calmed, ready for sleep. Thank you."</p><p class="w-n">Ruby</p></div>
+      <div class="w-card"><div class="w-stars">★★★★★</div><p class="w-q">"Very effective. The tone and pace were perfect for me. It is very calming."</p><p class="w-n">Judy Kneisley, Texas</p></div>
+      <div class="w-card"><div class="w-stars">★★★★★</div><p class="w-q">"One of my favorites. It helps me fall asleep. Beautiful blessings."</p><p class="w-n">Shivamarye, California</p></div>
+      <div class="w-card"><div class="w-stars">★★★★★</div><p class="w-q">"It worked. I fell asleep. It's like a short, gentle hypnotherapy, with binaural beats as a bonus."</p><p class="w-n">Mandi, Oregon</p></div>
+    </div>
+    <p class="wall-foot">Every review verified on Insight Timer, where Michael's sleep meditations hold 13,500+ five-star ratings.</p>
   </div>
 </section>
 
@@ -562,10 +670,10 @@
       <p class="eyebrow">You deserve to sleep</p>
       <h2 class="big">Tonight could be the night everything changes.</h2>
       <p class="body" style="max-width:600px;margin:0 auto 8px;">The first tools can be used tonight. The deeper transformation unfolds over the weeks that follow. It begins the moment you decide to address the whole picture, not just one more piece of it.</p>
-      <div class="cta-strip"><a href="https://www.awakened.academy/offers/aYLRotYo" class="btn">Yes — I want to sleep naturally →</a></div>
+      <div class="cta-strip"><a href="https://www.awakened.academy/offers/aYLRotYo" class="btn">Yes, I want to sleep naturally →</a></div>
       <p class="price-note" style="margin-top:16px;">One-time payment of $27 · Instant access · 30-night guarantee</p>
       <p class="ps"><strong>P.S.</strong> You've been "the person who can't sleep" for a long time. That isn't who you actually are. It's a state your nervous system has been stuck in, for reasons that haven't been addressed. When you address them, you sleep.</p>
-      <p class="ps"><strong>P.P.S.</strong> You're protected by the full 30-night guarantee. Sleep better, or you don't pay. The only real risk is another night lying awake.</p>
+      <p class="ps"><strong>P.P.S.</strong> You're protected by the full 30-night guarantee. Sleep better, or get a full refund and keep the course anyway. The only real risk is another night lying awake.</p>
     </div>
   </div>
 </section>
