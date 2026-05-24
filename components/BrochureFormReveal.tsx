@@ -111,10 +111,18 @@ export default function BrochureFormReveal({
   }
 
   return (
-    <div className="mt-6 overflow-hidden rounded bg-white/95">
+    <div className="-mt-2 mb-[-12px] overflow-hidden rounded bg-transparent">
       <iframe
         src={`https://links.awakenedacademy.com/widget/form/${formId}`}
-        style={{ width: "100%", height: "100%", border: "none", borderRadius: 3, minHeight: formHeight }}
+        style={{
+          width: "100%",
+          height: "100%",
+          border: "none",
+          borderRadius: 3,
+          minHeight: formHeight,
+          background: "transparent",
+          display: "block",
+        }}
         id={`inline-${formId}`}
         data-layout="{'id':'INLINE'}"
         data-trigger-type="alwaysShow"
