@@ -1,17 +1,17 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 import Link from "next/link";
+import GHLForm from "@/components/GHLForm";
 import { GHL } from "@/lib/site-config";
 
 /**
  * Certification opt-in form that reveals a brochure download button after the
- * GHL form posts a submission message.
+ * GHL form posts a submission message to the parent window.
  *
- * The GHL form for this funnel is configured to redirect the parent window to
- * /schedule on submit. We sandbox the iframe (no allow-top-navigation) so the
- * redirect is blocked at the browser level, then listen for the GHL
- * `leadCollected` postMessage to trigger the reveal.
+ * GHL/LeadConnector embed iframes are hosted at links.awakenedacademy.com and
+ * post a message on submit. Listen broadly across that origin family, since the
+ * exact payload schema isn't versioned and has changed historically.
  */
 export default function BrochureOptin({
   brochureHref = "/brochure",
@@ -21,11 +21,6 @@ export default function BrochureOptin({
   brochureLabel?: string;
 }) {
   const [submitted, setSubmitted] = useState(false);
-  const loadCountRef = useRef(0);
-
-  const formId = GHL.forms.certification.id;
-  const formName = GHL.forms.certification.name;
-  const formHeight = GHL.forms.certification.height;
 
   useEffect(() => {
     const TRUSTED_HOSTS = [
@@ -42,21 +37,25 @@ export default function BrochureOptin({
         return false;
       }
     };
-    const SUBMIT_KEYWORDS = ["leadcollected", "submit", "success", "thank"];
     const indicatesSubmit = (payload: unknown): boolean => {
-      const stringify = (v: unknown): string => {
-        if (typeof v === "string") return v;
-        if (v && typeof v === "object") {
-          try {
-            return JSON.stringify(v);
-          } catch {
-            return "";
+      if (typeof payload === "string") {
+        const s = payload.toLowerCase();
+        return s.includes("submit") || s.includes("success") || s.includes("thankyou") || s.includes("thank-you");
+      }
+      if (payload && typeof payload === "object") {
+        const candidates = ["type", "event", "eventName", "action", "status"];
+        const obj = payload as Record<string, unknown>;
+        for (const k of candidates) {
+          const v = obj[k];
+          if (typeof v === "string") {
+            const s = v.toLowerCase();
+            if (s.includes("submit") || s.includes("success") || s.includes("thankyou") || s.includes("thank-you")) {
+              return true;
+            }
           }
         }
-        return "";
-      };
-      const s = stringify(payload).toLowerCase();
-      return SUBMIT_KEYWORDS.some((k) => s.includes(k));
+      }
+      return false;
     };
 
     const onMessage = (e: MessageEvent) => {
@@ -68,11 +67,6 @@ export default function BrochureOptin({
     window.addEventListener("message", onMessage);
     return () => window.removeEventListener("message", onMessage);
   }, []);
-
-  const handleIframeLoad = () => {
-    loadCountRef.current += 1;
-    if (loadCountRef.current >= 2) setSubmitted(true);
-  };
 
   if (submitted) {
     return (
@@ -110,24 +104,10 @@ export default function BrochureOptin({
         </p>
       </div>
       <div className="-mt-6 overflow-hidden">
-        <iframe
-          src={`https://links.awakenedacademy.com/widget/form/${formId}`}
-          sandbox="allow-scripts allow-same-origin allow-forms"
-          style={{ width: "100%", height: "100%", border: "none", minHeight: formHeight, background: "transparent" }}
-          id={`inline-${formId}`}
-          data-layout="{'id':'INLINE'}"
-          data-trigger-type="alwaysShow"
-          data-trigger-value=""
-          data-activation-type="alwaysActivated"
-          data-activation-value=""
-          data-deactivation-type="neverDeactivate"
-          data-deactivation-value=""
-          data-form-name={formName}
-          data-height={String(formHeight)}
-          data-layout-iframe-id={`inline-${formId}`}
-          data-form-id={formId}
-          title={formName}
-          onLoad={handleIframeLoad}
+        <GHLForm
+          formId={GHL.forms.certification.id}
+          formName={GHL.forms.certification.name}
+          height={GHL.forms.certification.height}
         />
       </div>
       <p className="mt-2 text-center text-[11.5px] tracking-wide text-ink2">
