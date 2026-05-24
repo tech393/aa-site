@@ -92,9 +92,7 @@ export default function BrochureOptin({
       <div className="-mt-6 overflow-hidden">
         <iframe
           src={`https://links.awakenedacademy.com/widget/form/${formId}`}
-          sandbox="allow-scripts allow-same-origin allow-forms"
-          referrerPolicy="strict-origin"
-          style={{ width: "100%", height: "100%", border: "none", minHeight: formHeight, background: "transparent" }}
+          style={{ width: "100%", height: "100%", border: "none", borderRadius: 3, minHeight: formHeight }}
           id={`inline-${formId}`}
           data-layout="{'id':'INLINE'}"
           data-trigger-type="alwaysShow"
@@ -104,7 +102,7 @@ export default function BrochureOptin({
           data-deactivation-type="neverDeactivate"
           data-deactivation-value=""
           data-form-name={formName}
-          data-height={String(formHeight)}
+          data-height="undefined"
           data-layout-iframe-id={`inline-${formId}`}
           data-form-id={formId}
           title={formName}

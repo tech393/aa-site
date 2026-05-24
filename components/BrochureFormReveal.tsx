@@ -5,10 +5,9 @@ import { GHL } from "@/lib/site-config";
 
 /**
  * Brochure opt-in form that swaps to a direct PDF download button after the
- * visitor submits. GHL's form is configured to redirect the parent window to
- * /schedule on submit, which blew away the reveal. To block that, we render
- * the embed iframe with sandbox flags that drop allow-top-navigation; the
- * form's hardcoded top.location.href call is then denied by the browser.
+ * visitor submits. Listens for GHL's `leadCollected` postMessage to fire the
+ * reveal. (The form's redirect-on-submit was removed in the GHL dashboard, so
+ * the iframe no longer needs to be sandboxed.)
  */
 export default function BrochureFormReveal({
   pdfHref,
@@ -94,9 +93,7 @@ export default function BrochureFormReveal({
     <div className="mt-6 overflow-hidden rounded bg-white/95">
       <iframe
         src={`https://links.awakenedacademy.com/widget/form/${formId}`}
-        sandbox="allow-scripts allow-same-origin allow-forms"
-        referrerPolicy="strict-origin"
-        style={{ width: "100%", height: "100%", border: "none", minHeight: formHeight, background: "transparent" }}
+        style={{ width: "100%", height: "100%", border: "none", borderRadius: 3, minHeight: formHeight }}
         id={`inline-${formId}`}
         data-layout="{'id':'INLINE'}"
         data-trigger-type="alwaysShow"
@@ -106,7 +103,7 @@ export default function BrochureFormReveal({
         data-deactivation-type="neverDeactivate"
         data-deactivation-value=""
         data-form-name={formName}
-        data-height={String(formHeight)}
+        data-height="undefined"
         data-layout-iframe-id={`inline-${formId}`}
         data-form-id={formId}
         title={formName}
