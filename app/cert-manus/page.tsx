@@ -76,8 +76,8 @@ export default function CertManusPage() {
           ================================================================= */}
       <section className="relative isolate w-full overflow-hidden">
         <Image
-          src="/images/cert-hero-sedona.jpg"
-          alt="Sedona red rock formations at sunset"
+          src="/images/woman-lotus-beach-gold.jpg"
+          alt="Woman in lotus meditation pose at golden sunset by the sea"
           fill
           priority
           className="-z-10 object-cover"
