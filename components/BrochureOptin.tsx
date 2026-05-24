@@ -28,24 +28,36 @@ export default function BrochureOptin({
       try {
         const h = new URL(origin).hostname.toLowerCase();
         return TRUSTED_SUBSTRINGS.some((s) => h.includes(s));
-      } catch {
-        return false;
-      }
+      } catch { return false; }
     };
-    const stringify = (v: unknown): string => {
-      if (typeof v === "string") return v;
-      if (v && typeof v === "object") {
-        try { return JSON.stringify(v); } catch { return ""; }
-      }
-      return "";
-    };
-    const indicatesSubmit = (payload: unknown) => {
-      return stringify(payload).toLowerCase().includes("leadcollected");
+    let armedAt = Date.now() + 3000;
+    let peakHeight = 0;
+    const parseHeight = (raw: unknown): number | null => {
+      if (typeof raw !== "string") return null;
+      const m = raw.match(/^\[iFrameSizer\][^:]+:(\d+):/);
+      return m ? parseInt(m[1], 10) : null;
     };
     const onMessage = (e: MessageEvent) => {
       if (!isTrusted(e.origin)) return;
-      if (!indicatesSubmit(e.data)) return;
-      setSubmitted(true);
+      if (typeof e.data === "string" && e.data.toLowerCase().includes("leadcollected")) {
+        setSubmitted(true);
+        return;
+      }
+      if (e.data && typeof e.data === "object") {
+        try {
+          if (JSON.stringify(e.data).toLowerCase().includes("leadcollected")) {
+            setSubmitted(true);
+            return;
+          }
+        } catch {}
+      }
+      const h = parseHeight(e.data);
+      if (h !== null) {
+        if (h > peakHeight) peakHeight = h;
+        if (Date.now() >= armedAt && peakHeight >= 400 && h < peakHeight * 0.55 && h < 380) {
+          setSubmitted(true);
+        }
+      }
     };
     window.addEventListener("message", onMessage);
     return () => window.removeEventListener("message", onMessage);

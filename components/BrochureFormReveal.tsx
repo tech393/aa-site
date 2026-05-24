@@ -39,26 +39,49 @@ export default function BrochureFormReveal({
         return false;
       }
     };
-    const stringify = (v: unknown): string => {
-      if (typeof v === "string") return v;
-      if (v && typeof v === "object") {
-        try {
-          return JSON.stringify(v);
-        } catch {
-          return "";
-        }
-      }
-      return "";
-    };
-    const indicatesSubmit = (payload: unknown) => {
-      return stringify(payload).toLowerCase().includes("leadcollected");
+
+    // Warmup before we trust height-based detection. The form re-flows as it
+    // mounts (focus events, font load, captcha box appearing), so heights
+    // captured in the first ~3s should not be compared to.
+    let armedAt = Date.now() + 3000;
+    let peakHeight = 0;
+
+    // iFrameSizer payload: "[iFrameSizer]<id>:<height>:<width>:<type>".
+    const parseHeight = (raw: unknown): number | null => {
+      if (typeof raw !== "string") return null;
+      const m = raw.match(/^\[iFrameSizer\][^:]+:(\d+):/);
+      return m ? parseInt(m[1], 10) : null;
     };
 
     const onMessage = (e: MessageEvent) => {
       if (!isTrusted(e.origin)) return;
-      if (!indicatesSubmit(e.data)) return;
-      setSubmitted(true);
+
+      // Path 1: explicit lead-capture event (rarely fires with inline-thank-you).
+      if (typeof e.data === "string" && e.data.toLowerCase().includes("leadcollected")) {
+        setSubmitted(true);
+        return;
+      }
+      if (e.data && typeof e.data === "object") {
+        try {
+          if (JSON.stringify(e.data).toLowerCase().includes("leadcollected")) {
+            setSubmitted(true);
+            return;
+          }
+        } catch {}
+      }
+
+      // Path 2: iframe height collapse. When the form is replaced by the small
+      // inline "Thank you for taking the time..." message, height drops sharply.
+      const h = parseHeight(e.data);
+      if (h !== null) {
+        if (h > peakHeight) peakHeight = h;
+        const armed = Date.now() >= armedAt;
+        if (armed && peakHeight >= 400 && h < peakHeight * 0.55 && h < 380) {
+          setSubmitted(true);
+        }
+      }
     };
+
     window.addEventListener("message", onMessage);
     return () => window.removeEventListener("message", onMessage);
   }, []);
