@@ -76,8 +76,8 @@ export default function CertManusPage() {
           ================================================================= */}
       <section className="relative isolate w-full overflow-hidden">
         <Image
-          src="/images/woman-lotus-beach-gold.jpg"
-          alt="Woman in lotus meditation pose at golden sunset by the sea"
+          src="/images/cert-hero-meditation-sedona.webp"
+          alt="Woman in white robes meditating in lotus pose on a wooden deck overlooking misty mountains at sunset"
           fill
           priority
           className="-z-10 object-cover"
