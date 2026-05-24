@@ -15,6 +15,7 @@ export type SiteLink = { href: string; label: string };
 export type SiteSection = { title: string; note?: string; links: SiteLink[] };
 
 const APP_DIR = path.join(process.cwd(), "app");
+const PUBLIC_DIR = path.join(process.cwd(), "public");
 
 // Turn a route segment like "spiritual-life-coach-certification" into a
 // readable label: "Spiritual Life Coach Certification".
@@ -25,6 +26,44 @@ function humanize(segment: string): string {
     .map((w) => (w.length <= 3 ? w : w.charAt(0).toUpperCase() + w.slice(1)))
     .join(" ")
     .replace(/^\w/, (c) => c.toUpperCase());
+}
+
+// Pull a readable label from a public/*/index.html landing page. Falls back
+// to a humanized slug if the file has no <title> or can't be read.
+function titleFromHtml(filePath: string, fallbackSlug: string): string {
+  try {
+    const html = fs.readFileSync(filePath, "utf-8");
+    const m = html.match(/<title>([^<]+)<\/title>/i);
+    if (m) {
+      return m[1]
+        .replace(/\s*[|·–-]\s*Awakened Academy.*$/i, "")
+        .replace(/\s+/g, " ")
+        .trim();
+    }
+  } catch {
+    /* fall through */
+  }
+  return humanize(fallbackSlug);
+}
+
+// Standalone landing pages dropped into public/ (each is a folder containing
+// index.html). Served by Next as static files, so they don't appear in the
+// app/ routing tree.
+function discoverPublicLandingPages(): { href: string; label: string }[] {
+  if (!fs.existsSync(PUBLIC_DIR)) return [];
+  const pages: { href: string; label: string }[] = [];
+  for (const entry of fs.readdirSync(PUBLIC_DIR, { withFileTypes: true })) {
+    if (!entry.isDirectory()) continue;
+    // /migrated/ is the WP image mirror, not a landing page.
+    if (entry.name === "migrated") continue;
+    const indexPath = path.join(PUBLIC_DIR, entry.name, "index.html");
+    if (!fs.existsSync(indexPath)) continue;
+    pages.push({
+      href: `/${entry.name}`,
+      label: titleFromHtml(indexPath, entry.name),
+    });
+  }
+  return pages.sort((a, b) => a.label.localeCompare(b.label));
 }
 
 type Discovered = {
@@ -142,6 +181,15 @@ export function buildSiteMap(): SiteMap {
     sections.push({
       title: "Softly Powerful — lessons",
       links: SP_COURSE.map((l) => ({ href: `/sp/${l.slug}`, label: l.title })),
+    });
+  }
+
+  const publicLandings = discoverPublicLandingPages();
+  if (publicLandings.length) {
+    sections.push({
+      title: "Static landing pages",
+      note: "Standalone HTML pages served from /public/.",
+      links: publicLandings,
     });
   }
 
