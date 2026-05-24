@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import { GHL } from "@/lib/site-config";
 
@@ -18,10 +18,16 @@ export default function BrochureOptin({
   brochureLabel?: string;
 }) {
   const [submitted, setSubmitted] = useState(false);
+  const loadCountRef = useRef(0);
+  const readyAtRef = useRef(0);
 
   const formId = GHL.forms.certManus.id;
   const formName = GHL.forms.certManus.name;
   const formHeight = GHL.forms.certManus.height;
+
+  useEffect(() => {
+    readyAtRef.current = Date.now() + 1500;
+  }, []);
 
   useEffect(() => {
     const TRUSTED_SUBSTRINGS = ["awakenedacademy", "msgsndr", "leadconnectorhq", "gohighlevel"];
@@ -40,10 +46,13 @@ export default function BrochureOptin({
       }
       return "";
     };
-    // Only react to GHL's official lead-capture event; broader keywords
-    // false-triggered on init-time messages.
     const indicatesSubmit = (payload: unknown) => {
-      return stringify(payload).toLowerCase().includes("leadcollected");
+      const s = stringify(payload).toLowerCase();
+      if (s.includes("leadcollected")) return true;
+      if (Date.now() >= readyAtRef.current && (s.includes("thank you for") || s.includes("form-submission") || s.includes("formsubmitsuccess"))) {
+        return true;
+      }
+      return false;
     };
     const onMessage = (e: MessageEvent) => {
       if (!isTrusted(e.origin)) return;
@@ -53,6 +62,13 @@ export default function BrochureOptin({
     window.addEventListener("message", onMessage);
     return () => window.removeEventListener("message", onMessage);
   }, []);
+
+  const handleIframeLoad = () => {
+    loadCountRef.current += 1;
+    if (loadCountRef.current >= 2 && Date.now() >= readyAtRef.current) {
+      setSubmitted(true);
+    }
+  };
 
   if (submitted) {
     return (
@@ -106,6 +122,7 @@ export default function BrochureOptin({
           data-layout-iframe-id={`inline-${formId}`}
           data-form-id={formId}
           title={formName}
+          onLoad={handleIframeLoad}
         />
       </div>
       <p className="mt-2 text-center text-[11.5px] tracking-wide text-ink2">
