@@ -1,14 +1,13 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 import Link from "next/link";
 import { GHL } from "@/lib/site-config";
 
 /**
  * Certification opt-in form that swaps to a brochure CTA after the visitor
- * submits the GHL form. The form is configured to top-redirect to /schedule
- * on submit; we sandbox the iframe (no allow-top-navigation) so the redirect
- * is denied and the leadCollected postMessage gets a chance to fire instead.
+ * submits the GHL form. Listens for GHL's `leadCollected` postMessage to
+ * trigger the reveal.
  */
 export default function BrochureOptin({
   brochureHref = "/brochure",
@@ -18,16 +17,10 @@ export default function BrochureOptin({
   brochureLabel?: string;
 }) {
   const [submitted, setSubmitted] = useState(false);
-  const loadCountRef = useRef(0);
-  const readyAtRef = useRef(0);
 
   const formId = GHL.forms.certManus.id;
   const formName = GHL.forms.certManus.name;
   const formHeight = GHL.forms.certManus.height;
-
-  useEffect(() => {
-    readyAtRef.current = Date.now() + 1500;
-  }, []);
 
   useEffect(() => {
     const TRUSTED_SUBSTRINGS = ["awakenedacademy", "msgsndr", "leadconnectorhq", "gohighlevel"];
@@ -47,12 +40,7 @@ export default function BrochureOptin({
       return "";
     };
     const indicatesSubmit = (payload: unknown) => {
-      const s = stringify(payload).toLowerCase();
-      if (s.includes("leadcollected")) return true;
-      if (Date.now() >= readyAtRef.current && (s.includes("thank you for") || s.includes("form-submission") || s.includes("formsubmitsuccess"))) {
-        return true;
-      }
-      return false;
+      return stringify(payload).toLowerCase().includes("leadcollected");
     };
     const onMessage = (e: MessageEvent) => {
       if (!isTrusted(e.origin)) return;
@@ -62,13 +50,6 @@ export default function BrochureOptin({
     window.addEventListener("message", onMessage);
     return () => window.removeEventListener("message", onMessage);
   }, []);
-
-  const handleIframeLoad = () => {
-    loadCountRef.current += 1;
-    if (loadCountRef.current >= 2 && Date.now() >= readyAtRef.current) {
-      setSubmitted(true);
-    }
-  };
 
   if (submitted) {
     return (
@@ -122,7 +103,6 @@ export default function BrochureOptin({
           data-layout-iframe-id={`inline-${formId}`}
           data-form-id={formId}
           title={formName}
-          onLoad={handleIframeLoad}
         />
       </div>
       <p className="mt-2 text-center text-[11.5px] tracking-wide text-ink2">

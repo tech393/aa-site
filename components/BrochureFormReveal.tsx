@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 import { GHL } from "@/lib/site-config";
 
 /**
@@ -19,19 +19,10 @@ export default function BrochureFormReveal({
   meta?: string;
 }) {
   const [submitted, setSubmitted] = useState(false);
-  const loadCountRef = useRef(0);
-  const readyAtRef = useRef(0);
 
   const formId = GHL.forms.certManus.id;
   const formName = GHL.forms.certManus.name;
   const formHeight = GHL.forms.certManus.height;
-
-  // After mount, mark the iframe as "ready to count submission loads". Any
-  // iframe-load event arriving before this timestamp is part of the initial
-  // render (React strict-mode double-mount, slow CDN, etc.) and ignored.
-  useEffect(() => {
-    readyAtRef.current = Date.now() + 1500;
-  }, []);
 
   useEffect(() => {
     const TRUSTED_SUBSTRINGS = [
@@ -59,17 +50,8 @@ export default function BrochureFormReveal({
       }
       return "";
     };
-    // GHL's "leadCollected" is the canonical event. But with inline-thank-you
-    // configured, the iframe sometimes only posts the thank-you copy via a
-    // mutationObserver size update — so also accept any post-warmup message
-    // mentioning the thank-you string.
     const indicatesSubmit = (payload: unknown) => {
-      const s = stringify(payload).toLowerCase();
-      if (s.includes("leadcollected")) return true;
-      if (Date.now() >= readyAtRef.current && (s.includes("thank you for") || s.includes("form-submission") || s.includes("formsubmitsuccess"))) {
-        return true;
-      }
-      return false;
+      return stringify(payload).toLowerCase().includes("leadcollected");
     };
 
     const onMessage = (e: MessageEvent) => {
@@ -80,16 +62,6 @@ export default function BrochureFormReveal({
     window.addEventListener("message", onMessage);
     return () => window.removeEventListener("message", onMessage);
   }, []);
-
-  const handleIframeLoad = () => {
-    loadCountRef.current += 1;
-    // GHL's "inline thank you" config replaces the form HTML inside the iframe
-    // when the visitor submits, which fires `load` again. After the warmup
-    // window any further load = a real submission.
-    if (loadCountRef.current >= 2 && Date.now() >= readyAtRef.current) {
-      setSubmitted(true);
-    }
-  };
 
   if (submitted) {
     return (
@@ -136,7 +108,6 @@ export default function BrochureFormReveal({
         data-layout-iframe-id={`inline-${formId}`}
         data-form-id={formId}
         title={formName}
-        onLoad={handleIframeLoad}
       />
     </div>
   );
