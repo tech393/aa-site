@@ -51,10 +51,11 @@ export default function BrochureFormReveal({
       }
       return "";
     };
-    const SUBMIT_KEYWORDS = ["leadcollected", "submit", "success", "thank"];
+    // Only react to GHL's official lead-capture event. Earlier broader
+    // keywords (submit/success/thank) were false-triggering on init-time
+    // messages and revealing the download button before the user submitted.
     const indicatesSubmit = (payload: unknown) => {
-      const s = stringify(payload).toLowerCase();
-      return SUBMIT_KEYWORDS.some((k) => s.includes(k));
+      return stringify(payload).toLowerCase().includes("leadcollected");
     };
 
     const onMessage = (e: MessageEvent) => {
