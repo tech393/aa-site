@@ -22,9 +22,9 @@ export default function BrochureFormReveal({
   const [submitted, setSubmitted] = useState(false);
   const loadCountRef = useRef(0);
 
-  const formId = GHL.forms.certification.id;
-  const formName = GHL.forms.certification.name;
-  const formHeight = GHL.forms.certification.height;
+  const formId = GHL.forms.certManus.id;
+  const formName = GHL.forms.certManus.name;
+  const formHeight = GHL.forms.certManus.height;
 
   useEffect(() => {
     const TRUSTED_SUBSTRINGS = [
