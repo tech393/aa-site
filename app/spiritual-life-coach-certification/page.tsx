@@ -57,10 +57,10 @@ const BENEFIT_IMAGES: { src: string; alt: string; position?: string }[] = [
 
 const PRESS = ["ABC", "NBC", "CBS", "Fox News", "Good Morning America", "The Huffington Post"];
 
-const TRUST_STATS = [
-  { value: "650+",      label: "Certified coaches" },
-  { value: "25+",       label: "Countries" },
-  { value: "125,000+",  label: "5-star reviews" },
+const TRUST_STATS: { value: string; label: string; href?: string }[] = [
+  { value: "650+",       label: "Certified coaches" },
+  { value: "25+",        label: "Countries" },
+  { value: "125,000+",   label: "5-star reviews on Insight Timer", href: "https://insighttimer.com/awakenedacademy" },
   { value: "Since 2004", label: "Pioneering spiritual coaching" },
 ];
 
@@ -145,16 +145,35 @@ export default function CertificationPage() {
           </Reveal>
           <Reveal>
             <ul className="mt-10 grid grid-cols-2 gap-x-6 gap-y-10 md:grid-cols-4">
-              {TRUST_STATS.map((s) => (
-                <li key={s.label} className="text-center">
-                  <div className="font-serif text-[clamp(26px,3.4vw,42px)] leading-none text-gold-light">
-                    {s.value}
-                  </div>
-                  <div className="mt-3 text-[11.5px] font-semibold uppercase tracking-[0.22em] text-white/75">
-                    {s.label}
-                  </div>
-                </li>
-              ))}
+              {TRUST_STATS.map((s) => {
+                const inner = (
+                  <>
+                    <div className="font-serif text-[clamp(26px,3.4vw,42px)] leading-none text-gold-light">
+                      {s.value}
+                    </div>
+                    <div className="mt-3 text-[11.5px] font-semibold uppercase tracking-[0.22em] text-white/75">
+                      {s.label}
+                      {s.href && <span aria-hidden className="ml-1 text-gold-light/80">↗</span>}
+                    </div>
+                  </>
+                );
+                return (
+                  <li key={s.label} className="text-center">
+                    {s.href ? (
+                      <a
+                        href={s.href}
+                        target="_blank"
+                        rel="noopener"
+                        className="block transition hover:text-white"
+                      >
+                        {inner}
+                      </a>
+                    ) : (
+                      inner
+                    )}
+                  </li>
+                );
+              })}
             </ul>
           </Reveal>
         </div>
