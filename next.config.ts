@@ -15,6 +15,8 @@ const config: NextConfig = {
   async redirects() {
     return [
 
+    // Cert page redesign promoted: /cert-manus -> /spiritual-life-coach-certification (May 2026)
+    { source: "/cert-manus", destination: "/spiritual-life-coach-certification", permanent: true },
     // Brochure opt-in funnel renamed: /brochure-optin -> /brochure-download (May 2026)
     { source: "/brochure-optin", destination: "/brochure-download", permanent: true },
     // Podcast rebrand: theawakenedlife -> dont-die-with-your-song-inside (May 2026)
