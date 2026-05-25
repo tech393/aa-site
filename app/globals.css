@@ -213,3 +213,91 @@
     font-size: 0.75em;
   }
 }
+
+/* =========================================================
+   "As Featured In" press-logo marquee (FeaturedInBanner.tsx)
+   Auto-scrolling, hover-paused, respects prefers-reduced-motion.
+   Source: AA-Featured-In-Banner-FINAL.zip (Michael, 2026-05-19).
+   ========================================================= */
+.aa-fb {
+  width: 100%;
+  background: transparent;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+.aa-fb__label {
+  display: block;
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-style: italic;
+  font-weight: 500;
+  letter-spacing: 0.3px;
+  color: #1A7A70;
+  text-align: center;
+}
+.aa-fb__label::after {
+  content: "";
+  display: block;
+  width: 46px;
+  height: 1px;
+  background: #8B7228;
+  opacity: 0.55;
+  margin: 13px auto 0;
+}
+.aa-fb__marquee {
+  position: relative;
+  overflow: hidden;
+  mask-image: linear-gradient(to right, transparent, #000 8%, #000 92%, transparent);
+  -webkit-mask-image: linear-gradient(to right, transparent, #000 8%, #000 92%, transparent);
+}
+.aa-fb__track {
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+  width: max-content;
+  animation: aa-fb-scroll 55s linear infinite;
+}
+.aa-fb__marquee:hover .aa-fb__track {
+  animation-play-state: paused;
+}
+.aa-fb__track img {
+  width: auto;
+  object-fit: contain;
+  opacity: 0.9;
+  transition: opacity 0.3s ease;
+  flex-shrink: 0;
+}
+.aa-fb__track img:hover { opacity: 1; }
+@keyframes aa-fb-scroll {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+.aa-fb--sm { padding: 22px 0; }
+.aa-fb--sm .aa-fb__label { font-size: 15px; margin-bottom: 14px; }
+.aa-fb--sm .aa-fb__track { gap: 36px; }
+.aa-fb--sm .aa-fb__track img { height: 28px; max-width: 130px; }
+.aa-fb--md { padding: 36px 0; }
+.aa-fb--md .aa-fb__label { font-size: 18px; margin-bottom: 22px; }
+.aa-fb--md .aa-fb__track { gap: 56px; }
+.aa-fb--md .aa-fb__track img { height: 46px; max-width: 220px; }
+.aa-fb--lg { padding: 52px 0; }
+.aa-fb--lg .aa-fb__label { font-size: 22px; margin-bottom: 30px; }
+.aa-fb--lg .aa-fb__track { gap: 80px; }
+.aa-fb--lg .aa-fb__track img { height: 72px; max-width: 360px; }
+.aa-fb--dark .aa-fb__label { color: #E8DCC8; }
+@media (max-width: 768px) {
+  .aa-fb--sm .aa-fb__track img { height: 22px; max-width: 100px; }
+  .aa-fb--sm .aa-fb__track { gap: 28px; }
+  .aa-fb--md .aa-fb__track img { height: 34px; max-width: 160px; }
+  .aa-fb--md .aa-fb__track { gap: 40px; }
+  .aa-fb--lg .aa-fb__track img { height: 52px; max-width: 260px; }
+  .aa-fb--lg .aa-fb__track { gap: 56px; }
+}
+@media (max-width: 480px) {
+  .aa-fb--sm .aa-fb__track img { height: 20px; }
+  .aa-fb--md .aa-fb__track img { height: 28px; }
+  .aa-fb--lg .aa-fb__track img { height: 40px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .aa-fb__track { animation: none; flex-wrap: wrap; justify-content: center; width: 100%; }
+  .aa-fb__marquee { mask-image: none; -webkit-mask-image: none; }
+}

@@ -4,6 +4,7 @@ import Link from "next/link";
 import Reveal from "@/components/Reveal";
 import FAQ from "@/components/FAQ";
 import StickyCTABar from "@/components/StickyCTABar";
+import FeaturedInBanner from "@/components/FeaturedInBanner";
 import { SITE } from "@/lib/site-config";
 import {
   PILLARS,
@@ -54,8 +55,6 @@ const BENEFIT_IMAGES: { src: string; alt: string; position?: string }[] = [
   { src: "/images/bands/tablet.jpg",                                alt: "Tablet displaying digital course materials" },
   { src: "/images/bands/woman-with-tablet.jpg",                     alt: "Woman reading course content on a tablet",            position: "center top" },
 ];
-
-const PRESS = ["ABC", "NBC", "CBS", "Fox News", "Good Morning America", "The Huffington Post"];
 
 const TRUST_STATS: { value: string; label: string; href?: string }[] = [
   { value: "650+",       label: "Certified coaches" },
@@ -179,15 +178,8 @@ export default function CertificationPage() {
         </div>
 
         <div className="border-t border-white/10 bg-teal-deep">
-          <div className="mx-auto max-w-widest px-6 py-7 text-center">
-            <div className="text-[11px] font-semibold uppercase tracking-[0.32em] text-gold-light/80">
-              As Featured In
-            </div>
-            <ul className="mt-4 flex flex-wrap items-center justify-center gap-x-10 gap-y-3 font-serif text-[15px] italic text-white/70">
-              {PRESS.map((p) => (
-                <li key={p}>{p}</li>
-              ))}
-            </ul>
+          <div className="mx-auto max-w-widest px-6">
+            <FeaturedInBanner size="md" dark />
           </div>
         </div>
       </section>
