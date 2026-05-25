@@ -480,6 +480,17 @@ export default function CertManusPage() {
               </Reveal>
             ))}
           </div>
+
+          <Reveal>
+            <div className="mt-12 text-center">
+              <Link
+                href="/wall-of-gratitude"
+                className="inline-flex items-center gap-2 text-[14px] font-medium text-teal underline-offset-4 transition hover:text-teal-deep hover:underline"
+              >
+                See more graduate stories <span aria-hidden>→</span>
+              </Link>
+            </div>
+          </Reveal>
         </div>
       </section>
 
