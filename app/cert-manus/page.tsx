@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import Reveal from "@/components/Reveal";
 import FAQ from "@/components/FAQ";
+import StickyCTABar from "@/components/StickyCTABar";
 import { SITE } from "@/lib/site-config";
 import {
   PILLARS,
@@ -564,6 +565,13 @@ export default function CertManusPage() {
           </Reveal>
         </div>
       </section>
+
+      <StickyCTABar
+        title="Become a Certified Spiritual Life Coach"
+        subtitle="Free brochure · No commitment · 25+ countries"
+        ctaLabel="Download free brochure"
+        ctaHref="/brochure-optin"
+      />
     </>
   );
 }
