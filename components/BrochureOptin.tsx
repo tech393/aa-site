@@ -5,9 +5,11 @@ import Link from "next/link";
 import { GHL } from "@/lib/site-config";
 
 /**
- * Certification opt-in form that swaps to a brochure CTA after the visitor
- * submits the GHL form. Listens for GHL's `leadCollected` postMessage to
- * trigger the reveal.
+ * Certification opt-in form for /cert-manus-optin. Same crash-avoidance
+ * pattern as BrochureFormReveal: the iframe is rendered once and stays
+ * mounted forever, hidden via CSS after submit, because GHL's form_embed.js
+ * mutates the DOM around it and unmounting via conditional render crashes
+ * React reconciliation with a removeChild NotFoundError.
  */
 export default function BrochureOptin({
   brochureHref = "/brochure",
@@ -61,9 +63,6 @@ export default function BrochureOptin({
     };
     window.addEventListener("message", onMessage);
 
-    // Sustained-iframe-focus reveal: blur fires when the user clicks INTO the
-    // iframe; if they stay focused for 8s without new clicks (= no inputs
-    // because the thank-you screen replaced the form), reveal.
     let interactionTimer: ReturnType<typeof setTimeout> | null = null;
     const isFocusInIframe = () =>
       !!document.activeElement && document.activeElement.tagName === "IFRAME";
@@ -92,63 +91,68 @@ export default function BrochureOptin({
     };
   }, []);
 
-  if (submitted) {
-    return (
-      <div className="rounded-lg bg-white p-8 text-center shadow-[0_2px_12px_-4px_rgba(42,26,15,0.08)] ring-1 ring-ink/5">
-        <div className="text-[11px] font-semibold uppercase tracking-[0.28em] text-teal">
-          ✦&nbsp;&nbsp;You&apos;re in&nbsp;&nbsp;✦
-        </div>
-        <h3 className="mt-4 font-serif text-[clamp(22px,3vw,30px)] leading-[1.2] text-ink">
-          Your brochure is <em className="italic text-gold">ready</em>.
-        </h3>
-        <p className="mx-auto mt-3 max-w-md text-[14.5px] leading-[1.7] text-ink2">
-          A copy has been sent to your inbox. You can also download it right now below.
-        </p>
-        <Link
-          href={brochureHref}
-          className="mt-7 inline-flex items-center gap-2 rounded bg-gold px-9 py-4 text-[13px] font-semibold uppercase tracking-[0.14em] text-ink transition hover:bg-gold-deep hover:text-white"
-        >
-          {brochureLabel} <span aria-hidden>↓</span>
-        </Link>
-      </div>
-    );
-  }
-
   return (
-    <div className="overflow-hidden rounded-lg bg-white p-6 shadow-[0_2px_12px_-4px_rgba(42,26,15,0.08)] ring-1 ring-ink/5 md:p-7">
-      <div className="text-center">
-        <div className="text-[11px] font-semibold uppercase tracking-[0.28em] text-teal">
-          ✦&nbsp;&nbsp;Free Brochure&nbsp;&nbsp;✦
+    <>
+      {/* Form card — always mounted, hidden via CSS once submitted. */}
+      <div
+        className="overflow-hidden rounded-lg bg-white p-6 shadow-[0_2px_12px_-4px_rgba(42,26,15,0.08)] ring-1 ring-ink/5 md:p-7"
+        style={{ display: submitted ? "none" : "block" }}
+      >
+        <div className="text-center">
+          <div className="text-[11px] font-semibold uppercase tracking-[0.28em] text-teal">
+            ✦&nbsp;&nbsp;Free Brochure&nbsp;&nbsp;✦
+          </div>
+          <h3 className="mt-3 font-serif text-[clamp(22px,2.8vw,28px)] leading-[1.2] text-ink">
+            Download the full <em className="italic text-gold">Academy Brochure</em>
+          </h3>
+          <p className="mt-2 text-[13.5px] leading-[1.6] text-ink2">
+            Curriculum, tuition, and how the certification works end-to-end.
+          </p>
         </div>
-        <h3 className="mt-3 font-serif text-[clamp(22px,2.8vw,28px)] leading-[1.2] text-ink">
-          Download the full <em className="italic text-gold">Academy Brochure</em>
-        </h3>
-        <p className="mt-2 text-[13.5px] leading-[1.6] text-ink2">
-          Curriculum, tuition, and how the certification works end-to-end.
+        <div className="-mt-6 overflow-hidden">
+          <iframe
+            src={`https://links.awakenedacademy.com/widget/form/${formId}`}
+            style={{ width: "100%", height: "100%", border: "none", borderRadius: 3, minHeight: formHeight }}
+            id={`inline-${formId}`}
+            data-layout="{'id':'INLINE'}"
+            data-trigger-type="alwaysShow"
+            data-trigger-value=""
+            data-activation-type="alwaysActivated"
+            data-activation-value=""
+            data-deactivation-type="neverDeactivate"
+            data-deactivation-value=""
+            data-form-name={formName}
+            data-height="undefined"
+            data-layout-iframe-id={`inline-${formId}`}
+            data-form-id={formId}
+            title={formName}
+          />
+        </div>
+        <p className="mt-2 text-center text-[11.5px] tracking-wide text-ink2">
+          Instant access · No spam · Unsubscribe anytime
         </p>
       </div>
-      <div className="-mt-6 overflow-hidden">
-        <iframe
-          src={`https://links.awakenedacademy.com/widget/form/${formId}`}
-          style={{ width: "100%", height: "100%", border: "none", borderRadius: 3, minHeight: formHeight }}
-          id={`inline-${formId}`}
-          data-layout="{'id':'INLINE'}"
-          data-trigger-type="alwaysShow"
-          data-trigger-value=""
-          data-activation-type="alwaysActivated"
-          data-activation-value=""
-          data-deactivation-type="neverDeactivate"
-          data-deactivation-value=""
-          data-form-name={formName}
-          data-height="undefined"
-          data-layout-iframe-id={`inline-${formId}`}
-          data-form-id={formId}
-          title={formName}
-        />
-      </div>
-      <p className="mt-2 text-center text-[11.5px] tracking-wide text-ink2">
-        Instant access · No spam · Unsubscribe anytime
-      </p>
-    </div>
+
+      {/* Post-submit reveal — mounted only after submitted. */}
+      {submitted && (
+        <div className="rounded-lg bg-white p-8 text-center shadow-[0_2px_12px_-4px_rgba(42,26,15,0.08)] ring-1 ring-ink/5">
+          <div className="text-[11px] font-semibold uppercase tracking-[0.28em] text-teal">
+            ✦&nbsp;&nbsp;You&apos;re in&nbsp;&nbsp;✦
+          </div>
+          <h3 className="mt-4 font-serif text-[clamp(22px,3vw,30px)] leading-[1.2] text-ink">
+            Your brochure is <em className="italic text-gold">ready</em>.
+          </h3>
+          <p className="mx-auto mt-3 max-w-md text-[14.5px] leading-[1.7] text-ink2">
+            A copy has been sent to your inbox. You can also download it right now below.
+          </p>
+          <Link
+            href={brochureHref}
+            className="mt-7 inline-flex items-center gap-2 rounded bg-gold px-9 py-4 text-[13px] font-semibold uppercase tracking-[0.14em] text-ink transition hover:bg-gold-deep hover:text-white"
+          >
+            {brochureLabel} <span aria-hidden>↓</span>
+          </Link>
+        </div>
+      )}
+    </>
   );
 }

@@ -4,10 +4,22 @@ import { useEffect, useState } from "react";
 import { GHL } from "@/lib/site-config";
 
 /**
- * Brochure opt-in form that swaps to a direct PDF download button after the
- * visitor submits. Listens for GHL's `leadCollected` postMessage to fire the
- * reveal. (The form's redirect-on-submit was removed in the GHL dashboard, so
- * the iframe no longer needs to be sandboxed.)
+ * Brochure opt-in widget. Renders the GHL form iframe and a download button;
+ * uses CSS to swap which is visible after submit.
+ *
+ * We never unmount the iframe once it's rendered, because GHL's form_embed.js
+ * mutates the DOM around it (iframe-resizer wrappers, attribute changes).
+ * Conditionally rendering it crashed React with "Failed to execute removeChild
+ * on Node: The node to be removed is not a child of this node" when state
+ * flipped from form → button.
+ *
+ * Detection signals (any of them flips `submitted`):
+ *   - postMessage payload containing `leadCollected` (GHL's official event).
+ *   - iFrameSizer height collapse < 55% of peak and < 380px after 3s warmup
+ *     (catches the inline thank-you swap GHL does instead of leadCollected).
+ *   - Window blur with focus on the iframe, followed by 8s of inactivity
+ *     (visitor clicked into the form, stopped interacting because the
+ *     thank-you replaced the inputs).
  */
 export default function BrochureFormReveal({
   pdfHref,
@@ -40,13 +52,9 @@ export default function BrochureFormReveal({
       }
     };
 
-    // Warmup before we trust height-based detection. The form re-flows as it
-    // mounts (focus events, font load, captcha box appearing), so heights
-    // captured in the first ~3s should not be compared to.
     let armedAt = Date.now() + 3000;
     let peakHeight = 0;
 
-    // iFrameSizer payload: "[iFrameSizer]<id>:<height>:<width>:<type>".
     const parseHeight = (raw: unknown): number | null => {
       if (typeof raw !== "string") return null;
       const m = raw.match(/^\[iFrameSizer\][^:]+:(\d+):/);
@@ -55,8 +63,6 @@ export default function BrochureFormReveal({
 
     const onMessage = (e: MessageEvent) => {
       if (!isTrusted(e.origin)) return;
-
-      // Path 1: explicit lead-capture event (rarely fires with inline-thank-you).
       if (typeof e.data === "string" && e.data.toLowerCase().includes("leadcollected")) {
         setSubmitted(true);
         return;
@@ -69,41 +75,21 @@ export default function BrochureFormReveal({
           }
         } catch {}
       }
-
-      // Path 2: iframe height collapse. When the form is replaced by the small
-      // inline "Thank you for taking the time..." message, height drops sharply.
       const h = parseHeight(e.data);
       if (h !== null) {
         if (h > peakHeight) peakHeight = h;
-        const armed = Date.now() >= armedAt;
-        if (armed && peakHeight >= 400 && h < peakHeight * 0.55 && h < 380) {
+        if (Date.now() >= armedAt && peakHeight >= 400 && h < peakHeight * 0.55 && h < 380) {
           setSubmitted(true);
         }
       }
     };
-
     window.addEventListener("message", onMessage);
 
-    // Path 3: visitor-interaction-then-pause detection. When the user clicks
-    // INTO an iframe the parent window emits `blur`; clicking back to the
-    // parent re-fires `focus`. We treat sustained inactivity inside the iframe
-    // as "they submitted and the form has nothing left to interact with".
-    //
-    // Mechanics:
-    //   - First blur after warmup starts an 8s timer.
-    //   - Every subsequent blur resets the timer (still interacting).
-    //   - If the user clicks back OUT of the iframe (focus fires), cancel —
-    //     they didn't submit, no reveal.
-    //   - Timer firing = they were focused on the iframe with no new
-    //     interaction for 8s, which after a submit means the inline thank-you
-    //     is showing (no input to refocus).
     let interactionTimer: ReturnType<typeof setTimeout> | null = null;
     const isFocusInIframe = () =>
-      !!document.activeElement &&
-      document.activeElement.tagName === "IFRAME";
+      !!document.activeElement && document.activeElement.tagName === "IFRAME";
     const onBlur = () => {
       if (Date.now() < armedAt) return;
-      // Defer the focus check one tick so document.activeElement settles.
       setTimeout(() => {
         if (!isFocusInIframe()) return;
         if (interactionTimer) clearTimeout(interactionTimer);
@@ -127,52 +113,57 @@ export default function BrochureFormReveal({
     };
   }, []);
 
-  if (submitted) {
-    return (
-      <>
-        <div className="mt-7">
-          <a
-            href={pdfHref}
-            download
-            className="inline-block rounded bg-teal px-7 py-3.5 text-[13px] font-medium text-white transition hover:bg-teal-soft"
-          >
-            {buttonLabel}
-          </a>
-        </div>
-        <p className="mt-4 text-[11px] tracking-wide text-white/75">
-          {meta} · Sent to your inbox too
-        </p>
-      </>
-    );
-  }
-
   return (
-    <div className="-mt-2 mb-[-12px] overflow-hidden rounded bg-transparent">
-      <iframe
-        src={`https://links.awakenedacademy.com/widget/form/${formId}`}
-        style={{
-          width: "100%",
-          height: "100%",
-          border: "none",
-          borderRadius: 3,
-          minHeight: formHeight,
-          background: "transparent",
-          display: "block",
-        }}
-        id={`inline-${formId}`}
-        data-layout="{'id':'INLINE'}"
-        data-trigger-type="alwaysShow"
-        data-trigger-value=""
-        data-activation-type="alwaysActivated"
-        data-activation-value=""
-        data-deactivation-type="neverDeactivate"
-        data-deactivation-value=""
-        data-form-name={formName}
-        data-height="undefined"
-        data-layout-iframe-id={`inline-${formId}`}
-        data-form-id={formId}
-        title={formName}
-      />
-    </div>
+    <>
+      {/* Iframe stays mounted forever (see component-level note about
+          form_embed.js DOM mutations); we just hide it via CSS after submit. */}
+      <div
+        className="-mt-2 mb-[-12px] overflow-hidden rounded bg-transparent"
+        style={{ display: submitted ? "none" : "block" }}
+      >
+        <iframe
+          src={`https://links.awakenedacademy.com/widget/form/${formId}`}
+          style={{
+            width: "100%",
+            height: "100%",
+            border: "none",
+            borderRadius: 3,
+            minHeight: formHeight,
+            background: "transparent",
+            display: "block",
+          }}
+          id={`inline-${formId}`}
+          data-layout="{'id':'INLINE'}"
+          data-trigger-type="alwaysShow"
+          data-trigger-value=""
+          data-activation-type="alwaysActivated"
+          data-activation-value=""
+          data-deactivation-type="neverDeactivate"
+          data-deactivation-value=""
+          data-form-name={formName}
+          data-height="undefined"
+          data-layout-iframe-id={`inline-${formId}`}
+          data-form-id={formId}
+          title={formName}
+        />
+      </div>
+
+      {submitted && (
+        <>
+          <div className="mt-7">
+            <a
+              href={pdfHref}
+              download
+              className="inline-block rounded bg-teal px-7 py-3.5 text-[13px] font-medium text-white transition hover:bg-teal-soft"
+            >
+              {buttonLabel}
+            </a>
+          </div>
+          <p className="mt-4 text-[11px] tracking-wide text-white/75">
+            {meta} · Sent to your inbox too
+          </p>
+        </>
+      )}
+    </>
   );
 }
