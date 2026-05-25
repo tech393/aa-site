@@ -83,7 +83,48 @@ export default function BrochureFormReveal({
     };
 
     window.addEventListener("message", onMessage);
-    return () => window.removeEventListener("message", onMessage);
+
+    // Path 3: visitor-interaction-then-pause detection. When the user clicks
+    // INTO an iframe the parent window emits `blur`; clicking back to the
+    // parent re-fires `focus`. We treat sustained inactivity inside the iframe
+    // as "they submitted and the form has nothing left to interact with".
+    //
+    // Mechanics:
+    //   - First blur after warmup starts an 8s timer.
+    //   - Every subsequent blur resets the timer (still interacting).
+    //   - If the user clicks back OUT of the iframe (focus fires), cancel —
+    //     they didn't submit, no reveal.
+    //   - Timer firing = they were focused on the iframe with no new
+    //     interaction for 8s, which after a submit means the inline thank-you
+    //     is showing (no input to refocus).
+    let interactionTimer: ReturnType<typeof setTimeout> | null = null;
+    const isFocusInIframe = () =>
+      !!document.activeElement &&
+      document.activeElement.tagName === "IFRAME";
+    const onBlur = () => {
+      if (Date.now() < armedAt) return;
+      // Defer the focus check one tick so document.activeElement settles.
+      setTimeout(() => {
+        if (!isFocusInIframe()) return;
+        if (interactionTimer) clearTimeout(interactionTimer);
+        interactionTimer = setTimeout(() => setSubmitted(true), 8000);
+      }, 0);
+    };
+    const onFocus = () => {
+      if (interactionTimer) {
+        clearTimeout(interactionTimer);
+        interactionTimer = null;
+      }
+    };
+    window.addEventListener("blur", onBlur);
+    window.addEventListener("focus", onFocus);
+
+    return () => {
+      window.removeEventListener("message", onMessage);
+      window.removeEventListener("blur", onBlur);
+      window.removeEventListener("focus", onFocus);
+      if (interactionTimer) clearTimeout(interactionTimer);
+    };
   }, []);
 
   if (submitted) {

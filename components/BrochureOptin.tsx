@@ -60,7 +60,36 @@ export default function BrochureOptin({
       }
     };
     window.addEventListener("message", onMessage);
-    return () => window.removeEventListener("message", onMessage);
+
+    // Sustained-iframe-focus reveal: blur fires when the user clicks INTO the
+    // iframe; if they stay focused for 8s without new clicks (= no inputs
+    // because the thank-you screen replaced the form), reveal.
+    let interactionTimer: ReturnType<typeof setTimeout> | null = null;
+    const isFocusInIframe = () =>
+      !!document.activeElement && document.activeElement.tagName === "IFRAME";
+    const onBlur = () => {
+      if (Date.now() < armedAt) return;
+      setTimeout(() => {
+        if (!isFocusInIframe()) return;
+        if (interactionTimer) clearTimeout(interactionTimer);
+        interactionTimer = setTimeout(() => setSubmitted(true), 8000);
+      }, 0);
+    };
+    const onFocus = () => {
+      if (interactionTimer) {
+        clearTimeout(interactionTimer);
+        interactionTimer = null;
+      }
+    };
+    window.addEventListener("blur", onBlur);
+    window.addEventListener("focus", onFocus);
+
+    return () => {
+      window.removeEventListener("message", onMessage);
+      window.removeEventListener("blur", onBlur);
+      window.removeEventListener("focus", onFocus);
+      if (interactionTimer) clearTimeout(interactionTimer);
+    };
   }, []);
 
   if (submitted) {
