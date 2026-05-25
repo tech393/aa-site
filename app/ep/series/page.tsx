@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
 import Reveal from "@/components/Reveal";
@@ -103,7 +103,7 @@ export default function EPSeriesIndex() {
               craft, and the business systems that turn this series into a livelihood.
             </p>
             <div className="mt-9 flex flex-wrap justify-center gap-4">
-              <Link href="/spiritual-life-coach-certification#program-info" className="btn-gold">
+              <Link href="/brochure-download" className="btn-gold">
                 Download Free Brochure
               </Link>
               <Link href="/schedule" className="btn-ghost-teal !border-white !text-white hover:!bg-white hover:!text-teal">

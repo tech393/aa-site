@@ -15,6 +15,8 @@ const config: NextConfig = {
   async redirects() {
     return [
 
+    // Brochure opt-in funnel renamed: /brochure-optin -> /brochure-download (May 2026)
+    { source: "/brochure-optin", destination: "/brochure-download", permanent: true },
     // Podcast rebrand: theawakenedlife -> dont-die-with-your-song-inside (May 2026)
     { source: "/theawakenedlife", destination: "/dont-die-with-your-song-inside", permanent: true },
     // Reviews consolidated into Wall of Gratitude (May 2026 — 47-card grid replaced by 313-testimonial WOG rebuild)

@@ -101,7 +101,7 @@ export default function SuccessStoriesPage() {
               Thank you for being you. Thank you for being willing to awaken.
             </p>
             <div className="mt-9 flex flex-wrap justify-center gap-4">
-              <Link href="/spiritual-life-coach-certification#program-info" className="inline-block rounded bg-gold px-7 py-3.5 text-[13px] font-medium text-white transition hover:bg-gold-dark">Download Free Brochure</Link>
+              <Link href="/brochure-download" className="inline-block rounded bg-gold px-7 py-3.5 text-[13px] font-medium text-white transition hover:bg-gold-dark">Download Free Brochure</Link>
               <Link href="/schedule" className="inline-block rounded border-2 border-white px-7 py-3 text-[13px] font-medium text-white transition hover:bg-white hover:text-teal">Book a Discovery Call</Link>
             </div>
           </Reveal>

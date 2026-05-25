@@ -28,7 +28,7 @@ export default function HomePage() {
         imageAlt="A woman in lotus meditation pose at sunrise"
         title={<>Live a spiritual life, do <em className="text-gold-lt">meaningful</em> work and <strong className="font-medium">make a great living in 2026</strong></>}
         ctaLabel="Download Free Brochure"
-        ctaHref="/spiritual-life-coach-certification#program-info"
+        ctaHref="/brochure-download"
         ctaSecondaryLabel="Book a Free Call"
         ctaSecondaryHref="/schedule"
         align="right"

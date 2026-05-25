@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   title: { absolute: "Get the Free Brochure | Awakened Academy Certification" },
   description:
     "Enter your details to receive the Awakened Academy Spiritual Life Coach Certification brochure — curriculum, tuition, and program details.",
-  alternates: { canonical: "/brochure-optin" },
+  alternates: { canonical: "/brochure-download" },
   robots: { index: false, follow: false },
   openGraph: { title: "Awakened Academy Brochure (Free)", description: "Free brochure on the Spiritual Life Coach Certification." },
 };

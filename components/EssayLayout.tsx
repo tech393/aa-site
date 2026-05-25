@@ -1,4 +1,4 @@
-import Image from "next/image";
+﻿import Image from "next/image";
 import Link from "next/link";
 import Reveal from "@/components/Reveal";
 import MarkdownBody from "@/components/MarkdownBody";
@@ -154,7 +154,7 @@ export default function EssayLayout({ essay, prev, next }: Props) {
               Certification. 14 transformation modules. 650+ certified coaches in 25+ countries. 1-on-1 access to Michael.
             </p>
             <div className="mt-9 flex flex-wrap justify-center gap-4">
-              <Link href="/spiritual-life-coach-certification#program-info" className="inline-block rounded bg-gold px-7 py-3.5 text-[13px] font-medium text-white transition hover:bg-gold-dark">
+              <Link href="/brochure-download" className="inline-block rounded bg-gold px-7 py-3.5 text-[13px] font-medium text-white transition hover:bg-gold-dark">
                 Download Free Brochure
               </Link>
               <Link href="/schedule" className="inline-block rounded border-2 border-white px-7 py-3 text-[13px] font-medium text-white transition hover:bg-white hover:text-teal">
