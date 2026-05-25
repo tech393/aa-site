@@ -57,10 +57,10 @@ const BENEFIT_IMAGES: { src: string; alt: string; position?: string }[] = [
 const PRESS = ["ABC", "NBC", "CBS", "Fox News", "Good Morning America", "The Huffington Post"];
 
 const TRUST_STATS = [
-  { value: "2,400+", label: "Certified graduates" },
-  { value: "40+",    label: "Countries worldwide" },
-  { value: "20+",    label: "Years teaching" },
-  { value: "900K+",  label: "Meditation plays by graduates" },
+  { value: "650+",      label: "Certified coaches" },
+  { value: "25+",       label: "Countries" },
+  { value: "125,000+",  label: "5-star reviews" },
+  { value: "Since 2004", label: "Pioneering spiritual coaching" },
 ];
 
 const TIMELINE_LABELS = ["Within 30 days", "Within 60 days", "Within 90 days", "Within 6 months"];
@@ -142,9 +142,9 @@ export default function CertManusPage() {
       <section className="bg-teal text-white">
         <div className="mx-auto max-w-widest px-6 pt-14 pb-12 md:pt-16 md:pb-14">
           <Reveal>
-            <p className="mx-auto max-w-3xl text-center font-serif text-[clamp(16px,2vw,20px)] italic leading-[1.6] text-white/85">
-              {SITE.founded.statement}
-            </p>
+            <div className="text-center text-[11px] font-semibold uppercase tracking-[0.32em] text-gold-light">
+              Trusted Worldwide
+            </div>
           </Reveal>
           <Reveal>
             <ul className="mt-10 grid grid-cols-2 gap-x-6 gap-y-10 md:grid-cols-4">
