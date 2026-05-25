@@ -135,7 +135,7 @@ export default function SPCoursePage() {
               practices in the world.
             </p>
             <div className="mt-9 flex flex-wrap justify-center gap-4">
-              <Link href="/brochure-download" className="btn-gold">
+              <Link href="/download-free-brochure" className="btn-gold">
                 Download Free Brochure
               </Link>
               <Link href="/schedule" className="btn-ghost-teal !border-white !text-white hover:!bg-white hover:!text-teal">

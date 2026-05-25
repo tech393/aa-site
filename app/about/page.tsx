@@ -571,7 +571,7 @@ export default function AboutPage() {
             </div>
 
             <div className="mt-12 flex flex-wrap justify-center gap-4">
-              <Link href="/brochure-download" className="btn-teal">
+              <Link href="/download-free-brochure" className="btn-teal">
                 Download Free Brochure
               </Link>
               <Link href="/schedule" className="btn-ghost-teal">

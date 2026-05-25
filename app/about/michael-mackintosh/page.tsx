@@ -270,7 +270,7 @@ export default function MichaelMackintoshPage() {
             </p>
             <div className="mt-9 flex flex-wrap justify-center gap-4">
               <Link
-                href="/brochure-download"
+                href="/download-free-brochure"
                 className="inline-block rounded bg-gold px-7 py-3.5 text-[13px] font-medium text-white transition hover:bg-gold-dark"
               >
                 Download Free Brochure

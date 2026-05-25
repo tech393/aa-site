@@ -151,7 +151,7 @@ export default function WhereWeAreComingFromPage() {
             </div>
 
             <div className="mt-14 flex flex-wrap justify-center gap-4">
-              <Link href="/brochure-download" className="btn-teal">Download Free Brochure</Link>
+              <Link href="/download-free-brochure" className="btn-teal">Download Free Brochure</Link>
               <Link href="/schedule" className="btn-ghost-teal">Book a Discovery Call</Link>
             </div>
           </Reveal>

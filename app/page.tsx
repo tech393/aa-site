@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
 import Hero from "@/components/Hero";
@@ -28,7 +28,7 @@ export default function HomePage() {
         imageAlt="A woman in lotus meditation pose at sunrise"
         title={<>Live a spiritual life, do <em className="text-gold-lt">meaningful</em> work and <strong className="font-medium">make a great living in 2026</strong></>}
         ctaLabel="Download Free Brochure"
-        ctaHref="/brochure-download"
+        ctaHref="/download-free-brochure"
         ctaSecondaryLabel="Book a Free Call"
         ctaSecondaryHref="/schedule"
         align="right"

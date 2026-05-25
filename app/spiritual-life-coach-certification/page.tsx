@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import Reveal from "@/components/Reveal";
@@ -498,7 +498,7 @@ export default function CertificationPage() {
                     Book a Discovery Call
                   </Link>
                   <Link
-                    href="/brochure-download"
+                    href="/download-free-brochure"
                     className="inline-flex items-center gap-2 rounded border border-white/40 px-9 py-4 text-[13px] font-medium uppercase tracking-[0.12em] text-white transition hover:border-white hover:bg-white/10"
                   >
                     Download Free Brochure
@@ -542,7 +542,7 @@ export default function CertificationPage() {
         title="Become a Certified Spiritual Life Coach"
         subtitle="Free brochure · No commitment · 25+ countries"
         ctaLabel="Download free brochure"
-        ctaHref="/brochure-download"
+        ctaHref="/download-free-brochure"
       />
     </>
   );
