@@ -150,7 +150,7 @@ export default function CertManusPage() {
             <ul className="mt-10 grid grid-cols-2 gap-x-6 gap-y-10 md:grid-cols-4">
               {TRUST_STATS.map((s) => (
                 <li key={s.label} className="text-center">
-                  <div className="font-serif text-[clamp(36px,5vw,56px)] leading-none text-gold-light">
+                  <div className="font-serif text-[clamp(26px,3.4vw,42px)] leading-none text-gold-light">
                     {s.value}
                   </div>
                   <div className="mt-3 text-[11.5px] font-semibold uppercase tracking-[0.22em] text-white/75">
