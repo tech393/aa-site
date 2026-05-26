@@ -86,8 +86,8 @@ export default function CertificationPage() {
         <div className="mx-auto max-w-widest px-6 py-24 md:py-32 lg:py-36">
           <div className="max-w-3xl text-white">
             <Reveal>
-              <div className="text-[12px] font-semibold uppercase tracking-[0.28em] text-white/90">
-                ✦&nbsp;&nbsp;Awakened Academy&apos;s Original Spiritual Life Coach Certification&nbsp;·&nbsp;Since 2012&nbsp;&nbsp;✦
+              <div className="text-[clamp(10px,1.05vw,12px)] font-semibold uppercase tracking-[clamp(0.16em,0.22vw,0.28em)] text-white/90 whitespace-nowrap">
+                ✦&nbsp;&nbsp;The Original Spiritual Life Coach Certification&nbsp;·&nbsp;Since 2012&nbsp;&nbsp;✦
               </div>
             </Reveal>
             <Reveal>
