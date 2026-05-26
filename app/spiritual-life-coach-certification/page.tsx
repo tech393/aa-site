@@ -177,9 +177,9 @@ export default function CertificationPage() {
           </Reveal>
         </div>
 
-        <div className="border-t border-white/10 bg-teal-deep">
+        <div className="bg-white">
           <div className="mx-auto max-w-widest px-6">
-            <FeaturedInBanner size="md" dark />
+            <FeaturedInBanner size="md" />
           </div>
         </div>
       </section>
@@ -387,11 +387,23 @@ export default function CertificationPage() {
           <ol className="mt-14 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
             {PILLARS.map((p) => (
               <Reveal key={p.title}>
-                <li className="flex h-full items-start gap-5 rounded-md border border-ink/10 bg-white p-7 transition hover:border-teal/40 hover:shadow-md">
-                  <div className="font-serif text-[34px] italic leading-none text-gold">{p.roman}</div>
-                  <div>
-                    <h3 className="font-serif text-[19px] font-normal text-ink">{p.title}</h3>
-                    <p className="mt-2.5 text-[14.5px] leading-[1.7] text-ink2">{p.body}</p>
+                <li className="flex h-full flex-col overflow-hidden rounded-md border border-ink/10 bg-white shadow-sm transition hover:border-teal/40 hover:shadow-md">
+                  <div className="relative aspect-[16/10] w-full overflow-hidden bg-teal/10">
+                    <Image
+                      src={p.image}
+                      alt=""
+                      fill
+                      className="object-cover"
+                      style={{ objectPosition: p.imagePosition ?? "center" }}
+                      sizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw"
+                    />
+                  </div>
+                  <div className="flex flex-1 items-start gap-5 p-7">
+                    <div className="font-serif text-[34px] italic leading-none text-gold">{p.roman}</div>
+                    <div>
+                      <h3 className="font-serif text-[19px] font-normal text-ink">{p.title}</h3>
+                      <p className="mt-2.5 text-[14.5px] leading-[1.7] text-ink2">{p.body}</p>
+                    </div>
                   </div>
                 </li>
               </Reveal>
@@ -486,7 +498,7 @@ export default function CertificationPage() {
       </section>
 
       {/* FINAL CTA */}
-      <section className="bg-ink text-white">
+      <section className="bg-teal text-white">
         <div className="mx-auto max-w-widest px-6 py-24">
           <div className="grid items-center gap-12 md:grid-cols-[1.4fr_1fr]">
             <div>

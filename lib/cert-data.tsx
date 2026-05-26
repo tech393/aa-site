@@ -18,7 +18,7 @@ export const BENEFITS = [
   { title: "Genuine confidence working with clients", body: "Our confidence-creator method gives you a self-honor that runs deep, so you coach your clients from a place of rooted steadiness instead of performance." },
   { title: "Be spiritual and wealthy", body: "Spiritual people deserve the money they need to do their work without stress or worry. Join a growing circle of spiritually-grounded business leaders changing the world for the better." },
   { title: "Coach others while transforming yourself", body: "Heal your own internal and external life challenges as you train, so by the time you start coaching you've already walked the path you're guiding others through." },
-  { title: "Proven holistic teaching methods", body: "An experiential, sacred, and genuinely fun style of learning, qualifying you to establish your own lucrative, meaningful career as a professional certified spiritual life coach." },
+  { title: "Co-founder Arielle Hecht's group work", body: "Co-founder Arielle Hecht — Higher Self mentor, meditation teacher, and author of 3 Seconds to Being Your Higher Self — leads the transformational group work and live calls that run alongside the certification, in an experiential, sacred, and genuinely fun style." },
   { title: "Be on the leading edge", body: "Be at the forefront of a new wave of entrepreneurs and coaches leading from a deep peace within themselves rather than hustle culture." },
   { title: "Reclaim your time", body: "Designed to easily fit into busy lives. Part of the curriculum is helping you reclaim time itself so you can do more of what you love." },
   { title: "Live and work from anywhere", body: "Coach clients from anywhere in the world. Build a portable, location-free practice that follows your life." },
@@ -48,27 +48,51 @@ export const POSSIBLE = [
   "You direct your time and energy toward your real passions, and the universe meets you there.",
 ];
 
+// Six cert-page testimonials, condensed verbatim quotes from
+// /app/wall-of-gratitude/testimonials-data.ts (source of truth). For the full
+// long-form versions and 100+ more stories, see /wall-of-gratitude.
 export const TESTIMONIALS = [
   {
     name: "Rita Andorinho",
-    role: "Certified Spiritual Life Coach",
-    quote: "I left my corporate job, started coaching, bought my dream house, lost 30 lbs, wrote a book, attracted a loving new relationship, and so much more. I highly recommend Awakened Academy.",
-    photo: "/testimonials/rita.jpg" as string | null,
+    role: "Corporate Lawyer turned Coach · Portugal",
+    quote: "I left my corporate law job in Macau, bought my dream farm with a saltwater pool 10 minutes from my parents, lost 13 kg, wrote a book, found a deeply loving relationship, and started a coaching practice. Eleven changes in two and a half years. If you're serious about changing your life, this course will bring you what you need.",
+    photo: "/img/testimonials/Rita-Andorinho.jpg" as string | null,
     initials: "RA",
   },
   {
+    name: "Rakhee C. Patel",
+    role: "Pharmacist 17 yrs → Spiritual Life Coach",
+    quote: "After 17 years as a pharmacist I mustered the courage to leave and join Awakened Academy. Three months later I'm working with 3 clients a day, feeling genuinely happy most of the time, and I finally have the freedom to enjoy life. I'm living my Dharma and it feels like a dream come true.",
+    photo: "/img/testimonials/Rakhee-Patel.jpg" as string | null,
+    initials: "RP",
+  },
+  {
     name: "Lyne Johnson",
-    role: "Certified Spiritual Life Coach & Course Creator",
-    quote: "I am now a successful spiritual mentor who helps beautiful souls find their way back home, to their hearts. I do my sacred work full-time. I've published four online courses and several guided meditations that have been played 900,000 times.",
-    photo: "/testimonials/lyne.jpeg" as string | null,
+    role: "Certified Coach & Course Creator · London",
+    quote: "I'm now a successful spiritual mentor helping beautiful souls find their way back home, to their hearts. I do my sacred work full-time. I've published four online courses and guided meditations that have been played over 900,000 times. I'm the owner of my time — mentally, emotionally, financially.",
+    photo: "/img/testimonials/Lyne-Johnson-Jan-2021.jpg" as string | null,
     initials: "LJ",
   },
   {
-    name: "Rakhee Patel",
-    role: "Certified Spiritual Life Coach",
-    quote: "Three months ago, I was stuck in a job I didn't love, disconnected from my spiritual practice, and feeling off, like I was out of alignment with my Dharma and true purpose. Then I enrolled in Awakened Academy and everything changed. Through the program, I discovered so much about myself, my calling, and how to truly coach others from a place of love and alignment. Today, I'm working with 3 clients a day, feeling genuinely happy most of the time, and I finally have the freedom to enjoy life. No more 9-to-5 grind. I'm living my Dharma and it feels like a dream come true.",
-    photo: "/img/testimonials/Rakhee-Patel.jpg" as string | null,
-    initials: "RP",
+    name: "Christy Sanger",
+    role: "MSPT, MOMT · Certified Coach · CO & HI",
+    quote: "Words cannot describe the shifts I've experienced and the results I've seen in my clients after completing my Spiritual Life Coaching Certification. My clients are healing at exponential rates. I'm no longer doing the work — I'm channeling, and the client solves their own problems. What gift is greater than 'physician, heal thyself'?",
+    photo: "/img/testimonials/Christy-Sanger.jpg" as string | null,
+    initials: "CS",
+  },
+  {
+    name: "Dorise Chen",
+    role: "Entrepreneur · Founder, Infinity Capital · Australia",
+    quote: "Going deep into my spirituality through Awakened Academy completely changed how I experience my life. I doubled my income working half the time. I started a foundation. I wrote a book. I even attracted a $100 million investor. I don't get stressed out anymore. I love my life.",
+    photo: "/img/testimonials/Dorise-Chen.jpeg" as string | null,
+    initials: "DC",
+  },
+  {
+    name: "Kacy Singh",
+    role: "Certified Spiritual Life Coach · Canada",
+    quote: "My life has expanded so much since integrating these teachings. I literally wrote down what was blocking me, and within 48 hours most of the challenges sorted themselves out. A whole 6-week program flew right out of me — curriculum, strategy, marketing — and I sold the first spot the next day. Miraculous.",
+    photo: "/img/testimonials/Kacy-Singh.jpg" as string | null,
+    initials: "KS",
   },
 ];
 
