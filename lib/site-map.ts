@@ -280,11 +280,8 @@ export function buildSiteMap(): SiteMap {
   if (coaches.length) {
     sections.push({
       title: "Coach directory",
-      // Each coach's profile lives on the directory subdomain. Use its full
-      // directoryUrl so links resolve directly instead of going through the
-      // /directory/:slug redirect (which would 301 and rewrite, but adds a hop).
       links: coaches
-        .map((c) => ({ href: c.directoryUrl, label: c.name }))
+        .map((c) => ({ href: `/directory/${c.slug}`, label: c.name }))
         .sort((a, b) => a.label.localeCompare(b.label)),
     });
   }

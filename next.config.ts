@@ -15,10 +15,6 @@ const config: NextConfig = {
   async redirects() {
     return [
 
-    // Coach directory lives on its own subdomain. Anything hitting
-    // awakenedacademy.com/directory or /directory/:slug forwards there.
-    { source: "/directory", destination: "https://directory.awakenedacademy.com/", permanent: true },
-    { source: "/directory/:slug", destination: "https://directory.awakenedacademy.com/dt_listing/:slug/", permanent: true },
     // Cert page redesign promoted: /cert-manus -> /spiritual-life-coach-certification (May 2026)
     { source: "/cert-manus", destination: "/spiritual-life-coach-certification", permanent: true },
     // Brochure opt-in funnel rename history (May 2026):
