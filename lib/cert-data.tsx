@@ -1,13 +1,13 @@
 import { SITE } from "@/lib/site-config";
 
 export const PILLARS = [
-  { roman: "I", title: "Awakened You", body: "Personal foundation, inner work, and the awakened lifestyle that sustains a coaching career.", image: "/images/bands/WOMAN-LOTUS-POOL.jpg", imagePosition: "center top" },
-  { roman: "II", title: "Awakened Dharma", body: "Discover your soul purpose, your unique why for serving the world.", image: "/images/bands/woman-on-mountain-top.jpg", imagePosition: "center top" },
-  { roman: "III", title: "Awakened Coaching", body: "The coaching craft itself: presence, transformational conversation, real client results.", image: "/images/bands/Michael-Chair-2.jpg", imagePosition: "right top" },
-  { roman: "IV", title: "Awakened Creator", body: "Become a best-selling author and online course creator alongside your coaching.", image: "/images/bands/Arielle_Writing-Hero-2.png", imagePosition: "left top" },
-  { roman: "V", title: "Awakened Wealth", body: "Heal your inner relationship to money. Then build outer wealth that supports the work.", image: "/images/bands/coffee-sunset.jpg", imagePosition: "center" },
-  { roman: "VI", title: "Awakened Business Success Systems", body: "Packages, contracts, niche, infrastructure, the operating system of a sustainable practice.", image: "/images/bands/woman-on-mac.jpg", imagePosition: "center top" },
-  { roman: "VII", title: "Awakened Enrollment & Sales", body: "The spiritual approach to client attraction. A consistent stream of ideal clients.", image: "/images/bands/hands-over.jpg", imagePosition: "center" },
+  { roman: "I",   title: "Awakened You",                       body: "Personal foundation, inner work, and the awakened lifestyle that sustains a coaching career.", image: "/images/pillars/awakened-you.jpg",        imagePosition: "center" },
+  { roman: "II",  title: "Awakened Dharma",                    body: "Discover your soul purpose, your unique why for serving the world.",                          image: "/images/pillars/awakened-dharma.jpg",     imagePosition: "center" },
+  { roman: "III", title: "Awakened Coaching",                  body: "The coaching craft itself: presence, transformational conversation, real client results.",   image: "/images/pillars/awakened-coaching.jpg",   imagePosition: "center" },
+  { roman: "IV",  title: "Awakened Creator",                   body: "Become a best-selling author and online course creator alongside your coaching.",             image: "/images/pillars/awakened-creator.jpg",    imagePosition: "center" },
+  { roman: "V",   title: "Awakened Wealth",                    body: "Heal your inner relationship to money. Then build outer wealth that supports the work.",      image: "/images/pillars/awakened-wealth.jpg",     imagePosition: "center" },
+  { roman: "VI",  title: "Awakened Business Success Systems",  body: "Packages, contracts, niche, infrastructure, the operating system of a sustainable practice.", image: "/images/pillars/awakened-business.jpg",   imagePosition: "center" },
+  { roman: "VII", title: "Awakened Enrollment & Sales",        body: "The spiritual approach to client attraction. A consistent stream of ideal clients.",          image: "/images/pillars/awakened-enrollment.jpg", imagePosition: "center" },
 ];
 
 export const BENEFITS = [
