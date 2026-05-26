@@ -12,7 +12,7 @@ export const PILLARS = [
 
 export const BENEFITS = [
   { title: "Tap into your unique gifts", body: "Discover the deep spiritual gifts you carry, then use them to coach others. Once you share what you uniquely have to offer, you can be a highly-regarded coach doing what you love and being paid well for it." },
-  { title: "1-on-1 access to Michael", body: "Every certification student receives direct 1-on-1 access to Michael Mackintosh as part of the program, not just group calls. This level of founder involvement has become rare in modern coaching education." },
+  { title: "1-on-1 access to the Founder", body: "Every certification student receives direct 1-on-1 access to Michael Mackintosh, founder of Awakened Academy, as part of the program — not just group calls. This level of founder involvement has become rare in modern coaching education." },
   { title: "Join a new generation of awakened leaders", body: "Step into your greatness alongside a cohort of spiritual coaches, teachers and guides who are choosing meaningful work over the conventional path." },
   { title: "Real loving connection and deep support", body: "A community where lifetime friendships are made, professional alliances are formed, and everyone feels part of a greater whole." },
   { title: "Genuine confidence working with clients", body: "Our confidence-creator method gives you a self-honor that runs deep, so you coach your clients from a place of rooted steadiness instead of performance." },

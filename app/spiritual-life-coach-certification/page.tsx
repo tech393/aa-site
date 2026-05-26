@@ -60,7 +60,7 @@ const TRUST_STATS: { value: string; label: string; href?: string }[] = [
   { value: "650+",       label: "Certified coaches" },
   { value: "25+",        label: "Countries" },
   { value: "125,000+",   label: "5-star reviews on Insight Timer", href: "https://insighttimer.com/awakenedacademy" },
-  { value: "Since 2004", label: "Pioneering spiritual coaching" },
+  { value: "Since 2012", label: "Original certification training" },
 ];
 
 const TIMELINE_LABELS = ["Within 30 days", "Within 60 days", "Within 90 days", "Within 6 months"];
@@ -86,18 +86,18 @@ export default function CertificationPage() {
         <div className="mx-auto max-w-widest px-6 py-24 md:py-32 lg:py-36">
           <div className="max-w-3xl text-white">
             <Reveal>
-              <div className="text-[12px] font-semibold uppercase tracking-[0.28em] text-gold-light">
-                ✦&nbsp;&nbsp;Spiritual Life Coach Certification&nbsp;·&nbsp;Since 2004&nbsp;&nbsp;✦
+              <div className="text-[12px] font-semibold uppercase tracking-[0.28em] text-white/90">
+                ✦&nbsp;&nbsp;Awakened Academy&apos;s Original Spiritual Life Coach Certification&nbsp;·&nbsp;Since 2012&nbsp;&nbsp;✦
               </div>
             </Reveal>
             <Reveal>
               <h1 className="mt-6 font-serif text-[clamp(38px,6vw,64px)] leading-[1.05]">
-                Spiritual Life Coach Certification <em className="text-gold-light">in Sedona</em>
+                Become a <em className="text-gold-light">Spiritual Life Coach</em>
               </h1>
             </Reveal>
             <Reveal>
               <p className="mt-7 max-w-2xl text-[clamp(15px,1.8vw,18px)] leading-[1.7] text-white/95">
-                Learn to harness your experiences and emotional intelligence to support and guide others through their spiritual transitions, and create a prosperous career doing what you love.
+                Awakened Academy&apos;s original Spiritual Life Coach Certification. Learn to harness your experiences and emotional intelligence to support and guide others through their spiritual transitions, and create a prosperous career doing what you love.
               </p>
             </Reveal>
             <Reveal>
@@ -105,7 +105,7 @@ export default function CertificationPage() {
                 {[
                   "100% online & self-paced",
                   "650+ certified coaches in 25+ countries",
-                  "Pioneering since 2004",
+                  "Original certification training since 2012",
                 ].map((label) => (
                   <li key={label} className="flex items-center gap-2.5">
                     <span aria-hidden className="inline-flex h-5 w-5 items-center justify-center rounded-full border border-gold-light/70 text-[11px] text-gold-light">✓</span>
@@ -117,16 +117,16 @@ export default function CertificationPage() {
             <Reveal>
               <div className="mt-10 flex flex-wrap items-center gap-5">
                 <Link
-                  href="/schedule"
+                  href="/download-free-brochure"
                   className="inline-flex items-center gap-2 rounded bg-gold px-7 py-3.5 text-[13.5px] font-semibold uppercase tracking-[0.12em] text-ink shadow-lg transition hover:bg-gold-deep hover:text-white"
                 >
-                  Book a Discovery Call
+                  Get the Brochure
                 </Link>
                 <Link
-                  href="#curriculum"
+                  href="/schedule"
                   className="inline-flex items-center gap-2 rounded border border-white/45 px-7 py-3.5 text-[13.5px] font-medium uppercase tracking-[0.12em] text-white transition hover:border-white hover:bg-white/10"
                 >
-                  Explore the Program <span aria-hidden>↓</span>
+                  Book a Call
                 </Link>
               </div>
             </Reveal>
@@ -333,7 +333,7 @@ export default function CertificationPage() {
       </section>
 
       {/* TRANSFORMATION TIMELINE */}
-      <section className="bg-ink text-white">
+      <section className="bg-teal text-white">
         <div className="mx-auto max-w-widest px-6 py-24">
           <Reveal>
             <div className="text-center">
@@ -351,7 +351,7 @@ export default function CertificationPage() {
             {TIMELINE.map((t, i) => (
               <Reveal key={t.when}>
                 <div className="relative flex flex-col items-center text-center">
-                  <div className="relative z-10 flex h-14 w-14 items-center justify-center rounded-full border-2 border-gold-light bg-ink font-serif text-[20px] text-gold-light">
+                  <div className="relative z-10 flex h-14 w-14 items-center justify-center rounded-full border-2 border-gold-light bg-teal font-serif text-[20px] text-gold-light">
                     {i + 1}
                   </div>
                   <div className="mt-5 text-[10.5px] font-semibold uppercase tracking-[0.22em] text-gold-light">
@@ -409,7 +409,7 @@ export default function CertificationPage() {
                 ✦&nbsp;&nbsp;What Is Possible For You&nbsp;&nbsp;✦
               </div>
               <h2 className="mt-5 font-serif text-[clamp(30px,5vw,46px)] leading-[1.15] text-white">
-                Imagine waking up to a life where…
+                What&apos;s possible <em className="text-gold-light italic">as you progress</em>
               </h2>
             </div>
           </Reveal>
