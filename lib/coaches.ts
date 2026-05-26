@@ -13,6 +13,9 @@ export type Coach = {
   /** Decimal degrees, used by the directory map. Sourced from the WP listing's ACF map marker. */
   lat?: number;
   lng?: number;
+  /** Multiplier applied via CSS transform: scale() on the card image when the
+   * source photo has a lot of negative space around the subject. 1 = no zoom. */
+  imageZoom?: number;
   phone?: string;
   email?: string;
   website?: string;
@@ -79,6 +82,9 @@ export const coaches: Coach[] = [
     tier: "premium",
     directoryUrl: "https://directory.awakenedacademy.com/dt_listing/angeli-sivaraman/",
     lat: 36.1626638, lng: -86.7816016,
+    // Source photo is a wide gym-hall shot with the subject in the centre third.
+    // Zoom to focus on her booth and crop the empty hall on either side.
+    imageZoom: 1.8,
     bio: "Certified Emotion Code Practitioner, Certified Body Code Practitioner, Certified Belief Code Practitioner, Certified Mindfulness Facilitator.\n\nI worked in healthcare during the pandemic, burned out really badly, and was asking myself the question, \"What is my purpose?\" It sent me on a wild spiritual journey to figure it out.\n\nSince then, I've started a Substack, quit my job, gotten certified in energy healing and coaching, become an author, and do work I love every day.\n\nI do this work because I understand what it's like to crave meaning and purpose, and to find new ways to fulfill that need. I believe each person in their divine purpose can change the world.\n\nI help women in their 30s and 40s recover from burnout, find their purpose, and create meaningful work they love so that they can feel whole, safe, and alive again.",
     social: {
       facebook: "https://www.facebook.com/angeli.sivaraman",

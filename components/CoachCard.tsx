@@ -30,6 +30,7 @@ export default function CoachCard({ coach, featured = false }: Props) {
             src={coach.imageUrl}
             alt={coach.name}
             className="absolute inset-0 h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+            style={coach.imageZoom ? { transform: `scale(${coach.imageZoom})`, transformOrigin: "center" } : undefined}
           />
         </div>
         <div className="flex flex-1 flex-col gap-3 p-5">
@@ -72,6 +73,7 @@ export default function CoachCard({ coach, featured = false }: Props) {
           src={coach.imageUrl}
           alt={coach.name}
           className="absolute inset-0 h-full w-full object-cover"
+          style={coach.imageZoom ? { transform: `scale(${coach.imageZoom})`, transformOrigin: "center" } : undefined}
         />
         {coach.tier === "premium" && (
           <span className="absolute bottom-1.5 right-1.5 rounded bg-gold px-1.5 py-0.5 text-[10px] font-bold text-white shadow">
