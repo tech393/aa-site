@@ -1,4 +1,4 @@
-export type Social = {
+﻿export type Social = {
   facebook?: string;
   instagram?: string;
   linkedin?: string;
@@ -10,6 +10,9 @@ export type Coach = {
   name: string;
   slug: string;
   location: string;
+  /** Decimal degrees, used by the directory map. Sourced from the WP listing's ACF map marker. */
+  lat?: number;
+  lng?: number;
   phone?: string;
   email?: string;
   website?: string;
@@ -55,6 +58,7 @@ export const coaches: Coach[] = [
     categories: ["high-performing-leaders"],
     tier: "premium",
     directoryUrl: "https://directory.awakenedacademy.com/dt_listing/dr-disha/",
+    lat: 43.0483411, lng: -73.8523702,
     bio: "At The Sovereign Heart™, we help women physicians and high-performing leaders finally move from exhausted and fragmented to grounded and whole.\n\nIf you are the strong one everyone counts on — yet inside you are unraveling, running on fumes, and disconnected from who you really are — we help you regulate your nervous system, reclaim your authentic self, and lead your life from love instead of fear.",
     social: {
       facebook: "https://www.facebook.com/dishaphilipllc/",
@@ -74,6 +78,7 @@ export const coaches: Coach[] = [
     categories: ["spiritual-life-coach", "breakthrough-coaching", "freedom-design-coaching", "unique-soul-purpose-coaching", "full-spectrum-coaching", "meditation-mindfulness"],
     tier: "premium",
     directoryUrl: "https://directory.awakenedacademy.com/dt_listing/angeli-sivaraman/",
+    lat: 36.1626638, lng: -86.7816016,
     bio: "Certified Emotion Code Practitioner, Certified Body Code Practitioner, Certified Belief Code Practitioner, Certified Mindfulness Facilitator.\n\nI worked in healthcare during the pandemic, burned out really badly, and was asking myself the question, \"What is my purpose?\" It sent me on a wild spiritual journey to figure it out.\n\nSince then, I've started a Substack, quit my job, gotten certified in energy healing and coaching, become an author, and do work I love every day.\n\nI do this work because I understand what it's like to crave meaning and purpose, and to find new ways to fulfill that need. I believe each person in their divine purpose can change the world.\n\nI help women in their 30s and 40s recover from burnout, find their purpose, and create meaningful work they love so that they can feel whole, safe, and alive again.",
     social: {
       facebook: "https://www.facebook.com/angeli.sivaraman",
@@ -93,6 +98,7 @@ export const coaches: Coach[] = [
     categories: ["breakthrough-coaching", "full-spectrum-coaching"],
     tier: "premium",
     directoryUrl: "https://directory.awakenedacademy.com/dt_listing/mathias-ihlenfeld/",
+    lat: 30.267153, lng: -97.7430608,
   },
   {
     id: "barbara-hunter",
@@ -105,6 +111,7 @@ export const coaches: Coach[] = [
     categories: [],
     tier: "premium",
     directoryUrl: "https://directory.awakenedacademy.com/dt_listing/barbara-hunter/",
+    lat: 53.7266683, lng: -127.6476206,
   },
   {
     id: "samantha-bushika",
@@ -117,6 +124,7 @@ export const coaches: Coach[] = [
     categories: ["spiritual-life-coach", "group-coaching"],
     tier: "premium",
     directoryUrl: "https://directory.awakenedacademy.com/dt_listing/samantha-bushika/",
+    lat: 43.9653889, lng: -70.8226541,
   },
   {
     id: "sanger-alternative",
@@ -129,6 +137,7 @@ export const coaches: Coach[] = [
     categories: ["holistic-therapies"],
     tier: "free",
     directoryUrl: "https://directory.awakenedacademy.com/dt_listing/sanger-alternative-therapies-and-education/",
+    lat: 39.5942225, lng: -104.9001987,
   },
   {
     id: "bella-luna",
@@ -140,6 +149,7 @@ export const coaches: Coach[] = [
     categories: ["spiritual-life-coach"],
     tier: "free",
     directoryUrl: "https://directory.awakenedacademy.com/dt_listing/bella-luna/",
+    lat: 51.5072178, lng: -0.1275862,
   },
   {
     id: "megan-pass",
@@ -151,6 +161,7 @@ export const coaches: Coach[] = [
     categories: ["health"],
     tier: "free",
     directoryUrl: "https://directory.awakenedacademy.com/dt_listing/megan-pass/",
+    lat: 42.7893867, lng: -86.1089511,
   },
   {
     id: "insight-soul-coaching",
@@ -172,6 +183,7 @@ export const coaches: Coach[] = [
     categories: ["freedom-design"],
     tier: "free",
     directoryUrl: "https://directory.awakenedacademy.com/dt_listing/freedom-design/",
+    lat: 54.653827, lng: -8.1096142,
   },
   {
     id: "rjo-wellness",
@@ -183,5 +195,6 @@ export const coaches: Coach[] = [
     categories: [],
     tier: "free",
     directoryUrl: "https://directory.awakenedacademy.com/dt_listing/r-j-o-wellness/",
+    lat: 51.0447331, lng: -114.0718831,
   },
 ];

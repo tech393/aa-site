@@ -4,6 +4,7 @@ import { useState, useMemo } from "react";
 import { coaches } from "@/lib/coaches";
 import CoachCard from "@/components/CoachCard";
 import DirectoryHero from "@/components/DirectoryHero";
+import DirectoryMap from "@/components/DirectoryMap";
 
 export default function DirectoryClient() {
   const [search, setSearch] = useState("");
@@ -39,6 +40,9 @@ export default function DirectoryClient() {
         setCategoryFilter={setCategoryFilter}
         onReset={reset}
       />
+
+      {/* Map of coach locations, hidden while filtering */}
+      {!hasFilters && <DirectoryMap />}
 
       {/* Featured coaches, hidden while filtering */}
       {!hasFilters && featured.length > 0 && (
