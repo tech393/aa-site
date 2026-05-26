@@ -12,13 +12,13 @@ export const PILLARS = [
 
 export const BENEFITS = [
   { title: "Tap into your unique gifts", body: "Discover the deep spiritual gifts you carry, then use them to coach others. Once you share what you uniquely have to offer, you can be a highly-regarded coach doing what you love and being paid well for it." },
-  { title: "1-on-1 access to the Founder", body: "Every certification student receives direct 1-on-1 access to Michael Mackintosh, founder of Awakened Academy, as part of the program — not just group calls. This level of founder involvement has become rare in modern coaching education." },
+  { title: "1-on-1 access to the Founder", body: "Every certification student receives direct 1-on-1 access to Michael Mackintosh, founder of Awakened Academy, as part of the program, not just group calls. This level of founder involvement has become rare in modern coaching education." },
   { title: "Join a new generation of awakened leaders", body: "Step into your greatness alongside a cohort of spiritual coaches, teachers and guides who are choosing meaningful work over the conventional path." },
   { title: "Real loving connection and deep support", body: "A community where lifetime friendships are made, professional alliances are formed, and everyone feels part of a greater whole." },
   { title: "Genuine confidence working with clients", body: "Our confidence-creator method gives you a self-honor that runs deep, so you coach your clients from a place of rooted steadiness instead of performance." },
   { title: "Be spiritual and wealthy", body: "Spiritual people deserve the money they need to do their work without stress or worry. Join a growing circle of spiritually-grounded business leaders changing the world for the better." },
   { title: "Coach others while transforming yourself", body: "Heal your own internal and external life challenges as you train, so by the time you start coaching you've already walked the path you're guiding others through." },
-  { title: "Co-founder Arielle Hecht's group work", body: "Co-founder Arielle Hecht — Higher Self mentor, meditation teacher, and author of 3 Seconds to Being Your Higher Self — leads the transformational group work and live calls that run alongside the certification, in an experiential, sacred, and genuinely fun style." },
+  { title: "Co-founded by Arielle Hecht", body: "Co-founder Arielle Hecht, Higher Self mentor, meditation teacher, and author of 3 Seconds to Being Your Higher Self, shapes the certification's experiential, sacred, and genuinely fun teaching style." },
   { title: "Be on the leading edge", body: "Be at the forefront of a new wave of entrepreneurs and coaches leading from a deep peace within themselves rather than hustle culture." },
   { title: "Reclaim your time", body: "Designed to easily fit into busy lives. Part of the curriculum is helping you reclaim time itself so you can do more of what you love." },
   { title: "Live and work from anywhere", body: "Coach clients from anywhere in the world. Build a portable, location-free practice that follows your life." },
@@ -69,14 +69,14 @@ export const TESTIMONIALS = [
   {
     name: "Lyne Johnson",
     role: "Certified Coach & Course Creator · London",
-    quote: "I'm now a successful spiritual mentor helping beautiful souls find their way back home, to their hearts. I do my sacred work full-time. I've published four online courses and guided meditations that have been played over 900,000 times. I'm the owner of my time — mentally, emotionally, financially.",
+    quote: "I'm now a successful spiritual mentor helping beautiful souls find their way back home, to their hearts. I do my sacred work full-time. I've published four online courses and guided meditations that have been played over 900,000 times. I'm the owner of my time, mentally, emotionally, financially.",
     photo: "/img/testimonials/Lyne-Johnson-Jan-2021.jpg" as string | null,
     initials: "LJ",
   },
   {
     name: "Christy Sanger",
     role: "MSPT, MOMT · Certified Coach · CO & HI",
-    quote: "Words cannot describe the shifts I've experienced and the results I've seen in my clients after completing my Spiritual Life Coaching Certification. My clients are healing at exponential rates. I'm no longer doing the work — I'm channeling, and the client solves their own problems. What gift is greater than 'physician, heal thyself'?",
+    quote: "Words cannot describe the shifts I've experienced and the results I've seen in my clients after completing my Spiritual Life Coaching Certification. My clients are healing at exponential rates. I'm no longer doing the work. I'm channeling, and the client solves their own problems. What gift is greater than 'physician, heal thyself'?",
     photo: "/img/testimonials/Christy-Sanger.jpg" as string | null,
     initials: "CS",
   },
@@ -90,7 +90,7 @@ export const TESTIMONIALS = [
   {
     name: "Kacy Singh",
     role: "Certified Spiritual Life Coach · Canada",
-    quote: "My life has expanded so much since integrating these teachings. I literally wrote down what was blocking me, and within 48 hours most of the challenges sorted themselves out. A whole 6-week program flew right out of me — curriculum, strategy, marketing — and I sold the first spot the next day. Miraculous.",
+    quote: "My life has expanded so much since integrating these teachings. I literally wrote down what was blocking me, and within 48 hours most of the challenges sorted themselves out. A whole 6-week program flew right out of me. Curriculum, strategy, marketing. I sold the first spot the next day. Miraculous.",
     photo: "/img/testimonials/Kacy-Singh.jpg" as string | null,
     initials: "KS",
   },

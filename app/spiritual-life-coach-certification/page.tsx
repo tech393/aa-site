@@ -22,12 +22,12 @@ import {
 // for reference (noindex).
 
 export const metadata: Metadata = {
-  title: { absolute: "Spiritual Life Coach Certification — Become Certified | Awakened Academy" },
+  title: { absolute: "Spiritual Life Coach Certification: Become Certified | Awakened Academy" },
   description:
     "Become a certified spiritual life coach online. 650+ coaches certified in 25+ countries since 2012. 14 transformation modules. 100% self-paced. Download the free brochure.",
   alternates: { canonical: "/spiritual-life-coach-certification" },
   openGraph: {
-    title: "Spiritual Life Coach Certification — Become Certified | Awakened Academy",
+    title: "Spiritual Life Coach Certification: Become Certified | Awakened Academy",
     description:
       "Become a certified spiritual life coach online. 650+ coaches certified in 25+ countries since 2012. 14 transformation modules. 100% self-paced. Download the free brochure.",
     url: `${SITE.url}/spiritual-life-coach-certification`,
@@ -208,7 +208,7 @@ export default function CertificationPage() {
             </Reveal>
             <Reveal>
               <p>
-                Awakened Academy&apos;s certification trains you across seven dimensions of this work: your inner foundation, the coaching craft, your dharma, creative expression, wealth, business systems, and client enrollment — everything needed to become a practising coach, not just a certificate holder.
+                Awakened Academy&apos;s certification trains you across seven dimensions of this work: your inner foundation, the coaching craft, your dharma, creative expression, wealth, business systems, and client enrollment. Everything needed to become a practising coach, not just a certificate holder.
               </p>
             </Reveal>
           </div>
