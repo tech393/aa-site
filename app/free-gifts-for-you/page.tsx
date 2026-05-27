@@ -25,6 +25,15 @@ type Gift = {
 
 const GIFTS: Gift[] = [
   {
+    title: "Free Meditations Library",
+    tagline: "200+ free guided meditations on Insight Timer. 8M+ plays, 125,000+ five-star reviews.",
+    href: "/meditations",
+    image: "/images/meditations-hero-cliff.jpg",
+    photo: true,
+    imagePosition: "center",
+    cta: "Meditate Now",
+  },
+  {
     title: "Discover Your Dharma",
     tagline: "Uncover your life's purpose, success will follow you.",
     href: "/dharma",
@@ -96,15 +105,6 @@ const GIFTS: Gift[] = [
     photo: true,
     imagePosition: "center",
     cta: "Listen Free",
-  },
-  {
-    title: "Free Meditations Library",
-    tagline: "200+ free guided meditations on Insight Timer. 8M+ plays, 125,000+ five-star reviews.",
-    href: "/meditations",
-    image: "/images/meditations-hero-cliff.jpg",
-    photo: true,
-    imagePosition: "center",
-    cta: "Meditate Now",
   },
 ];
 

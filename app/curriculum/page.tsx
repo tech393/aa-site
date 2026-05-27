@@ -70,20 +70,45 @@ export default function CurriculumPage() {
               </p>
             </div>
           </Reveal>
-          <ol className="mt-12 grid gap-5 md:grid-cols-2">
+          <ol className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
             {PILLARS.map((p) => (
               <Reveal key={p.title}>
-                <li className="flex h-full items-start gap-5 rounded-md border border-ink/10 bg-white p-6 shadow-sm">
-                  <div className="font-serif text-[32px] font-light leading-none text-gold">{p.roman}</div>
-                  <div>
-                    <div className="font-serif text-[19px] text-ink">{p.title}</div>
-                    <p className="mt-2 text-[14.5px] leading-[1.65] text-ink2">{p.body}</p>
+                <li className="flex h-full flex-col overflow-hidden rounded-md border border-ink/10 bg-white shadow-sm transition hover:border-teal/40 hover:shadow-md">
+                  <div className="relative aspect-[16/10] w-full overflow-hidden bg-teal/10">
+                    <Image
+                      src={p.image}
+                      alt=""
+                      fill
+                      className="object-cover"
+                      style={{ objectPosition: p.imagePosition ?? "center" }}
+                      sizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw"
+                    />
+                  </div>
+                  <div className="flex flex-1 items-start gap-5 p-6">
+                    <div className="font-serif text-[32px] font-light leading-none text-gold">{p.roman}</div>
+                    <div>
+                      <div className="font-serif text-[19px] text-ink">{p.title}</div>
+                      <p className="mt-2 text-[14.5px] leading-[1.65] text-ink2">{p.body}</p>
+                    </div>
                   </div>
                 </li>
               </Reveal>
             ))}
           </ol>
         </div>
+      </section>
+
+      {/* BAND IMAGE */}
+      <section className="relative h-[280px] w-full overflow-hidden md:h-[360px]">
+        <Image
+          src="/images/bands/woman-on-mountain-top.jpg"
+          alt=""
+          fill
+          className="object-cover"
+          style={{ objectPosition: "center" }}
+          sizes="100vw"
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-transparent to-black/30" />
       </section>
 
       {/* 14 MODULES */}
