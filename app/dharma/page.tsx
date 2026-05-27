@@ -75,11 +75,11 @@ export default function DharmaPage() {
             <div className="mb-3 text-[11px] font-bold uppercase tracking-[0.32em] text-teal">
               Begin Here
             </div>
-            <p className="mb-6 font-display text-[1.625rem] font-medium leading-[1.2] tracking-[-0.015em] text-ink">
+            <p className="mb-5 font-display text-[1.5rem] font-medium leading-[1.2] tracking-[-0.015em] text-ink">
               A free guided path to <em className="italic text-teal">your true work.</em>
             </p>
 
-            <ul className="mb-7 list-none border-b border-line pb-6">
+            <ul className="mb-5 list-none border-b border-line pb-4">
               {[
                 "Clarity on what you came here to do",
                 "Freedom from years of second-guessing yourself",
@@ -88,7 +88,7 @@ export default function DharmaPage() {
               ].map((b) => (
                 <li
                   key={b}
-                  className="relative py-2 pl-7 font-display text-[1.0625rem] leading-[1.4] text-ink"
+                  className="relative py-1 pl-7 font-display text-[1.0625rem] leading-[1.35] text-ink"
                 >
                   <span aria-hidden className="absolute left-0 top-[10px] text-[1rem] text-gold">
                     ✦
