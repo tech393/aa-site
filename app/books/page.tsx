@@ -39,6 +39,15 @@ const FEATURED_BOOK: Book = {
 
 const BOOKS: Book[] = [
   {
+    title: "How to Wake Up Early",
+    author: "Michael Mackintosh",
+    desc: "The simple practice that changes everything. A short, practical guide to rising early — and using the quiet morning hour to transform your life.",
+    cover: "/images/books/how-to-wake-up-early.jpg",
+    href: "/downloads/how-to-wake-up-early.pdf",
+    cta: "Read Free PDF",
+    free: true,
+  },
+  {
     title: "Get It Done",
     author: "Michael Mackintosh",
     desc: "The 21-day mind-hack system to double your productivity, beat procrastination, and finally finish what you start.",
