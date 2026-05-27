@@ -139,11 +139,6 @@ const PENDING_OTHER: PendingItem[] = [
     label: "Wall of Gratitude — route live, body stubbed",
     source: "01-CORE-BRAND/04-wall-of-gratitude.md",
   },
-  {
-    slug: "book-a-call",
-    label: "Book a Call — long-form Sacred Session version",
-    source: "02-MAIN-OFFER/03-book-a-call-Sacred-Session.md",
-  },
 ];
 
 const APP_DIR = path.join(process.cwd(), "app");
@@ -352,7 +347,7 @@ export function buildSiteMap(): SiteMap {
 
   // PENDING_OTHER entries deliberately keep showing even if a stub route is
   // already live — the point is that the *content* is still missing
-  // (wall-of-gratitude body is stubbed, book-a-call long-form not spliced in).
+  // (wall-of-gratitude body is stubbed).
   const pendingBlog = PENDING_BLOG_POSTS.filter(
     (p) => !liveBlogSet.has(p.slug) && !liveStaticSet.has(p.slug),
   );

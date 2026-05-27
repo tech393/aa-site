@@ -104,6 +104,47 @@ export default function SPLesson({ lesson }: { lesson: Lesson }) {
         </div>
       </section>
 
+      {/* BROCHURE CTA */}
+      <section className="relative isolate w-full overflow-hidden">
+        <Image
+          src="/images/machu-picchu-sunset.jpg"
+          alt=""
+          fill
+          sizes="100vw"
+          className="-z-10 object-cover object-center"
+        />
+        <div className="absolute inset-0 -z-10 bg-gradient-to-b from-black/60 via-black/50 to-black/70" />
+        <div className="mx-auto max-w-wide px-6 py-16 md:py-20">
+          <Reveal>
+            <div className="mx-auto max-w-2xl text-center">
+              <span className="text-[11px] font-semibold uppercase tracking-[0.28em] text-gold-lt">
+                Ready for the full path?
+              </span>
+              <h2 className="mt-3 font-serif text-[clamp(24px,3.6vw,34px)] leading-[1.15] text-white">
+                Download the <em className="italic text-gold">Academy Brochure</em>
+              </h2>
+              <p className="mx-auto mt-4 max-w-lg text-[14.5px] leading-[1.65] text-white/85">
+                The full Spiritual Life Coach Certification — curriculum, tuition, and how it works.
+              </p>
+              <div className="mt-6 flex flex-wrap items-center justify-center gap-4">
+                <Link
+                  href="/download-free-brochure"
+                  className="inline-block rounded bg-gold px-7 py-3.5 text-[13px] font-medium text-white transition hover:bg-gold-dark"
+                >
+                  Download Free Brochure →
+                </Link>
+                <Link
+                  href="/book-a-call"
+                  className="inline-block rounded border border-white/60 px-7 py-3.5 text-[13px] font-medium text-white transition hover:bg-white/10"
+                >
+                  Book a Call
+                </Link>
+              </div>
+            </div>
+          </Reveal>
+        </div>
+      </section>
+
       {/* PREV/NEXT NAV */}
       <section className="bg-warm">
         <div className="mx-auto max-w-wide px-6 py-12">

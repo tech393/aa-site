@@ -34,27 +34,27 @@ type AudioTrack = { number: number; title: string; src: string };
 
 const TRAININGS: AudioTrack[] = [
   { number: 1, title: 'Miracle Journal Explanation',
-    src: 'https://4ea5621ec44199858a125ea2f02cc024.wpxtemp.com/wp-content/uploads/2021/07/01-1-Miracle-Journal-Explanation.mp3' },
+    src: '/audio/miracle/01-1-Miracle-Journal-Explanation.mp3' },
   { number: 2, title: 'Creating Your Sacred Intentions',
-    src: 'https://4ea5621ec44199858a125ea2f02cc024.wpxtemp.com/wp-content/uploads/2021/07/02-2-Creating-Your-Sacred-Intentions.mp3' },
+    src: '/audio/miracle/02-2-Creating-Your-Sacred-Intentions.mp3' },
   { number: 3, title: 'Sacred Appreciation & Feel The Gratitude',
-    src: 'https://4ea5621ec44199858a125ea2f02cc024.wpxtemp.com/wp-content/uploads/2021/07/3-Sacred-Appreciation-Feel-The-Gratitude.mp3' },
+    src: '/audio/miracle/3-Sacred-Appreciation-Feel-The-Gratitude.mp3' },
   { number: 4, title: 'Yes! It Is Done',
-    src: 'https://4ea5621ec44199858a125ea2f02cc024.wpxtemp.com/wp-content/uploads/2021/07/04-4-Yes-It-Is-Done.mp3' },
+    src: '/audio/miracle/04-4-Yes-It-Is-Done.mp3' },
   { number: 5, title: 'Your Sacred Rituals & Inspired Actions',
-    src: 'https://4ea5621ec44199858a125ea2f02cc024.wpxtemp.com/wp-content/uploads/2021/07/5-Your-Sacred-Rituals-Inspired-Actions.mp3' },
+    src: '/audio/miracle/5-Your-Sacred-Rituals-Inspired-Actions.mp3' },
   { number: 6, title: 'Your Weekly Reflections',
-    src: 'https://4ea5621ec44199858a125ea2f02cc024.wpxtemp.com/wp-content/uploads/2021/07/7-Your-Weekly-Reflections.mp3' },
+    src: '/audio/miracle/7-Your-Weekly-Reflections.mp3' },
   { number: 7, title: 'How To Make Sure You Do It!!',
-    src: 'https://4ea5621ec44199858a125ea2f02cc024.wpxtemp.com/wp-content/uploads/2021/07/8-How-To-Make-Sure-You-Do-It.mp3' },
+    src: '/audio/miracle/8-How-To-Make-Sure-You-Do-It.mp3' },
   { number: 8, title: 'Missing Manifestation Secret (Simple but essential)',
-    src: 'https://4ea5621ec44199858a125ea2f02cc024.wpxtemp.com/wp-content/uploads/2021/08/Missing-Manifestation-Secret-Simple-but-essential.mp3' }
+    src: '/audio/miracle/Missing-Manifestation-Secret-Simple-but-essential.mp3' }
 ];
 
 const BONUS_TRACK: AudioTrack = {
   number: 0,
   title: 'BONUS: Advanced Law Of Attraction Training',
-  src: 'https://4ea5621ec44199858a125ea2f02cc024.wpxtemp.com/wp-content/uploads/2021/07/Advanced-Law-Of-Attraction-Training.mp3'
+  src: '/audio/miracle/Advanced-Law-Of-Attraction-Training.mp3'
 };
 
 const INTRO_PARAGRAPH =
@@ -638,22 +638,33 @@ export default function MiracleClient() {
             </h2>
           </Reveal>
           <Reveal delay={0.1}>
-            <Link
-              href={CERT_URL}
-              className="inline-flex items-center gap-2 px-8 py-4 rounded-sm bg-gold text-navy font-medium tracking-wide hover:bg-[#D9B26A] hover:-translate-y-0.5 transition-all"
-            >
-              Learn more
-              <svg width="14" height="14" viewBox="0 0 14 14" aria-hidden>
-                <path
-                  d="M3 7h8M7 3l4 4-4 4"
-                  stroke="currentColor"
-                  strokeWidth="1.5"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  fill="none"
-                />
-              </svg>
-            </Link>
+            <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
+              <Link
+                href="/download-free-brochure"
+                className="inline-flex items-center gap-2 px-8 py-4 rounded-sm bg-gold text-navy font-medium tracking-wide hover:bg-[#D9B26A] hover:-translate-y-0.5 transition-all"
+              >
+                Download Free Brochure
+                <svg width="14" height="14" viewBox="0 0 14 14" aria-hidden>
+                  <path
+                    d="M3 7h8M7 3l4 4-4 4"
+                    stroke="currentColor"
+                    strokeWidth="1.5"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    fill="none"
+                  />
+                </svg>
+              </Link>
+              <Link
+                href="/book-a-call"
+                className="inline-flex items-center gap-2 px-8 py-4 rounded-sm border border-gold/60 text-cream font-medium tracking-wide hover:bg-gold/10 hover:-translate-y-0.5 transition-all"
+              >
+                Book a Call
+              </Link>
+            </div>
+            <p className="mt-6 text-[12px] text-cream/55">
+              Or <Link href={CERT_URL} className="underline decoration-gold/40 underline-offset-4 hover:text-gold">explore the full certification</Link>.
+            </p>
           </Reveal>
         </div>
       </section>

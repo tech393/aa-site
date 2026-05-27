@@ -146,6 +146,55 @@ export default function PodcastShow({ podcast }: { podcast: Podcast }) {
         </div>
       </section>
 
+      {/* BROCHURE CTA */}
+      <section className="relative isolate w-full overflow-hidden">
+        <Image
+          src="/images/machu-picchu-sunset.jpg"
+          alt=""
+          fill
+          sizes="100vw"
+          className="-z-10 object-cover object-center"
+        />
+        <div className="absolute inset-0 -z-10 bg-gradient-to-b from-black/60 via-black/50 to-black/70" />
+        <div className="mx-auto max-w-wide px-6 py-20 md:py-24">
+          <Reveal>
+            <div className="mx-auto grid max-w-4xl items-center gap-10 md:grid-cols-[minmax(0,300px)_minmax(0,1fr)]">
+              <Image
+                src="/images/brochure-preview.png"
+                alt="Awakened Academy Brochure preview"
+                width={700}
+                height={576}
+                className="mx-auto h-auto w-full max-w-[300px] rounded-sm shadow-2xl"
+              />
+              <div className="text-center md:text-left">
+                <span className="eyebrow !text-gold-lt">Ready to go deeper?</span>
+                <h2 className="mt-3 font-serif text-[clamp(26px,4vw,38px)] leading-[1.15] text-white">
+                  Download the <em className="italic text-gold">Academy Brochure</em>
+                </h2>
+                <p className="mt-4 max-w-lg text-[15px] leading-[1.7] text-white/85 md:mx-0">
+                  Curriculum, tuition, and how the Spiritual Life Coach Certification works
+                  end-to-end — delivered as a PDF.
+                </p>
+                <div className="mt-7 flex flex-wrap items-center justify-center gap-4 md:justify-start">
+                  <Link
+                    href="/download-free-brochure"
+                    className="inline-block rounded bg-gold px-7 py-3.5 text-[13px] font-medium text-white transition hover:bg-gold-dark"
+                  >
+                    Download Free Brochure →
+                  </Link>
+                  <Link
+                    href="/schedule"
+                    className="inline-block rounded border border-white/60 px-7 py-3.5 text-[13px] font-medium text-white transition hover:bg-white/10"
+                  >
+                    Book a Call
+                  </Link>
+                </div>
+              </div>
+            </div>
+          </Reveal>
+        </div>
+      </section>
+
       {/* MORE FROM AA */}
       <section className="bg-warm">
         <div className="mx-auto max-w-widest px-6 py-20">

@@ -8,8 +8,7 @@ const STATIC_ROUTES: { path: string; priority: number; changeFreq: MetadataRoute
   { path: "/spiritual-life-coach-certification", priority: 0.95, changeFreq: "weekly" },
   { path: "/curriculum", priority: 0.9, changeFreq: "monthly" },
   { path: "/brochure", priority: 0.85, changeFreq: "monthly" },
-  { path: "/book-a-call", priority: 0.9, changeFreq: "weekly" },
-  { path: "/schedule", priority: 0.85, changeFreq: "weekly" },
+  { path: "/schedule", priority: 0.9, changeFreq: "weekly" },
 
   // Brand pages
   { path: "/about", priority: 0.85, changeFreq: "monthly" },

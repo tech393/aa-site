@@ -6,7 +6,7 @@ hero_image: "/images/golden-light.jpg"
 images: []
 primary_cta:
   label: "Book a Free Clarity Call"
-  destination: "/book-a-call"
+  destination: "/schedule"
 form_present: false
 form_target: ""
 embedded_video: ""
@@ -70,4 +70,4 @@ If you are drawn to the money side of this work, begin with [Wealth and Abundanc
 - [Discover Your Dharma](/dharma)
 - [Spiritual Life Coach Certification](/spiritual-life-coach-certification)
 - [Free Gifts For You](/free-gifts-for-you)
-- [Book a Free Clarity Call](/book-a-call)
+- [Book a Free Clarity Call](/schedule)

@@ -243,7 +243,7 @@ If you are feeling called, you are not alone. We have trained 650+ certified coa
 If you want to see what that could look like for you:
 
 - [Download the brochure](/brochure) to see the full certification curriculum and pricing.
-- [Book a free call](/book-a-call) with our team to see if it is a fit.
+- [Book a free call](/schedule) with our team to see if it is a fit.
 - [Read the stories](/wall-of-gratitude) of the coaches who have walked this path before you.
 
 The work is needed. The world is ready. The only question is whether you are.

@@ -160,6 +160,12 @@ export default function SchedulePage() {
                 What happens on the call
               </h2>
               <div className="gold-line mt-6" />
+              <p className="mx-auto mt-8 max-w-2xl text-[15.5px] leading-[1.75] text-ink2">
+                This is a real conversation, not a sales pitch. We listen first.
+                You talk through where you are, what's calling you forward, and
+                what's in the way. Then together we look at whether Awakened
+                Academy is the right next step, or whether something else is.
+              </p>
             </div>
           </Reveal>
 
@@ -167,17 +173,29 @@ export default function SchedulePage() {
             <ul className="mx-auto mt-12 max-w-2xl space-y-5 text-[16.5px] leading-[1.7] text-ink2">
               <li className="flex gap-4">
                 <span aria-hidden className="mt-1.5 inline-flex h-5 w-5 flex-none items-center justify-center rounded-full border border-gold/70 text-[11px] text-gold">✓</span>
-                <span>Get clear on how to turn your spiritual gifts into a real income.</span>
+                <span><strong className="font-medium text-ink">We hear your story.</strong> Where you are now, what's been calling you toward coaching or spiritual work, and what you've already tried.</span>
               </li>
               <li className="flex gap-4">
                 <span aria-hidden className="mt-1.5 inline-flex h-5 w-5 flex-none items-center justify-center rounded-full border border-gold/70 text-[11px] text-gold">✓</span>
-                <span>Discover how to build a coaching practice that gives you total freedom.</span>
+                <span><strong className="font-medium text-ink">We get clear on the vision.</strong> The kind of life and practice you actually want to build, and how your gifts could become a real income doing meaningful work.</span>
               </li>
               <li className="flex gap-4">
                 <span aria-hidden className="mt-1.5 inline-flex h-5 w-5 flex-none items-center justify-center rounded-full border border-gold/70 text-[11px] text-gold">✓</span>
-                <span>We'll talk about where you are, what you need, and how we can support you.</span>
+                <span><strong className="font-medium text-ink">We answer your questions.</strong> About the certification, the curriculum, the community, the time commitment, the investment — anything you need to make a clear decision.</span>
+              </li>
+              <li className="flex gap-4">
+                <span aria-hidden className="mt-1.5 inline-flex h-5 w-5 flex-none items-center justify-center rounded-full border border-gold/70 text-[11px] text-gold">✓</span>
+                <span><strong className="font-medium text-ink">We decide together if it's a fit.</strong> If it's right, we'll talk about enrollment. If it isn't, you'll leave with clarity and pointers toward what is. Either way, you win.</span>
               </li>
             </ul>
+          </Reveal>
+
+          <Reveal>
+            <p className="mx-auto mt-12 max-w-2xl text-center text-[13.5px] leading-[1.7] text-soft">
+              The call is 1 hour, by phone or video, and completely free. You
+              will not be sold to. We've built this practice for 20+ years by
+              listening first.
+            </p>
           </Reveal>
 
           <Reveal>

@@ -6,7 +6,7 @@ hero_image: "/images/freedom-img.webp"
 images: []
 primary_cta:
   label: "Book a Free Clarity Call"
-  destination: "/book-a-call"
+  destination: "/schedule"
 form_present: false
 form_target: ""
 embedded_video: ""
@@ -71,4 +71,4 @@ If you want guided inner work, start with [Awakened Life](/awakened-life), [Your
 - [21 Day Challenge](/21-day-challenge)
 - [Free Meditations](/meditations)
 - [Spiritual Life Coach Certification](/spiritual-life-coach-certification)
-- [Book a Free Clarity Call](/book-a-call)
+- [Book a Free Clarity Call](/schedule)
