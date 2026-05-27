@@ -27,16 +27,17 @@ type Book = {
 };
 
 // Catalog + final links per DAN-HANDOFF.md (2026-05-19), the source of truth.
+const FEATURED_BOOK: Book = {
+  title: "Why The World Needs YOU",
+  author: "Michael Mackintosh",
+  desc: "Awakening your inner calling at a time of great need. A short, soul-shaking read for anyone who senses they're here for a reason — and is ready to find out what it is. Yours free as an ebook.",
+  cover: "/images/books/why-the-world-needs-you.jpg",
+  href: "/free-book",
+  cta: "Read it Free",
+  free: true,
+};
+
 const BOOKS: Book[] = [
-  {
-    title: "Why The World Needs YOU",
-    author: "Michael Mackintosh",
-    desc: "Awakening your inner calling at a time of great need. Yours free — read it as an ebook.",
-    cover: "/images/books/why-the-world-needs-you.jpg",
-    href: "/free-book",
-    cta: "Read it Free",
-    free: true,
-  },
   {
     title: "Get It Done",
     author: "Michael Mackintosh",
@@ -137,9 +138,62 @@ export default function BooksPage() {
         </div>
       </header>
 
+      {/* FEATURED BOOK */}
+      <section className="bg-cream-paper">
+        <div className="mx-auto max-w-page px-6 py-20 md:py-24">
+          <Reveal>
+            <div className="grid items-center gap-10 md:grid-cols-[minmax(0,1fr)_minmax(0,1.15fr)] md:gap-14 lg:gap-20">
+              <Link
+                href={FEATURED_BOOK.href}
+                className="group mx-auto block w-full max-w-[360px] transition-transform duration-300 ease-out hover:-translate-y-1 md:mx-0 md:max-w-none"
+              >
+                <div className="relative aspect-[2/3] w-full overflow-hidden rounded-lg shadow-xl transition-shadow duration-300 group-hover:shadow-2xl">
+                  <Image
+                    src={FEATURED_BOOK.cover}
+                    alt={`${FEATURED_BOOK.title} book cover`}
+                    fill
+                    sizes="(min-width: 768px) 440px, 90vw"
+                    priority
+                    className="object-cover"
+                  />
+                </div>
+              </Link>
+              <div className="text-center md:text-left">
+                <span className="inline-block rounded-full bg-gold/15 px-3 py-1 text-[12px] font-semibold uppercase tracking-[0.14em] text-gold-deep">
+                  Start here &middot; Free ebook
+                </span>
+                <h2 className="mt-5 font-serif text-[clamp(30px,4vw,46px)] font-normal leading-[1.1] tracking-[-0.015em] text-ink">
+                  {FEATURED_BOOK.title}
+                </h2>
+                <p className="mt-2 text-[13px] tracking-wide text-soft">{FEATURED_BOOK.author}</p>
+                <p className="mx-auto mt-5 max-w-[52ch] text-[17px] leading-[1.65] text-ink2 md:mx-0">
+                  {FEATURED_BOOK.desc}
+                </p>
+                <div className="mt-7">
+                  <Link
+                    href={FEATURED_BOOK.href}
+                    className="inline-block rounded bg-teal px-8 py-3.5 text-[16px] font-semibold text-cream-paper transition hover:-translate-y-px hover:bg-teal-deep"
+                  >
+                    {FEATURED_BOOK.cta}
+                  </Link>
+                </div>
+              </div>
+            </div>
+          </Reveal>
+        </div>
+      </section>
+
       {/* BOOK GRID */}
       <main className="bg-cream">
         <div className="mx-auto max-w-page px-6 py-20 md:py-24">
+          <Reveal>
+            <div className="mb-12 text-center">
+              <span className="eyebrow">More books by Michael</span>
+              <h2 className="mx-auto mt-3 max-w-[20ch] font-serif text-[clamp(26px,3vw,36px)] font-normal leading-[1.15] tracking-[-0.01em] text-ink">
+                The wider library
+              </h2>
+            </div>
+          </Reveal>
           <div className="grid grid-cols-1 gap-10 sm:grid-cols-2 md:grid-cols-3 md:gap-x-9 md:gap-y-12">
             {BOOKS.map((book) => {
               const coverLink = book.free

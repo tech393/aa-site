@@ -656,7 +656,7 @@ export default function MiracleClient() {
                 </svg>
               </Link>
               <Link
-                href="/book-a-call"
+                href="/schedule"
                 className="inline-flex items-center gap-2 px-8 py-4 rounded-sm border border-gold/60 text-cream font-medium tracking-wide hover:bg-gold/10 hover:-translate-y-0.5 transition-all"
               >
                 Book a Call

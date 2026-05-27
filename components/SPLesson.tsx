@@ -134,7 +134,7 @@ export default function SPLesson({ lesson }: { lesson: Lesson }) {
                   Download Free Brochure →
                 </Link>
                 <Link
-                  href="/book-a-call"
+                  href="/schedule"
                   className="inline-block rounded border border-white/60 px-7 py-3.5 text-[13px] font-medium text-white transition hover:bg-white/10"
                 >
                   Book a Call
