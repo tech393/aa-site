@@ -14,6 +14,10 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400;1,500&family=Cinzel:wght@400;500;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<!-- Cloudflare Turnstile — blocks bot submissions before they hit Claude API.
+     Dan: replace data-sitekey on the .cf-turnstile widget below with the real key. -->
+<script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
 <style>
   :root {
     --bg-base: #1E0E3A;
@@ -307,6 +311,7 @@
             <input type="text" id="birthPlace" name="birth_place" placeholder="City, Country" required>
           </div>
         </div>
+        <div class="cf-turnstile" data-sitekey="YOUR_CLOUDFLARE_TURNSTILE_SITE_KEY" data-theme="dark" data-callback="onCaptchaSuccess" data-expired-callback="onCaptchaExpired" style="margin: 4px 0 10px; display: flex; justify-content: center;"></div>
         <button type="submit" class="form-btn" id="submitBtn">
           <span class="btxt">Send My Free Reading &rarr;</span>
           <span class="spinner"></span>
@@ -432,8 +437,14 @@
     // ============================================================
     var CONFIG = {
       GHL_WEBHOOK_URL: 'YOUR_GHL_INBOUND_WEBHOOK_URL_HERE',
+      TURNSTILE_SITE_KEY: 'YOUR_CLOUDFLARE_TURNSTILE_SITE_KEY',
       SUBMIT_TIMEOUT: 15000
     };
+
+    // Turnstile callbacks (global — required by the Cloudflare widget).
+    var captchaToken = '';
+    window.onCaptchaSuccess = function(token){ captchaToken = token; };
+    window.onCaptchaExpired = function(){ captchaToken = ''; };
 
     var params = new URLSearchParams(window.location.search);
     var form = document.getElementById('dharma-free-form'),
@@ -459,6 +470,13 @@
       if (!birthPlace) { flag('birthPlace'); bad = true; }
       if (bad) { showErr('Please fill in all required fields.'); busy = false; return; }
 
+      // Require a Turnstile token unless the site key is still a placeholder (dev/TEST MODE).
+      var turnstileLive = CONFIG.TURNSTILE_SITE_KEY !== 'YOUR_CLOUDFLARE_TURNSTILE_SITE_KEY';
+      if (turnstileLive && !captchaToken) {
+        showErr('Please complete the verification box above the button.');
+        busy = false; return;
+      }
+
       var payload = {
         first_name: firstName, email: email, date_of_birth: dob,
         birth_time: birthTime || '', birth_place: birthPlace,
@@ -466,7 +484,8 @@
         utm_source: params.get('utm_source') || '',
         utm_medium: params.get('utm_medium') || '',
         utm_campaign: params.get('utm_campaign') || '',
-        page_url: window.location.href
+        page_url: window.location.href,
+        turnstile_token: captchaToken
       };
 
       if (CONFIG.GHL_WEBHOOK_URL === 'YOUR_GHL_INBOUND_WEBHOOK_URL_HERE') {
