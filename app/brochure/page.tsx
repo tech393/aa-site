@@ -21,10 +21,11 @@ export default function BrochurePage() {
     <>
       <section className="relative isolate w-full overflow-hidden">
         <Image
-          src="/images/brochure-hero-bagan.jpg"
-          alt="Traveler at sunset overlooking ancient temples"
+          src="/images/machu-picchu-sunset.jpg"
+          alt="Machu Picchu at sunset"
           fill
           priority
+          sizes="100vw"
           className="-z-10 object-cover object-center"
         />
         <div className="absolute inset-0 -z-10 bg-gradient-to-b from-black/35 via-black/25 to-black/55" />
