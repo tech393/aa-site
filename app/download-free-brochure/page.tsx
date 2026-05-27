@@ -34,9 +34,9 @@ export default function BrochureOptinPage() {
       <div className="mx-auto flex min-h-[78vh] max-w-widest items-center px-6 py-20 md:py-28">
         <div className="mx-auto w-full">
           <Reveal>
-            <h1 className="text-center font-serif text-[clamp(36px,6.2vw,62px)] font-normal leading-[1.1] tracking-[0.005em] text-gold-lt [text-shadow:0_2px_18px_rgba(0,0,0,0.7),0_1px_2px_rgba(0,0,0,0.55)]">
+            <h1 className="text-center font-serif text-[clamp(38px,6.5vw,68px)] font-light leading-[1.1] tracking-[0.005em] text-white [text-shadow:0_0_42px_rgba(0,0,0,0.55),0_2px_22px_rgba(0,0,0,0.65),0_1px_2px_rgba(0,0,0,0.6)]">
               Do spiritual work<br />
-              <span className="text-gold">&amp; Create Abundance</span>
+              <span className="text-gold-lt [text-shadow:0_0_36px_rgba(201,169,97,0.45),0_2px_22px_rgba(0,0,0,0.7),0_1px_2px_rgba(0,0,0,0.6)]">&amp; Create Abundance</span>
             </h1>
           </Reveal>
 
