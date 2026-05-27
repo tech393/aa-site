@@ -21,7 +21,7 @@ const STATIC_ROUTES: { path: string; priority: number; changeFreq: MetadataRoute
   // /awakened-academy-reviews 301→ /wall-of-gratitude (May 2026 consolidation)
   { path: "/wall-of-gratitude", priority: 0.85, changeFreq: "weekly" },
   { path: "/awakened-academy-success-stories", priority: 0.75, changeFreq: "monthly" },
-  { path: "/featured-coaches", priority: 0.6, changeFreq: "monthly" },
+  { path: "/directory", priority: 0.7, changeFreq: "weekly" },
 
   // Lead magnets
   { path: "/dharma", priority: 0.85, changeFreq: "monthly" },

@@ -70,8 +70,10 @@ const config: NextConfig = {
     { source: "/bring-your-project-to-life-3", destination: "/ep", permanent: true },
     { source: "/softly-powerful-home", destination: "/introvert", permanent: true },
     { source: "/softly-powerful-fb-thank-page", destination: "/introvert", permanent: true },
-    // Already 301d
-    { source: "/coaches", destination: "/featured-coaches", permanent: true },
+    // /featured-coaches retired May 2026 — coach listing moved to /directory.
+    // /coaches and /amy-miller previously chained through /featured-coaches; retargeted to /directory to avoid the hop.
+    { source: "/featured-coaches", destination: "/directory", permanent: true },
+    { source: "/coaches", destination: "/directory", permanent: true },
     { source: "/jobs-new", destination: "/jobs", permanent: true },
     // Old EP article
     { source: "/3-mistakes-you-dont-want-to-make-in-business", destination: "/ep", permanent: true },
@@ -195,7 +197,7 @@ const config: NextConfig = {
     { source: "/products", destination: "https://my.awakenedacademy.com/dashboard", permanent: true },
     // Kajabi handles
     { source: "/login", destination: "https://my.awakenedacademy.com/login", permanent: true },
-    { source: "/amy-miller", destination: "/featured-coaches", permanent: true },
+    { source: "/amy-miller", destination: "/directory", permanent: true },
     { source: "/diary", destination: "/blog", permanent: true },
     { source: "/god-book", destination: "/free-gifts-for-you", permanent: true },
     { source: "/you-ebook", destination: "/free-gifts-for-you", permanent: true },
