@@ -74,7 +74,7 @@ export default function BrochurePage() {
         </div>
       </section>
 
-      <section id="read-brochure" className="w-full bg-neutral-950 py-16 md:py-24">
+      <section id="read-brochure" className="w-full bg-teal-deep py-16 md:py-24">
         <div className="mx-auto max-w-5xl px-4">
           <Reveal>
             <div className="mb-10 text-center md:mb-14">
