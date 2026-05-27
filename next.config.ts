@@ -15,6 +15,9 @@ const config: NextConfig = {
   async redirects() {
     return [
 
+    // /book-a-call retired May 2026 — same job as /schedule (calendar + Sacred Alignment Call).
+    // The long-form letter version was never the production path; /schedule is canonical.
+    { source: "/book-a-call", destination: "/schedule", permanent: true },
     // Cert page redesign promoted: /cert-manus -> /spiritual-life-coach-certification (May 2026)
     { source: "/cert-manus", destination: "/spiritual-life-coach-certification", permanent: true },
     // Brochure opt-in funnel rename history (May 2026):
@@ -28,7 +31,7 @@ const config: NextConfig = {
     // Spiritual business ideas consolidated to canonical SEO slug (May 2026 — pillar post per SEO content calendar)
     { source: "/15-profitable-spiritual-business-ideas-for-modern-entrepreneurs", destination: "/spiritual-business-ideas", permanent: true },
     // Sacred Session CTA target (Two Mindsets post) routes to booking page until a dedicated page exists. Temporary 302.
-    { source: "/sacred-session", destination: "/book-a-call", permanent: false },
+    { source: "/sacred-session", destination: "/schedule", permanent: false },
     // Top-marketing post year bump 2025 -> 2026 (May 2026)
     { source: "/top-marketing-for-coaches-strategies-to-attract-clients-in-2025", destination: "/top-marketing-for-coaches-strategies-to-attract-clients-in-2026", permanent: true },
     // Affiliate program retired until sales page exists; restore URL when ready
@@ -54,7 +57,7 @@ const config: NextConfig = {
     // Old discount variant
     { source: "/apply-2", destination: "/spiritual-life-coach-certification", permanent: true },
     // Old application page
-    { source: "/sacred-application-call-experience", destination: "/book-a-call", permanent: true },
+    { source: "/sacred-application-call-experience", destination: "/schedule", permanent: true },
     { source: "/wealth-and-abundance-2", destination: "/wealth-and-abundance", permanent: true },
     { source: "/wealth-and-abundance-2-2", destination: "/wealth-and-abundance", permanent: true },
     { source: "/wealth-and-abundance-kit", destination: "/wealth-and-abundance", permanent: true },
@@ -103,25 +106,9 @@ const config: NextConfig = {
     { source: "/freedom-from-other-peoples-b-s-control", destination: "/ep", permanent: true },
     { source: "/freedom-from-overwhelm-and-overwork", destination: "/ep", permanent: true },
     { source: "/freedom-from-your-own-b-s-negativity", destination: "/ep", permanent: true },
-    { source: "/sp/business-success-for-introverts", destination: "/introvert", permanent: true },
-    { source: "/sp/deep-questions-to-discover-your-dharma", destination: "/dharma", permanent: true },
+    // Legacy /sp/* slugs that have no lesson page — keep redirecting to /introvert.
     { source: "/sp/defining-introverts-for-a-better-future", destination: "/introvert", permanent: true },
-    { source: "/sp/disover-who-you-are", destination: "/introvert", permanent: true },
-    { source: "/sp/how-to-deal-with-extrovert-situations", destination: "/introvert", permanent: true },
-    { source: "/sp/how-to-overcome-being-triggered-hooponopono", destination: "/introvert", permanent: true },
-    { source: "/sp/how-to-overcome-oversensitivy", destination: "/introvert", permanent: true },
-    { source: "/sp/intro", destination: "/introvert", permanent: true },
-    { source: "/sp/introversion-101-dos-and-donts", destination: "/introvert", permanent: true },
-    { source: "/sp/introverts-versus-extroverts", destination: "/introvert", permanent: true },
-    { source: "/sp/overcoming-the-lizard-brain-that-stops-you-from-doing-things", destination: "/introvert", permanent: true },
     { source: "/sp/quiz", destination: "/introvert", permanent: true },
-    { source: "/sp/the-growth-of-the-extrovert-ideal", destination: "/introvert", permanent: true },
-    { source: "/sp/the-power-of-energy-exercise", destination: "/introvert", permanent: true },
-    { source: "/sp/the-power-of-introverts", destination: "/introvert", permanent: true },
-    { source: "/sp/the-secret-formula-to-lasting-happiness", destination: "/introvert", permanent: true },
-    { source: "/sp/what-to-do-on-a-rainy-day-when-youre-feeling-down", destination: "/introvert", permanent: true },
-    { source: "/sp/when-to-say-yes", destination: "/introvert", permanent: true },
-    { source: "/sp/why-its-okay-to-say-no", destination: "/introvert", permanent: true },
     { source: "/less", destination: "/ep", permanent: true },
     { source: "/less/6-channels", destination: "/ep", permanent: true },
     { source: "/less/get-more-done-in-a-day-than-you-normally-achieve-in-a-month-special-interview-with-pete-williams", destination: "/ep", permanent: true },
@@ -210,7 +197,7 @@ const config: NextConfig = {
     { source: "/calendar-events", destination: "/", permanent: true },
     { source: "/donation", destination: "/", permanent: true },
     { source: "/creation-survey", destination: "/", permanent: true },
-    { source: "/for-you", destination: "/book-a-call", permanent: true },
+    { source: "/for-you", destination: "/schedule", permanent: true },
     { source: "/welcome", destination: "/", permanent: true },
     { source: "/how-to-download-sync-mp3", destination: "/free-meditations", permanent: true },
     { source: "/referral-gifts", destination: "/", permanent: true },
