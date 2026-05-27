@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Free Book — Why The World Needs You | Awakened Academy</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Fraunces:ital,wght@0,400;0,500;1,400;1,500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --teal:#1A7A70; --teal-deep:#14635B; --gold:#C9A961; --gold-deep:#A98B47;
+    --cream:#F2E8D5; --cream-paper:#FBF5E8; --navy:#0F1A38;
+    --rose:#C47E7E; --blush:#F8DCDC; --blush-mist:#FCF0F0;
+    --ink:#2A1A0F; --ink-soft:rgba(42,26,15,.72); --ink-muted:rgba(42,26,15,.55);
+    --inverse:#FBF5E8; --line:rgba(42,26,15,.12);
+    --font-display:'Fraunces',Georgia,serif;
+    --font-body:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
+    --shadow-2:0 4px 12px -2px rgba(42,26,15,.06);
+    --shadow-3:0 12px 32px -8px rgba(42,26,15,.12);
+    --shadow-cover:0 28px 60px -14px rgba(42,26,15,.42);
+    --ease-out:cubic-bezier(0.16,1,0.3,1);
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  html{scroll-behavior:smooth;}
+  body{
+    font-family:var(--font-body); color:var(--ink); background:var(--cream);
+    font-size:1.0625rem; line-height:1.65; -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:1140px; margin:0 auto; padding:0 32px;}
+  @media(max-width:640px){ .wrap{padding:0 22px;} }
+
+  /* ---------- HERO / OFFER ---------- */
+  .hero{
+    position:relative; overflow:hidden;
+    padding:72px 0 84px;
+    background:
+      radial-gradient(ellipse 70% 55% at 15% 0%, var(--blush) 0%, transparent 62%),
+      linear-gradient(180deg, var(--blush-mist) 0%, var(--cream) 60%, var(--cream-paper) 100%);
+  }
+  .offer-grid{
+    display:grid; grid-template-columns:1.15fr .85fr; gap:64px; align-items:center;
+  }
+  @media(max-width:860px){
+    .offer-grid{grid-template-columns:1fr; gap:44px;}
+    .cover-col{order:-1;}
+  }
+
+  .eyebrow{
+    font-size:.75rem; font-weight:600; letter-spacing:.26em; text-transform:uppercase;
+    color:var(--gold-deep); margin-bottom:18px;
+  }
+  h1{
+    font-family:var(--font-display); font-weight:400;
+    font-size:clamp(2.1rem,4.4vw,3.4rem); line-height:1.1; letter-spacing:-.02em;
+    color:var(--ink);
+  }
+  h1 em{font-style:italic; color:var(--teal);}
+  .subhead{
+    font-size:1.15rem; line-height:1.55; color:var(--ink-soft);
+    margin-top:20px; max-width:46ch;
+  }
+  .subhead strong{color:var(--ink); font-weight:600;}
+
+  .opening{margin-top:26px; max-width:48ch;}
+  .opening p{margin-bottom:14px;}
+  .opening p:last-child{margin-bottom:0;}
+
+  /* what's inside */
+  .inside{
+    margin-top:30px; padding-top:26px; border-top:1px solid var(--line);
+    max-width:50ch;
+  }
+  .inside-label{
+    font-family:var(--font-body); font-weight:600; font-size:.95rem;
+    color:var(--ink); margin-bottom:14px;
+  }
+  .inside ul{list-style:none;}
+  .inside li{
+    position:relative; padding-left:30px; margin-bottom:12px;
+    font-size:1rem; line-height:1.5; color:var(--ink-soft);
+  }
+  .inside li::before{
+    content:""; position:absolute; left:0; top:.55em;
+    width:9px; height:9px; border-radius:50%;
+    background:var(--gold); box-shadow:0 0 0 4px rgba(201,169,97,.18);
+  }
+
+  /* ---------- COVER ---------- */
+  .cover-col{display:flex; flex-direction:column; align-items:center;}
+  .cover-frame{
+    width:100%; max-width:340px;
+    border-radius:6px; overflow:hidden;
+    box-shadow:var(--shadow-cover);
+    transform:rotate(-2deg);
+  }
+  .cover-frame img{display:block; width:100%; height:auto;}
+  .cover-tag{
+    margin-top:26px; font-family:var(--font-display); font-style:italic;
+    font-size:1.05rem; color:var(--ink-muted); text-align:center;
+  }
+
+  /* ---------- FORM ---------- */
+  .form-card{
+    margin-top:34px; background:var(--cream-paper);
+    border:1px solid var(--line); border-radius:14px;
+    padding:30px 30px 32px; box-shadow:var(--shadow-2);
+    max-width:440px;
+  }
+  .form-card h2{
+    font-family:var(--font-display); font-weight:500; font-size:1.4rem;
+    line-height:1.2; color:var(--ink); margin-bottom:6px;
+  }
+  .form-card .note{font-size:.9rem; color:var(--ink-muted); margin-bottom:20px;}
+
+  /* ===== GHL FORM EMBED SLOT — see DAN-HANDOFF.md =====
+     DAN: replace everything between the two GHL-EMBED markers with the
+     GoHighLevel form embed code. The GHL form must:
+       1. collect First Name + Email
+       2. tag the contact for the WTWNY free-book funnel
+       3. trigger the automation that emails the ebook PDF
+          (Why-The-World-Needs-You-FREE-EBOOK.pdf) and adds the
+          contact to the Dharma Code nurture sequence.
+     The styled form below is a visual placeholder only — it does not submit. */
+  /* ===== GHL-EMBED START ===== */
+  .field{margin-bottom:14px;}
+  .field label{
+    display:block; font-size:.82rem; font-weight:600; color:var(--ink-soft);
+    margin-bottom:6px; letter-spacing:.01em;
+  }
+  .field input{
+    width:100%; font-family:var(--font-body); font-size:1rem; color:var(--ink);
+    padding:13px 15px; border:1px solid var(--line); border-radius:7px;
+    background:#fff;
+  }
+  .field input:focus{outline:2px solid rgba(26,122,112,.4); outline-offset:1px;}
+  .submit-btn{
+    width:100%; margin-top:6px; cursor:pointer;
+    font-family:var(--font-body); font-size:1.02rem; font-weight:600;
+    color:var(--cream-paper); background:var(--teal); border:none;
+    padding:15px 24px; border-radius:7px;
+    transition:background .2s var(--ease-out), transform .2s var(--ease-out);
+  }
+  .submit-btn:hover{background:var(--teal-deep); transform:translateY(-1px);}
+  .placeholder-flag{
+    margin-top:14px; font-size:.78rem; line-height:1.45; color:var(--ink-muted);
+    background:rgba(201,169,97,.13); border:1px dashed var(--gold);
+    border-radius:7px; padding:9px 12px;
+  }
+  /* ===== GHL-EMBED END ===== */
+
+  .form-fine{
+    margin-top:14px; font-size:.8rem; color:var(--ink-muted); text-align:center;
+  }
+
+  /* ---------- PROOF BAR ---------- */
+  .proof{background:var(--navy); color:var(--inverse); padding:36px 0;}
+  .proof-grid{
+    display:flex; flex-wrap:wrap; justify-content:center; gap:14px 56px;
+    text-align:center;
+  }
+  .proof-item .num{
+    font-family:var(--font-display); font-size:1.7rem; color:var(--gold);
+    line-height:1;
+  }
+  .proof-item .lbl{
+    font-size:.78rem; letter-spacing:.12em; text-transform:uppercase;
+    color:rgba(251,245,232,.7); margin-top:7px;
+  }
+
+  /* ---------- FOOTER ---------- */
+  .foot{
+    text-align:center; padding:30px 0; font-size:.82rem;
+    color:var(--ink-muted); background:var(--cream);
+  }
+</style>
+</head>
+<body>
+
+<!-- ================= HERO / OFFER ================= -->
+<header class="hero">
+  <div class="wrap">
+    <div class="offer-grid">
+
+      <!-- LEFT: the offer + form -->
+      <div class="offer-col">
+        <div class="eyebrow">A Free Book from Awakened Academy</div>
+        <h1>If you've always known you're here to do something that <em>matters</em> — this book is for you.</h1>
+        <p class="subhead">Get <strong>Why the World Needs You</strong> — Michael Mackintosh's book on awakening your inner calling — as a free ebook, straight to your inbox.</p>
+
+        <div class="opening">
+          <p>You've built a life that looks right. A career, a path, things that make sense on paper. And still — something in you knows this isn't the whole story.</p>
+          <p>That quiet knowing has never gone away. This is the book about it: the calling you've carried, why it keeps speaking, and how to finally answer it.</p>
+        </div>
+
+        <div class="inside">
+          <div class="inside-label">What's inside:</div>
+          <ul>
+            <li>The Two Paths — the life you've built, and the life that's quietly calling you</li>
+            <li>The 6 Myths that keep you small and keep your calling on hold</li>
+            <li>The 7 Golden Keys to awakening your purpose — and actually living it</li>
+            <li>Real stories of people who stopped waiting and stepped into their work</li>
+            <li>The New Paradigm — what answering your calling looks like, day to day</li>
+          </ul>
+        </div>
+
+        <!-- FORM -->
+        <div class="form-card">
+          <h2>Send me the free book</h2>
+          <p class="note">Enter your details and the ebook lands in your inbox.</p>
+
+          <!-- ===== GHL-EMBED START — DAN: replace this block (see DAN-HANDOFF.md) ===== -->
+          <form onsubmit="return false;">
+            <div class="field">
+              <label for="fname">First name</label>
+              <input id="fname" type="text" placeholder="Your first name" autocomplete="given-name">
+            </div>
+            <div class="field">
+              <label for="email">Email address</label>
+              <input id="email" type="email" placeholder="you@email.com" autocomplete="email">
+            </div>
+            <button class="submit-btn" type="submit">Send Me the Free Book</button>
+            <div class="placeholder-flag">
+              Placeholder form — not connected. Dan: swap this block for the
+              GoHighLevel form embed (collects name + email, tags the contact,
+              triggers the ebook delivery + Dharma Code nurture sequence).
+            </div>
+          </form>
+          <!-- ===== GHL-EMBED END ===== -->
+
+          <p class="form-fine">It's free. No spam. Unsubscribe anytime.</p>
+        </div>
+      </div>
+
+      <!-- RIGHT: the book cover -->
+      <div class="cover-col">
+        <div class="cover-frame">
+          <img src="/images/books/why-the-world-needs-you.jpg" alt="Why The World Needs You — book cover">
+        </div>
+        <p class="cover-tag">Why the World Needs You<br>by Michael Mackintosh</p>
+      </div>
+
+    </div>
+  </div>
+</header>
+
+<!-- ================= PROOF BAR ================= -->
+<section class="proof">
+  <div class="wrap">
+    <div class="proof-grid">
+      <div class="proof-item"><div class="num">20+</div><div class="lbl">Years Teaching</div></div>
+      <div class="proof-item"><div class="num">85,000+</div><div class="lbl">5-Star Reviews</div></div>
+      <div class="proof-item"><div class="num">1,000+</div><div class="lbl">Certified Coaches</div></div>
+      <div class="proof-item"><div class="num">25+</div><div class="lbl">Countries</div></div>
+    </div>
+  </div>
+</section>
+
+<div class="foot">From Michael Mackintosh, founder of Awakened Academy — teaching the inner path for over 20 years.</div>
+
+</body>
+</html>

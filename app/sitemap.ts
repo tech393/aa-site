@@ -27,6 +27,7 @@ const STATIC_ROUTES: { path: string; priority: number; changeFreq: MetadataRoute
   { path: "/dharma", priority: 0.85, changeFreq: "monthly" },
   { path: "/dharma-keys", priority: 0.85, changeFreq: "monthly" },
   { path: "/dharma-code", priority: 0.8, changeFreq: "monthly" },
+  { path: "/free-book", priority: 0.85, changeFreq: "monthly" },
   { path: "/ep", priority: 0.85, changeFreq: "monthly" },
   { path: "/introvert", priority: 0.85, changeFreq: "monthly" },
   { path: "/miracle", priority: 0.8, changeFreq: "monthly" },

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Your Free Book — Why The World Needs You | Awakened Academy</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Fraunces:ital,wght@0,400;0,500;1,400;1,500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --teal:#1A7A70; --teal-deep:#14635B; --gold-deep:#A98B47;
+    --cream:#F2E8D5; --cream-paper:#FBF5E8;
+    --ink:#2A1A0F; --ink-soft:rgba(42,26,15,.72); --ink-muted:rgba(42,26,15,.55);
+    --line:rgba(42,26,15,.12);
+    --font-display:'Fraunces',Georgia,serif;
+    --font-body:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
+    --ease-out:cubic-bezier(0.16,1,0.3,1);
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  body{
+    font-family:var(--font-body); color:var(--ink); background:var(--cream);
+    font-size:1.0625rem; line-height:1.65; -webkit-font-smoothing:antialiased;
+    min-height:100vh; display:flex; flex-direction:column;
+  }
+  main{
+    flex:1; display:flex; flex-direction:column;
+    align-items:center;
+    text-align:center; padding:72px 24px 80px;
+  }
+  .eyebrow{
+    font-size:.75rem; font-weight:600; letter-spacing:.26em; text-transform:uppercase;
+    color:var(--gold-deep); margin-bottom:30px;
+  }
+  .cover{
+    display:block; width:220px; max-width:60%; height:auto;
+    border-radius:4px;
+    box-shadow:0 20px 44px -14px rgba(42,26,15,.32);
+    margin-bottom:38px;
+  }
+  h1{
+    font-family:var(--font-display); font-weight:400;
+    font-size:clamp(2rem,3.8vw,2.6rem); line-height:1.15; letter-spacing:-.01em;
+    color:var(--ink); margin-bottom:30px;
+  }
+  .btn{
+    display:inline-block; text-decoration:none; cursor:pointer;
+    font-family:var(--font-body); font-size:1.05rem; font-weight:600;
+    color:var(--cream-paper); background:var(--teal);
+    padding:16px 40px; border-radius:8px;
+    transition:background .2s var(--ease-out), transform .2s var(--ease-out);
+  }
+  .btn:hover{background:var(--teal-deep); transform:translateY(-1px);}
+  .meta{
+    margin-top:14px; font-size:.85rem; color:var(--ink-muted);
+    letter-spacing:.02em;
+  }
+
+  .divider{
+    width:54px; height:1px; background:var(--line);
+    border:0; margin:60px 0 36px;
+  }
+
+  .schedule{ max-width:46ch; }
+  .schedule h2{
+    font-family:var(--font-display); font-weight:500;
+    font-size:1.3rem; line-height:1.25; color:var(--ink);
+    margin-bottom:14px; letter-spacing:-.01em;
+  }
+  .schedule p{
+    font-size:.98rem; line-height:1.55; color:var(--ink-soft);
+    margin-bottom:22px;
+  }
+  .btn-secondary{
+    display:inline-block; text-decoration:none; cursor:pointer;
+    font-family:var(--font-body); font-size:.98rem; font-weight:600;
+    color:var(--teal); background:transparent;
+    border:1.5px solid var(--teal);
+    padding:13px 30px; border-radius:8px;
+    transition:background .2s var(--ease-out), color .2s var(--ease-out);
+  }
+  .btn-secondary:hover{
+    background:var(--teal); color:var(--cream-paper);
+  }
+
+  .foot{
+    text-align:center; padding:24px 0; font-size:.8rem;
+    color:var(--ink-muted); border-top:1px solid var(--line);
+  }
+</style>
+</head>
+<body>
+
+<main>
+  <div class="eyebrow">Your Free Book</div>
+  <img class="cover" src="/images/books/why-the-world-needs-you.jpg" alt="Why The World Needs You — book cover">
+  <h1>Here's your book.</h1>
+  <a class="btn" href="/why-the-world-needs-you.pdf" download>Download the Book (PDF)</a>
+  <div class="meta">Why The World Needs You &middot; Michael Mackintosh &middot; PDF</div>
+
+  <hr class="divider">
+
+  <section class="schedule">
+    <h2>Want to jump ahead?</h2>
+    <p>If you'd like to figure out how you can help people make a difference in the world, go ahead and schedule your free call.</p>
+    <a class="btn-secondary" href="https://awakenedacademy.com/schedule">Schedule Your Free Call</a>
+  </section>
+</main>
+
+<div class="foot">From Michael Mackintosh, founder of Awakened Academy.</div>
+
+</body>
+</html>
