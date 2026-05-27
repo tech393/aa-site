@@ -48,7 +48,7 @@ Personal growth is crucial for a successful spiritual life coach. By continuousl
 
 Creating a comprehensive business plan is a crucial first step in setting up your spiritual coaching business. This plan should cover your target audience, marketing strategy, and financial planning. Essential tools for starting your business include a laptop, coaching agreement, and a solid business structure.
 
-Registering your business as a sole proprietor or legal entity, and opening a business bank account, ensures smooth and professional operation. Additionally, consider using digital tools like Paperbell to enhance client experience and streamline administrative tasks.
+Registering your business as a sole proprietor or legal entity, and opening a business bank account, ensures smooth and professional operation. Inside [Awakened Academy](https://awakenedacademy.com/spiritual-life-coach-certification/) you'll learn exactly which tools to set up — scheduling, payments, client agreements, and session notes — without spending months figuring it out on your own.
 
 ### Pick a Name and Legal Structure
 

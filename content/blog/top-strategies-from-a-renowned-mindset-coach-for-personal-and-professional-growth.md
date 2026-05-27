@@ -85,11 +85,11 @@ Initial sessions discover existing mental frameworks. Goal setting articulates c
 
 ## Becoming a Certified Mindset Coach
 
-The Mindset Coach Academy offers comprehensive certification including a multi-modal curriculum featuring NLP and hypnotherapy. Program costs vary widely, with some exceeding $10,000. Training duration ranges from 10–12 months through options like iPEC Coach Certification.
+Mindset work is only half the picture. The deeper transformation — the one clients actually pay for — happens when you can guide them past surface-level thinking into purpose, alignment, and inner clarity. That's what spiritual life coaching adds on top of mindset coaching.
 
-Programs provide practical coaching experience and business establishment resources including coaching calls and mastermind groups.
+[Awakened Academy's Spiritual Life Coach Certification](https://awakenedacademy.com/spiritual-life-coach-certification/) is built for coaches who want to do both: shift mindset *and* awaken purpose. The program covers transformational coaching frameworks, business setup, client attraction, and the inner work that makes you a coach people refer their friends to.
 
-For a holistic alternative, see [becoming a spiritual life coach with Awakened Academy](https://awakenedacademy.com/spiritual-life-coach-certification).
+Self-paced, lifetime access, personalised 1-on-1 support, and a curriculum designed by Michael Mackintosh — a coach trainer who has built his work over 20+ years guiding awakened entrepreneurs.
 
 ## Real-Life Success Stories
 

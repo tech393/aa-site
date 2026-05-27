@@ -64,9 +64,9 @@ Regular practice integration into daily life produces significant transformation
 
 **Recommended Resources:**
 
-- Meditation apps: Headspace, Calm, Insight Timer
+- [Awakened Academy](https://awakenedacademy.com/) — guided meditations, soul-purpose teachings, and the Spiritual Life Coach Certification for those called to guide others
 - Book: *The Miracle of Mindfulness* by Thich Nhat Hanh
-- Online courses: Udemy, Coursera
+- A daily practice you actually keep — the technique matters less than the consistency
 
 ## The Role of Spirituality in Modern Medicine
 

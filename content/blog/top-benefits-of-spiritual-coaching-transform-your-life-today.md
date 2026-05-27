@@ -53,7 +53,7 @@ Research potential coaches and ensure values alignment. Consider training, curri
 
 ### Certification Programs
 
-Certification enhances credibility, though it's not mandatory. Top 2025 programs include Awakened Academy's Spiritual Life Coach Certification, Udemy's offering, and Life Purpose Institute. Consider cost, duration, and accreditation.
+Certification enhances credibility, though it's not mandatory. The [Awakened Academy Spiritual Life Coach Certification](https://awakenedacademy.com/spiritual-life-coach-certification/) is purpose-built for coaches who want a soulful, transformational practice — combining inner work, transformational coaching skills, and the business fundamentals you need to attract aligned clients. Self-paced, lifetime access, and personalised 1-on-1 support throughout.
 
 ### Building Your Spiritual Coaching Business
 
