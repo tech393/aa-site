@@ -41,22 +41,21 @@ export default function BrochureOptinPage() {
           </Reveal>
 
           <Reveal>
-            <div className="mx-auto mt-14 grid max-w-3xl items-center gap-8 md:grid-cols-[320px_1fr]">
+            <div className="mx-auto mt-14 grid max-w-4xl items-center gap-10 md:grid-cols-[minmax(360px,460px)_1fr]">
               <Image
                 src="/images/brochure-preview.png"
                 alt="Awakened Academy Brochure preview"
                 width={700}
                 height={576}
-                className="mx-auto h-auto w-full max-w-[320px] rounded-sm shadow-2xl"
+                className="mx-auto h-auto w-full max-w-[460px] rounded-sm shadow-2xl"
               />
 
-              <div className="rounded-md bg-gold/85 p-8 text-center shadow-2xl backdrop-blur-sm md:p-10">
-                <h2 className="font-serif text-[clamp(22px,3vw,30px)] font-light leading-[1.2] text-white">
+              <div className="rounded-md bg-gold/85 p-6 text-center shadow-2xl backdrop-blur-sm md:p-7">
+                <h2 className="font-serif text-[clamp(20px,2.6vw,26px)] font-light leading-[1.2] text-white">
                   Download the Awakened Academy Brochure
                 </h2>
-                <p className="mt-4 text-[14px] leading-[1.7] text-white/90">
-                  The full curriculum, tuition options, and how the certification program works,
-                  delivered as a PDF.
+                <p className="mt-3 text-[13px] leading-[1.6] text-white/90">
+                  Curriculum, tuition, and how the program works — delivered as a PDF.
                 </p>
                 <BrochureFormReveal pdfHref={BROCHURE_PDF} />
               </div>
