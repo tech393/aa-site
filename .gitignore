@@ -9,3 +9,5 @@ npm-debug.log*
 *.docx
 *.xlsx
 *.pdf
+!public/**/*.pdf
+!public/*.pdf
