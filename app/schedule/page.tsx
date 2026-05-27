@@ -5,13 +5,13 @@ import Reveal from "@/components/Reveal";
 import { GHL, SITE } from "@/lib/site-config";
 
 export const metadata: Metadata = {
-  title: "Spiritual Life Coach Certification (Online Training Program)",
+  title: "Book Your Sacred Alignment Call",
   description:
-    "Become a certified spiritual life coach. Our Spiritual Life Coach Certification and Sacred Online Business Academy exceeds the limits of basic life coach training. Schedule your Sacred Alignment Call.",
+    "Book your free Sacred Alignment Call with Awakened Academy. A 1-hour, no-pressure conversation to see whether our Spiritual Life Coach Certification is the right next step.",
   alternates: { canonical: "/schedule" },
   openGraph: {
-    title: "Schedule Your Sacred Alignment Call, Awakened Academy",
-    description: "Become a certified spiritual life coach. Book a free clarity call to see if Awakened Academy is the right next step.",
+    title: "Book Your Sacred Alignment Call, Awakened Academy",
+    description: "Book a free, 1-hour Sacred Alignment Call to see whether Awakened Academy is the right next step.",
     url: `${SITE.url}/schedule`,
   },
 };
@@ -80,14 +80,14 @@ export default function SchedulePage() {
 
           <Reveal>
             <h1 className="hero-text mx-auto mt-10 max-w-4xl font-serif text-[clamp(30px,5.5vw,54px)] font-light leading-[1.12] text-white">
-              Live a spiritual life, <em className="text-gold-lt">do meaningful work</em> and make a great living
+              Book your <em className="text-gold-lt">Sacred Alignment Call</em>
             </h1>
           </Reveal>
 
           <Reveal>
             <p className="hero-text mx-auto mt-6 max-w-2xl text-[clamp(15px,2vw,18px)] leading-[1.65] text-white/90">
-              For deep, empathic souls who are ready for freedom. Book your free
-              Sacred Alignment Call and discover whether Awakened Academy is your next step.
+              For deep, empathic souls who are ready for freedom. A free, 1-hour
+              conversation to see whether Awakened Academy is your next step.
             </p>
           </Reveal>
 
