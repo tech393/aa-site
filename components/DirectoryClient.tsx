@@ -31,6 +31,9 @@ export default function DirectoryClient() {
 
   return (
     <>
+      {/* Map of coach locations, hidden while filtering */}
+      {!hasFilters && <DirectoryMap />}
+
       <DirectoryHero
         search={search}
         setSearch={setSearch}
@@ -40,9 +43,6 @@ export default function DirectoryClient() {
         setCategoryFilter={setCategoryFilter}
         onReset={reset}
       />
-
-      {/* Map of coach locations, hidden while filtering */}
-      {!hasFilters && <DirectoryMap />}
 
       {/* Featured coaches, hidden while filtering */}
       {!hasFilters && featured.length > 0 && (
