@@ -29,12 +29,12 @@ export default function BrochureOptinPage() {
         sizes="100vw"
         className="-z-10 object-cover object-center"
       />
-      <div className="absolute inset-0 -z-10 bg-gradient-to-b from-black/35 via-black/25 to-black/55" />
+      <div className="absolute inset-0 -z-10 bg-gradient-to-b from-black/65 via-black/55 to-black/70" />
 
       <div className="mx-auto flex min-h-[78vh] max-w-widest items-center px-6 py-20 md:py-28">
         <div className="mx-auto w-full">
           <Reveal>
-            <h1 className="text-center font-serif text-[clamp(34px,6vw,58px)] font-light leading-[1.1] text-gold-lt">
+            <h1 className="text-center font-serif text-[clamp(36px,6.2vw,62px)] font-normal leading-[1.1] tracking-[0.005em] text-gold-lt [text-shadow:0_2px_18px_rgba(0,0,0,0.7),0_1px_2px_rgba(0,0,0,0.55)]">
               Do spiritual work<br />
               <span className="text-gold">&amp; Create Abundance</span>
             </h1>
