@@ -14,7 +14,7 @@ If your life is not exactly as you’d love it to be and if you’ve been strugg
 
 How many people do what they love every day?
 
-Probably not many. I’ve personally spoken to hundreds of people about why the Law of Attraction is not working for them.  I’ve taught thousands of people in our courses [Spiritual Life Coach Certification](../spiritual-life-coach-certification/index.html).  And I can assure you that very few people understand the deeper workings of manifestation.  Even worse – most people have experienced negative side effects from attempting to make the Law of Attraction work for them. Their lives have actually become worse and they have a nagging feeling that they are not as far along the path as they should be. They are always wanting something they don’t have now and are rarely happy with their life the way it is, today.
+Probably not many. I’ve personally spoken to hundreds of people about why the Law of Attraction is not working for them.  I’ve taught thousands of people in our courses [Spiritual Life Coach Certification](/spiritual-life-coach-certification).  And I can assure you that very few people understand the deeper workings of manifestation.  Even worse – most people have experienced negative side effects from attempting to make the Law of Attraction work for them. Their lives have actually become worse and they have a nagging feeling that they are not as far along the path as they should be. They are always wanting something they don’t have now and are rarely happy with their life the way it is, today.
 
 *Be warned: * The traditional Law of Attraction teachings (if taken literally) can screw up your life and leave you with nightmares from shattered and distorted dreams. People who apply the Law of Attraction in the wrong way have half-dreams and nothing to show for them. Their experiences are like the movie, *The Fly* in which a man is teleported in a machine with a stray fly. When he is re-materialized he has become half man, half fly. If you get these techniques wrong, they are worse than having done nothing. Disappointment is a heavy burden. Without the other secrets I’m going to share with you, the Law of Attraction can be harmful.
 
@@ -74,6 +74,8 @@ To begin, I want to acknowledge that the traditional Law of Attraction teachings
 
 These secrets are eager to be revealed.  They are available for all who are willing to see. I call them secrets because they are rarely disclosed by those who teach the Law of Attraction. You deserve to know what they are. So, if you are tired of not experiencing the life you want, let’s get to it and start filling in the gaps.
 
+## Missing Secret 1: Your Heart’s True Desires
+
 This first secret was alluded to in the title of this article. In the traditional Law of Attraction teachings, it is stated that whatever you want you can have if you focus on having it enough, feel good about having it and generally stay in positive emotions. Unfortunately, the alarming problem with this teaching is the word “want.” Why? Because not everything we “want” is truly what we really, deeply and honestly desire on a soul level. In fact, most of the things we think we want will never bring us any real happiness and fulfillment at all.  Worse still, even if we do manifest our lower desires, they will materialize along with a disturbing progeny of unexpected complications, suffering, frustrations, depression and even bankruptcy in some cases.
 
 There is an enormous difference between your ego/mind-based set of  limited desires – and your heart’s pure, true desires. Your heart’s desires come from your soul and are divinely ordained. They are in alignment with the highest good for all, naturally. The energy between these two kinds of desires couldn’t be further apart – and most Law of Attraction teachings do not make any distinction between them. People may be blindly led to create lives that they end up hating, and they have experiences or relationships that they would be happier without.  Not all desires are made equal! Be careful what you ask for!
@@ -116,9 +118,7 @@ Write down whatever comes to you. And keep asking these questions until your hea
 
 Until you get to the level of inspiration I just described, keep asking these questions. Don’t bother trying to manifest things that are from your ego. It is a waste of time and energy. Have patience and you will hear your heart. And, keep focused on the other secrets you are learning here, and that I am about to share.
 
-**Missing Secret 2:
-What is your level of consciousness?**
-** **
+## Missing Secret 2: Your Level of Consciousness
 
 It’s myth-busting time! A huge myth in the new age movement is that everyone has a similar capacity to manifest things if they simply apply the traditional methods. If you look around, you can clearly see this is not true. Some people manifest seemingly effortlessly and others, despite all their hard work, never seem to manifest or change anything.
 
@@ -138,19 +138,21 @@ To know that the Law of Attraction methods simply don’t work for everyone may 
 
 There are three main elements that will support you in increasing your level of consciousness.
 
+### 1. Question your ego
+
 Realize that your ego is limited. It doesn’t know everything, and it isn’t always right. Once you accept that you are a student of life, and that being loving and kind is more important than being right or holding on to limiting beliefs, you open yourself to a higher awareness which raises your level of consciousness.
 
-## 2. Surrender to God/The Divine
+### 2. Surrender to God / the Divine
 
-It’s important not to get caught up in words here as we talk about God. There is an energy that is infinitely powerful and pure, that has the power to burn through the clouds that shield us from our true power and liberate us from all our suffering, confusion and anxiety. This Being is here to remove the clouds in our life.  As you humbly choose to let go, to surrender the limited ego side of you to the Divine, to release old ideas, to forsake old resentments, negative habits and being right, you begin to open up to an enormous power. This power purifies your soul and raises your level of consciousness. Simply be humble and be aligned with this energy.  And watch as your life naturally improves. For guided meditations on connecting with the Divine, [visit our meditation page](../meditation-with-michael-mackintosh-arielle-hecht/index.html).
+It’s important not to get caught up in words here as we talk about God. There is an energy that is infinitely powerful and pure, that has the power to burn through the clouds that shield us from our true power and liberate us from all our suffering, confusion and anxiety. This Being is here to remove the clouds in our life.  As you humbly choose to let go, to surrender the limited ego side of you to the Divine, to release old ideas, to forsake old resentments, negative habits and being right, you begin to open up to an enormous power. This power purifies your soul and raises your level of consciousness. Simply be humble and be aligned with this energy.  And watch as your life naturally improves. For guided meditations on connecting with the Divine, [visit our meditations](/meditations).
 
-## 3. Be loving to all of life
+### 3. Be loving to all of life
 
 The ego-self is selfish and greedy.  As your consciousness ascends and as you come into your power, your life becomes aligned with service and loving others.  Transcending the ego’s wants and fulfilling your heart’s true desires will bring you more than the momentary joy of attaining. In fact, as you serve others from your heart, all of your own human needs and desires for love, wealth, and health will be fulfilled (even without wishing for or focusing on those specific outcomes).
 
-We have arrived at the final hidden secret.
+## Missing Secret 3: Let Go and Allow
 
-This secret is subtle and even counter-intuitive.
+We have arrived at the final hidden secret. It is subtle and even counter-intuitive.
 
 Recall the basic Law of Attraction teaching, which guides you to  Ask, Believe, Receive or suggests that you can manifest whatever you think about most and believe you can have.
 
@@ -170,6 +172,8 @@ So, the secret is again not about the wanting and trying, it is about the lettin
 
 Once you’ve experienced yourself having attained whatever it is that your heart truly desires, imagine it in a bubble. Surrender that whole vision and possibility to the Divine. Allow it to float away and then let it go, totally and completely. Really let it go as if it doesn’t matter at all to you if it happens or not. Feel that if it is destined to happen, it will. If not, it won’t – and either way you have surrendered to the best possibility ever. It is all good. You are free. As you let go, feel how blessed you are already. Feel how your life is about service, and that whatever you can do to serve more, is great. You are surrendered to the highest good for all and aligned with the Divine. You are a humble servant of life and life itself is a wonderful gift. See and feel life as a cosmic entertainment. As you do this, you will feel a lightness and peace come over you. Breathe deep and allow yourself to relax. Be thankful for all of life and how rich you already are. You have already attained everything. Truly. You need nothing. You are complete. Smile on your world.
 
+## Bonus Secret: Take Inspired Action
+
 This article would not be complete without this bonus tip! One of the biggest complaints against the traditional Law of Attraction teachings is that you can simply sit on a chair all day, imagine you have a million dollars and the million dollars will show up in the mail. I think we all can tell how naive this approach is. It may be great for selling gimmicks, but useless in practice. Along with all the deeper and more subtle secrets we’ve shared – the final (and obvious) secret is:
 
 ACT NOW! Make it happen! The Law of Attraction simply will not work if you just sit on a chair and imagine things.
@@ -184,11 +188,13 @@ If you add this last step, you now have all the tools you could ever need to cre
 
 May your days be full of inner peace, smiles and laughter as you become who you were born to be. Bless the world with your life. Surrender to the highest good for all and live the miracle.
 
-## CALL TO AWAKENING
-**Free *Advanced* Law of Attraction Meditation
-(+ 2 Surprise Bonus Meditations)**
+## Free Advanced Manifestation Meditation
 
-## What people are saying about this meditation
+A guided meditation to help you connect with your heart’s true desires, surrender, and allow what wants to come to you. Plus two surprise bonus meditations.
+
+[Get the free meditation →](/meditation-gifts)
+
+### What people are saying about this meditation
 
 Wow what a powerful meditation! I was able to see everything that I have manifested all in one space. Thank you for this incredible meditation, namaste – Mallory
 
@@ -200,11 +206,11 @@ Intense waves of energy and tears of joy were brought to me through this meditat
 
 Love this meditation! Lifts me up every time I practice 🙌 – Josephine
 
-## RECAP
+## Recap
 
 1. Ask yourself the questions in this article to discover your heart’s true desires (so you avoid attracting things that cause you problems and make sure you’re attracting only your heart’s true, pure desires).
 
-2. Focus most of your energy on ascending in your level of consciousness. Sign up above for your Advanced Manifestation Meditation (plus two surprise bonus meditations).
+2. Focus most of your energy on ascending in your level of consciousness. [Get our free Advanced Manifestation Meditation](/meditation-gifts) (plus two bonus meditations).
 
 3. Apply the traditional Law of Attraction method of experiencing yourself in the now having attained your heart’s true desires. See it and feel it. Fully immerse yourself in the desired outcome. It is a done deal and you have already attained this for a long time and it is normal. Get to this level of familiarity with your visions.
 
@@ -212,9 +218,9 @@ Love this meditation! Lifts me up every time I practice 🙌 – Josephine
 
 5. Whenever you get ideas related to your heart’s true desires – act! Don’t just sit around waiting. If you have ideas, make them happen!
 
-7. Repeat the process with higher levels of humility and surrender to the Divine.
+6. Repeat the process with higher levels of humility and surrender to the Divine.
 
-8. Invest time, money and energy in your awakening and freedom. Seek to raise your level of consciousness. The more you invest in yourself, the more you’ll get back. Make sure your whole life is aligned with your values, so that you bring all of your power on board and really ground in your heart’s true desires.
+7. Invest time, money and energy in your awakening and freedom. Seek to raise your level of consciousness. The more you invest in yourself, the more you’ll get back. Make sure your whole life is aligned with your values, so that you bring all of your power on board and really ground in your heart’s true desires.
 
 You are amazing. You are powerful. You can create the life you love.
 
@@ -224,5 +230,3 @@ p.s. As each of us manifests our highest good, we create a beautiful world. As 
 
 As the Law of Attraction goes, the more you share and give with a pure heart and intention, so you receive 10+ fold.
 As you help another soul manifest their pure desires, you automatically receive the blessing of easeful manifestation and brilliant good fortune.
-
-Thank you, I have struggled with the Law of Attraction. It really never worked for me. I will give this a shot!
