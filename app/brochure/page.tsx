@@ -40,16 +40,7 @@ export default function BrochurePage() {
             </Reveal>
 
             <Reveal>
-              <div className="mx-auto mt-14 grid max-w-3xl items-center gap-8 md:grid-cols-[280px_1fr]">
-                <div className="relative mx-auto aspect-[3/4] w-full max-w-[280px] overflow-hidden rounded-sm shadow-2xl">
-                  <Image
-                    src="/images/brochure-preview.png"
-                    alt="Awakened Academy Brochure preview"
-                    fill
-                    className="object-cover object-top"
-                  />
-                </div>
-
+              <div className="mx-auto mt-14 max-w-xl">
                 <div className="rounded-md bg-teal/90 p-8 text-center shadow-2xl backdrop-blur-sm md:p-10">
                   <h2 className="font-serif text-[clamp(22px,3vw,30px)] font-light leading-[1.2] text-white">
                     Download the Awakened Academy Brochure
