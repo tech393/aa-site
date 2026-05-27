@@ -22,13 +22,14 @@ export default function BrochureOptinPage() {
   return (
     <section className="relative isolate w-full overflow-hidden">
       <Image
-        src="/images/woman-on-top-full.jpg"
-        alt="Mountain landscape"
+        src="/images/machu-picchu-sunset.jpg"
+        alt="Machu Picchu at sunset"
         fill
         priority
+        sizes="100vw"
         className="-z-10 object-cover object-center"
       />
-      <div className="absolute inset-0 -z-10 bg-gradient-to-b from-black/30 via-black/20 to-black/50" />
+      <div className="absolute inset-0 -z-10 bg-gradient-to-b from-black/35 via-black/25 to-black/55" />
 
       <div className="mx-auto flex min-h-[78vh] max-w-widest items-center px-6 py-20 md:py-28">
         <div className="mx-auto w-full">
@@ -40,15 +41,14 @@ export default function BrochureOptinPage() {
           </Reveal>
 
           <Reveal>
-            <div className="mx-auto mt-14 grid max-w-3xl items-center gap-8 md:grid-cols-[280px_1fr]">
-              <div className="relative mx-auto aspect-[3/4] w-full max-w-[280px] overflow-hidden rounded-sm shadow-2xl">
-                <Image
-                  src="/images/brochure-preview.png"
-                  alt="Awakened Academy Brochure preview"
-                  fill
-                  className="object-cover object-top"
-                />
-              </div>
+            <div className="mx-auto mt-14 grid max-w-3xl items-center gap-8 md:grid-cols-[320px_1fr]">
+              <Image
+                src="/images/brochure-preview.png"
+                alt="Awakened Academy Brochure preview"
+                width={700}
+                height={576}
+                className="mx-auto h-auto w-full max-w-[320px] rounded-sm shadow-2xl"
+              />
 
               <div className="rounded-md bg-gold/85 p-8 text-center shadow-2xl backdrop-blur-sm md:p-10">
                 <h2 className="font-serif text-[clamp(22px,3vw,30px)] font-light leading-[1.2] text-white">
