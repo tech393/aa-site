@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Your Order Is Confirmed — Dharma Keys | Awakened Academy</title>
+
+<!-- ==================================================================
+     PAID DHARMA KEYS — THANK-YOU PAGE (shown after a $17 purchase)
+     Dan: add your purchase/conversion pixel here — this page loads
+     only after a successful payment.
+     ================================================================== -->
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400;1,500&family=Cinzel:wght@400;500;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg-base: #1E0E3A;
+    --gold: #D4A94F;
+    --gold-bright: #F2D08A;
+    --gold-deep: #9E7C35;
+    --amethyst: #A864C7;
+    --cream: #FCF5E8;
+    --cream-muted: #E5D8BD;
+    --muted: #A697B8;
+    --rose: #D4A5B8;
+    --serif: 'Cormorant Garamond', Georgia, serif;
+    --display: 'Cinzel', 'Cormorant Garamond', serif;
+    --body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    background: var(--bg-base); color: var(--cream); font-family: var(--body);
+    font-weight: 300; font-size: 18px; line-height: 1.8; overflow-x: hidden;
+    -webkit-font-smoothing: antialiased; position: relative;
+  }
+  body::before {
+    content: ''; position: fixed; inset: 0;
+    background:
+      radial-gradient(ellipse 80% 60% at 20% 10%, rgba(168,100,199,0.35), transparent 60%),
+      radial-gradient(ellipse 70% 50% at 85% 75%, rgba(212,165,184,0.15), transparent 60%),
+      radial-gradient(ellipse 60% 40% at 50% 40%, rgba(107,45,142,0.4), transparent 70%);
+    pointer-events: none; z-index: 0;
+    animation: aurora 30s ease-in-out infinite alternate;
+  }
+  @keyframes aurora {
+    0% { transform: translate(0,0) scale(1); }
+    50% { transform: translate(-2%,1%) scale(1.05); }
+    100% { transform: translate(1%,-1%) scale(1); }
+  }
+  .stars { position: fixed; inset: 0; pointer-events: none; z-index: 1; }
+  .stars::before {
+    content: ''; position: absolute; inset: 0;
+    background-image:
+      radial-gradient(1.5px 1.5px at 15% 25%, rgba(255,255,255,0.85), transparent),
+      radial-gradient(1px 1px at 60% 70%, rgba(242,208,138,0.7), transparent),
+      radial-gradient(2px 2px at 80% 20%, rgba(255,255,255,0.8), transparent),
+      radial-gradient(1.5px 1.5px at 90% 50%, rgba(242,208,138,0.7), transparent),
+      radial-gradient(2.5px 2.5px at 45% 15%, rgba(242,208,138,0.8), transparent),
+      radial-gradient(1px 1px at 70% 40%, rgba(255,255,255,0.7), transparent);
+    background-repeat: repeat; background-size: 480px 480px; opacity: 0.65;
+    animation: twinkle 5s ease-in-out infinite;
+  }
+  @keyframes twinkle { 0%,100% { opacity: 0.35; } 50% { opacity: 0.7; } }
+
+  header, section, footer { position: relative; z-index: 2; }
+  .page { max-width: 600px; margin: 0 auto; padding: 0 26px 70px; }
+
+  .head { text-align: center; padding: 64px 0 8px; }
+  .eyebrow {
+    font-family: var(--display); font-size: 0.74rem; letter-spacing: 0.38em;
+    text-transform: uppercase; color: var(--gold); margin-bottom: 1.5rem;
+  }
+  h1 {
+    font-family: var(--serif); font-weight: 400; color: var(--cream);
+    font-size: clamp(2.1rem, 5.6vw, 3rem); line-height: 1.16; margin-bottom: 1.1rem;
+  }
+  h1 em { font-style: italic; color: var(--gold-bright); display: block; }
+  .sub {
+    font-size: 1.06rem; color: var(--cream); opacity: 0.92;
+    line-height: 1.7; max-width: 450px; margin: 0 auto;
+  }
+  .sub strong { color: var(--gold-bright); font-weight: 500; }
+
+  .sigil { width: 104px; height: 104px; margin: 30px auto 6px; display: block; filter: drop-shadow(0 0 22px rgba(242,208,138,0.5)); }
+  .sigil .rot { transform-origin: 60px 60px; animation: spin 70s linear infinite; }
+  @keyframes spin { to { transform: rotate(360deg); } }
+
+  .divider { display: flex; align-items: center; justify-content: center; gap: 18px; margin: 40px auto; max-width: 300px; }
+  .divider-line { flex: 1; height: 1px; background: linear-gradient(90deg, transparent, var(--gold), transparent); }
+  .divider span { color: var(--gold-bright); font-size: 0.85rem; letter-spacing: 0.3em; }
+
+  /* FORM */
+  .form-card {
+    background: radial-gradient(ellipse at top, rgba(168,100,199,0.4), transparent 60%), rgba(30,14,58,0.78);
+    border: 1.5px solid var(--gold); border-radius: 5px; padding: 36px 30px; margin: 8px 0;
+    box-shadow: 0 0 50px rgba(168,100,199,0.22), inset 0 0 50px rgba(107,45,142,0.15);
+  }
+  .form-card .eyebrow { text-align: center; display: block; margin-bottom: 0.9rem; }
+  .form-card h2 {
+    font-family: var(--serif); font-weight: 400; color: var(--cream);
+    font-size: clamp(1.55rem, 4vw, 2rem); text-align: center; line-height: 1.2; margin-bottom: 0.7rem;
+  }
+  .form-card .intro { font-size: 0.98rem; color: var(--cream-muted); text-align: center; line-height: 1.65; max-width: 420px; margin: 0 auto 1.6rem; }
+  .fg { margin-bottom: 14px; }
+  .fg label {
+    display: block; font-family: var(--display); font-size: 0.64rem; letter-spacing: 0.16em;
+    text-transform: uppercase; color: var(--gold); margin-bottom: 6px;
+  }
+  .fg label .opt { font-family: var(--body); letter-spacing: 0; text-transform: none; color: var(--muted); }
+  .fg input {
+    width: 100%; padding: 13px 15px; border: 1px solid rgba(212,169,79,0.3);
+    border-radius: 3px; background: rgba(255,255,255,0.05); color: var(--cream);
+    font-family: var(--body); font-size: 16px; font-weight: 300; outline: none;
+    transition: border-color 0.2s, background 0.2s;
+  }
+  .fg input::placeholder { color: rgba(230,216,189,0.35); }
+  .fg input:focus { border-color: var(--gold-bright); background: rgba(255,255,255,0.08); }
+  .fg input.err { border-color: var(--rose); }
+  .frow { display: flex; gap: 14px; }
+  .frow .fg { flex: 1; }
+  .form-btn {
+    width: 100%; margin-top: 8px; font-family: var(--display); font-size: 0.84rem;
+    letter-spacing: 0.2em; text-transform: uppercase; color: var(--bg-base);
+    background: linear-gradient(135deg, #F2D08A 0%, #D4A94F 45%, #A8852C 100%);
+    padding: 18px 24px; border: none; border-radius: 3px; cursor: pointer; font-weight: 600;
+    box-shadow: 0 0 30px rgba(212,169,79,0.35); transition: all 0.3s ease;
+  }
+  .form-btn:hover { transform: translateY(-2px); box-shadow: 0 0 50px rgba(242,208,138,0.5); }
+  .form-btn:disabled { opacity: 0.6; cursor: not-allowed; transform: none; }
+  .form-btn .spinner {
+    display: none; width: 20px; height: 20px; border: 2px solid rgba(30,14,58,0.3);
+    border-top-color: var(--bg-base); border-radius: 50%; animation: sp 0.6s linear infinite; margin: 0 auto;
+  }
+  @keyframes sp { to { transform: rotate(360deg); } }
+  .form-btn.loading .btxt { display: none; }
+  .form-btn.loading .spinner { display: inline-block; }
+  .form-privacy { font-size: 0.8rem; color: var(--muted); text-align: center; margin-top: 13px; line-height: 1.6; }
+  .form-err {
+    display: none; background: rgba(212,165,184,0.15); border: 1px solid var(--rose);
+    border-radius: 3px; padding: 11px 14px; margin-top: 12px; font-size: 0.86rem; color: #F0CFD9; text-align: center;
+  }
+  .form-success { display: none; text-align: center; padding: 12px 0; }
+  .form-success .tick {
+    display: inline-block; width: 50px; height: 50px; border: 2px solid var(--gold-bright);
+    border-radius: 50%; line-height: 46px; color: var(--gold-bright); font-size: 22px; margin-bottom: 12px;
+  }
+  .form-success h3 { font-family: var(--serif); font-weight: 400; font-size: 1.55rem; color: var(--cream); margin-bottom: 0.5rem; }
+  .form-success p { font-size: 0.96rem; color: var(--cream-muted); line-height: 1.65; }
+
+  /* STEPS */
+  .steps-head { text-align: center; }
+  .steps-head h2 { font-family: var(--serif); font-weight: 400; color: var(--cream); font-size: clamp(1.55rem, 4vw, 2rem); }
+  .step { display: flex; gap: 16px; align-items: flex-start; padding: 16px 0; border-bottom: 1px solid rgba(212,169,79,0.18); }
+  .step:last-child { border-bottom: none; }
+  .step-n {
+    flex-shrink: 0; width: 38px; height: 38px; display: flex; align-items: center; justify-content: center;
+    font-family: var(--serif); font-style: italic; font-size: 1.25rem; color: var(--gold-bright);
+    border: 1px solid var(--gold); border-radius: 50%;
+    background: radial-gradient(circle, rgba(168,100,199,0.3), rgba(107,45,142,0.15));
+  }
+  .step h3 { font-family: var(--body); font-size: 1.04rem; font-weight: 600; color: var(--gold-bright); margin-bottom: 0.25rem; }
+  .step p { font-size: 0.96rem; color: var(--cream-muted); line-height: 1.6; }
+
+  /* GUARANTEE */
+  .guar {
+    text-align: center; padding: 28px 26px; margin-top: 36px;
+    border: 1px solid rgba(212,169,79,0.35); border-radius: 5px; background: rgba(30,14,58,0.5);
+  }
+  .guar h3 { font-family: var(--serif); font-weight: 400; font-style: italic; color: var(--gold-bright); font-size: 1.4rem; margin-bottom: 0.6rem; }
+  .guar p { font-size: 0.98rem; color: var(--cream-muted); line-height: 1.7; max-width: 450px; margin: 0 auto; }
+
+  .close-line {
+    font-family: var(--serif); font-style: italic; font-size: clamp(1.1rem, 3vw, 1.35rem);
+    color: var(--gold-bright); text-align: center; line-height: 1.6; margin-top: 38px;
+  }
+
+  footer {
+    text-align: center; padding: 40px 20px 0; font-size: 0.78rem; color: var(--muted);
+    letter-spacing: 0.06em; line-height: 1.9;
+  }
+  footer .glyph-row { font-family: var(--display); color: var(--gold-bright); letter-spacing: 0.4em; margin-bottom: 0.8rem; font-size: 0.9rem; }
+  footer a { color: inherit; text-decoration: underline; }
+
+  @media (max-width: 600px) {
+    body { font-size: 16.5px; }
+    .head { padding: 50px 0 6px; }
+    .form-card { padding: 30px 20px; }
+    .frow { flex-direction: column; gap: 0; }
+  }
+</style>
+</head>
+<body>
+
+<div class="stars" aria-hidden="true"></div>
+
+<div class="page">
+
+  <!-- ===== ORDER CONFIRMED ===== -->
+  <div class="head">
+    <div class="eyebrow">Payment Confirmed</div>
+    <h1>Thank You.<br><em>Your Dharma Keys is on its way.</em></h1>
+    <p class="sub">Your payment went through and your reading is reserved. There's <strong>one quick step</strong> below — then our team creates your reading and sends it within 24 hours.</p>
+
+    <svg class="sigil" viewBox="0 0 120 120" aria-hidden="true">
+      <defs>
+        <linearGradient id="sg" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stop-color="#F2D08A"/><stop offset="100%" stop-color="#9E7C35"/>
+        </linearGradient>
+        <radialGradient id="sgGlow">
+          <stop offset="0%" stop-color="#A864C7" stop-opacity="0.55"/><stop offset="100%" stop-color="#A864C7" stop-opacity="0"/>
+        </radialGradient>
+      </defs>
+      <circle cx="60" cy="60" r="58" fill="url(#sgGlow)"/>
+      <g class="rot" stroke="url(#sg)" stroke-width="0.8" fill="none" opacity="0.92">
+        <circle cx="60" cy="60" r="54" stroke-width="0.6"/>
+        <circle cx="60" cy="44" r="16"/><circle cx="60" cy="76" r="16"/>
+        <circle cx="46.1" cy="52" r="16"/><circle cx="73.9" cy="52" r="16"/>
+        <circle cx="46.1" cy="68" r="16"/><circle cx="73.9" cy="68" r="16"/>
+        <circle cx="60" cy="60" r="16"/>
+      </g>
+      <g stroke="#F2D08A" stroke-width="0.7" fill="none" opacity="0.95">
+        <path d="M 60 49 L 69 69 L 49 56 L 71 56 L 51 69 Z"/>
+      </g>
+      <circle cx="60" cy="60" r="2" fill="#F2D08A"/>
+    </svg>
+  </div>
+
+  <!-- ===== BIRTH DETAILS FORM =====
+       Dan: this collects the birth data the reading is built from.
+       If your checkout already captures birth date / time / place, you can
+       delete this entire .form-card block — the rest of the page still works.
+       Otherwise: create a GHL Inbound Webhook and paste its URL in CONFIG below. -->
+  <div class="form-card">
+    <span class="eyebrow">One Quick Step</span>
+    <h2>Send Us Your Birth Details</h2>
+    <p class="intro">Your reading is calculated from your birth chart, so we need three things. The more exact your birth time, the more precise your reading — your best estimate is fine if you're not certain.</p>
+
+    <form id="birth-form" novalidate>
+      <div class="fg">
+        <label for="firstName">First Name</label>
+        <input type="text" id="firstName" name="first_name" placeholder="Your first name" required autocomplete="given-name">
+      </div>
+      <div class="fg">
+        <label for="email">Email <span class="opt">(the one you ordered with)</span></label>
+        <input type="email" id="email" name="email" placeholder="your@email.com" required autocomplete="email">
+      </div>
+      <div class="fg">
+        <label for="dob">Date of Birth</label>
+        <input type="date" id="dob" name="date_of_birth" required>
+      </div>
+      <div class="frow">
+        <div class="fg">
+          <label for="birthTime">Time of Birth <span class="opt">(optional)</span></label>
+          <input type="time" id="birthTime" name="birth_time">
+        </div>
+        <div class="fg">
+          <label for="birthPlace">Place of Birth</label>
+          <input type="text" id="birthPlace" name="birth_place" placeholder="City, Country" required>
+        </div>
+      </div>
+      <button type="submit" class="form-btn" id="submitBtn">
+        <span class="btxt">Send My Birth Details &rarr;</span>
+        <span class="spinner"></span>
+      </button>
+      <div class="form-err" id="formError" role="alert"></div>
+    </form>
+
+    <div class="form-success" id="formSuccess" role="alert">
+      <div class="tick">&#10003;</div>
+      <h3>Got It — Your Reading Is Being Created</h3>
+      <p>Your Dharma Keys reading will arrive in your inbox within 24 hours. If you don't see it, check your spam or promotions folder.</p>
+    </div>
+
+    <p class="form-privacy">Your details are private, never shared, and used only to create your reading.</p>
+  </div>
+
+  <div class="divider"><span class="divider-line"></span><span>&#10022;</span><span class="divider-line"></span></div>
+
+  <!-- ===== WHAT HAPPENS NEXT ===== -->
+  <div class="steps-head">
+    <span class="eyebrow">What Happens Next</span>
+    <h2>From Here to Your Reading</h2>
+  </div>
+  <div style="margin-top: 14px;">
+    <div class="step">
+      <div class="step-n">1</div>
+      <div><h3>You send your birth details</h3><p>The short form above — it takes about a minute.</p></div>
+    </div>
+    <div class="step">
+      <div class="step-n">2</div>
+      <div><h3>We create your reading</h3><p>Your birth chart is read through the system Michael built over twenty years — his dharma-coaching framework applied to your exact chart, so the reading is genuinely personal to you.</p></div>
+    </div>
+    <div class="step">
+      <div class="step-n">3</div>
+      <div><h3>It lands in your inbox</h3><p>Your complete Dharma Keys reading arrives by email within 24 hours, as a PDF — yours to keep for good.</p></div>
+    </div>
+  </div>
+
+  <!-- ===== GUARANTEE ===== -->
+  <div class="guar">
+    <h3>You're covered.</h3>
+    <p>Read your Dharma Keys and sit with it for 30 days. If it doesn't feel like the most accurate, personal reading you've ever received, email us for a full refund. You keep the reading either way.</p>
+  </div>
+
+  <p class="close-line">Your path is about to become a lot clearer.</p>
+
+  <footer>
+    <div class="glyph-row">&#9737; &#9789;</div>
+    Awakened Academy&reg; &middot; The Dharma Keys Reading<br>
+    <a href="https://www.awakenedacademy.com/privacy-policy">Privacy Policy</a> &middot; <a href="https://www.awakenedacademy.com/terms">Terms of Use</a>
+  </footer>
+
+</div>
+
+<script>
+(function(){
+  'use strict';
+  // ============================================================
+  // CONFIG — Dan: create a GHL Inbound Webhook, paste its URL here.
+  // Until it's set, the form runs in TEST MODE (shows success,
+  // logs to console, sends nothing).
+  // ============================================================
+  var CONFIG = {
+    GHL_WEBHOOK_URL: 'YOUR_GHL_INBOUND_WEBHOOK_URL_HERE',
+    SUBMIT_TIMEOUT: 15000
+  };
+
+  var params = new URLSearchParams(window.location.search);
+  var form = document.getElementById('birth-form'),
+      btn = document.getElementById('submitBtn'),
+      errBox = document.getElementById('formError'),
+      okBox = document.getElementById('formSuccess'),
+      busy = false;
+  if (!form) return;
+
+  form.addEventListener('submit', function(e){
+    e.preventDefault();
+    if (busy) return;
+    busy = true;
+    errBox.style.display = 'none';
+    var marked = form.querySelectorAll('input.err');
+    for (var i = 0; i < marked.length; i++) marked[i].classList.remove('err');
+
+    var firstName = val('firstName'), email = val('email'), dob = val('dob'),
+        birthTime = val('birthTime'), birthPlace = val('birthPlace'), bad = false;
+    if (!firstName) { flag('firstName'); bad = true; }
+    if (!email || !okEmail(email)) { flag('email'); bad = true; }
+    if (!dob) { flag('dob'); bad = true; }
+    if (!birthPlace) { flag('birthPlace'); bad = true; }
+    if (bad) { showErr('Please fill in all required fields.'); busy = false; return; }
+
+    var payload = {
+      first_name: firstName, email: email, date_of_birth: dob,
+      birth_time: birthTime || '', birth_place: birthPlace,
+      source: 'dharma-keys-paid-thankyou',
+      order_id: params.get('order_id') || params.get('orderId') || '',
+      contact_id: params.get('contact_id') || params.get('contactId') || '',
+      page_url: window.location.href
+    };
+
+    if (CONFIG.GHL_WEBHOOK_URL === 'YOUR_GHL_INBOUND_WEBHOOK_URL_HERE') {
+      console.warn('[Dharma Keys] TEST MODE — webhook URL not configured.');
+      console.log('[Dharma Keys] Birth details payload:', payload);
+      showOk();
+      return;
+    }
+
+    btn.classList.add('loading'); btn.disabled = true;
+    var to = setTimeout(function(){
+      btn.classList.remove('loading'); btn.disabled = false; busy = false;
+      showErr('Request timed out. Please check your connection and try again.');
+    }, CONFIG.SUBMIT_TIMEOUT);
+
+    fetch(CONFIG.GHL_WEBHOOK_URL, {
+      method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(payload)
+    })
+    .then(function(r){ clearTimeout(to); if (!r.ok) throw new Error('Server ' + r.status); showOk(); })
+    .catch(function(err){
+      clearTimeout(to);
+      console.error('[Dharma Keys] submit error:', err);
+      fetch(CONFIG.GHL_WEBHOOK_URL, {
+        method: 'POST', mode: 'no-cors', headers: { 'Content-Type': 'text/plain' }, body: JSON.stringify(payload)
+      })
+      .then(function(){ showOk(); })
+      .catch(function(){
+        showErr('Something went wrong. Please email support@awakenedacademy.com with your birth details and we will create your reading.');
+        btn.classList.remove('loading'); btn.disabled = false; busy = false;
+      });
+    });
+  });
+
+  function val(id){ return (document.getElementById(id).value || '').trim(); }
+  function flag(id){ document.getElementById(id).classList.add('err'); }
+  function okEmail(e){ return /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/.test(e); }
+  function showErr(m){ errBox.textContent = m; errBox.style.display = 'block'; }
+  function showOk(){ form.style.display = 'none'; okBox.style.display = 'block'; okBox.scrollIntoView({ behavior: 'smooth', block: 'center' }); }
+})();
+</script>
+
+</body>
+</html>
