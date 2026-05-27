@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
@@ -105,7 +105,7 @@ export default function MobileNav() {
         {/* Sticky CTA + contact strip */}
         <div className="border-t border-ink/10 bg-warm px-6 py-5">
           <Link
-            href="/spiritual-life-coach-certification#program-info"
+            href="/download-free-brochure"
             onClick={() => setOpen(false)}
             className="block w-full rounded bg-gold py-3.5 text-center text-[13px] font-medium text-white shadow-sm transition hover:bg-gold-dark"
           >

@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import MobileNav from "@/components/MobileNav";
+import HeaderBrochureCTA from "@/components/HeaderBrochureCTA";
 import { SITE } from "@/lib/site-config";
 
 const ABOUT_SUBMENU = [
@@ -70,9 +71,7 @@ export default function SiteHeader() {
           </nav>
 
           <div className="flex items-center gap-3">
-            <Link href="/spiritual-life-coach-certification#program-info" className="hidden rounded bg-gold px-5 py-2.5 text-[12px] font-medium text-white transition hover:bg-gold-dark sm:block">
-              Download Free Brochure
-            </Link>
+            <HeaderBrochureCTA />
             <MobileNav />
           </div>
         </div>

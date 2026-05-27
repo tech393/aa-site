@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
 import Reveal from "@/components/Reveal";
@@ -107,7 +107,7 @@ export default function DharmaCoursePage() {
               ten years of dharma teaching distilled into a complete training and business.
             </p>
             <div className="mt-9 flex flex-wrap justify-center gap-4">
-              <Link href="/spiritual-life-coach-certification#program-info" className="btn-gold">
+              <Link href="/download-free-brochure" className="btn-gold">
                 Download Free Brochure
               </Link>
               <Link href="/schedule" className="btn-ghost-teal !border-white !text-white hover:!bg-white hover:!text-teal">

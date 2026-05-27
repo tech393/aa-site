@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
 import Reveal from "@/components/Reveal";
@@ -151,7 +151,7 @@ export default function WhereWeAreComingFromPage() {
             </div>
 
             <div className="mt-14 flex flex-wrap justify-center gap-4">
-              <Link href="/spiritual-life-coach-certification#program-info" className="btn-teal">Download Free Brochure</Link>
+              <Link href="/download-free-brochure" className="btn-teal">Download Free Brochure</Link>
               <Link href="/schedule" className="btn-ghost-teal">Book a Discovery Call</Link>
             </div>
           </Reveal>

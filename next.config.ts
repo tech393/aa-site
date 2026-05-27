@@ -1,4 +1,4 @@
-import type { NextConfig } from "next";
+﻿import type { NextConfig } from "next";
 
 const config: NextConfig = {
   reactStrictMode: true,
@@ -15,6 +15,12 @@ const config: NextConfig = {
   async redirects() {
     return [
 
+    // Cert page redesign promoted: /cert-manus -> /spiritual-life-coach-certification (May 2026)
+    { source: "/cert-manus", destination: "/spiritual-life-coach-certification", permanent: true },
+    // Brochure opt-in funnel rename history (May 2026):
+    //   /brochure-optin -> /brochure-download -> /download-free-brochure
+    { source: "/brochure-optin", destination: "/download-free-brochure", permanent: true },
+    { source: "/brochure-download", destination: "/download-free-brochure", permanent: true },
     // Podcast rebrand: theawakenedlife -> dont-die-with-your-song-inside (May 2026)
     { source: "/theawakenedlife", destination: "/dont-die-with-your-song-inside", permanent: true },
     // Reviews consolidated into Wall of Gratitude (May 2026 — 47-card grid replaced by 313-testimonial WOG rebuild)

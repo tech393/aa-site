@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
 import { notFound } from "next/navigation";
@@ -162,7 +162,7 @@ function BlogPostView({ post }: { post: ReturnType<typeof getBlogPost> & {} }) {
                 </div>
               </div>
               <Link
-                href="/spiritual-life-coach-certification#program-info"
+                href="/spiritual-life-coach-certification"
                 className="hidden rounded border border-teal px-4 py-2 text-[13px] font-medium text-teal transition hover:bg-teal hover:text-white sm:inline-block"
               >
                 Get certified
@@ -209,7 +209,7 @@ function BlogPostView({ post }: { post: ReturnType<typeof getBlogPost> & {} }) {
                 Download the brochure or book a free discovery call to see if the certification is the right next step.
               </p>
               <div className="mt-7 flex flex-wrap justify-center gap-3">
-                <Link href="/spiritual-life-coach-certification#program-info" className="btn-teal">Download Free Brochure</Link>
+                <Link href="/download-free-brochure" className="btn-teal">Download Free Brochure</Link>
                 <Link href="/schedule" className="btn-ghost-teal">Book a Discovery Call</Link>
               </div>
             </div>
@@ -293,7 +293,7 @@ function ProgramPageView({ program }: { program: ReturnType<typeof getProgramPag
           {/* CTA */}
           <Reveal>
             <div className="mt-16 flex flex-wrap justify-center gap-4">
-              <Link href="/spiritual-life-coach-certification#program-info" className="btn-teal">Download Free Brochure</Link>
+              <Link href="/download-free-brochure" className="btn-teal">Download Free Brochure</Link>
               <Link href="/schedule" className="btn-ghost-teal">Book a Discovery Call</Link>
             </div>
           </Reveal>

@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
 import Reveal from "@/components/Reveal";
@@ -270,7 +270,7 @@ export default function MichaelMackintoshPage() {
             </p>
             <div className="mt-9 flex flex-wrap justify-center gap-4">
               <Link
-                href="/spiritual-life-coach-certification#program-info"
+                href="/download-free-brochure"
                 className="inline-block rounded bg-gold px-7 py-3.5 text-[13px] font-medium text-white transition hover:bg-gold-dark"
               >
                 Download Free Brochure
