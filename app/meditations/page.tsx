@@ -24,6 +24,29 @@ const MEDITATIONS = [
   { name: "Releasing &amp; Letting Go Into Peace", url: "https://insig.ht/gm_83968", image: "/images/meditations/releasing-peace.jpeg" },
 ];
 
+const ARCHIVE = [
+  {
+    title: "Completely Relaxed Meditation",
+    subtitle: "A long-form practice to drop into deep stillness. Headphones recommended.",
+    audio: "/audio/meditations/Completely-Relaxed-Meditation.mp3",
+  },
+  {
+    title: "Hand of Blessings",
+    subtitle: "Receive and give blessings — an early Awakened Academy classic.",
+    audio: "/audio/meditations/Hand-of-Blessings.mp3",
+  },
+  {
+    title: "Feel-Good and Smile Meditation",
+    subtitle: "A gentle morning practice for lifting state and softening the day.",
+    audio: "/audio/meditations/Feel-Good-and-Smile-Meditation.mp3",
+  },
+  {
+    title: "Ease and Grace in Social Situations",
+    subtitle: "Give and receive blessings — for the spaces that ask the most of you.",
+    audio: "/audio/meditations/Experience-Ease-and-Grace-In-Social-Situations-Give-and-Receive-Blessings.mp3",
+  },
+];
+
 export default function MeditationsPage() {
   return (
     <>
@@ -114,8 +137,57 @@ export default function MeditationsPage() {
         </div>
       </section>
 
-      {/* TEACHERS */}
+      {/* ARCHIVE — original 2014-2015 recordings */}
       <section className="bg-warm">
+        <div className="mx-auto max-w-wide px-6 py-20">
+          <Reveal>
+            <div className="text-center">
+              <span className="eyebrow">From the Archive</span>
+              <h2 className="mt-3 font-serif text-[clamp(26px,4vw,38px)] font-light text-ink">
+                The original recordings, <em>preserved in full</em>
+              </h2>
+              <div className="gold-line mt-6" />
+              <p className="mx-auto mt-6 max-w-xl text-[16px] leading-[1.7] text-ink2">
+                The earliest Awakened Academy meditations, recorded by Michael
+                between 2014 and 2015. Long-form, single-track, and free to
+                listen here without leaving the site.
+              </p>
+            </div>
+          </Reveal>
+
+          <div className="mt-12 grid gap-5 md:grid-cols-2">
+            {ARCHIVE.map((m) => (
+              <Reveal key={m.audio}>
+                <article className="flex h-full flex-col rounded-md border border-ink/10 bg-white p-6 shadow-sm">
+                  <div className="text-[10px] font-semibold uppercase tracking-[0.22em] text-gold-deep">
+                    Original Recording
+                  </div>
+                  <h3 className="mt-2 font-serif text-[20px] leading-[1.3] text-ink">
+                    {m.title}
+                  </h3>
+                  <p className="mt-2 text-[14.5px] leading-[1.6] text-ink2">
+                    {m.subtitle}
+                  </p>
+                  <audio
+                    controls
+                    preload="none"
+                    className="mt-5 w-full"
+                    src={m.audio}
+                  >
+                    Your browser does not support the audio element.
+                  </audio>
+                  <p className="mt-3 text-[12px] text-soft">
+                    Best with headphones. Right-click the player to download.
+                  </p>
+                </article>
+              </Reveal>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* TEACHERS */}
+      <section className="bg-bg">
         <div className="mx-auto max-w-widest px-6 py-20">
           <Reveal>
             <div className="text-center">
