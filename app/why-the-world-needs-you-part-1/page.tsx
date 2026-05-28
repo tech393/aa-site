@@ -38,7 +38,14 @@ export default function Page() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
-      <EssayLayout essay={essay} prev={PREV} next={NEXT} />
+      <EssayLayout
+        essay={essay}
+        prev={PREV}
+        next={NEXT}
+        heroImage="/images/blog/spiritual-awakening-above-clouds.jpg"
+        heroEyebrow="The Foundational Essay · A Three-Part Series"
+        series={{ part: 1, total: 3, label: "The Times We're Living In" }}
+      />
     </>
   );
 }

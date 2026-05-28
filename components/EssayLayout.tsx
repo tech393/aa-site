@@ -6,13 +6,24 @@ import { type Essay } from "@/lib/essays";
 import { SITE } from "@/lib/site-config";
 
 type NavLink = { slug: string; title: string };
+type Series = { part: number; total: number; label: string };
 type Props = {
   essay: Essay;
   prev?: NavLink;
   next?: NavLink;
+  heroImage?: string;
+  heroEyebrow?: string;
+  series?: Series;
 };
 
-export default function EssayLayout({ essay, prev, next }: Props) {
+export default function EssayLayout({
+  essay,
+  prev,
+  next,
+  heroImage = "/images/golden-light.jpg",
+  heroEyebrow = "Cornerstone Essay",
+  series,
+}: Props) {
   // Show TOC when there are >=3 H2 entries; truncate to first 12 if too many
   const showToc = essay.toc_h2s.length >= 3;
   const tocItems = essay.toc_h2s.slice(0, 12);
@@ -34,15 +45,53 @@ export default function EssayLayout({ essay, prev, next }: Props) {
 
       {/* HERO */}
       <section className="relative isolate w-full overflow-hidden">
-        <Image src="/images/golden-light.jpg" alt="" fill priority className="-z-10 object-cover object-center" />
-        <div className="absolute inset-0 -z-10 bg-gradient-to-b from-black/55 via-black/40 to-black/65" />
-        <div className="mx-auto max-w-wide px-6 py-24 text-center text-white md:py-28">
+        <Image src={heroImage} alt="" fill priority sizes="100vw" className="-z-10 object-cover object-center" />
+        {/* Layered overlays for legibility + warmth */}
+        <div className="absolute inset-0 -z-10 bg-gradient-to-b from-black/65 via-black/45 to-black/75" />
+        <div className="absolute inset-0 -z-10 bg-[radial-gradient(ellipse_at_center,_rgba(0,0,0,0)_0%,_rgba(0,0,0,0.35)_70%)]" />
+        <div className="mx-auto max-w-wide px-6 py-28 text-center text-white md:py-36">
           <Reveal>
-            <span className="eyebrow !text-gold-lt">Cornerstone Essay</span>
-            <h1 className="mt-4 font-serif text-[clamp(28px,5vw,52px)] font-light leading-[1.1]">
+            <span className="eyebrow !text-gold-lt">{heroEyebrow}</span>
+
+            {/* Series progress indicator */}
+            {series && (
+              <div className="mt-5 flex items-center justify-center gap-3 text-[11px] uppercase tracking-[0.28em] text-white/75">
+                <span className="font-sans">{series.label}</span>
+                <span className="flex items-center gap-1.5" aria-hidden>
+                  {Array.from({ length: series.total }).map((_, i) => {
+                    const idx = i + 1;
+                    const isActive = idx === series.part;
+                    const isPast = idx < series.part;
+                    return (
+                      <span
+                        key={i}
+                        className={
+                          isActive
+                            ? "h-1.5 w-6 rounded-full bg-gold-lt"
+                            : isPast
+                            ? "h-1.5 w-2 rounded-full bg-white/60"
+                            : "h-1.5 w-2 rounded-full bg-white/25"
+                        }
+                      />
+                    );
+                  })}
+                </span>
+                <span className="font-sans">Part {series.part} of {series.total}</span>
+              </div>
+            )}
+
+            <h1 className="mt-6 font-serif text-[clamp(30px,5.5vw,58px)] font-light leading-[1.08] tracking-[-0.005em]">
               {essay.title}
             </h1>
-            <div className="mt-7 flex flex-wrap items-center justify-center gap-x-4 gap-y-1 text-[12.5px] text-white/85">
+
+            {/* Gold ornament divider */}
+            <div className="mt-8 flex items-center justify-center gap-3" aria-hidden>
+              <span className="h-px w-10 bg-gold-lt/60" />
+              <span className="h-1.5 w-1.5 rotate-45 bg-gold-lt/80" />
+              <span className="h-px w-10 bg-gold-lt/60" />
+            </div>
+
+            <div className="mt-6 flex flex-wrap items-center justify-center gap-x-4 gap-y-1 text-[12.5px] text-white/85">
               <span>
                 By{" "}
                 <Link href="/about/michael-mackintosh" className="underline-offset-4 hover:underline">
