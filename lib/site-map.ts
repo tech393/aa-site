@@ -9,6 +9,7 @@ import {
 import { DHARMA_COURSE } from "@/lib/dharma-course";
 import { EP_COURSE } from "@/lib/ep-course";
 import { SP_COURSE } from "@/lib/sp-course";
+import { AWAKENED_LIFE } from "@/lib/awakened-life";
 import { coaches } from "@/lib/coaches";
 
 export type SiteLink = { href: string; label: string };
@@ -176,13 +177,14 @@ function titleFromHtml(filePath: string, fallbackSlug: string): string {
 // Standalone landing pages dropped into public/ (each is a folder containing
 // index.html). Served by Next as static files, so they don't appear in the
 // app/ routing tree.
-function discoverPublicLandingPages(): { href: string; label: string }[] {
+function discoverPublicLandingPages(skip: Set<string>): { href: string; label: string }[] {
   if (!fs.existsSync(PUBLIC_DIR)) return [];
   const pages: { href: string; label: string }[] = [];
   for (const entry of fs.readdirSync(PUBLIC_DIR, { withFileTypes: true })) {
     if (!entry.isDirectory()) continue;
     // /migrated/ is the WP image mirror, not a landing page.
     if (entry.name === "migrated") continue;
+    if (skip.has(entry.name)) continue;
     const indexPath = path.join(PUBLIC_DIR, entry.name, "index.html");
     if (!fs.existsSync(indexPath)) continue;
     pages.push({
@@ -311,7 +313,21 @@ export function buildSiteMap(): SiteMap {
     });
   }
 
-  const publicLandings = discoverPublicLandingPages();
+  if (AWAKENED_LIFE.length) {
+    sections.push({
+      title: "The Awakened Life — videos",
+      note: "Free 4-part video series. Opt-in at /awakened-life; videos served as static HTML from /public/.",
+      links: AWAKENED_LIFE.map((v) => ({
+        href: `/${v.slug}`,
+        label: `${v.number}. ${v.title}`,
+      })),
+    });
+  }
+
+  // Don't double-list the awakened-life videos under the generic landing
+  // pages bucket — they have their own grouped section above.
+  const awakenedLifeSlugs = new Set(AWAKENED_LIFE.map((v) => v.slug));
+  const publicLandings = discoverPublicLandingPages(awakenedLifeSlugs);
   if (publicLandings.length) {
     sections.push({
       title: "Static landing pages",
