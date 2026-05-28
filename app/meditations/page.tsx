@@ -2,6 +2,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import Reveal from "@/components/Reveal";
+import { audioUrl } from "@/lib/audio";
 
 export const metadata: Metadata = {
   title: { absolute: "Meditation with Michael Mackintosh & Arielle Hecht" },
@@ -28,22 +29,22 @@ const ARCHIVE = [
   {
     title: "Completely Relaxed Meditation",
     subtitle: "A long-form practice to drop into deep stillness. Headphones recommended.",
-    audio: "/audio/meditations/Completely-Relaxed-Meditation.mp3",
+    audio: audioUrl("/audio/meditations/Completely-Relaxed-Meditation.mp3"),
   },
   {
     title: "Hand of Blessings",
     subtitle: "Receive and give blessings — an early Awakened Academy classic.",
-    audio: "/audio/meditations/Hand-of-Blessings.mp3",
+    audio: audioUrl("/audio/meditations/Hand-of-Blessings.mp3"),
   },
   {
     title: "Feel-Good and Smile Meditation",
     subtitle: "A gentle morning practice for lifting state and softening the day.",
-    audio: "/audio/meditations/Feel-Good-and-Smile-Meditation.mp3",
+    audio: audioUrl("/audio/meditations/Feel-Good-and-Smile-Meditation.mp3"),
   },
   {
     title: "Ease and Grace in Social Situations",
     subtitle: "Give and receive blessings — for the spaces that ask the most of you.",
-    audio: "/audio/meditations/Experience-Ease-and-Grace-In-Social-Situations-Give-and-Receive-Blessings.mp3",
+    audio: audioUrl("/audio/meditations/Experience-Ease-and-Grace-In-Social-Situations-Give-and-Receive-Blessings.mp3"),
   },
 ];
 

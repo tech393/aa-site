@@ -25,6 +25,7 @@ import { useRef, useState, useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import Reveal from '@/components/Reveal';
+import { audioUrl } from '@/lib/audio';
 
 // ───────────────────────────────────────────────────────────────────────────
 // Data, verbatim from the WP /miracle page. No invented copy.
@@ -34,27 +35,27 @@ type AudioTrack = { number: number; title: string; src: string };
 
 const TRAININGS: AudioTrack[] = [
   { number: 1, title: 'Miracle Journal Explanation',
-    src: '/audio/miracle/01-1-Miracle-Journal-Explanation.mp3' },
+    src: audioUrl('/audio/miracle/01-1-Miracle-Journal-Explanation.mp3') },
   { number: 2, title: 'Creating Your Sacred Intentions',
-    src: '/audio/miracle/02-2-Creating-Your-Sacred-Intentions.mp3' },
+    src: audioUrl('/audio/miracle/02-2-Creating-Your-Sacred-Intentions.mp3') },
   { number: 3, title: 'Sacred Appreciation & Feel The Gratitude',
-    src: '/audio/miracle/3-Sacred-Appreciation-Feel-The-Gratitude.mp3' },
+    src: audioUrl('/audio/miracle/3-Sacred-Appreciation-Feel-The-Gratitude.mp3') },
   { number: 4, title: 'Yes! It Is Done',
-    src: '/audio/miracle/04-4-Yes-It-Is-Done.mp3' },
+    src: audioUrl('/audio/miracle/04-4-Yes-It-Is-Done.mp3') },
   { number: 5, title: 'Your Sacred Rituals & Inspired Actions',
-    src: '/audio/miracle/5-Your-Sacred-Rituals-Inspired-Actions.mp3' },
+    src: audioUrl('/audio/miracle/5-Your-Sacred-Rituals-Inspired-Actions.mp3') },
   { number: 6, title: 'Your Weekly Reflections',
-    src: '/audio/miracle/7-Your-Weekly-Reflections.mp3' },
+    src: audioUrl('/audio/miracle/7-Your-Weekly-Reflections.mp3') },
   { number: 7, title: 'How To Make Sure You Do It!!',
-    src: '/audio/miracle/8-How-To-Make-Sure-You-Do-It.mp3' },
+    src: audioUrl('/audio/miracle/8-How-To-Make-Sure-You-Do-It.mp3') },
   { number: 8, title: 'Missing Manifestation Secret (Simple but essential)',
-    src: '/audio/miracle/Missing-Manifestation-Secret-Simple-but-essential.mp3' }
+    src: audioUrl('/audio/miracle/Missing-Manifestation-Secret-Simple-but-essential.mp3') }
 ];
 
 const BONUS_TRACK: AudioTrack = {
   number: 0,
   title: 'BONUS: Advanced Law Of Attraction Training',
-  src: '/audio/miracle/Advanced-Law-Of-Attraction-Training.mp3'
+  src: audioUrl('/audio/miracle/Advanced-Law-Of-Attraction-Training.mp3')
 };
 
 const INTRO_PARAGRAPH =
