@@ -120,8 +120,9 @@ export default function MichaelMackintoshPage() {
                 </p>
                 <p>
                   An international bestselling author and spiritual teacher, he has guided more than
-                  1,250 students across 25+ countries through Awakened Academy's certification, and
-                  reached millions through meditations, podcasts, and writing.
+                  1,250 students across 25+ countries through Awakened Academy's certification &mdash;
+                  with 650+ going on to complete certification &mdash; and reached millions through
+                  meditations, podcasts, and writing.
                 </p>
                 <p>
                   Every Awakened Academy certification student receives 1-on-1 access to Michael as
@@ -214,7 +215,7 @@ export default function MichaelMackintoshPage() {
               name="Awakened Academy"
               role="Founder · Lead Mentor"
               year="2014"
-              description="The flagship spiritual life coach certification, trusted by 1,250+ students across 25+ countries."
+              description="The flagship spiritual life coach certification. 1,250+ students enrolled across 25+ countries, 650+ now certified coaches."
             />
             <ProjectCard
               name="Liberated Life Productions"

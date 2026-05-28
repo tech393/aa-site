@@ -124,14 +124,14 @@ export default function AboutPage() {
                 <p className="text-[15px] leading-[1.75] text-ink2">
                   Michael began teaching what would later be called spiritual life coaching in 2004,
                   before the term existed, in a small room opposite King's College, Cambridge.
-                  Twenty years of daily meditation and a personal journey through addiction,
+                  28 years of daily meditation and a personal journey through addiction,
                   depression, and awakening became the foundation of the work.
                 </p>
                 <p className="text-[15px] leading-[1.75] text-ink2">
                   An international bestselling author and host of the <em>Don't Die With Your Song
                   Inside</em> podcast, Michael has co-founded Superhero Training, Ombar Chocolate,
                   Awakened Academy, and Liberated Life Productions. His meditations on Insight
-                  Timer have been reviewed 125,000+ times.
+                  Timer have been reviewed 85,000+ times.
                 </p>
                 <p className="text-[15px] leading-[1.75] text-ink2">
                   Today Michael lives on the island of Kauai, mentors students 1-on-1 as part of

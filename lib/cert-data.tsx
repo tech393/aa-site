@@ -106,7 +106,7 @@ export const FAQ_ITEMS = [
   { q: "How do I know if spiritual life coaching is right for me?", a: "Spiritual life coaching is one of the most fulfilling careers in the world. Who wouldn't want to be paid to expand their own personal and spiritual growth while helping others do the same? On your discovery call we'll walk through your situation, what you're called to, and whether this work is the right fit." },
   { q: "How many hours per week should I commit?", a: "The Academy is self-paced, you decide how many hours to put in each week. Consider what is realistic for your life, and go for that. Many students dedicate 3–8 hours per week and complete the program comfortably alongside work or family commitments." },
   { q: "Do you offer payment plans?", a: "Absolutely. We offer several payment plan options. We'll walk through them with you on your discovery call to find one that fits your situation." },
-  { q: "How much is the tuition?", a: "Tuition ranges from $3,000 to $9,000+ depending on the level of support you choose. Payment plans are available. We'll go through the options with you on your discovery call." },
+  { q: "How much is the tuition?", a: "The core certification is $3,000 to $9,000+ depending on the level of support you choose, plus a $1,000 entry option for students who want to start the path before committing to the full program. Payment plans are available. We'll walk through every option with you on your discovery call." },
   { q: "Do I have access to the founder, Michael?", a: "Yes. You receive 1-on-1 access to Michael as part of the program, plus twice-monthly live group calls where you can ask questions, receive deep insights, and get feedback directly from Michael." },
   { q: "Can I do this program while working a full-time job or being a full-time parent?", a: "Yes. Many of our students are full-time workers, students, and parents. A core part of what you'll learn in the Academy is how to simplify your life and create new habits, so the program itself becomes an exercise in the time and energy work you'll later teach your own clients." },
   { q: "I'm already a coach, will this be repetitive?", a: "No. This is a one-of-a-kind training that will enhance your current practice. You'll be able to go deeper with your clients, integrate spiritual transformation into your existing methodology, and access the inner work that most coaching trainings skip entirely." },
@@ -119,7 +119,7 @@ export const FAQ_ITEMS = [
 export const FAQ_PLAIN_TEXT: { q: string; a: string }[] = [
   { q: "Is spiritual coach certification worth it?", a: "Yes, obtaining a spiritual life coach certification can be incredibly worthwhile. It provides structured training, credibility, proven methods, and the confidence to effectively guide clients." },
   { q: "How long does it take to become a certified spiritual life coach?", a: "Our online Spiritual Life Coach Certification is designed to be completed in about 3–6 months on a fast track, 6–12 months at a typical pace, or up to 18 months fully self-paced." },
-  { q: "How much is the tuition?", a: "Tuition ranges from $3,000 to $9,000+ depending on the level of support you choose. Payment plans are available." },
+  { q: "How much is the tuition?", a: "The core certification is $3,000 to $9,000+ depending on the level of support, plus a $1,000 entry option. Payment plans are available." },
   { q: "Does Awakened Academy come with a guarantee?", a: "We offer a 14-day refund window from program start." },
 ];
 
