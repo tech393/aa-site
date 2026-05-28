@@ -46,7 +46,7 @@ export default function EPSeriesIndex() {
                 href={`/ep/${EP_COURSE[0].slug}`}
                 className="inline-flex items-center justify-center rounded bg-gold px-7 py-3.5 text-[15px] font-medium text-white shadow-md transition hover:bg-gold-deep"
               >
-                Watch Video 1 →
+                Start with Lesson 1 →
               </Link>
             </div>
           </Reveal>
@@ -77,14 +77,16 @@ export default function EPSeriesIndex() {
                       {String(l.number).padStart(2, "0")}
                     </span>
                     <span className="text-[10px] font-semibold uppercase tracking-[0.18em] text-teal">
-                      Video
+                      {l.youtubeId ? "Video" : "Essay"}
                     </span>
                   </div>
                   <h3 className="mt-4 font-serif text-[20px] leading-[1.3] text-ink group-hover:text-teal">
                     {l.title}
                   </h3>
                   <p className="mt-3 flex-1 text-[14.5px] leading-[1.7] text-ink2">{l.subtitle}</p>
-                  <div className="mt-5 text-[12px] font-medium text-teal">Watch →</div>
+                  <div className="mt-5 text-[12px] font-medium text-teal">
+                    {l.youtubeId ? "Watch →" : "Read →"}
+                  </div>
                 </Link>
               </Reveal>
             ))}

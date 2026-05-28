@@ -59,7 +59,7 @@ export default async function Page({ params }: { params: Promise<Params> }) {
               ← EnlightenedPreneurs Video Series
             </Link>
             <div className="mt-5 text-[11px] font-semibold uppercase tracking-[0.22em] text-teal">
-              Video {lesson.number} of {total}
+              Lesson {lesson.number} of {total}
             </div>
             <h1 className="mt-4 font-serif text-[clamp(28px,5vw,46px)] leading-[1.1] text-ink">
               {lesson.title}
@@ -71,23 +71,25 @@ export default async function Page({ params }: { params: Promise<Params> }) {
         </div>
       </section>
 
-      <section className="bg-warm">
-        <div className="mx-auto max-w-wide px-6 py-14">
-          <Reveal>
-            <div className="rounded-md border border-ink/10 bg-white p-3 shadow-sm">
-              <div className="relative aspect-video w-full overflow-hidden rounded-sm">
-                <iframe
-                  src={`https://www.youtube-nocookie.com/embed/${lesson.youtubeId}?rel=0`}
-                  title={lesson.title}
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowFullScreen
-                  className="absolute inset-0 h-full w-full border-0"
-                />
+      {lesson.youtubeId && (
+        <section className="bg-warm">
+          <div className="mx-auto max-w-wide px-6 py-14">
+            <Reveal>
+              <div className="rounded-md border border-ink/10 bg-white p-3 shadow-sm">
+                <div className="relative aspect-video w-full overflow-hidden rounded-sm">
+                  <iframe
+                    src={`https://www.youtube-nocookie.com/embed/${lesson.youtubeId}?rel=0`}
+                    title={lesson.title}
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                    className="absolute inset-0 h-full w-full border-0"
+                  />
+                </div>
               </div>
-            </div>
-          </Reveal>
-        </div>
-      </section>
+            </Reveal>
+          </div>
+        </section>
+      )}
 
       {lesson.body && (
         <section className="bg-bg">
@@ -112,7 +114,7 @@ export default async function Page({ params }: { params: Promise<Params> }) {
                 className="group flex h-full flex-col rounded-md border border-ink/10 bg-white p-5 shadow-sm transition hover:border-teal/40 hover:shadow-md"
               >
                 <div className="text-[10px] font-semibold uppercase tracking-[0.22em] text-soft">
-                  ← Previous video
+                  ← Previous lesson
                 </div>
                 <div className="mt-2 font-serif text-[17px] leading-[1.3] text-ink group-hover:text-teal">
                   {prev.title}
@@ -127,7 +129,7 @@ export default async function Page({ params }: { params: Promise<Params> }) {
                 className="group flex h-full flex-col rounded-md border border-ink/10 bg-white p-5 text-right shadow-sm transition hover:border-teal/40 hover:shadow-md"
               >
                 <div className="text-[10px] font-semibold uppercase tracking-[0.22em] text-teal">
-                  Next video →
+                  Next lesson →
                 </div>
                 <div className="mt-2 font-serif text-[17px] leading-[1.3] text-ink group-hover:text-teal">
                   {next.title}
