@@ -54,5 +54,6 @@ export const PODCASTS: Record<string, Podcast> = {
     coverAlt: "Spiritual Sense, podcast cover art",
     apple:
       "https://podcasts.apple.com/us/podcast/spiritual-sense-spiritual-recharge-how-to-stay-awake/id1580259632",
+    spotify: "https://open.spotify.com/show/32WIzPOOqODjYgjM79T090",
   },
 };
