@@ -25,78 +25,97 @@ const MEDITATIONS = [
   { name: "Releasing &amp; Letting Go Into Peace", url: "https://insig.ht/gm_83968", image: "/images/meditations/releasing-peace.jpeg" },
 ];
 
+const IMG = "/images/meditations-cards";
+
 const ARCHIVE = [
   {
     title: "Completely Relaxed Meditation",
     subtitle: "A long-form practice to drop into deep stillness. Headphones recommended.",
     audio: audioUrl("/audio/meditations/Completely-Relaxed-Meditation.mp3"),
+    image: `${IMG}/completely-relaxed.jpg`,
   },
   {
     title: "Hand of Blessings",
     subtitle: "Receive and give blessings — an early Awakened Academy classic.",
     audio: audioUrl("/audio/meditations/Hand-of-Blessings.mp3"),
+    image: `${IMG}/hand-of-blessings.jpg`,
   },
   {
     title: "Feel-Good and Smile Meditation",
     subtitle: "A gentle morning practice for lifting state and softening the day.",
     audio: audioUrl("/audio/meditations/Feel-Good-and-Smile-Meditation.mp3"),
+    image: `${IMG}/feel-good-smile.jpg`,
   },
   {
     title: "Ease and Grace in Social Situations",
     subtitle: "Give and receive blessings — for the spaces that ask the most of you.",
     audio: audioUrl("/audio/meditations/Experience-Ease-and-Grace-In-Social-Situations-Give-and-Receive-Blessings.mp3"),
+    image: `${IMG}/ease-and-grace.jpg`,
   },
 ];
 
 const HEALING = [
-  { title: "Pain Relief Meditation", subtitle: "Gentle relief practice for physical pain.", audio: audioUrl("/audio/meditations/healing/Pain-Relief-Meditation.mp3") },
-  { title: "Healing a Broken Heart", subtitle: "Tender support for the heart that's hurting.", audio: audioUrl("/audio/meditations/healing/Healing-a-broken-heart.mp3") },
-  { title: "Healing Heart and Mind", subtitle: "A whole-system practice for emotional and mental healing.", audio: audioUrl("/audio/meditations/healing/Healing-Heart-and-Mind.mp3") },
-  { title: "Sacred Healing", subtitle: "Open to deep healing on every level.", audio: audioUrl("/audio/meditations/healing/Sacred-Healing.mp3") },
-  { title: "Sacred Release of Pain, Stress & Tension", subtitle: "Release stored pain, stress, and tension from the body.", audio: audioUrl("/audio/meditations/healing/Sacred-Release-of-Pain-Stress-Tension.mp3") },
-  { title: "Spiritual Recharge", subtitle: "Refill your inner reserves when you're depleted.", audio: audioUrl("/audio/meditations/healing/Spiritual-Recharge-Meditation.mp3") },
-  { title: "Relaxing Within Your Higher Self", subtitle: "Drop into the calm of who you really are.", audio: audioUrl("/audio/meditations/healing/Relaxing-Within-Your-Higher-Self.mp3") },
-  { title: "Blessed and Full of Light", subtitle: "Fill with light and bless what you touch.", audio: audioUrl("/audio/meditations/healing/Blessed-and-Full-of-Light-Meditation.mp3") },
-  { title: "Advanced Law of Attraction Meditation", subtitle: "Align with what you want to call in.", audio: audioUrl("/audio/meditations/healing/Advanced-Law-of-Attraction-Meditation.mp3") },
-  { title: "The Gratitude Meditation", subtitle: "Drop into the felt sense of gratitude.", audio: audioUrl("/audio/meditations/healing/The-Gratitude-Meditation.mp3") },
-  { title: "Short Sacred Peace", subtitle: "A 10-minute reset to peace.", audio: audioUrl("/audio/meditations/healing/Short-Sacred-Peace-Meditation.mp3") },
+  { title: "Pain Relief Meditation", subtitle: "Gentle relief practice for physical pain.", audio: audioUrl("/audio/meditations/healing/Pain-Relief-Meditation.mp3"), image: `${IMG}/pain-relief.jpg` },
+  { title: "Healing a Broken Heart", subtitle: "Tender support for the heart that's hurting.", audio: audioUrl("/audio/meditations/healing/Healing-a-broken-heart.mp3"), image: `${IMG}/broken-heart.jpg` },
+  { title: "Healing Heart and Mind", subtitle: "A whole-system practice for emotional and mental healing.", audio: audioUrl("/audio/meditations/healing/Healing-Heart-and-Mind.mp3"), image: `${IMG}/heart-and-mind.jpg` },
+  { title: "Sacred Healing", subtitle: "Open to deep healing on every level.", audio: audioUrl("/audio/meditations/healing/Sacred-Healing.mp3"), image: `${IMG}/sacred-healing.jpg` },
+  { title: "Sacred Release of Pain, Stress & Tension", subtitle: "Release stored pain, stress, and tension from the body.", audio: audioUrl("/audio/meditations/healing/Sacred-Release-of-Pain-Stress-Tension.mp3"), image: `${IMG}/sacred-release.jpg` },
+  { title: "Spiritual Recharge", subtitle: "Refill your inner reserves when you're depleted.", audio: audioUrl("/audio/meditations/healing/Spiritual-Recharge-Meditation.mp3"), image: `${IMG}/spiritual-recharge.jpg` },
+  { title: "Relaxing Within Your Higher Self", subtitle: "Drop into the calm of who you really are.", audio: audioUrl("/audio/meditations/healing/Relaxing-Within-Your-Higher-Self.mp3"), image: `${IMG}/higher-self.jpg` },
+  { title: "Blessed and Full of Light", subtitle: "Fill with light and bless what you touch.", audio: audioUrl("/audio/meditations/healing/Blessed-and-Full-of-Light-Meditation.mp3"), image: `${IMG}/blessed-light.jpg` },
+  { title: "Advanced Law of Attraction Meditation", subtitle: "Align with what you want to call in.", audio: audioUrl("/audio/meditations/healing/Advanced-Law-of-Attraction-Meditation.mp3"), image: `${IMG}/advanced-loa.jpg` },
+  { title: "The Gratitude Meditation", subtitle: "Drop into the felt sense of gratitude.", audio: audioUrl("/audio/meditations/healing/The-Gratitude-Meditation.mp3"), image: `${IMG}/gratitude.jpg` },
+  { title: "Short Sacred Peace", subtitle: "A 10-minute reset to peace.", audio: audioUrl("/audio/meditations/healing/Short-Sacred-Peace-Meditation.mp3"), image: `${IMG}/sacred-peace.jpg` },
 ];
 
 const CRISIS = [
-  { title: "Peace in a Crazy World", subtitle: "How to hold inner peace when the world feels chaotic.", audio: audioUrl("/audio/meditations/crisis/Peace-in-a-crazy-world.mp3") },
-  { title: "Coronavirus Crisis — 10 Insights", subtitle: "10 insights to find the silver lining and hidden gifts in difficult times. Recorded March 2020.", audio: audioUrl("/audio/meditations/crisis/Coronavirus-Crisis-10-Insights.mp3") },
+  { title: "Peace in a Crazy World", subtitle: "How to hold inner peace when the world feels chaotic.", audio: audioUrl("/audio/meditations/crisis/Peace-in-a-crazy-world.mp3"), image: `${IMG}/peace-crazy-world.jpg` },
+  { title: "Coronavirus Crisis — 10 Insights", subtitle: "10 insights to find the silver lining and hidden gifts in difficult times. Recorded March 2020.", audio: audioUrl("/audio/meditations/crisis/Coronavirus-Crisis-10-Insights.mp3"), image: `${IMG}/coronavirus-insights.jpg` },
 ];
 
 const SLEEP = [
-  { title: "16 Ways to Get Better Sleep, Starting Tonight", subtitle: "A practical talk on the habits and shifts that improve your sleep from this evening forward.", audio: audioUrl("/audio/meditations/sleep/16-Ways-to-Better-Sleep.mp3") },
-  { title: "Clearing Your Day for Better Sleep", subtitle: "A powerful method for clearing the residue of the day and waking up fresh.", audio: audioUrl("/audio/meditations/sleep/Clearing-Your-Day-Better-Sleep.mp3") },
+  { title: "16 Ways to Get Better Sleep, Starting Tonight", subtitle: "A practical talk on the habits and shifts that improve your sleep from this evening forward.", audio: audioUrl("/audio/meditations/sleep/16-Ways-to-Better-Sleep.mp3"), image: `${IMG}/better-sleep.jpg` },
+  { title: "Clearing Your Day for Better Sleep", subtitle: "A powerful method for clearing the residue of the day and waking up fresh.", audio: audioUrl("/audio/meditations/sleep/Clearing-Your-Day-Better-Sleep.mp3"), image: `${IMG}/clearing-your-day.jpg` },
 ];
 
 const LIBRARY = [
-  { title: "Self-Compassion and Worthiness", subtitle: "Soften the inner critic and remember you're enough.", audio: audioUrl("/audio/meditations/Self-Compassion-and-Worthiness-Guided-Meditation.mp3") },
-  { title: "Free from Past Burdens and Mistakes", subtitle: "Let go of what's been weighing on you. Step forward lighter.", audio: audioUrl("/audio/meditations/Free-from-Past-Burdens-and-Mistakes-Meditation.mp3") },
-  { title: "My Personal Best Day Ever", subtitle: "Set the inner conditions for a day that flows well.", audio: audioUrl("/audio/meditations/My-Personal-Best-Day-Ever-Meditation.mp3") },
-  { title: "Your Sacred Intentions", subtitle: "Set sacred intentions for what you want to create.", audio: audioUrl("/audio/meditations/YourSacred-Intentions.mp3") },
-  { title: "7 Color Rays Balancing Meditation", subtitle: "Balance the seven energy centres with the seven color rays.", audio: audioUrl("/audio/meditations/7-Colors-Rays-Balancing-Meditation.mp3") },
-  { title: "The Light of the Spiritual Sun", subtitle: "A longer journey into the inner light.", audio: audioUrl("/audio/meditations/The-Light-of-the-Spiritual-Sun.mp3") },
-  { title: "Spiritual Sun Meditation", subtitle: "Receive the warmth and clarity of the inner sun.", audio: audioUrl("/audio/meditations/Spiritual-Sun-Meditation.mp3") },
-  { title: "Creating a Sanctuary", subtitle: "Turn the space you live in into a place of refuge and renewal.", audio: audioUrl("/audio/meditations/Creating-a-Sanctuary-Making-Your-Home-Into-a-Heaven.mp3") },
-  { title: "Remembrance", subtitle: "Remember who you really are, beneath the day's noise.", audio: audioUrl("/audio/meditations/Remembrance_Guided_Meditation.mp3") },
-  { title: "The Pulse — Bonus Meditation", subtitle: "A short pulse-based practice to settle the nervous system.", audio: audioUrl("/audio/meditations/The-Pulse-Bonus-Meditation.mp3") },
+  { title: "Self-Compassion and Worthiness", subtitle: "Soften the inner critic and remember you're enough.", audio: audioUrl("/audio/meditations/Self-Compassion-and-Worthiness-Guided-Meditation.mp3"), image: `${IMG}/self-compassion.jpg` },
+  { title: "Free from Past Burdens and Mistakes", subtitle: "Let go of what's been weighing on you. Step forward lighter.", audio: audioUrl("/audio/meditations/Free-from-Past-Burdens-and-Mistakes-Meditation.mp3"), image: `${IMG}/free-from-past.jpg` },
+  { title: "My Personal Best Day Ever", subtitle: "Set the inner conditions for a day that flows well.", audio: audioUrl("/audio/meditations/My-Personal-Best-Day-Ever-Meditation.mp3"), image: `${IMG}/personal-best-day.jpg` },
+  { title: "Your Sacred Intentions", subtitle: "Set sacred intentions for what you want to create.", audio: audioUrl("/audio/meditations/YourSacred-Intentions.mp3"), image: `${IMG}/sacred-intentions.jpg` },
+  { title: "7 Color Rays Balancing Meditation", subtitle: "Balance the seven energy centres with the seven color rays.", audio: audioUrl("/audio/meditations/7-Colors-Rays-Balancing-Meditation.mp3"), image: `${IMG}/color-rays.jpg` },
+  { title: "The Light of the Spiritual Sun", subtitle: "A longer journey into the inner light.", audio: audioUrl("/audio/meditations/The-Light-of-the-Spiritual-Sun.mp3"), image: `${IMG}/light-spiritual-sun.jpg` },
+  { title: "Spiritual Sun Meditation", subtitle: "Receive the warmth and clarity of the inner sun.", audio: audioUrl("/audio/meditations/Spiritual-Sun-Meditation.mp3"), image: `${IMG}/spiritual-sun.jpg` },
+  { title: "Creating a Sanctuary", subtitle: "Turn the space you live in into a place of refuge and renewal.", audio: audioUrl("/audio/meditations/Creating-a-Sanctuary-Making-Your-Home-Into-a-Heaven.mp3"), image: `${IMG}/sanctuary.jpg` },
+  { title: "Remembrance", subtitle: "Remember who you really are, beneath the day's noise.", audio: audioUrl("/audio/meditations/Remembrance_Guided_Meditation.mp3"), image: `${IMG}/remembrance.jpg` },
+  { title: "The Pulse — Bonus Meditation", subtitle: "A short pulse-based practice to settle the nervous system.", audio: audioUrl("/audio/meditations/The-Pulse-Bonus-Meditation.mp3"), image: `${IMG}/pulse.jpg` },
 ];
 
-type MedItem = { title: string; subtitle: string; audio: string };
+type MedItem = { title: string; subtitle: string; audio: string; image?: string };
 
 function MedCard({ m, eyebrow }: { m: MedItem; eyebrow: string }) {
   return (
-    <article className="flex h-full flex-col rounded-md border border-ink/10 bg-white p-6 shadow-sm">
-      <div className="text-[10px] font-semibold uppercase tracking-[0.22em] text-gold-deep">{eyebrow}</div>
-      <h3 className="mt-2 font-serif text-[20px] leading-[1.3] text-ink">{m.title}</h3>
-      <p className="mt-2 text-[14.5px] leading-[1.6] text-ink2">{m.subtitle}</p>
-      <audio controls preload="none" className="mt-5 w-full" src={m.audio}>
-        Your browser does not support the audio element.
-      </audio>
-      <p className="mt-3 text-[12px] text-soft">Best with headphones. Right-click the player to download.</p>
+    <article className="flex h-full flex-col overflow-hidden rounded-md border border-ink/10 bg-white shadow-sm">
+      {m.image && (
+        <div className="relative aspect-[16/9] w-full overflow-hidden">
+          <Image
+            src={m.image}
+            alt=""
+            fill
+            sizes="(min-width: 768px) 50vw, 100vw"
+            className="object-cover"
+          />
+        </div>
+      )}
+      <div className="flex flex-1 flex-col p-6">
+        <div className="text-[10px] font-semibold uppercase tracking-[0.22em] text-gold-deep">{eyebrow}</div>
+        <h3 className="mt-2 font-serif text-[20px] leading-[1.3] text-ink">{m.title}</h3>
+        <p className="mt-2 text-[14.5px] leading-[1.6] text-ink2">{m.subtitle}</p>
+        <audio controls preload="none" className="mt-5 w-full" src={m.audio}>
+          Your browser does not support the audio element.
+        </audio>
+        <p className="mt-3 text-[12px] text-soft">Best with headphones. Right-click the player to download.</p>
+      </div>
     </article>
   );
 }
