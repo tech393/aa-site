@@ -48,6 +48,54 @@ const ARCHIVE = [
   },
 ];
 
+const HEALING = [
+  { title: "Pain Relief Meditation", subtitle: "Gentle relief practice for physical pain.", audio: audioUrl("/audio/meditations/healing/Pain-Relief-Meditation.mp3") },
+  { title: "Healing a Broken Heart", subtitle: "Tender support for the heart that's hurting.", audio: audioUrl("/audio/meditations/healing/Healing-a-broken-heart.mp3") },
+  { title: "Healing Heart and Mind", subtitle: "A whole-system practice for emotional and mental healing.", audio: audioUrl("/audio/meditations/healing/Healing-Heart-and-Mind.mp3") },
+  { title: "Sacred Healing", subtitle: "Open to deep healing on every level.", audio: audioUrl("/audio/meditations/healing/Sacred-Healing.mp3") },
+  { title: "Sacred Release of Pain, Stress & Tension", subtitle: "Release stored pain, stress, and tension from the body.", audio: audioUrl("/audio/meditations/healing/Sacred-Release-of-Pain-Stress-Tension.mp3") },
+  { title: "Spiritual Recharge", subtitle: "Refill your inner reserves when you're depleted.", audio: audioUrl("/audio/meditations/healing/Spiritual-Recharge-Meditation.mp3") },
+  { title: "Relaxing Within Your Higher Self", subtitle: "Drop into the calm of who you really are.", audio: audioUrl("/audio/meditations/healing/Relaxing-Within-Your-Higher-Self.mp3") },
+  { title: "Blessed and Full of Light", subtitle: "Fill with light and bless what you touch.", audio: audioUrl("/audio/meditations/healing/Blessed-and-Full-of-Light-Meditation.mp3") },
+  { title: "Advanced Law of Attraction Meditation", subtitle: "Align with what you want to call in.", audio: audioUrl("/audio/meditations/healing/Advanced-Law-of-Attraction-Meditation.mp3") },
+  { title: "The Gratitude Meditation", subtitle: "Drop into the felt sense of gratitude.", audio: audioUrl("/audio/meditations/healing/The-Gratitude-Meditation.mp3") },
+  { title: "Short Sacred Peace", subtitle: "A 10-minute reset to peace.", audio: audioUrl("/audio/meditations/healing/Short-Sacred-Peace-Meditation.mp3") },
+];
+
+const CRISIS = [
+  { title: "Peace in a Crazy World", subtitle: "How to hold inner peace when the world feels chaotic.", audio: audioUrl("/audio/meditations/crisis/Peace-in-a-crazy-world.mp3") },
+  { title: "Coronavirus Crisis — 10 Insights", subtitle: "10 insights to find the silver lining and hidden gifts in difficult times. Recorded March 2020.", audio: audioUrl("/audio/meditations/crisis/Coronavirus-Crisis-10-Insights.mp3") },
+];
+
+const LIBRARY = [
+  { title: "Self-Compassion and Worthiness", subtitle: "Soften the inner critic and remember you're enough.", audio: audioUrl("/audio/meditations/Self-Compassion-and-Worthiness-Guided-Meditation.mp3") },
+  { title: "Free from Past Burdens and Mistakes", subtitle: "Let go of what's been weighing on you. Step forward lighter.", audio: audioUrl("/audio/meditations/Free-from-Past-Burdens-and-Mistakes-Meditation.mp3") },
+  { title: "My Personal Best Day Ever", subtitle: "Set the inner conditions for a day that flows well.", audio: audioUrl("/audio/meditations/My-Personal-Best-Day-Ever-Meditation.mp3") },
+  { title: "Your Sacred Intentions", subtitle: "Set sacred intentions for what you want to create.", audio: audioUrl("/audio/meditations/YourSacred-Intentions.mp3") },
+  { title: "7 Color Rays Balancing Meditation", subtitle: "Balance the seven energy centres with the seven color rays.", audio: audioUrl("/audio/meditations/7-Colors-Rays-Balancing-Meditation.mp3") },
+  { title: "The Light of the Spiritual Sun", subtitle: "A longer journey into the inner light.", audio: audioUrl("/audio/meditations/The-Light-of-the-Spiritual-Sun.mp3") },
+  { title: "Spiritual Sun Meditation", subtitle: "Receive the warmth and clarity of the inner sun.", audio: audioUrl("/audio/meditations/Spiritual-Sun-Meditation.mp3") },
+  { title: "Creating a Sanctuary", subtitle: "Turn the space you live in into a place of refuge and renewal.", audio: audioUrl("/audio/meditations/Creating-a-Sanctuary-Making-Your-Home-Into-a-Heaven.mp3") },
+  { title: "Remembrance", subtitle: "Remember who you really are, beneath the day's noise.", audio: audioUrl("/audio/meditations/Remembrance_Guided_Meditation.mp3") },
+  { title: "The Pulse — Bonus Meditation", subtitle: "A short pulse-based practice to settle the nervous system.", audio: audioUrl("/audio/meditations/The-Pulse-Bonus-Meditation.mp3") },
+];
+
+type MedItem = { title: string; subtitle: string; audio: string };
+
+function MedCard({ m, eyebrow }: { m: MedItem; eyebrow: string }) {
+  return (
+    <article className="flex h-full flex-col rounded-md border border-ink/10 bg-white p-6 shadow-sm">
+      <div className="text-[10px] font-semibold uppercase tracking-[0.22em] text-gold-deep">{eyebrow}</div>
+      <h3 className="mt-2 font-serif text-[20px] leading-[1.3] text-ink">{m.title}</h3>
+      <p className="mt-2 text-[14.5px] leading-[1.6] text-ink2">{m.subtitle}</p>
+      <audio controls preload="none" className="mt-5 w-full" src={m.audio}>
+        Your browser does not support the audio element.
+      </audio>
+      <p className="mt-3 text-[12px] text-soft">Best with headphones. Right-click the player to download.</p>
+    </article>
+  );
+}
+
 export default function MeditationsPage() {
   return (
     <>
@@ -159,28 +207,84 @@ export default function MeditationsPage() {
           <div className="mt-12 grid gap-5 md:grid-cols-2">
             {ARCHIVE.map((m) => (
               <Reveal key={m.audio}>
-                <article className="flex h-full flex-col rounded-md border border-ink/10 bg-white p-6 shadow-sm">
-                  <div className="text-[10px] font-semibold uppercase tracking-[0.22em] text-gold-deep">
-                    Original Recording
-                  </div>
-                  <h3 className="mt-2 font-serif text-[20px] leading-[1.3] text-ink">
-                    {m.title}
-                  </h3>
-                  <p className="mt-2 text-[14.5px] leading-[1.6] text-ink2">
-                    {m.subtitle}
-                  </p>
-                  <audio
-                    controls
-                    preload="none"
-                    className="mt-5 w-full"
-                    src={m.audio}
-                  >
-                    Your browser does not support the audio element.
-                  </audio>
-                  <p className="mt-3 text-[12px] text-soft">
-                    Best with headphones. Right-click the player to download.
-                  </p>
-                </article>
+                <MedCard m={m} eyebrow="Original Recording" />
+              </Reveal>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* HEALING — 2021/01 batch */}
+      <section className="bg-bg">
+        <div className="mx-auto max-w-wide px-6 py-20">
+          <Reveal>
+            <div className="text-center">
+              <span className="eyebrow">Healing</span>
+              <h2 className="mt-3 font-serif text-[clamp(26px,4vw,38px)] font-light text-ink">
+                Meditations for healing <em>the heart, mind, and body</em>
+              </h2>
+              <div className="gold-line mt-6" />
+              <p className="mx-auto mt-6 max-w-xl text-[16px] leading-[1.7] text-ink2">
+                A 2021 batch of practices Michael recorded for healing emotional pain,
+                physical tension, and inner overwhelm. Free to listen here.
+              </p>
+            </div>
+          </Reveal>
+          <div className="mt-12 grid gap-5 md:grid-cols-2">
+            {HEALING.map((m) => (
+              <Reveal key={m.audio}>
+                <MedCard m={m} eyebrow="Healing" />
+              </Reveal>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CRISIS — 2020/03 batch */}
+      <section className="bg-warm">
+        <div className="mx-auto max-w-wide px-6 py-20">
+          <Reveal>
+            <div className="text-center">
+              <span className="eyebrow">Crisis Reset</span>
+              <h2 className="mt-3 font-serif text-[clamp(26px,4vw,38px)] font-light text-ink">
+                Practices for <em>hard times</em>
+              </h2>
+              <div className="gold-line mt-6" />
+              <p className="mx-auto mt-6 max-w-xl text-[16px] leading-[1.7] text-ink2">
+                Recorded in March 2020 — meditations for finding inner peace when the world feels chaotic.
+              </p>
+            </div>
+          </Reveal>
+          <div className="mt-12 grid gap-5 md:grid-cols-2">
+            {CRISIS.map((m) => (
+              <Reveal key={m.audio}>
+                <MedCard m={m} eyebrow="Crisis Reset" />
+              </Reveal>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* LIBRARY — general practice library */}
+      <section className="bg-bg">
+        <div className="mx-auto max-w-wide px-6 py-20">
+          <Reveal>
+            <div className="text-center">
+              <span className="eyebrow">Practice Library</span>
+              <h2 className="mt-3 font-serif text-[clamp(26px,4vw,38px)] font-light text-ink">
+                More guided journeys, <em>free to listen here</em>
+              </h2>
+              <div className="gold-line mt-6" />
+              <p className="mx-auto mt-6 max-w-xl text-[16px] leading-[1.7] text-ink2">
+                Additional meditations from across the years — short and long-form practices
+                for everyday inner work.
+              </p>
+            </div>
+          </Reveal>
+          <div className="mt-12 grid gap-5 md:grid-cols-2">
+            {LIBRARY.map((m) => (
+              <Reveal key={m.audio}>
+                <MedCard m={m} eyebrow="Practice" />
               </Reveal>
             ))}
           </div>
