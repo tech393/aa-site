@@ -2,11 +2,12 @@
  * Softly Powerful, the original WordPress mini-course recovered from
  * the May 2026 WP database dump. 17 audio lessons + intro + quiz.
  *
- * Audio files originally lived at awakenedacademy.com/wp-content/uploads/2014/09/
- * and need to be re-uploaded to /public/audio/softly-powerful/ for playback.
- * If a file is missing, the <SPLesson> component falls back to a "coming soon"
- * placeholder, the rest of the page still works.
+ * Audio is hosted on Cloudflare R2 (key prefix audio/softly-powerful/) and
+ * served via NEXT_PUBLIC_AUDIO_CDN. See lib/audio.ts for why — TL;DR Vercel
+ * doesn't hydrate Git LFS pointers so MP3s in public/ wouldn't play.
  */
+import { audioUrl } from "@/lib/audio";
+
 export type SPLesson = {
   slug: string;
   number: number | null;
@@ -25,7 +26,7 @@ export const SP_COURSE: SPLesson[] = [
     number: 0,
     title: "Welcome to Softly Powerful",
     subtitle: "The secrets to dealing with social situations in a world that doesn't 'get' you.",
-    audio: "/audio/softly-powerful/Softly-Powerful-Intro.mp3",
+    audio: audioUrl("/audio/softly-powerful/Softly-Powerful-Intro.mp3"),
     audioOriginal:
       "https://awakenedacademy.com/wp-content/uploads/2014/09/Softly-Powerful-Intro.mp3",
     bullets: [
@@ -40,7 +41,7 @@ export const SP_COURSE: SPLesson[] = [
     number: 1,
     title: "Introverts vs Extroverts",
     subtitle: "What's the actual difference, and why has the world tilted one way?",
-    audio: "/audio/softly-powerful/1-Introverts-Versus-Extroverts-Whats-the-Difference.mp3",
+    audio: audioUrl("/audio/softly-powerful/1-Introverts-Versus-Extroverts-Whats-the-Difference.mp3"),
     audioOriginal:
       "https://awakenedacademy.com/wp-content/uploads/2014/09/1-Introverts-Versus-Extroverts-Whats-the-Difference.mp3",
     bullets: [
@@ -55,7 +56,7 @@ export const SP_COURSE: SPLesson[] = [
     number: 2,
     title: "The Power of Introverts",
     subtitle: "Why the world needs you, and how to deal with social situations without selling out.",
-    audio: "/audio/softly-powerful/2-The-Power-of-Introverts-and-Why-the-World-Needs-You.mp3",
+    audio: audioUrl("/audio/softly-powerful/2-The-Power-of-Introverts-and-Why-the-World-Needs-You.mp3"),
     audioOriginal:
       "https://awakenedacademy.com/wp-content/uploads/2014/09/2-The-Power-of-Introverts-and-Why-the-World-Needs-You.mp3",
     bullets: [
@@ -70,8 +71,9 @@ export const SP_COURSE: SPLesson[] = [
     number: 3,
     title: "The Growth of the Extrovert Ideal",
     subtitle: "How the world got loud, and how to find peace inside it.",
-    audio:
-      "/audio/softly-powerful/3-The-Growth-of-the-Extrovert-Ideal-and-the-Emergence-of-the-Personality-Cults.mp3",
+    audio: audioUrl(
+      "/audio/softly-powerful/3-The-Growth-of-the-Extrovert-Ideal-and-the-Emergence-of-the-Personality-Cults.mp3"
+    ),
     audioOriginal:
       "https://awakenedacademy.com/wp-content/uploads/2014/09/3-The-Growth-of-the-Extrovert-Ideal-and-the-Emergence-of-the-Personality-Cults.mp3",
     bullets: [
@@ -86,7 +88,7 @@ export const SP_COURSE: SPLesson[] = [
     number: 4,
     title: "Discover Who You Are",
     subtitle: "And what you're here to do as an introvert.",
-    audio: "/audio/softly-powerful/4-Discover-Who-You-Are-and-What-Youre-Here-to-Do-as-an-Introvert.mp3",
+    audio: audioUrl("/audio/softly-powerful/4-Discover-Who-You-Are-and-What-Youre-Here-to-Do-as-an-Introvert.mp3"),
     audioOriginal:
       "https://awakenedacademy.com/wp-content/uploads/2014/09/4-Discover-Who-You-Are-and-What-Youre-Here-to-Do-as-an-Introvert.mp3",
     bullets: [
@@ -101,7 +103,7 @@ export const SP_COURSE: SPLesson[] = [
     number: 5,
     title: "Deep Questions to Discover Your Dharma",
     subtitle: "The inquiries that uncover the work you came here to do.",
-    audio: "/audio/softly-powerful/5-Deep-Questions-to-Discover-Your-Dharma.mp3",
+    audio: audioUrl("/audio/softly-powerful/5-Deep-Questions-to-Discover-Your-Dharma.mp3"),
     audioOriginal:
       "https://awakenedacademy.com/wp-content/uploads/2014/09/5-Deep-Questions-to-Discover-Your-Dharma.mp3",
     bullets: [
@@ -116,7 +118,7 @@ export const SP_COURSE: SPLesson[] = [
     number: 6,
     title: "The Secret Formula to Lasting Happiness",
     subtitle: "What actually creates contentment for deep, sensitive people.",
-    audio: "/audio/softly-powerful/6-The-Secret-Formula-to-Lasting-Happiness.mp3",
+    audio: audioUrl("/audio/softly-powerful/6-The-Secret-Formula-to-Lasting-Happiness.mp3"),
     audioOriginal:
       "https://awakenedacademy.com/wp-content/uploads/2014/09/6-The-Secret-Formula-to-Lasting-Happiness.mp3",
     bullets: [
@@ -131,7 +133,7 @@ export const SP_COURSE: SPLesson[] = [
     number: 7,
     title: "How to Overcome Oversensitivity",
     subtitle: "Stay open without absorbing everyone else's noise.",
-    audio: "/audio/softly-powerful/7-How-to-Overcome-Oversensitivy.mp3",
+    audio: audioUrl("/audio/softly-powerful/7-How-to-Overcome-Oversensitivy.mp3"),
     audioOriginal:
       "https://awakenedacademy.com/wp-content/uploads/2014/09/7-How-to-Overcome-Oversensitivy.mp3",
     bullets: [
@@ -146,7 +148,7 @@ export const SP_COURSE: SPLesson[] = [
     number: 8,
     title: "How to Deal with Extrovert Situations",
     subtitle: "Parties, networking, family dinners, big rooms.",
-    audio: "/audio/softly-powerful/8-How-to-Deal-with-Extrovert-Situations.mp3",
+    audio: audioUrl("/audio/softly-powerful/8-How-to-Deal-with-Extrovert-Situations.mp3"),
     audioOriginal:
       "https://awakenedacademy.com/wp-content/uploads/2014/09/8-How-to-Deal-with-Extrovert-Situations.mp3",
     bullets: [
@@ -161,7 +163,7 @@ export const SP_COURSE: SPLesson[] = [
     number: 9,
     title: "Why It's Okay to Say No",
     subtitle: "The most undervalued superpower of the softly powerful.",
-    audio: "/audio/softly-powerful/9-Why-its-Okay-to-Say-No.mp3",
+    audio: audioUrl("/audio/softly-powerful/9-Why-its-Okay-to-Say-No.mp3"),
     audioOriginal: "https://awakenedacademy.com/wp-content/uploads/2014/09/9-Why-its-Okay-to-Say-No.mp3",
     bullets: [
       "Why saying no is an act of love, not selfishness.",
@@ -175,7 +177,7 @@ export const SP_COURSE: SPLesson[] = [
     number: 10,
     title: "When to Say Yes",
     subtitle: "Knowing which invitations are actually for you.",
-    audio: "/audio/softly-powerful/10-When-to-Say-Yes.mp3",
+    audio: audioUrl("/audio/softly-powerful/10-When-to-Say-Yes.mp3"),
     audioOriginal: "https://awakenedacademy.com/wp-content/uploads/2014/09/10-When-to-Say-Yes.mp3",
     bullets: [
       "The internal signals that tell you something is genuinely a yes.",
@@ -189,7 +191,7 @@ export const SP_COURSE: SPLesson[] = [
     number: 11,
     title: "Introversion 101, Dos and Don'ts",
     subtitle: "The practical handbook for living as a quiet soul in a loud world.",
-    audio: "/audio/softly-powerful/11-Introversion-101-Dos-and-Donts.mp3",
+    audio: audioUrl("/audio/softly-powerful/11-Introversion-101-Dos-and-Donts.mp3"),
     audioOriginal:
       "https://awakenedacademy.com/wp-content/uploads/2014/09/11-Introversion-101-Dos-and-Donts.mp3",
     bullets: [
@@ -204,8 +206,9 @@ export const SP_COURSE: SPLesson[] = [
     number: 12,
     title: "Overcoming the Lizard Brain",
     subtitle: "The part of you that stops you from doing what you came here to do.",
-    audio:
-      "/audio/softly-powerful/12-Overcoming-the-Lizard-Brain-that-Stops-You-from-Doing-Things.mp3",
+    audio: audioUrl(
+      "/audio/softly-powerful/12-Overcoming-the-Lizard-Brain-that-Stops-You-from-Doing-Things.mp3"
+    ),
     audioOriginal:
       "https://awakenedacademy.com/wp-content/uploads/2014/09/12-Overcoming-the-Lizard-Brain-that-Stops-You-from-Doing-Things.mp3",
     bullets: [
@@ -220,7 +223,7 @@ export const SP_COURSE: SPLesson[] = [
     number: 13,
     title: "What to Do on a Rainy Day",
     subtitle: "When you're feeling down, soft, slow, and uninspired.",
-    audio: "/audio/softly-powerful/13-What-to-Do-on-a-Rainy-Day-When-Youre-Feeling-Down.mp3",
+    audio: audioUrl("/audio/softly-powerful/13-What-to-Do-on-a-Rainy-Day-When-Youre-Feeling-Down.mp3"),
     audioOriginal:
       "https://awakenedacademy.com/wp-content/uploads/2014/09/13-What-to-Do-on-a-Rainy-Day-When-Youre-Feeling-Down.mp3",
     bullets: [
@@ -235,7 +238,7 @@ export const SP_COURSE: SPLesson[] = [
     number: 14,
     title: "The Power of Energy",
     subtitle: "Movement practice for sensitive, awakened souls.",
-    audio: "/audio/softly-powerful/14-The-Power-of-Energy-Exercise.mp3",
+    audio: audioUrl("/audio/softly-powerful/14-The-Power-of-Energy-Exercise.mp3"),
     audioOriginal:
       "https://awakenedacademy.com/wp-content/uploads/2014/09/14-The-Power-of-Energy-Exercise.mp3",
     bullets: [
@@ -250,7 +253,7 @@ export const SP_COURSE: SPLesson[] = [
     number: 15,
     title: "Business Success for Introverts",
     subtitle: "Build a meaningful career without becoming someone you're not.",
-    audio: "/audio/softly-powerful/15-Business-Success-for-Introverts.mp3",
+    audio: audioUrl("/audio/softly-powerful/15-Business-Success-for-Introverts.mp3"),
     audioOriginal:
       "https://awakenedacademy.com/wp-content/uploads/2014/09/15-Business-Success-for-Introverts.mp3",
     bullets: [
@@ -265,7 +268,7 @@ export const SP_COURSE: SPLesson[] = [
     number: 16,
     title: "How to Overcome Being Triggered",
     subtitle: "The Ho'oponopono practice for sensitive souls.",
-    audio: "/audio/softly-powerful/16-How-to-overcome-being-triggered-Hooponopono.mp3",
+    audio: audioUrl("/audio/softly-powerful/16-How-to-overcome-being-triggered-Hooponopono.mp3"),
     audioOriginal:
       "https://awakenedacademy.com/wp-content/uploads/2014/09/16-How-to-overcome-being-triggered-Hooponopono.mp3",
     bullets: [
