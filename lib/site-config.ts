@@ -30,6 +30,7 @@ export const GHL = {
     twentyOneDayChallenge: { id: "rvLvT4aWLhS6qRRiJcou", name: "21 Day Challenge", height: 884 },
     softlyPowerful: { id: "XMpfPDgqmz2fjd45bhYc", name: "Softly Powerful", height: 580 },
     awakenedLife: { id: "I063KZl5QBU8udCFoCJb", name: "awakened life", height: 540 },
+    moneyMagic: { id: "1y6emuLgSkP5ZbXfZUIf", name: "Money Magic", height: 655 },
   },
   calendars: {
     bookACall: { id: "9G3lOXbWVOP5TmT6xy5r" },

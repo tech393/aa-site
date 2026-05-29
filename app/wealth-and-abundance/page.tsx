@@ -86,9 +86,9 @@ export default function Page() {
                 </div>
                 <div className="mt-5">
                   <GHLForm
-                    formId={GHL.forms.certification.id}
-                    formName="Lead Magnet Opt-In"
-                    height={GHL.forms.certification.height}
+                    formId={GHL.forms.moneyMagic.id}
+                    formName={GHL.forms.moneyMagic.name}
+                    height={GHL.forms.moneyMagic.height}
                   />
                 </div>
               </div>
