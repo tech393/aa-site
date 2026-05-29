@@ -1,8 +1,10 @@
 import type { Metadata } from "next";
 import Image from "next/image";
+import Link from "next/link";
 import Reveal from "@/components/Reveal";
 import GHLForm from "@/components/GHLForm";
 import { GHL, SITE } from "@/lib/site-config";
+import { MONEY_COURSE, MONEY_LIBRARY } from "@/lib/money-story";
 
 export const metadata: Metadata = {
   title: { absolute: "Wealth and Abundance Kit | Free from Awakened Academy" },
@@ -95,6 +97,7 @@ export default function Page() {
         </div>
       </section>
 
+      {/* COURSE — 4 actual lessons, listenable here */}
       <section className="bg-warm">
         <div className="mx-auto max-w-wide px-6 py-20">
           <Reveal>
@@ -103,39 +106,28 @@ export default function Page() {
               <h2 className="mt-3 font-serif text-[clamp(26px,4.2vw,36px)] font-light leading-[1.15] text-ink">Transforming Your Money Story</h2>
               <div className="gold-line mx-auto mt-6" />
               <p className="mx-auto mt-7 max-w-2xl text-[clamp(15px,1.9vw,17px)] leading-[1.75] text-ink2">
-                Most of what blocks prosperity is not strategy. It is the story you absorbed before you were old enough to question it. This three-part mini-course brings that story into the light so it can change.
+                Most of what blocks prosperity is not strategy. It is the story you absorbed before you were old enough to question it. This four-part audio course brings that story into the light so it can change. Listen free — no opt-in required.
               </p>
             </div>
           </Reveal>
 
-          <div className="mt-12 grid gap-6 md:grid-cols-3">
-            <Reveal>
-              <div className="h-full rounded-md border-l-2 border-gold bg-white p-7 shadow-sm md:p-8">
-                <div className="text-[11px] font-bold uppercase tracking-[0.28em] text-gold-deep">Part 1</div>
-                <h3 className="mt-3 font-serif text-[clamp(19px,2.4vw,22px)] font-light text-ink">Uncover the hidden stories</h3>
-                <p className="mt-4 text-[15px] leading-[1.7] text-ink2">
-                  Look back into childhood and surface the money beliefs you witnessed and absorbed — the ones still running quietly underneath every income decision.
-                </p>
-              </div>
-            </Reveal>
-            <Reveal delay={0.08}>
-              <div className="h-full rounded-md border-l-2 border-gold bg-white p-7 shadow-sm md:p-8">
-                <div className="text-[11px] font-bold uppercase tracking-[0.28em] text-gold-deep">Part 2</div>
-                <h3 className="mt-3 font-serif text-[clamp(19px,2.4vw,22px)] font-light text-ink">Forgive and cancel the beliefs</h3>
-                <p className="mt-4 text-[15px] leading-[1.7] text-ink2">
-                  Forgive the people inside the old stories so you are no longer bound to the past. Then consciously cancel the inherited beliefs and create space for something new.
-                </p>
-              </div>
-            </Reveal>
-            <Reveal delay={0.16}>
-              <div className="h-full rounded-md border-l-2 border-gold bg-white p-7 shadow-sm md:p-8">
-                <div className="text-[11px] font-bold uppercase tracking-[0.28em] text-gold-deep">Part 3</div>
-                <h3 className="mt-3 font-serif text-[clamp(19px,2.4vw,22px)] font-light text-ink">Align money with your values</h3>
-                <p className="mt-4 text-[15px] leading-[1.7] text-ink2">
-                  Name what you actually care about — and connect your money to it. When money becomes a means to a fuller life, the whole relationship shifts.
-                </p>
-              </div>
-            </Reveal>
+          <div className="mt-14 grid gap-4 md:grid-cols-2">
+            {MONEY_COURSE.map((l) => (
+              <Reveal key={l.slug}>
+                <Link
+                  href={`/money-story/${l.slug}`}
+                  className="group flex h-full flex-col rounded-md border border-ink/10 bg-white p-6 shadow-sm transition hover:border-teal/40 hover:shadow-md"
+                >
+                  <div className="flex items-baseline justify-between gap-3">
+                    <span className="font-serif text-[28px] leading-none text-gold">{String(l.number).padStart(2, "0")}</span>
+                    <span className="text-[10px] font-semibold uppercase tracking-[0.18em] text-teal">Audio</span>
+                  </div>
+                  <h3 className="mt-4 font-serif text-[18px] leading-[1.3] text-ink group-hover:text-teal">{l.title}</h3>
+                  <p className="mt-3 flex-1 text-[14px] leading-[1.65] text-ink2">{l.subtitle}</p>
+                  <div className="mt-5 text-[12px] font-medium text-teal">Listen →</div>
+                </Link>
+              </Reveal>
+            ))}
           </div>
 
           <div className="mt-12 text-center">
@@ -143,8 +135,40 @@ export default function Page() {
               href="#opt-in"
               className="inline-block rounded-md bg-teal px-8 py-4 font-serif text-[16px] text-white shadow-md transition hover:bg-teal-deep"
             >
-              Get the free kit
+              Get the full Wealth Kit (4 pieces, free)
             </a>
+          </div>
+        </div>
+      </section>
+
+      {/* LIBRARY — standalone money / manifestation teachings */}
+      <section className="bg-bg">
+        <div className="mx-auto max-w-wide px-6 py-20">
+          <Reveal>
+            <div className="text-center">
+              <span className="eyebrow">More teachings</span>
+              <h2 className="mt-3 font-serif text-[clamp(24px,3.6vw,32px)] font-light text-ink">Standalone <em>money &amp; manifestation</em> talks</h2>
+              <div className="gold-line mx-auto mt-6" />
+              <p className="mx-auto mt-6 max-w-xl text-[15px] leading-[1.7] text-ink2">
+                Long-form recordings from 2014-2022 on the law of attraction, manifestation, wealth, and breaking free of the money game. Free to listen here.
+              </p>
+            </div>
+          </Reveal>
+
+          <div className="mt-12 grid gap-5 md:grid-cols-2">
+            {MONEY_LIBRARY.map((m) => (
+              <Reveal key={m.audio}>
+                <article className="flex h-full flex-col rounded-md border border-ink/10 bg-white p-6 shadow-sm">
+                  <div className="text-[10px] font-semibold uppercase tracking-[0.22em] text-gold-deep">Teaching</div>
+                  <h3 className="mt-2 font-serif text-[20px] leading-[1.3] text-ink">{m.title}</h3>
+                  <p className="mt-2 text-[14.5px] leading-[1.6] text-ink2">{m.subtitle}</p>
+                  <audio controls preload="none" className="mt-5 w-full" src={m.audio}>
+                    Your browser does not support the audio element.
+                  </audio>
+                  <p className="mt-3 text-[12px] text-soft">Best with headphones. Right-click the player to download.</p>
+                </article>
+              </Reveal>
+            ))}
           </div>
         </div>
       </section>
