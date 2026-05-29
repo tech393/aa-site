@@ -1,9 +1,9 @@
-/**
+﻿/**
  * Softly Powerful, the original WordPress mini-course recovered from
  * the May 2026 WP database dump. 17 audio lessons + intro + quiz.
  *
  * Audio is hosted on Cloudflare R2 (key prefix audio/softly-powerful/) and
- * served via NEXT_PUBLIC_AUDIO_CDN. See lib/audio.ts for why — TL;DR Vercel
+ * served via NEXT_PUBLIC_AUDIO_CDN. See lib/audio.ts for why â€” TL;DR Vercel
  * doesn't hydrate Git LFS pointers so MP3s in public/ wouldn't play.
  */
 import { audioUrl } from "@/lib/audio";
@@ -17,6 +17,8 @@ export type SPLesson = {
   audio: string | null;
   /** Original WP file URL, for reference / restore. */
   audioOriginal?: string;
+  /** Hero card image, matches /public/images/sp-cards/<slug>.jpg. */
+  image?: string;
   bullets: string[];
 };
 
@@ -29,6 +31,7 @@ export const SP_COURSE: SPLesson[] = [
     audio: audioUrl("/audio/softly-powerful/Softly-Powerful-Intro.mp3"),
     audioOriginal:
       "https://awakenedacademy.com/wp-content/uploads/2014/09/Softly-Powerful-Intro.mp3",
+    image: "/images/sp-cards/intro.jpg",
     bullets: [
       "What it means to be 'softly powerful'.",
       "Why the world needs sensitive, deep souls right now.",
@@ -44,6 +47,7 @@ export const SP_COURSE: SPLesson[] = [
     audio: audioUrl("/audio/softly-powerful/1-Introverts-Versus-Extroverts-Whats-the-Difference.mp3"),
     audioOriginal:
       "https://awakenedacademy.com/wp-content/uploads/2014/09/1-Introverts-Versus-Extroverts-Whats-the-Difference.mp3",
+    image: "/images/sp-cards/introverts-versus-extroverts.jpg",
     bullets: [
       "The real (not stereotyped) difference between introverts and extroverts.",
       "Why so many sensitive people are quietly miserable in extrovert-built systems.",
@@ -59,6 +63,7 @@ export const SP_COURSE: SPLesson[] = [
     audio: audioUrl("/audio/softly-powerful/2-The-Power-of-Introverts-and-Why-the-World-Needs-You.mp3"),
     audioOriginal:
       "https://awakenedacademy.com/wp-content/uploads/2014/09/2-The-Power-of-Introverts-and-Why-the-World-Needs-You.mp3",
+    image: "/images/sp-cards/the-power-of-introverts.jpg",
     bullets: [
       "How to deal with work, parties, presentations and speeches without dread.",
       "Master social situations while staying true to yourself, relaxed and confident.",
@@ -76,6 +81,7 @@ export const SP_COURSE: SPLesson[] = [
     ),
     audioOriginal:
       "https://awakenedacademy.com/wp-content/uploads/2014/09/3-The-Growth-of-the-Extrovert-Ideal-and-the-Emergence-of-the-Personality-Cults.mp3",
+    image: "/images/sp-cards/the-growth-of-the-extrovert-ideal.jpg",
     bullets: [
       "When and why western culture became loud, fast, and personality-driven.",
       "How the 'cult of personality' silently warps how introverts see themselves.",
@@ -91,6 +97,7 @@ export const SP_COURSE: SPLesson[] = [
     audio: audioUrl("/audio/softly-powerful/4-Discover-Who-You-Are-and-What-Youre-Here-to-Do-as-an-Introvert.mp3"),
     audioOriginal:
       "https://awakenedacademy.com/wp-content/uploads/2014/09/4-Discover-Who-You-Are-and-What-Youre-Here-to-Do-as-an-Introvert.mp3",
+    image: "/images/sp-cards/disover-who-you-are.jpg",
     bullets: [
       "How to tell what your true nature wants vs what culture trained you to want.",
       "The quiet signals your soul is sending you about your real path.",
@@ -106,6 +113,7 @@ export const SP_COURSE: SPLesson[] = [
     audio: audioUrl("/audio/softly-powerful/5-Deep-Questions-to-Discover-Your-Dharma.mp3"),
     audioOriginal:
       "https://awakenedacademy.com/wp-content/uploads/2014/09/5-Deep-Questions-to-Discover-Your-Dharma.mp3",
+    image: "/images/sp-cards/deep-questions-to-discover-your-dharma.jpg",
     bullets: [
       "The questions to ask yourself that surface your true calling.",
       "Why most 'find your purpose' exercises miss what introverts actually need.",
@@ -121,6 +129,7 @@ export const SP_COURSE: SPLesson[] = [
     audio: audioUrl("/audio/softly-powerful/6-The-Secret-Formula-to-Lasting-Happiness.mp3"),
     audioOriginal:
       "https://awakenedacademy.com/wp-content/uploads/2014/09/6-The-Secret-Formula-to-Lasting-Happiness.mp3",
+    image: "/images/sp-cards/the-secret-formula-to-lasting-happiness.jpg",
     bullets: [
       "Why pleasure / stimulation / 'fun' doesn't equal happiness for introverts.",
       "The formula that does work, and why the world won't teach you it.",
@@ -136,6 +145,7 @@ export const SP_COURSE: SPLesson[] = [
     audio: audioUrl("/audio/softly-powerful/7-How-to-Overcome-Oversensitivy.mp3"),
     audioOriginal:
       "https://awakenedacademy.com/wp-content/uploads/2014/09/7-How-to-Overcome-Oversensitivy.mp3",
+    image: "/images/sp-cards/how-to-overcome-oversensitivy.jpg",
     bullets: [
       "The difference between healthy sensitivity and being a sponge for others.",
       "How to keep your softness without losing your boundaries.",
@@ -151,6 +161,7 @@ export const SP_COURSE: SPLesson[] = [
     audio: audioUrl("/audio/softly-powerful/8-How-to-Deal-with-Extrovert-Situations.mp3"),
     audioOriginal:
       "https://awakenedacademy.com/wp-content/uploads/2014/09/8-How-to-Deal-with-Extrovert-Situations.mp3",
+    image: "/images/sp-cards/how-to-deal-with-extrovert-situations.jpg",
     bullets: [
       "How to navigate loud, high-stimulation environments without depleting yourself.",
       "Pre-event, in-event, and recovery practices that actually work.",
@@ -165,6 +176,7 @@ export const SP_COURSE: SPLesson[] = [
     subtitle: "The most undervalued superpower of the softly powerful.",
     audio: audioUrl("/audio/softly-powerful/9-Why-its-Okay-to-Say-No.mp3"),
     audioOriginal: "https://awakenedacademy.com/wp-content/uploads/2014/09/9-Why-its-Okay-to-Say-No.mp3",
+    image: "/images/sp-cards/why-its-okay-to-say-no.jpg",
     bullets: [
       "Why saying no is an act of love, not selfishness.",
       "How to say no without breaking the relationship.",
@@ -179,6 +191,7 @@ export const SP_COURSE: SPLesson[] = [
     subtitle: "Knowing which invitations are actually for you.",
     audio: audioUrl("/audio/softly-powerful/10-When-to-Say-Yes.mp3"),
     audioOriginal: "https://awakenedacademy.com/wp-content/uploads/2014/09/10-When-to-Say-Yes.mp3",
+    image: "/images/sp-cards/when-to-say-yes.jpg",
     bullets: [
       "The internal signals that tell you something is genuinely a yes.",
       "Why most introverts say yes for the wrong reasons (and how to stop).",
@@ -194,6 +207,7 @@ export const SP_COURSE: SPLesson[] = [
     audio: audioUrl("/audio/softly-powerful/11-Introversion-101-Dos-and-Donts.mp3"),
     audioOriginal:
       "https://awakenedacademy.com/wp-content/uploads/2014/09/11-Introversion-101-Dos-and-Donts.mp3",
+    image: "/images/sp-cards/introversion-101-dos-and-donts.jpg",
     bullets: [
       "The non-negotiable daily habits for introvert wellbeing.",
       "The traps to avoid (most of them are 'productivity' advice in disguise).",
@@ -211,6 +225,7 @@ export const SP_COURSE: SPLesson[] = [
     ),
     audioOriginal:
       "https://awakenedacademy.com/wp-content/uploads/2014/09/12-Overcoming-the-Lizard-Brain-that-Stops-You-from-Doing-Things.mp3",
+    image: "/images/sp-cards/overcoming-the-lizard-brain-that-stops-you-from-doing-things.jpg",
     bullets: [
       "Why your nervous system blocks the work that matters most.",
       "How to recognise lizard-brain resistance vs a true 'not now'.",
@@ -226,6 +241,7 @@ export const SP_COURSE: SPLesson[] = [
     audio: audioUrl("/audio/softly-powerful/13-What-to-Do-on-a-Rainy-Day-When-Youre-Feeling-Down.mp3"),
     audioOriginal:
       "https://awakenedacademy.com/wp-content/uploads/2014/09/13-What-to-Do-on-a-Rainy-Day-When-Youre-Feeling-Down.mp3",
+    image: "/images/sp-cards/what-to-do-on-a-rainy-day-when-youre-feeling-down.jpg",
     bullets: [
       "Why low days aren't a problem to fix, they're information.",
       "Gentle practices for shifting state without forcing it.",
@@ -241,6 +257,7 @@ export const SP_COURSE: SPLesson[] = [
     audio: audioUrl("/audio/softly-powerful/14-The-Power-of-Energy-Exercise.mp3"),
     audioOriginal:
       "https://awakenedacademy.com/wp-content/uploads/2014/09/14-The-Power-of-Energy-Exercise.mp3",
+    image: "/images/sp-cards/the-power-of-energy-exercise.jpg",
     bullets: [
       "Why most 'fitness' advice is wrong for introverts and empaths.",
       "Movement practices that build energy instead of draining it.",
@@ -256,6 +273,7 @@ export const SP_COURSE: SPLesson[] = [
     audio: audioUrl("/audio/softly-powerful/15-Business-Success-for-Introverts.mp3"),
     audioOriginal:
       "https://awakenedacademy.com/wp-content/uploads/2014/09/15-Business-Success-for-Introverts.mp3",
+    image: "/images/sp-cards/business-success-for-introverts.jpg",
     bullets: [
       "Why introvert-built businesses outperform extrovert hustle in the long run.",
       "The pricing, packaging, and sales approaches that work for quiet souls.",
@@ -271,6 +289,7 @@ export const SP_COURSE: SPLesson[] = [
     audio: audioUrl("/audio/softly-powerful/16-How-to-overcome-being-triggered-Hooponopono.mp3"),
     audioOriginal:
       "https://awakenedacademy.com/wp-content/uploads/2014/09/16-How-to-overcome-being-triggered-Hooponopono.mp3",
+    image: "/images/sp-cards/how-to-overcome-being-triggered-hooponopono.jpg",
     bullets: [
       "What Ho'oponopono is and why it's particularly powerful for empaths.",
       "The exact phrases to use when you're flooded by someone else's energy.",
@@ -279,3 +298,4 @@ export const SP_COURSE: SPLesson[] = [
     ],
   },
 ];
+

@@ -98,23 +98,36 @@ export default function SPCoursePage() {
               <Reveal key={l.slug}>
                 <Link
                   href={`/sp/${l.slug}`}
-                  className="group flex h-full flex-col rounded-md border border-ink/10 bg-white p-6 shadow-sm transition hover:border-teal/40 hover:shadow-md"
+                  className="group flex h-full flex-col overflow-hidden rounded-md border border-ink/10 bg-white shadow-sm transition hover:border-teal/40 hover:shadow-md"
                 >
-                  <div className="flex items-baseline justify-between gap-3">
-                    <span className="font-serif text-[28px] leading-none text-gold">
-                      {l.number === 0 ? "00" : String(l.number).padStart(2, "0")}
-                    </span>
-                    <span className="text-[10px] font-semibold uppercase tracking-[0.18em] text-teal">
-                      {l.number === 0 ? "Intro" : "Audio"}
-                    </span>
-                  </div>
-                  <h3 className="mt-4 font-serif text-[18px] leading-[1.3] text-ink group-hover:text-teal">
-                    {l.title}
-                  </h3>
-                  {l.subtitle && (
-                    <p className="mt-3 flex-1 text-[14px] leading-[1.65] text-ink2">{l.subtitle}</p>
+                  {l.image && (
+                    <div className="relative aspect-[16/9] w-full overflow-hidden">
+                      <Image
+                        src={l.image}
+                        alt=""
+                        fill
+                        sizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw"
+                        className="object-cover transition group-hover:scale-105"
+                      />
+                    </div>
                   )}
-                  <div className="mt-5 text-[12px] font-medium text-teal">Listen →</div>
+                  <div className="flex flex-1 flex-col p-6">
+                    <div className="flex items-baseline justify-between gap-3">
+                      <span className="font-serif text-[28px] leading-none text-gold">
+                        {l.number === 0 ? "00" : String(l.number).padStart(2, "0")}
+                      </span>
+                      <span className="text-[10px] font-semibold uppercase tracking-[0.18em] text-teal">
+                        {l.number === 0 ? "Intro" : "Audio"}
+                      </span>
+                    </div>
+                    <h3 className="mt-4 font-serif text-[18px] leading-[1.3] text-ink group-hover:text-teal">
+                      {l.title}
+                    </h3>
+                    {l.subtitle && (
+                      <p className="mt-3 flex-1 text-[14px] leading-[1.65] text-ink2">{l.subtitle}</p>
+                    )}
+                    <div className="mt-5 text-[12px] font-medium text-teal">Listen →</div>
+                  </div>
                 </Link>
               </Reveal>
             ))}
