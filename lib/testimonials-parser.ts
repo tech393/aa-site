@@ -28,6 +28,25 @@ function looksLikeAttribution(line: string): boolean {
   return false;
 }
 
+/**
+ * Pull a name attached to the closing quote (e.g. `…I love you.”Nikki` or
+ * `…—Lyne Johnson`). Returns { quote, name } where `quote` has the trailing
+ * name stripped. Conservative: only accepts 1-3 capitalised tokens.
+ */
+function extractTrailingName(quote: string): { quote: string; name: string | null } {
+  const trimmed = quote.replace(/\s+$/u, "");
+  const m = trimmed.match(
+    /(?:[”"]|—|–|-{1,2})\s*([A-Z][a-zA-Z'’-]+(?:\s+[A-Z][a-zA-Z'’-]+){0,2})\s*$/u
+  );
+  if (!m) return { quote, name: null };
+  const name = m[1].trim();
+  if (ATTRIBUTION_KEYWORDS.some((k) => name.toLowerCase().includes(k))) {
+    return { quote, name: null };
+  }
+  const stripped = trimmed.slice(0, trimmed.length - m[1].length).replace(/\s+$/u, "");
+  return { quote: stripped, name };
+}
+
 function startsAsQuote(line: string): boolean {
   return line.trim().startsWith("“");
 }
@@ -79,12 +98,29 @@ export function parseTestimonials(body: string): Testimonial[] {
   }
   flush();
 
-  // Clean each testimonial's quote, strip enclosing curly quotes
-  return testimonials.map((t) => ({
-    quote: t.quote
+  // Clean each testimonial's quote, strip enclosing curly quotes, and promote
+  // any name buried at the end of the last paragraph (e.g. `…I love you.”Nikki`)
+  // up to the attribution slot when no explicit attribution was found.
+  return testimonials.map((t) => {
+    let attribution = t.attribution;
+    let quote = t.quote;
+    if (!attribution) {
+      const { quote: stripped, name } = extractTrailingName(quote);
+      if (name) {
+        attribution = name;
+        quote = stripped;
+      }
+    }
+    quote = quote
       .replace(/^[“”"'\s]+/, "")
       .replace(/[“”"'\s]+$/, "")
-      .trim(),
-    attribution: t.attribution || "Awakened Academy student",
-  })).filter((t) => t.quote.length > 20);
+      .trim();
+    // Collapse "*foo *" stray-italic patterns into "*foo*" so markdown emphasis
+    // renders correctly instead of leaving a literal asterisk in the body.
+    quote = quote.replace(/\*([^*\n]+?)\s+\*/g, "*$1*");
+    return {
+      quote,
+      attribution: attribution || "Awakened Academy graduate",
+    };
+  }).filter((t) => t.quote.length > 20);
 }

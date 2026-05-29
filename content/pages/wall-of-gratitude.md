@@ -36,7 +36,9 @@ And as for the Inspiration, both Arielle and Michael have long been making their
 
 High School Spanish/Special Education Teacher
 
-“I have done two of your guided meditations, 7 color rays and release past burdens by surrendering. They really have had a profound affect on me. I have done countless female or male guided meditations from the very famous to the more subtle ones…..I have never been so resonant to others….as yours. Just want to let you know. Thank you so much the beautiful living Angel Arielle. Blessings from Hong Kong, I love you.”Nikki
+“I have done two of your guided meditations, 7 color rays and release past burdens by surrendering. They really have had a profound affect on me. I have done countless female or male guided meditations from the very famous to the more subtle ones…..I have never been so resonant to others….as yours. Just want to let you know. Thank you so much the beautiful living Angel Arielle. Blessings from Hong Kong, I love you.”
+
+Nikki, Hong Kong
 
 “Your programs and guidance have been powerful beyond belief. The meditations and wisdom shared with such heart and soul shine with the higher vibration that I go back to again and again. Thank you so much! “
 
@@ -72,7 +74,7 @@ RN, LMT, Certified Health Coach
 
 “I can’t express how grateful I am and how fortunate I feel for having fortuitously stumbled upon Michael and Arielle’s work. They have helped me learn to say “no”, take “me time” and to embrace my introversion. Their openness in sharing past pains with a wide-open heart has enabled me to confront & embrace my pains.
 
-After an amazing phone consultation, I was miraculously able to release a debilitating physical condition called *brachial radial pruritis *that had been plaguing me for some time. Together as Michael and Arielle guided me in releasing my fears …. **My condition disappeared!** As they say, “as within, so without”!”
+After an amazing phone consultation, I was miraculously able to release a debilitating physical condition called *brachial radial pruritis* that had been plaguing me for some time. Together as Michael and Arielle guided me in releasing my fears …. **My condition disappeared!** As they say, “as within, so without”!”
 
 Mother, wife, seeker, yogi, entrepreneur, President, International Business Solutions, Inc
 

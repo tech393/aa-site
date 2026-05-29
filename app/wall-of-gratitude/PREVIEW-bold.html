@@ -5577,10 +5577,25 @@ function locationToCountry(location) {
 function initials(name) { return (name||'').split(/[\s,]+/).slice(0,2).map(w=>w[0]||'').join('').toUpperCase().slice(0,2); }
 function wordCount(s) { return s.trim().split(/\s+/).length; }
 function esc(s) { return (s||'').replace(/[&<>"']/g, c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c])); }
+// True for first-name-only attributions ("Nikki", "Joe", "Mary Beth") so the
+// masonry card surfaces the real name instead of hiding it behind the role.
+// False for role-shaped strings ("SEO Expert", "Awakened Academy Reader",
+// "Mother, wife, seeker, yogi, entrepreneur") that belong in the role slot.
+function isPersonName(name) {
+  if (!name) return false;
+  const n = name.trim();
+  if (n.length === 0 || n.length > 40) return false;
+  if (/[,&/]| and /i.test(n)) return false;
+  return /^[A-Z][a-zA-Z'’-]+(?:\s+[A-Z][a-zA-Z'’.-]+){0,2}$/.test(n);
+}
 
 function avatarHTML(t, large) {
   const cls = large ? 'avatar' : 'avatar-small';
-  if (t.photoSrc) return `<div class="${cls}"><img src="${esc(t.photoSrc)}" alt="${esc(t.name)}" onerror="this.parentElement.classList.add('avatar-empty'); this.parentElement.removeChild(this);"/></div>`;
+  if (t.photoSrc) {
+    const role = t.role || 'Awakened Academy graduate';
+    const altText = `Portrait of ${t.name}, ${role}`;
+    return `<div class="${cls}"><img src="${esc(t.photoSrc)}" alt="${esc(altText)}" onerror="this.parentElement.classList.add('avatar-empty'); this.parentElement.removeChild(this);"/></div>`;
+  }
   return `<div class="${cls} avatar-empty"></div>`;
 }
 
@@ -5692,12 +5707,12 @@ function renderMasonryCard(t, idx) {
     <div class="body-text" data-preview="${esc(preview).replace(/"/g,'&quot;')}" data-full="${esc(full).replace(/"/g,'&quot;')}">${preview}</div>
     ${isLong ? `<button class="read-more-btn" onclick="toggleExpand(this)" data-expanded="false">— Read full story</button>` : ''}
     <footer class="card-footer-small">
-      ${t.isFullName ? avatarHTML(t, false) : ''}
+      ${t.isFullName || isPersonName(t.name) ? avatarHTML(t, false) : ''}
       <div class="card-meta">
-        ${t.isFullName
+        ${t.isFullName || isPersonName(t.name)
           ? `<div class="card-name-small">${esc(t.name)}</div>
              <div class="card-role-small">${[t.role, t.location].filter(Boolean).map(esc).join(' · ') || esc(t.program)}</div>`
-          : `<div class="card-attribution">— ${esc(t.location || t.role || 'Awakened Academy graduate')}</div>`}
+          : `<div class="card-attribution">— ${esc(t.name || t.location || t.role || 'Awakened Academy graduate')}</div>`}
       </div>
     </footer>
   </article>`;
@@ -5921,7 +5936,7 @@ function renderFaces() {
   const remaining = target - unique.length - noPhotos.length;
   const facesHtml = unique.map((t, i) => {
     if (t.photoSrc) {
-      return `<div class="face reveal" title="${esc(t.name)}" style="animation-delay:${Math.min(i*0.015, 0.4)}s"><img src="${t.photoSrc}" alt="${esc(t.name)}" onerror="this.parentElement.classList.add('avatar-empty'); this.remove();"/></div>`;
+      return `<div class="face reveal" title="${esc(t.name)}" style="animation-delay:${Math.min(i*0.015, 0.4)}s"><img src="${t.photoSrc}" alt="${esc('Portrait of ' + t.name + ', Awakened Academy graduate')}" onerror="this.parentElement.classList.add('avatar-empty'); this.remove();"/></div>`;
     }
     return `<div class="face avatar-empty reveal" title="${esc(t.name)}" style="animation-delay:${Math.min(i*0.015, 0.4)}s"></div>`;
   }).join('');
