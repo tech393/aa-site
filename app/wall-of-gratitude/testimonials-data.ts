@@ -4425,6 +4425,34 @@ export const VIDEO_TESTIMONIALS: VideoTestimonial[] = [
 ];
 
 // ───────────────────────────────────────────────────────────────────────────
+// AUDIO TESTIMONIALS, recovered from the 2015/10 batch in the WordPress
+// backup (wp-content/uploads/2015/10/). Hosted on R2 via audioUrl().
+// ───────────────────────────────────────────────────────────────────────────
+export interface AudioTestimonial {
+  id: string;
+  audioPath: string;   // path under /audio/testimonials/, wrapped by audioUrl() in the client
+  name: string;
+  caption: string;
+  role?: string;
+}
+
+export const AUDIO_TESTIMONIALS: AudioTestimonial[] = [
+  {
+    id: 'audio-penny',
+    audioPath: '/audio/testimonials/Penny-testimonial.mp3',
+    name: 'Penny',
+    caption: 'Live group-call testimonial.',
+  },
+  {
+    id: 'audio-rachel',
+    audioPath: '/audio/testimonials/Rachel-testimonial.mp3',
+    name: 'Rachel Joy Olsen',
+    role: 'Entrepreneur & Holistic Health Coach',
+    caption: 'On the Certification program and finding her path.',
+  },
+];
+
+// ───────────────────────────────────────────────────────────────────────────
 // BIG PULL QUOTES, rendered as full-width serif dividers every ~12 cards in
 // the masonry wall. NYT-Magazine pacing. All are verbatim from the data
 // above; we just pull the most quotable line.

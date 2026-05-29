@@ -26,6 +26,7 @@ import {
   THEME_FILTERS,
   COUNTRY_FILTERS,
   VIDEO_TESTIMONIALS,
+  AUDIO_TESTIMONIALS,
   INSIGHT_TIMER_SAMPLES,
   AMAZON_REVIEWS,
   INSIGHT_TIMER_LIVE_REVIEWS,
@@ -34,6 +35,7 @@ import {
   type TestimonialTheme,
   type TestimonialProgram
 } from './testimonials-data';
+import { audioUrl } from '@/lib/audio';
 
 const STATS = [
   { value: '650+',    label: 'Certified coaches' },
@@ -390,6 +392,47 @@ export default function WallOfGratitudeClient() {
           </div>
         </div>
       </section>
+
+      {/* ─────────────────────────── AUDIO TESTIMONIALS ─────────────────────────── */}
+      {AUDIO_TESTIMONIALS.length > 0 && (
+        <section className="border-b border-line bg-cream">
+          <div className="max-w-[1180px] mx-auto px-6 md:px-8 py-16 md:py-20">
+            <Reveal>
+              <div className="text-center mb-10">
+                <div className="font-body text-[12px] uppercase tracking-[0.28em] font-semibold text-gold-deep mb-3">Audio testimonials</div>
+                <h2 className="font-display text-[clamp(1.75rem,4vw,2.5rem)] leading-[1.15] tracking-[-0.015em] text-ink">
+                  Listen to <em className="italic text-teal">graduates speak</em>
+                </h2>
+              </div>
+            </Reveal>
+            <div className="grid gap-6 md:grid-cols-2">
+              {AUDIO_TESTIMONIALS.map((a, i) => (
+                <Reveal key={a.id} delay={0.05 + i * 0.05}>
+                  <figure className="overflow-hidden rounded-md border border-line bg-white shadow-sm">
+                    <div className="p-5">
+                      <audio
+                        controls
+                        preload="none"
+                        src={audioUrl(a.audioPath)}
+                        className="w-full"
+                      >
+                        Your browser does not support the audio element.
+                      </audio>
+                    </div>
+                    <figcaption className="px-5 pb-5">
+                      <div className="font-display text-[18px] text-ink">{a.name}</div>
+                      {a.role && (
+                        <div className="font-body text-[13px] text-ink-muted mt-1">{a.role}</div>
+                      )}
+                      <div className="font-body text-[14px] text-ink-soft mt-2 italic">{a.caption}</div>
+                    </figcaption>
+                  </figure>
+                </Reveal>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
 
       {/* ─────────────────────────── INSIGHT TIMER ABUNDANCE ─────────────────────────── */}
       <InsightTimerSection />
