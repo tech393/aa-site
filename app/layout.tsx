@@ -117,6 +117,15 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <main className="flex-1">{children}</main>
         <SiteFooter />
         <Script src={GHL.scriptUrl} strategy="afterInteractive" />
+        <Script id="hyros-universal" strategy="afterInteractive">
+          {`
+            var head = document.head;
+            var script = document.createElement('script');
+            script.type = 'text/javascript';
+            script.src = "https://179664.t.hyros.com/v1/lst/universal-script?ph=f2cf483ecc62918bef5da777eb9e8a0b7bf30988e1b09ca416952038fbdbbbd8&tag=!clicked&ref_url=" + encodeURI(document.URL);
+            head.appendChild(script);
+          `}
+        </Script>
         {GA_ID && (
           <>
             <Script
