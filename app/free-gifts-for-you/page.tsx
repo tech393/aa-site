@@ -71,13 +71,11 @@ const GIFTS: Gift[] = [
     cta: "Start Now",
   },
   {
-    title: "21 Day Challenge",
-    tagline: "Bring your project to life in 21 days or less. Free challenge with Michael Mackintosh.",
-    href: "/21-day-challenge",
-    image: "/img/gifts/michael.jpg",
-    photo: true,
-    imagePosition: "center top",
-    cta: "Take the Challenge",
+    title: "Get It Done 21 Day Bonus",
+    tagline: "The free 21-day companion course for readers of Get It Done. Activate the mind hack system and finish what you started.",
+    href: "/21-day-bonus",
+    image: "/images/books/get-it-done.jpg",
+    cta: "Get The Free Course",
   },
   {
     title: "Don't Die With Your Song Inside",

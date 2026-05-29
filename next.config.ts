@@ -210,8 +210,9 @@ const config: NextConfig = {
     { source: "/guests", destination: "/", permanent: true },
     { source: "/privacy-policy", destination: "/privacy", permanent: true },
     { source: "/terms-of-service", destination: "/terms", permanent: true },
-    // Old book sales
-    { source: "/getitdone", destination: "/ep", permanent: true },
+    // Old Get It Done book sales URL — repointed to the canonical book-bonus landing (May 2026)
+    { source: "/getitdone", destination: "/21-day-bonus", permanent: true },
+    { source: "/get-it-done", destination: "/21-day-bonus", permanent: true },
     { source: "/snow-day", destination: "/", permanent: true },
     { source: "/kauai-aloha", destination: "/", permanent: true },
     // 2019 event
@@ -251,6 +252,12 @@ const config: NextConfig = {
       { source: "/top-spiritual-coaching-programs-for-2026-transform-your-life", destination: "/best-spiritual-life-coach-certification-programs", permanent: true },
       { source: "/top-rated-spiritual-life-coach-certification-programs-of-2025", destination: "/best-spiritual-life-coach-certification-programs", permanent: true },
       { source: "/top-spiritual-life-coach-training-programs-for-2026", destination: "/best-spiritual-life-coach-certification-programs", permanent: true },
+      // /21-day-bonus is the canonical landing page printed inside the Get It Done book
+      // (May 2026). It points at the Kajabi-hosted free bonus course. Every variant slug
+      // and the retired free-challenge URL redirect into it so the printed URL never 404s.
+      { source: "/21daybonus", destination: "/21-day-bonus", permanent: true },
+      { source: "/21daychallenge", destination: "/21-day-bonus", permanent: true },
+      { source: "/21-day-challenge", destination: "/21-day-bonus", permanent: true },
       // Residual WordPress paths are handled by middleware with 410 Gone.
     ];
   },
