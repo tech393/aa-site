@@ -24,7 +24,7 @@ export const SP_COURSE: SPLesson[] = [
   {
     slug: "intro",
     number: 0,
-    title: "Welcome to Softly Powerful",
+    title: "Intro to Softly Powerful",
     subtitle: "The secrets to dealing with social situations in a world that doesn't 'get' you.",
     audio: audioUrl("/audio/softly-powerful/Softly-Powerful-Intro.mp3"),
     audioOriginal:
@@ -39,7 +39,7 @@ export const SP_COURSE: SPLesson[] = [
   {
     slug: "introverts-versus-extroverts",
     number: 1,
-    title: "Introverts vs Extroverts",
+    title: "Introvert VS Extrovert",
     subtitle: "What's the actual difference, and why has the world tilted one way?",
     audio: audioUrl("/audio/softly-powerful/1-Introverts-Versus-Extroverts-Whats-the-Difference.mp3"),
     audioOriginal:
@@ -54,7 +54,7 @@ export const SP_COURSE: SPLesson[] = [
   {
     slug: "the-power-of-introverts",
     number: 2,
-    title: "The Power of Introverts",
+    title: "The Power of Introverts and Why the World Needs You",
     subtitle: "Why the world needs you, and how to deal with social situations without selling out.",
     audio: audioUrl("/audio/softly-powerful/2-The-Power-of-Introverts-and-Why-the-World-Needs-You.mp3"),
     audioOriginal:
@@ -69,7 +69,7 @@ export const SP_COURSE: SPLesson[] = [
   {
     slug: "the-growth-of-the-extrovert-ideal",
     number: 3,
-    title: "The Growth of the Extrovert Ideal",
+    title: "The Growth of the Extrovert Ideal and the Emergence of the Personality Cults",
     subtitle: "How the world got loud, and how to find peace inside it.",
     audio: audioUrl(
       "/audio/softly-powerful/3-The-Growth-of-the-Extrovert-Ideal-and-the-Emergence-of-the-Personality-Cults.mp3"
@@ -86,7 +86,7 @@ export const SP_COURSE: SPLesson[] = [
   {
     slug: "disover-who-you-are",
     number: 4,
-    title: "Discover Who You Are",
+    title: "Discover Who You Are and What You're Here to Do as an Introvert",
     subtitle: "And what you're here to do as an introvert.",
     audio: audioUrl("/audio/softly-powerful/4-Discover-Who-You-Are-and-What-Youre-Here-to-Do-as-an-Introvert.mp3"),
     audioOriginal:
@@ -189,7 +189,7 @@ export const SP_COURSE: SPLesson[] = [
   {
     slug: "introversion-101-dos-and-donts",
     number: 11,
-    title: "Introversion 101, Dos and Don'ts",
+    title: "Introversion 101 Do's and Dont's",
     subtitle: "The practical handbook for living as a quiet soul in a loud world.",
     audio: audioUrl("/audio/softly-powerful/11-Introversion-101-Dos-and-Donts.mp3"),
     audioOriginal:
@@ -204,7 +204,7 @@ export const SP_COURSE: SPLesson[] = [
   {
     slug: "overcoming-the-lizard-brain-that-stops-you-from-doing-things",
     number: 12,
-    title: "Overcoming the Lizard Brain",
+    title: "Overcoming the Lizard Brain that Stops You from Doing Things",
     subtitle: "The part of you that stops you from doing what you came here to do.",
     audio: audioUrl(
       "/audio/softly-powerful/12-Overcoming-the-Lizard-Brain-that-Stops-You-from-Doing-Things.mp3"
@@ -221,7 +221,7 @@ export const SP_COURSE: SPLesson[] = [
   {
     slug: "what-to-do-on-a-rainy-day-when-youre-feeling-down",
     number: 13,
-    title: "What to Do on a Rainy Day",
+    title: "What to Do on a Rainy Day When You're Feeling Down",
     subtitle: "When you're feeling down, soft, slow, and uninspired.",
     audio: audioUrl("/audio/softly-powerful/13-What-to-Do-on-a-Rainy-Day-When-Youre-Feeling-Down.mp3"),
     audioOriginal:
@@ -236,7 +236,7 @@ export const SP_COURSE: SPLesson[] = [
   {
     slug: "the-power-of-energy-exercise",
     number: 14,
-    title: "The Power of Energy",
+    title: "The Power of Energy (Exercise)",
     subtitle: "Movement practice for sensitive, awakened souls.",
     audio: audioUrl("/audio/softly-powerful/14-The-Power-of-Energy-Exercise.mp3"),
     audioOriginal:
@@ -266,7 +266,7 @@ export const SP_COURSE: SPLesson[] = [
   {
     slug: "how-to-overcome-being-triggered-hooponopono",
     number: 16,
-    title: "How to Overcome Being Triggered",
+    title: "How to Overcome Being 'Triggered' (Ho'oponopono)",
     subtitle: "The Ho'oponopono practice for sensitive souls.",
     audio: audioUrl("/audio/softly-powerful/16-How-to-overcome-being-triggered-Hooponopono.mp3"),
     audioOriginal:
