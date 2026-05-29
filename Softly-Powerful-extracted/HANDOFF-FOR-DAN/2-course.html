@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Softly Powerful — Your Mini-Course | Awakened Academy®</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* SOFTLY POWERFUL — premium "now playing" experience.
+           Desktop: player is a wide side-by-side panel (cover left, session + controls right).
+           Mobile: stacks. The player is the main thing; the CTA is a pleasant footer card. No stars. */
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+        :root {
+            --teal: #1F8077; --teal-deep: #0E5750;
+            --gold: #C9A24E; --gold-soft: #E6CB84;
+            --sand: #CBB68A; --sand-deep: #B49C6A;
+            --maroon: #7C2150; --maroon-deep: #5E1A3E;
+            --cream: #FBF7EC; --ink: #232b29; --ink-soft: rgba(35,43,41,0.74); --ink-muted: rgba(35,43,41,0.5);
+            --line: rgba(35,43,41,0.1);
+            --radius: 22px; --radius-sm: 8px;
+        }
+        body {
+            font-family: 'Inter', sans-serif; color: var(--ink);
+            background:
+              radial-gradient(1100px 620px at 50% -10%, #FCF7EA 0%, rgba(252,247,234,0) 60%),
+              radial-gradient(900px 700px at 85% 100%, rgba(31,128,119,0.12) 0%, rgba(31,128,119,0) 55%),
+              linear-gradient(180deg, #F4EFE2 0%, #E7EEE7 100%);
+            background-attachment: fixed;
+            font-size: 17px; line-height: 1.6; -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility;
+            min-height: 100vh;
+        }
+        .stage { max-width: 980px; margin: 0 auto; padding: 56px 24px 8px; }
+
+        .head { text-align: center; margin-bottom: 30px; }
+        .kicker { font-size: 11px; font-weight: 700; letter-spacing: 0.3em; text-transform: uppercase; color: var(--teal-deep); margin-bottom: 10px; }
+        .course-title { font-family: 'Cormorant Garamond', Georgia, serif; font-size: clamp(2.6rem, 6vw, 4rem); font-weight: 600; line-height: 1; color: var(--ink); margin-bottom: 6px; }
+        .course-name { font-family: 'Cormorant Garamond', Georgia, serif; font-size: clamp(1.25rem, 2.6vw, 1.6rem); font-weight: 500; font-style: italic; color: var(--ink-soft); }
+
+        /* THE PLAYER PANEL — side by side on desktop */
+        .panel {
+            background: #fff; border: 1px solid var(--line); border-radius: var(--radius);
+            padding: 52px 56px; box-shadow: 0 34px 80px -38px rgba(35,43,41,0.45);
+            display: grid; grid-template-columns: 300px 1fr; gap: 56px; align-items: center;
+        }
+
+        /* COVER with progress ring */
+        .cover { position: relative; width: 300px; height: 300px; flex-shrink: 0; }
+        .cover .art { position: absolute; inset: 22px; border-radius: 50%; overflow: hidden; box-shadow: 0 24px 60px -22px rgba(35,43,41,0.5), inset 0 0 0 1px rgba(255,255,255,0.4); transition: transform 1.6s ease-in-out; }
+        .cover .art img { width: 100%; height: 100%; object-fit: cover; display: block; }
+        body.playing .cover .art { animation: breathe 6s ease-in-out infinite; }
+        @keyframes breathe { 0%,100% { transform: scale(1); } 50% { transform: scale(1.025); } }
+        .cover svg { position: absolute; inset: 0; width: 100%; height: 100%; transform: rotate(-90deg); }
+        .cover .ring-track { fill: none; stroke: rgba(35,43,41,0.1); stroke-width: 5; }
+        .cover .ring-prog { fill: none; stroke: url(#goldgrad); stroke-width: 5; stroke-linecap: round; transition: stroke-dashoffset 0.25s linear; filter: drop-shadow(0 0 5px rgba(201,162,78,0.6)); }
+        .play-btn { position: absolute; left: 50%; top: 50%; transform: translate(-50%,-50%); width: 78px; height: 78px; border-radius: 50%; border: none; cursor: pointer; background: rgba(251,247,236,0.78); backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px); box-shadow: 0 10px 30px -8px rgba(35,43,41,0.5), inset 0 0 0 1px rgba(255,255,255,0.6); display: flex; align-items: center; justify-content: center; transition: transform 140ms, background 200ms; color: var(--teal-deep); }
+        .play-btn:hover { transform: translate(-50%,-50%) scale(1.06); background: #fff; }
+        .play-btn svg { position: static; width: 30px; height: 30px; transform: none; }
+
+        /* RIGHT — track info + controls (left aligned on desktop) */
+        .info { text-align: left; }
+        .session-no { font-size: 11px; font-weight: 700; letter-spacing: 0.28em; text-transform: uppercase; color: var(--maroon); margin-bottom: 12px; }
+        h1.title { font-family: 'Cormorant Garamond', Georgia, serif; font-size: clamp(2rem, 3.4vw, 2.8rem); font-weight: 600; line-height: 1.1; color: var(--ink); margin-bottom: 14px; }
+        .desc { font-size: 1.0625rem; line-height: 1.55; color: var(--ink-soft); max-width: 42ch; margin-bottom: 28px; min-height: 3em; }
+
+        .seek-wrap { display: flex; align-items: center; gap: 12px; margin-bottom: 24px; }
+        .time { font-size: 12px; color: var(--ink-muted); font-variant-numeric: tabular-nums; min-width: 38px; }
+        .time.dur { text-align: right; }
+        input[type=range].seek { -webkit-appearance: none; appearance: none; flex: 1; height: 4px; border-radius: 99px; background: rgba(35,43,41,0.14); outline: none; cursor: pointer; }
+        input[type=range].seek::-webkit-slider-thumb { -webkit-appearance: none; width: 15px; height: 15px; border-radius: 50%; background: var(--gold); box-shadow: 0 1px 4px rgba(0,0,0,0.25); }
+        input[type=range].seek::-moz-range-thumb { width: 15px; height: 15px; border: none; border-radius: 50%; background: var(--gold); }
+
+        .skips { display: flex; align-items: center; gap: 16px; }
+        .skip { background: none; border: 1px solid var(--line); width: 48px; height: 48px; border-radius: 50%; cursor: pointer; color: var(--teal-deep); display: flex; align-items: center; justify-content: center; transition: border-color 160ms, color 160ms, background 160ms; }
+        .skip:hover:not(:disabled) { border-color: var(--teal); background: rgba(31,128,119,0.07); }
+        .skip:disabled { opacity: 0.3; cursor: default; }
+        .skip svg { width: 18px; height: 18px; }
+        .upnext { margin-top: 18px; font-size: 14px; font-style: italic; color: var(--ink-muted); font-family: 'Cormorant Garamond', serif; }
+
+        /* BONUS WEBINAR */
+        .bonus { max-width: 760px; margin: 60px auto 0; text-align: center; }
+        .bonus .tag { font-size: 11px; font-weight: 700; letter-spacing: 0.22em; text-transform: uppercase; color: var(--teal-deep); margin-bottom: 12px; }
+        .bonus h2 { font-family: 'Cormorant Garamond', Georgia, serif; font-size: clamp(1.5rem, 3vw, 2rem); font-weight: 600; line-height: 1.16; color: var(--ink); margin-bottom: 12px; }
+        .bonus .note { font-size: 0.95rem; color: var(--ink-muted); font-style: italic; max-width: 54ch; margin: 0 auto 22px; line-height: 1.55; }
+        .bonus-btn { display: inline-block; margin-top: 4px; padding: 14px 32px; background: #fff; color: var(--teal-deep); border: 1px solid rgba(31,128,119,0.5); text-decoration: none; border-radius: var(--radius-sm); font-size: 13px; font-weight: 700; letter-spacing: 0.04em; transition: background 160ms, transform 120ms; }
+        .bonus-btn:hover { background: rgba(31,128,119,0.08); transform: translateY(-1px); }
+
+        /* CTA — pleasant footer card */
+        .cta { max-width: 760px; margin: 56px auto 0; background: #fff; border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; display: grid; grid-template-columns: 1fr 1fr; box-shadow: 0 24px 56px -30px rgba(35,43,41,0.4); }
+        .cta-img { min-height: 280px; background-size: cover; background-position: center; }
+        .cta-body { padding: 38px 36px; align-self: center; }
+        .cta-body .tag { font-size: 11px; font-weight: 700; letter-spacing: 0.22em; text-transform: uppercase; color: var(--teal-deep); margin-bottom: 12px; }
+        .cta-body h2 { font-family: 'Cormorant Garamond', Georgia, serif; font-size: clamp(1.6rem, 3vw, 2.1rem); font-weight: 600; line-height: 1.14; color: var(--ink); margin-bottom: 14px; }
+        .cta-body p { font-size: 1rem; color: var(--ink-soft); line-height: 1.6; margin-bottom: 22px; }
+        .cta-body a { display: inline-block; padding: 15px 30px; background: linear-gradient(180deg, var(--teal) 0%, var(--teal-deep) 100%); color: #fff; text-decoration: none; border-radius: var(--radius-sm); font-size: 13px; font-weight: 700; letter-spacing: 0.04em; box-shadow: 0 12px 26px -10px rgba(14,87,80,0.6); transition: transform 120ms; }
+        .cta-body a:hover { transform: translateY(-2px); }
+
+        footer { text-align: center; padding: 44px 24px 56px; font-size: 12px; color: var(--ink-muted); }
+        footer a { color: inherit; text-decoration: none; margin: 0 6px; }
+        button:focus-visible, a:focus-visible, input:focus-visible { outline: 2px solid var(--teal); outline-offset: 3px; }
+
+        /* RESPONSIVE — stack to a calm single column on smaller screens */
+        @media (max-width: 760px) {
+            .panel { grid-template-columns: 1fr; gap: 32px; padding: 40px 26px; text-align: center; }
+            .cover { margin: 0 auto; }
+            .info { text-align: center; }
+            .desc { margin-left: auto; margin-right: auto; }
+            .skips { justify-content: center; }
+            .cta { grid-template-columns: 1fr; }
+            .cta-img { min-height: 200px; }
+        }
+        @media (max-width: 560px) {
+            .stage { padding: 44px 18px 8px; }
+            .cover { width: 260px; height: 260px; }
+        }
+        @media (prefers-reduced-motion: reduce) { body.playing .cover .art { animation: none; } }
+    </style>
+</head>
+<body>
+    <div class="stage">
+        <div class="head">
+            <div class="kicker">A Free Spiritual Mini-Course</div>
+            <div class="course-title">Softly Powerful</div>
+            <div class="course-name">The Introvert's Guide to Success</div>
+        </div>
+
+        <div class="panel">
+            <div class="cover">
+                <svg viewBox="0 0 300 300" aria-hidden="true">
+                    <defs>
+                        <linearGradient id="goldgrad" x1="0" y1="0" x2="1" y2="1">
+                            <stop offset="0%" stop-color="#E6CB84"/>
+                            <stop offset="100%" stop-color="#C9A24E"/>
+                        </linearGradient>
+                    </defs>
+                    <circle class="ring-track" cx="150" cy="150" r="144"/>
+                    <circle class="ring-prog" id="ring" cx="150" cy="150" r="144" stroke-dasharray="904.78" stroke-dashoffset="904.78"/>
+                </svg>
+                <div class="art"><img src="images/sp-reading.jpg" alt="" id="art"></div>
+                <button class="play-btn" id="playBtn" aria-label="Play">
+                    <svg id="playIcon" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                </button>
+            </div>
+
+            <div class="info">
+                <div class="session-no" id="sessionNo">Welcome</div>
+                <h1 class="title" id="title">Welcome — Start Here</h1>
+                <p class="desc" id="desc">A few quiet minutes on what this is, and the gentlest way to listen.</p>
+
+                <div class="seek-wrap">
+                    <span class="time" id="cur">0:00</span>
+                    <input type="range" class="seek" id="seek" min="0" max="100" value="0" step="0.1" aria-label="Seek">
+                    <span class="time dur" id="dur">0:00</span>
+                </div>
+
+                <div class="skips">
+                    <button class="skip" id="prevBtn" disabled aria-label="Previous session">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M6 6h2v12H6zm3.5 6l8.5 6V6z"/></svg>
+                    </button>
+                    <button class="skip" id="nextBtn" aria-label="Next session">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M16 6h2v12h-2zM6 6l8.5 6L6 18z"/></svg>
+                    </button>
+                </div>
+                <div class="upnext" id="upNext"></div>
+            </div>
+        </div>
+
+        <audio id="audio" preload="metadata" src="audio/Softly-Powerful-Intro.mp3"></audio>
+
+        <div class="bonus">
+            <div class="tag">Free Bonus Webinar</div>
+            <h2>The Spiritual Introvert's Guide to a Meaningful, Prosperous Online Career</h2>
+            <p class="note">A free webinar showing how a quiet, introverted person can become a paid spiritual coach, author, or course creator &mdash; and build a meaningful career on their own terms.</p>
+            <a class="bonus-btn" href="4-webinar.html">Watch the Webinar &rarr;</a>
+        </div>
+
+        <div class="cta">
+            <div class="cta-img" style="background-image:url('images/sp-tea.jpg')" role="img" aria-label="A woman relaxing at home with a warm cup of tea"></div>
+            <div class="cta-body">
+                <div class="tag">A New Possibility</div>
+                <h2>Would you like to become a spiritual coach, author, or course creator?</h2>
+                <p>Imagine never having to go to work again. No commute, no boss, no clocking in. Just a life on your own terms &mdash; do work you love, from home, on your own hours, and get paid to help people the way these sessions are helping you. Talk to one of our coaches on a free, relaxed call to see if it's a fit for you.</p>
+                <a href="3-sacred-session.html">Talk to a Coach &rarr;</a>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        Awakened Academy<sup>&reg;</sup> &middot;
+        <a href="https://www.awakenedacademy.com/privacy-policy">Privacy</a> &middot;
+        <a href="https://www.awakenedacademy.com/earnings-disclaimer">Earnings Disclaimer</a>
+    </footer>
+
+    <script>
+    (function(){'use strict';
+        var S = [
+            {n:'Welcome',t:'Welcome — Start Here',d:'A few quiet minutes on what this is, and the gentlest way to listen.',f:'Softly-Powerful-Intro'},
+            {n:'Session 1',t:'Introverts Versus Extroverts',d:'What’s really different about how you’re wired — and why it was never a flaw.',f:'1-Introverts-Versus-Extroverts-Whats-the-Difference'},
+            {n:'Session 2',t:'The Power of Introverts',d:'Why the world actually needs the way you think, feel, and see things.',f:'2-The-Power-of-Introverts-and-Why-the-World-Needs-You'},
+            {n:'Session 3',t:'The Growth of the Extrovert Ideal',d:'How we came to believe louder is better — and why it simply isn’t true.',f:'3-The-Growth-of-the-Extrovert-Ideal-and-the-Emergence-of-the-Personality-Cults'},
+            {n:'Session 4',t:'Discover Who You Really Are',d:'Getting clear on who you are, and the work you’re quietly here to do.',f:'4-Discover-Who-You-Are-and-What-Youre-Here-to-Do-as-an-Introvert'},
+            {n:'Session 5',t:'Deep Questions to Find Your Dharma',d:'Simple questions that point you toward your real purpose.',f:'5-Deep-Questions-to-Discover-Your-Dharma'},
+            {n:'Session 6',t:'The Secret to Lasting Happiness',d:'What actually makes a quiet life a deeply happy one.',f:'6-The-Secret-Formula-to-Lasting-Happiness'},
+            {n:'Session 7',t:'How to Overcome Oversensitivity',d:'Stay deeply feeling — without being overwhelmed by it.',f:'7-How-to-Overcome-Oversensitivy'},
+            {n:'Session 8',t:'Handling Loud, Busy Situations',d:'Get through extrovert rooms without burning out afterwards.',f:'8-How-to-Deal-with-Extrovert-Situations'},
+            {n:'Session 9',t:'Why It’s Okay to Say No',d:'Permission — and the real reason saying no protects your energy.',f:'9-Why-its-Okay-to-Say-No'},
+            {n:'Session 10',t:'When to Say Yes',d:'The small handful of yeses that are actually worth your energy.',f:'10-When-to-Say-Yes'},
+            {n:'Session 11',t:'Introversion 101',d:'Simple dos and don’ts for living well as an introvert.',f:'11-Introversion-101-Dos-and-Donts'},
+            {n:'Session 12',t:'Getting Past the Resistance',d:'Move past the fear and overthinking that stop you from starting.',f:'12-Overcoming-the-Lizard-Brain-that-Stops-You-from-Doing-Things'},
+            {n:'Session 13',t:'When You’re Feeling Low',d:'A gentle way back up on the days that feel heavy.',f:'13-What-to-Do-on-a-Rainy-Day-When-Youre-Feeling-Down'},
+            {n:'Session 14',t:'The Power of Energy',d:'A simple practice to steady and lift your energy.',f:'14-The-Power-of-Energy-Exercise'},
+            {n:'Session 15',t:'Success on Your Own Terms',d:'How to do meaningful work and get paid — the quiet way.',f:'15-Business-Success-for-Introverts'},
+            {n:'Session 16',t:'Letting Go of What Triggers You',d:'A simple way to release tension and come back to calm.',f:'16-How-to-overcome-being-triggered-Hooponopono'}
+        ];
+        var C = 904.78; // ring circumference (2*pi*144)
+        var i = 0, a = document.getElementById('audio');
+        var ring = document.getElementById('ring'), seek = document.getElementById('seek');
+        var cur = document.getElementById('cur'), dur = document.getElementById('dur');
+        var playBtn = document.getElementById('playBtn'), playIcon = document.getElementById('playIcon');
+        var prev = document.getElementById('prevBtn'), next = document.getElementById('nextBtn');
+        var PLAY = '<path d="M8 5v14l11-7z"/>', PAUSE = '<path d="M7 5h3.5v14H7zM13.5 5H17v14h-3.5z"/>';
+        function fmt(s){ if(!s||isNaN(s)) return '0:00'; var m=Math.floor(s/60), sec=Math.floor(s%60); return m+':'+(sec<10?'0':'')+sec; }
+        function load(keepPlaying){
+            var s=S[i];
+            document.getElementById('sessionNo').textContent=s.n;
+            document.getElementById('title').textContent=s.t;
+            document.getElementById('desc').textContent=s.d;
+            document.getElementById('upNext').textContent=(i<S.length-1)?('Up next: '+S[i+1].t):'That’s the whole guide. Beautifully done.';
+            prev.disabled=(i===0); next.disabled=(i===S.length-1);
+            a.src='audio/'+s.f+'.mp3'; a.load();
+            ring.style.strokeDashoffset=C; seek.value=0; cur.textContent='0:00'; dur.textContent='0:00';
+            if(keepPlaying){ a.play().catch(function(){}); }
+        }
+        function setIcon(playing){ playIcon.innerHTML = playing?PAUSE:PLAY; playBtn.setAttribute('aria-label', playing?'Pause':'Play'); document.body.classList.toggle('playing', playing); }
+        playBtn.addEventListener('click', function(){ if(a.paused){ a.play(); } else { a.pause(); } });
+        a.addEventListener('play', function(){ setIcon(true); });
+        a.addEventListener('pause', function(){ setIcon(false); });
+        a.addEventListener('loadedmetadata', function(){ dur.textContent=fmt(a.duration); });
+        a.addEventListener('timeupdate', function(){
+            if(a.duration){ var p=a.currentTime/a.duration; ring.style.strokeDashoffset=C*(1-p); seek.value=p*100; cur.textContent=fmt(a.currentTime); }
+        });
+        a.addEventListener('ended', function(){ if(i<S.length-1){ i++; load(true); } });
+        seek.addEventListener('input', function(){ if(a.duration){ a.currentTime=(seek.value/100)*a.duration; } });
+        prev.addEventListener('click', function(){ if(i>0){ var wp=!a.paused; i--; load(wp); } });
+        next.addEventListener('click', function(){ if(i<S.length-1){ var wp=!a.paused; i++; load(wp); } });
+        load(false);
+    })();
+    </script>
+</body>
+</html>

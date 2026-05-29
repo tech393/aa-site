@@ -1,0 +1,1701 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<link rel="pingback" href="https://awakenedacademy.com/xmlrpc.php" />
+
+	<script type="text/javascript">
+		document.documentElement.className = 'js';
+	</script>
+	
+
+			<script type="text/javascript">
+			window.flatStyles = window.flatStyles || ''
+
+			window.lightspeedOptimizeStylesheet = function () {
+				const currentStylesheet = document.querySelector( '.tcb-lightspeed-style:not([data-ls-optimized])' )
+
+				if ( currentStylesheet ) {
+					try {
+						if ( currentStylesheet.sheet && currentStylesheet.sheet.cssRules ) {
+							if ( window.flatStyles ) {
+								if ( this.optimizing ) {
+									setTimeout( window.lightspeedOptimizeStylesheet.bind( this ), 24 )
+								} else {
+									this.optimizing = true;
+
+									let rulesIndex = 0;
+
+									while ( rulesIndex < currentStylesheet.sheet.cssRules.length ) {
+										const rule = currentStylesheet.sheet.cssRules[ rulesIndex ]
+										/* remove rules that already exist in the page */
+										if ( rule.type === CSSRule.STYLE_RULE && window.flatStyles.includes( `${rule.selectorText}{` ) ) {
+											currentStylesheet.sheet.deleteRule( rulesIndex )
+										} else {
+											rulesIndex ++
+										}
+									}
+									/* optimize, mark it such, move to the next file, append the styles we have until now */
+									currentStylesheet.setAttribute( 'data-ls-optimized', '1' )
+
+									window.flatStyles += currentStylesheet.innerHTML
+
+									this.optimizing = false
+								}
+							} else {
+								window.flatStyles = currentStylesheet.innerHTML
+								currentStylesheet.setAttribute( 'data-ls-optimized', '1' )
+							}
+						}
+					} catch ( error ) {
+						console.warn( error )
+					}
+
+					if ( currentStylesheet.parentElement.tagName !== 'HEAD' ) {
+						/* always make sure that those styles end up in the head */
+						const stylesheetID = currentStylesheet.id;
+						/**
+						 * make sure that there is only one copy of the css
+						 * e.g display CSS
+						 */
+						if ( ( ! stylesheetID || ( stylesheetID && ! document.querySelector( `head #${stylesheetID}` ) ) ) ) {
+							document.head.prepend( currentStylesheet )
+						} else {
+							currentStylesheet.remove();
+						}
+					}
+				}
+			}
+
+			window.lightspeedOptimizeFlat = function ( styleSheetElement ) {
+				if ( document.querySelectorAll( 'link[href*="thrive_flat.css"]' ).length > 1 ) {
+					/* disable this flat if we already have one */
+					styleSheetElement.setAttribute( 'disabled', true )
+				} else {
+					/* if this is the first one, make sure he's in head */
+					if ( styleSheetElement.parentElement.tagName !== 'HEAD' ) {
+						document.head.append( styleSheetElement )
+					}
+				}
+			}
+		</script>
+		<link rel="preconnect" href="https://fonts.gstatic.com" /><script id="diviarea-loader">window.DiviPopupData=window.DiviAreaConfig={"zIndex":1000000,"animateSpeed":400,"triggerClassPrefix":"show-popup-","idAttrib":"data-popup","modalIndicatorClass":"is-modal","blockingIndicatorClass":"is-blocking","defaultShowCloseButton":true,"withCloseClass":"with-close","noCloseClass":"no-close","triggerCloseClass":"close","singletonClass":"single","darkModeClass":"dark","noShadowClass":"no-shadow","altCloseClass":"close-alt","popupSelector":".et_pb_section.popup","initializeOnEvent":"et_pb_after_init_modules","popupWrapperClass":"area-outer-wrap","fullHeightClass":"full-height","openPopupClass":"da-overlay-visible","overlayClass":"da-overlay","exitIndicatorClass":"on-exit","hoverTriggerClass":"on-hover","clickTriggerClass":"on-click","onExitDelay":2000,"notMobileClass":"not-mobile","notTabletClass":"not-tablet","notDesktopClass":"not-desktop","baseContext":"body","activePopupClass":"is-open","closeButtonClass":"da-close","withLoaderClass":"with-loader","debug":false,"ajaxUrl":"https:\/\/awakenedacademy.com\/wp-admin\/admin-ajax.php","sys":[]};var divimode_loader=function(){"use strict";!function(t){t.DiviArea=t.DiviPopup={loaded:!1};var n=t.DiviArea,i=n.Hooks={},o={};function r(t,n,i){var r,e,c;if("string"==typeof t)if(o[t]){if(n)if((r=o[t])&&i)for(c=r.length;c--;)(e=r[c]).callback===n&&e.context===i&&(r[c]=!1);else for(c=r.length;c--;)r[c].callback===n&&(r[c]=!1)}else o[t]=[]}function e(t,n,i,r){if("string"==typeof t){var e={callback:n,priority:i,context:r},c=o[t];c?(c.push(e),c=function(t){var n,i,o,r,e=t.length;for(r=1;r<e;r++)for(n=t[r],i=r;i>0;i--)(o=t[i-1]).priority>n.priority&&(t[i]=o,t[i-1]=n);return t}(c)):c=[e],o[t]=c}}function c(t,n,i){"string"==typeof n&&(n=[n]);var r,e,c=[];for(r=0;r<n.length;r++)Array.prototype.push.apply(c,o[n[r]]);for(e=0;e<c.length;e++){var a=void 0;c[e]&&"function"==typeof c[e].callback&&("filter"===t?void 0!==(a=c[e].callback.apply(c[e].context,i))&&(i[0]=a):c[e].callback.apply(c[e].context,i))}if("filter"===t)return i[0]}i.silent=function(){return i},n.removeFilter=i.removeFilter=function(t,n){r(t,n)},n.removeAction=i.removeAction=function(t,n){r(t,n)},n.applyFilters=i.applyFilters=function(t){for(var n=[],i=arguments.length-1;i-- >0;)n[i]=arguments[i+1];return c("filter",t,n)},n.doAction=i.doAction=function(t){for(var n=[],i=arguments.length-1;i-- >0;)n[i]=arguments[i+1];c("action",t,n)},n.addFilter=i.addFilter=function(n,i,o,r){e(n,i,parseInt(o||10,10),r||t)},n.addAction=i.addAction=function(n,i,o,r){e(n,i,parseInt(o||10,10),r||t)},n.addActionOnce=i.addActionOnce=function(n,i,o,c){e(n,i,parseInt(o||10,10),c||t),e(n,(function(){r(n,i)}),1+parseInt(o||10,10),c||t)}}(window);return{}}();
+</script><meta name='robots' content='noindex, follow' />
+<script id="cookieyes" type="text/javascript" src="https://cdn-cookieyes.com/client_data/fc774cbc4c9ff004c24c1703/script.js"></script>
+<!-- Google Tag Manager for WordPress by gtm4wp.com -->
+<script data-cfasync="false" data-pagespeed-no-defer>
+	var gtm4wp_datalayer_name = "dataLayer";
+	var dataLayer = dataLayer || [];
+
+	const gtm4wp_scrollerscript_debugmode         = false;
+	const gtm4wp_scrollerscript_callbacktime      = 100;
+	const gtm4wp_scrollerscript_readerlocation    = 150;
+	const gtm4wp_scrollerscript_contentelementid  = "content";
+	const gtm4wp_scrollerscript_scannertime       = 60;
+</script>
+<!-- End Google Tag Manager for WordPress by gtm4wp.com --><script type="text/javascript">
+			let jqueryParams=[],jQuery=function(r){return jqueryParams=[...jqueryParams,r],jQuery},$=function(r){return jqueryParams=[...jqueryParams,r],$};window.jQuery=jQuery,window.$=jQuery;let customHeadScripts=!1;jQuery.fn=jQuery.prototype={},$.fn=jQuery.prototype={},jQuery.noConflict=function(r){if(window.jQuery)return jQuery=window.jQuery,$=window.jQuery,customHeadScripts=!0,jQuery.noConflict},jQuery.ready=function(r){jqueryParams=[...jqueryParams,r]},$.ready=function(r){jqueryParams=[...jqueryParams,r]},jQuery.load=function(r){jqueryParams=[...jqueryParams,r]},$.load=function(r){jqueryParams=[...jqueryParams,r]},jQuery.fn.ready=function(r){jqueryParams=[...jqueryParams,r]},$.fn.ready=function(r){jqueryParams=[...jqueryParams,r]};</script>
+	<!-- This site is optimized with the Yoast SEO plugin v26.6 - https://yoast.com/wordpress/plugins/seo/ -->
+	<title>Wealth and Abundance Archives - Awakened Academy®</title>
+	<meta property="og:locale" content="en_US" />
+	<meta property="og:type" content="article" />
+	<meta property="og:title" content="Wealth and Abundance Archives - Awakened Academy®" />
+	<meta property="og:url" content="https://awakenedacademy.com/category/wealth-and-abundance/" />
+	<meta property="og:site_name" content="Awakened Academy®" />
+	<meta name="twitter:card" content="summary_large_image" />
+	<script type="application/ld+json" class="yoast-schema-graph">{"@context":"https://schema.org","@graph":[{"@type":"CollectionPage","@id":"https://awakenedacademy.com/category/wealth-and-abundance/","url":"https://awakenedacademy.com/category/wealth-and-abundance/","name":"Wealth and Abundance Archives - Awakened Academy®","isPartOf":{"@id":"https://awakenedacademy.com/#website"},"breadcrumb":{"@id":"https://awakenedacademy.com/category/wealth-and-abundance/#breadcrumb"},"inLanguage":"en-US"},{"@type":"BreadcrumbList","@id":"https://awakenedacademy.com/category/wealth-and-abundance/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://awakenedacademy.com/"},{"@type":"ListItem","position":2,"name":"Wealth and Abundance"}]},{"@type":"WebSite","@id":"https://awakenedacademy.com/#website","url":"https://awakenedacademy.com/","name":"Awakened Academy®","description":"Simplicity • Creativity • Wealthy","potentialAction":[{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https://awakenedacademy.com/?s={search_term_string}"},"query-input":{"@type":"PropertyValueSpecification","valueRequired":true,"valueName":"search_term_string"}}],"inLanguage":"en-US"}]}</script>
+	<!-- / Yoast SEO plugin. -->
+
+
+<script type='application/javascript'  id='pys-version-script'>console.log('PixelYourSite Free version 11.2.0.3');</script>
+<link rel="alternate" type="application/rss+xml" title="Awakened Academy® &raquo; Feed" href="../../feed/index.rss" />
+<link rel="alternate" type="application/rss+xml" title="Awakened Academy® &raquo; Comments Feed" href="../../comments/feed/index.rss" />
+
+<!-- Google Tag Manager for WordPress by gtm4wp.com -->
+<!-- GTM Container placement set to automatic -->
+<script data-cfasync="false" data-pagespeed-no-defer type="text/javascript">
+	var dataLayer_content = {"pagePostType":"post","pagePostType2":"category-post","pageCategory":["wealth-and-abundance"]};
+	dataLayer.push( dataLayer_content );
+</script>
+<script data-cfasync="false" data-pagespeed-no-defer type="text/javascript">
+(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-KRPJ5GH');
+</script>
+<script data-cfasync="false" data-pagespeed-no-defer type="text/javascript">
+(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-WVNRH4S');
+</script>
+<!-- End Google Tag Manager for WordPress by gtm4wp.com --><link rel="alternate" type="application/rss+xml" title="Awakened Academy® &raquo; Wealth and Abundance Category Feed" href="feed/index.rss" />
+
+<!-- LCSEO current path: category/wealth-and-abundance -->
+<!-- LCSEO: no overrides found -->
+<meta content="Divi v.4.27.4" name="generator"/><link rel='stylesheet' id='wp-block-library-css' href='../../wp-includes/css/dist/block-library/style.min%EF%B9%96ver=6.8.css' type='text/css' media='all' />
+<style id='wp-block-library-theme-inline-css' type='text/css'>.wp-block-audio :where(figcaption){color:#555;font-size:13px;text-align:center}.is-dark-theme .wp-block-audio :where(figcaption){color:#ffffffa6}.wp-block-audio{margin:0 0 1em}.wp-block-code{border:1px solid #ccc;border-radius:4px;font-family:Menlo,Consolas,monaco,monospace;padding:.8em 1em}.wp-block-embed :where(figcaption){color:#555;font-size:13px;text-align:center}.is-dark-theme .wp-block-embed :where(figcaption){color:#ffffffa6}.wp-block-embed{margin:0 0 1em}.blocks-gallery-caption{color:#555;font-size:13px;text-align:center}.is-dark-theme .blocks-gallery-caption{color:#ffffffa6}:root :where(.wp-block-image figcaption){color:#555;font-size:13px;text-align:center}.is-dark-theme :root :where(.wp-block-image figcaption){color:#ffffffa6}.wp-block-image{margin:0 0 1em}.wp-block-pullquote{border-bottom:4px solid;border-top:4px solid;color:currentColor;margin-bottom:1.75em}.wp-block-pullquote cite,.wp-block-pullquote footer,.wp-block-pullquote__citation{color:currentColor;font-size:.8125em;font-style:normal;text-transform:uppercase}.wp-block-quote{border-left:.25em solid;margin:0 0 1.75em;padding-left:1em}.wp-block-quote cite,.wp-block-quote footer{color:currentColor;font-size:.8125em;font-style:normal;position:relative}.wp-block-quote:where(.has-text-align-right){border-left:none;border-right:.25em solid;padding-left:0;padding-right:1em}.wp-block-quote:where(.has-text-align-center){border:none;padding-left:0}.wp-block-quote.is-large,.wp-block-quote.is-style-large,.wp-block-quote:where(.is-style-plain){border:none}.wp-block-search .wp-block-search__label{font-weight:700}.wp-block-search__button{border:1px solid #ccc;padding:.375em .625em}:where(.wp-block-group.has-background){padding:1.25em 2.375em}.wp-block-separator.has-css-opacity{opacity:.4}.wp-block-separator{border:none;border-bottom:2px solid;margin-left:auto;margin-right:auto}.wp-block-separator.has-alpha-channel-opacity{opacity:1}.wp-block-separator:not(.is-style-wide):not(.is-style-dots){width:100px}.wp-block-separator.has-background:not(.is-style-dots){border-bottom:none;height:1px}.wp-block-separator.has-background:not(.is-style-wide):not(.is-style-dots){height:2px}.wp-block-table{margin:0 0 1em}.wp-block-table td,.wp-block-table th{word-break:normal}.wp-block-table :where(figcaption){color:#555;font-size:13px;text-align:center}.is-dark-theme .wp-block-table :where(figcaption){color:#ffffffa6}.wp-block-video :where(figcaption){color:#555;font-size:13px;text-align:center}.is-dark-theme .wp-block-video :where(figcaption){color:#ffffffa6}.wp-block-video{margin:0 0 1em}:root :where(.wp-block-template-part.has-background){margin-bottom:0;margin-top:0;padding:1.25em 2.375em}
+</style>
+<style id='global-styles-inline-css' type='text/css'>:root{--wp--preset--aspect-ratio--square: 1;--wp--preset--aspect-ratio--4-3: 4/3;--wp--preset--aspect-ratio--3-4: 3/4;--wp--preset--aspect-ratio--3-2: 3/2;--wp--preset--aspect-ratio--2-3: 2/3;--wp--preset--aspect-ratio--16-9: 16/9;--wp--preset--aspect-ratio--9-16: 9/16;--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgba(6,147,227,1) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgba(252,185,0,1) 0%,rgba(255,105,0,1) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgba(255,105,0,1) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);--wp--preset--shadow--outlined: 6px 6px 0px -3px rgba(255, 255, 255, 1), 6px 6px rgba(0, 0, 0, 1);--wp--preset--shadow--crisp: 6px 6px 0px rgba(0, 0, 0, 1);}:root { --wp--style--global--content-size: 823px;--wp--style--global--wide-size: 1080px; }:where(body) { margin: 0; }.wp-site-blocks > .alignleft { float: left; margin-right: 2em; }.wp-site-blocks > .alignright { float: right; margin-left: 2em; }.wp-site-blocks > .aligncenter { justify-content: center; margin-left: auto; margin-right: auto; }:where(.is-layout-flex){gap: 0.5em;}:where(.is-layout-grid){gap: 0.5em;}.is-layout-flow > .alignleft{float: left;margin-inline-start: 0;margin-inline-end: 2em;}.is-layout-flow > .alignright{float: right;margin-inline-start: 2em;margin-inline-end: 0;}.is-layout-flow > .aligncenter{margin-left: auto !important;margin-right: auto !important;}.is-layout-constrained > .alignleft{float: left;margin-inline-start: 0;margin-inline-end: 2em;}.is-layout-constrained > .alignright{float: right;margin-inline-start: 2em;margin-inline-end: 0;}.is-layout-constrained > .aligncenter{margin-left: auto !important;margin-right: auto !important;}.is-layout-constrained > :where(:not(.alignleft):not(.alignright):not(.alignfull)){max-width: var(--wp--style--global--content-size);margin-left: auto !important;margin-right: auto !important;}.is-layout-constrained > .alignwide{max-width: var(--wp--style--global--wide-size);}body .is-layout-flex{display: flex;}.is-layout-flex{flex-wrap: wrap;align-items: center;}.is-layout-flex > :is(*, div){margin: 0;}body .is-layout-grid{display: grid;}.is-layout-grid > :is(*, div){margin: 0;}body{padding-top: 0px;padding-right: 0px;padding-bottom: 0px;padding-left: 0px;}:root :where(.wp-element-button, .wp-block-button__link){background-color: #32373c;border-width: 0;color: #fff;font-family: inherit;font-size: inherit;line-height: inherit;padding: calc(0.667em + 2px) calc(1.333em + 2px);text-decoration: none;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+:where(.wp-block-post-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-post-template.is-layout-grid){gap: 1.25em;}
+:where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}
+:root :where(.wp-block-pullquote){font-size: 1.5em;line-height: 1.6;}
+</style>
+<link rel='stylesheet' id='dashicons-css' href='../../wp-includes/css/dashicons.min%EF%B9%96ver=6.8.css' type='text/css' media='all' />
+<link rel='stylesheet' id='LeadConnector-css' href='../../wp-content/plugins/leadconnector/public/css/lc-public%EF%B9%96ver=3.0.24.css' type='text/css' media='all' />
+<link rel='stylesheet' id='lc-theme-fixes-css' href='../../wp-content/plugins/leadconnector/assets/css/theme-fixes%EF%B9%96ver=1772972295.css' type='text/css' media='all' />
+<link rel='stylesheet' id='mashsb-styles-css' href='../../wp-content/plugins/mashsharer/assets/css/mashsb.min%EF%B9%96ver=4.0.47.css' type='text/css' media='all' />
+<style id='mashsb-styles-inline-css' type='text/css'>.mashsb-count {color:#cccccc;}@media only screen and (min-width:568px){.mashsb-buttons a {min-width: 177px;}}
+</style>
+<link rel='stylesheet' id='tve_leads_forms-css' href='../../wp-content/plugins/thrive-leads/editor-layouts/css/frontend%EF%B9%96ver=10.6.1.css' type='text/css' media='all' />
+<link rel='stylesheet' id='tve-ult-main-frame-css-css' href='../../wp-content/plugins/thrive-ultimatum/tcb-bridge/assets/css/placeholders%EF%B9%96ver=10.6.1.css' type='text/css' media='all' />
+<link rel='stylesheet' id='custom-article-cards-css' href='../../wp-content/plugins/divi-article-cards/assets/css/style%EF%B9%96ver=20160602.css' type='text/css' media='all' />
+<style id='custom-article-cards-inline-css' type='text/css'>.divi-100-article-card .et_pb_blog_grid .article-card__category,
+				.divi-100-article-card .et_pb_blog_grid .article-card__date { background-color: #810183; }
+				.divi-100-article-card .et_pb_blog_grid .article-card__sub-title { color: #810183; }
+</style>
+<link rel='stylesheet' id='css-divi-area-css' href='../../wp-content/plugins/popups-for-divi/styles/front.min%EF%B9%96ver=3.2.5.css' type='text/css' media='all' />
+<style id='css-divi-area-inline-css' type='text/css'>.et_pb_section.popup{display:none}
+</style>
+<link rel='stylesheet' id='css-divi-area-popuphidden-css' href='../../wp-content/plugins/popups-for-divi/styles/front-popuphidden.min%EF%B9%96ver=3.2.5.css' type='text/css' media='all' />
+<link rel='stylesheet' id='gpls-wpsctr-simple-countdown-timer-front-flipdown-css-css' href='../../wp-content/plugins/simple-countdown/assets/libs/flipdown.min%EF%B9%96ver=1.0.4.css' type='text/css' media='all' />
+<link rel='stylesheet' id='ninja-forms-spn-addon-css' href='../../wp-content/plugins/smart-phone-addon-for-ninja-forms/dist/public/addon-public.min%EF%B9%96ver=1.3.1.css' type='text/css' media='all' />
+<link rel='stylesheet' id='divi-style-css' href='../../wp-content/themes/Divi/style-static.min%EF%B9%96ver=4.27.4.css' type='text/css' media='all' />
+<script type="text/javascript" src="../../wp-content/plugins/duracelltomi-google-tag-manager/dist/js/analytics-talk-content-tracking%EF%B9%96ver=1.22.3.js" id="gtm4wp-scroll-tracking-js"></script>
+<script type="text/javascript" src="../../wp-content/plugins/popups-for-divi/scripts/ie-compat.min%EF%B9%96ver=3.2.5.js" id="dap-ie-js"></script>
+<link rel="https://api.w.org/" href="../../wp-json/index.json" /><link rel="alternate" title="JSON" type="application/json" href="../../wp-json/wp/v2/categories/26.json" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="../../xmlrpc.php%EF%B9%96rsd.xml" />
+<meta name="generator" content="WordPress 6.8" />
+<!-- start Simple Custom CSS and JS -->
+<script type="text/javascript">
+
+
+jQuery(document).ready(function(){
+	 setTimeout(function() {
+   $("input.form-phone").keypress(function(event) {   
+   if($(this).data('field') == "phone"){
+  return /\d/.test(String.fromCharCode(event.keyCode));
+  }
+});
+	},2000);
+});
+	
+	
+
+</script>
+<!-- end Simple Custom CSS and JS -->
+<!-- start Simple Custom CSS and JS -->
+<style type="text/css">Welcome to Custom CSS!
+
+To learn how this works, see http://wp.me/PEmnE-Bt*/
+
+
+
+.nf-form-fields-required{
+ display: none;
+}
+
+ul{ line-height: 2em !important;}
+
+/**/
+.et_pb_blog_0 .et_pb_post .more-link{
+text-transform: uppercase;
+background: #006d67;
+color: #fff;
+padding: 8px;
+width: 130px;
+font-family: open sans;
+font-weight: bold;
+font-style: normal;
+text-align: center;
+margin-top: 1rem;
+}
+.et_pb_blog_1 .et_pb_post .more-link{
+text-transform: uppercase;
+background: #006d67;
+color: #fff;
+padding: 8px;
+width: 130px;
+font-family: open sans;
+font-weight: bold;
+font-style: normal;
+text-align: center;
+margin-top: 1rem;
+}
+
+/*Contemplations Font Family*/
+.contemplations p {
+	font-family: quicksand !important;
+}
+
+/*Custom Scheduleonce Button*/
+input.custom-schedule-button{
+-webkit-appearance:none !important;
+border:1px solid #c8c8c8 !important;
+background-color:rgb(0, 107, 102) !important;
+color:rgb(255, 255, 255) !important;
+font-size:20px !important;
+font-weight:bold !important;
+padding:25px 100px !important;
+cursor:pointer !important;
+
+}
+/* Remove "LEAVE A COMMENT" in the comment module*/
+.comment-reply-title {
+	display: none;
+}
+
+/*For the SKYPE Optin*/
+.my-custom-div-for-skype {
+	clear: both;
+}
+
+/*For the full width navigation right align*/
+.custom-nav-full-width .et_pb_row {
+	background-color: #006d67;
+	position: fixed;
+	z-index: 100;
+}
+
+/*For the Top Menu & middle large button in video 4*/
+.menu-holder {
+	display: -webkit-box;
+	margin-bottom: 15px;
+	padding-top: 15px;
+	position: relative;
+}
+
+.custom-menu {
+	position: fixed;
+	right: 10px;
+}
+
+
+/*Custom Nav Button*/
+.custom-nav-button{
+	background-color: #bc9c76;
+	padding: 7px 15px;
+	border-radius: 10px;
+	color: #fff;}
+
+/*END*/
+
+.custom-button-3 {
+	-webkit-border-radius: 0;
+	-moz-border-radius: 0;
+	border-radius: 0;
+	color: #fff;
+	font-size: 18px;
+	padding: 10px 25px;
+	border: solid #fff 3px;
+	text-decoration: none;
+	margin-right: 20px;
+	-webkit-transition-duration: .3s;
+/* Safari */
+	transition-duration: .3s;
+}
+
+.custom-button-3:hover {
+	background-color: #006d67;
+	color: #fff;
+	border: solid #006d67 3px;
+}
+
+.main-holder {
+	width: 100%;
+}
+
+.holder {
+	background-color: #006d67;
+	-webkit-transition-duration: .4s;
+/* Safari */
+	transition-duration: .4s;
+	border: solid #006d67 4px;
+}
+
+.holder:hover {
+	background-color: #fff;
+	border: solid #006d67 4px;
+}
+
+.holder-3 {
+	background-color: #006d67;
+	-webkit-transition-duration: .4s;
+/* Safari */
+	transition-duration: .4s;
+	border: solid #006d67 4px;
+}
+
+.holder-3:hover {
+	background-color: #02867e;
+	border: solid #02867e 4px;
+}
+
+.custom-button-4 {
+	text-align: center;
+	padding: 100px;
+	color: #fff;
+	font-size: 20px;
+	-webkit-transition-duration: .4s;
+/* Safari */
+	transition-duration: .4s;
+}
+
+.custom-button-4:hover {
+	color: #006d67;
+}
+
+.custom-button-7 {
+	text-align: center;
+	padding: 50px 20px;
+	color: #fff;
+	line-height: 1.4em;
+	font-size: 1.5em;
+	-webkit-transition-duration: .4s;
+/* Safari */
+	transition-duration: .4s;
+}
+
+.custom-button-7:hover {
+	color: #fff;
+	cursor: pointer;
+}
+
+.custom-button-8 {
+	text-align: center;
+	padding: 20px;
+	color: #bc9c76;
+	line-height: 1.2em;
+	font-size: 1.2em;
+	-webkit-transition-duration: .4s;
+/* Safari */
+	transition-duration: .4s;
+}
+
+.custom-button-8:hover {
+	color: #bc9c76;
+	cursor: pointer;
+}
+
+/*###################*/
+.holder-2 {
+	background-color: #006d67;
+	-webkit-transition-duration: .4s;
+/* Safari */
+	transition-duration: .4s;
+	border: solid #fff 2px;
+}
+
+.holder-2:hover {
+	background-color: #fff;
+	border: solid #006d67 2px;
+}
+
+.custom-button-6 {
+	text-align: center;
+	padding: 20px;
+	color: #fff;
+	font-size: 27px;
+	-webkit-transition-duration: .4s;
+/* Safari */
+	transition-duration: .4s;
+}
+
+.custom-button-6:hover {
+	color: #006d67;
+}
+
+/*TOP MENU END*/
+.custom-height {
+	min-height: 500px;
+}
+
+/* YouTube Responsive CSS*/
+.hs-responsive-embed-youtube {
+	width: 100% !important;
+	position: relative;
+	padding-bottom: 56.25%;
+/* 16:9 Aspect Ratio */
+	padding-top: 30px;
+	width: 100% !important;
+}
+
+.hs-responsive-embed-youtube iframe {
+	position: absolute;
+	width: 100% !important;
+	height: 100% !important;
+}
+
+/*NINJA FORM*/
+#ninja_forms_form_10_all_fields_wrap {
+	background-color: floralwhite;
+	padding: 30px 40px;
+	box-shadow: 1px 1px 20px rgba(0,0,0,.5) !important;
+}
+
+.ninja-forms-form-wrap .custom-submit-button {
+	width: 150px !important;
+	border: solid 0 #ffffff !important;
+	font-size: 20px !important;
+	color: #ffffff !important;
+	padding: 10px 20px !important;
+	background-color: #99016b !important;
+}
+
+#ninja_forms_form_6 {
+	background-color: floralwhite;
+	padding: 30px 40px;
+	box-shadow: 1px 1px 20px rgba(0,0,0,.1) !important;
+}
+
+.ninja-forms-form-wrap .custom-textbox {
+	width: 50% !important;
+	height: 35px !important;
+}
+
+.ninja-forms-required-items {
+	display: none;
+}
+
+.ninja-forms-form-wrap .custom-hr {
+	margin: 20px 0 !important;
+}
+
+.ninja-forms-form-wrap .custom-spam-textbox {
+	height: 35px !important;
+}
+
+/*GOOGLE FORM BUTTON*/
+.maxbutton-5.maxbutton-aa-google-form.maxbutton {
+	position: relative;
+	text-decoration: none;
+	cursor: pointer;
+	display: inline-block;
+	width: 550px;
+	height: 90px;
+	border-color: #fff;
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+	border-bottom-left-radius: 5px;
+	border-bottom-right-radius: 5px;
+	border-style: solid;
+	border-width: 5px;
+	background: rgba(156,9,92,1);
+	background: -webkit-gradient(linear,left top,left bottom,color-stop(45%,rgba(156,9,92,1)),color-stop(1,rgba(156,9,92,1)));
+	background: -moz-linear-gradient(rgba(156,9,92,1) 45%,rgba(156,9,92,1));
+	background: -o-linear-gradient(rgba(156,9,92,1) 45%,rgba(156,9,92,1));
+	background: linear-gradient(rgba(156,9,92,1) 45%,rgba(156,9,92,1));
+}
+
+.maxbutton-5.maxbutton-aa-google-form.maxbutton:hover {
+	border-color: #fff;
+	background: rgba(171,26,69,1);
+	background: -webkit-gradient(linear,left top,left bottom,color-stop(45%,rgba(171,26,69,1)),color-stop(1,rgba(171,26,69,1)));
+	background: -moz-linear-gradient(rgba(171,26,69,1) 45%,rgba(171,26,69,1));
+	background: -o-linear-gradient(rgba(171,26,69,1) 45%,rgba(171,26,69,1));
+	background: linear-gradient(rgba(171,26,69,1) 45%,rgba(171,26,69,1));
+}
+
+.maxbutton-5.maxbutton-aa-google-form.maxbutton .mb-text {
+	font-family: Georgia;
+	font-size: 20px;
+	text-align: center;
+	font-style: normal;
+	font-weight: normal;
+	padding-top: 35px;
+	padding-right: 18px;
+	padding-bottom: 35px;
+	padding-left: 18px;
+	line-height: 1em;
+	box-sizing: border-box;
+	display: block;
+	color: #fff;
+}
+
+.maxbutton-5.maxbutton-aa-google-form.maxbutton:hover .mb-text {
+	color: #fff;
+}
+
+/*BUTTON Apply*/
+.maxbutton-1.maxbutton-aa-apply.maxbutton {
+	position: relative;
+	text-decoration: none;
+	display: inline-block;
+	cursor: pointer;
+	width: 550px;
+	height: 90px;
+	border-color: #fff;
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+	border-bottom-left-radius: 5px;
+	border-bottom-right-radius: 5px;
+	border-style: solid;
+	border-width: 0;
+	background: rgba(156,9,92,1);
+	background: -webkit-gradient(linear,left top,left bottom,color-stop(45%,rgba(156,9,92,1)),color-stop(1,rgba(156,9,92,1)));
+	background: -moz-linear-gradient(rgba(156,9,92,1) 45%,rgba(156,9,92,1));
+	background: -o-linear-gradient(rgba(156,9,92,1) 45%,rgba(156,9,92,1));
+	background: linear-gradient(rgba(156,9,92,1) 45%,rgba(156,9,92,1));
+}
+
+.maxbutton-1.maxbutton-aa-apply.maxbutton:hover {
+	border-color: #fff;
+	background: rgba(171,26,69,1);
+	background: -webkit-gradient(linear,left top,left bottom,color-stop(45%,rgba(171,26,69,1)),color-stop(1,rgba(171,26,69,1)));
+	background: -moz-linear-gradient(rgba(171,26,69,1) 45%,rgba(171,26,69,1));
+	background: -o-linear-gradient(rgba(171,26,69,1) 45%,rgba(171,26,69,1));
+	background: linear-gradient(rgba(171,26,69,1) 45%,rgba(171,26,69,1));
+}
+
+.maxbutton-1.maxbutton-aa-apply.maxbutton .mb-text {
+	font-family: Georgia;
+	font-size: 20px;
+	text-align: center;
+	font-style: normal;
+	font-weight: normal;
+	padding-top: 35px;
+	padding-right: 18px;
+	padding-bottom: 35px;
+	padding-left: 18px;
+	line-height: 1em;
+	box-sizing: border-box;
+	display: block;
+	color: #fff;
+}
+
+.maxbutton-1.maxbutton-aa-apply.maxbutton:hover .mb-text {
+	color: #fff;
+}
+
+/*Button Apply Transparent*/
+.maxbutton-2.maxbutton-aa-apply-transparent.maxbutton {
+	position: relative;
+	text-decoration: none;
+	display: inline-block;
+	cursor: pointer;
+	width: 550px;
+	height: 90px;
+	border-color: #fafafa;
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+	border-bottom-left-radius: 5px;
+	border-bottom-right-radius: 5px;
+	border-style: solid;
+	border-width: 5px;
+	background: rgba(156,9,92,0);
+	background: -webkit-gradient(linear,left top,left bottom,color-stop(45%,rgba(156,9,92,0)),color-stop(1,rgba(166,111,142,0)));
+	background: -moz-linear-gradient(rgba(156,9,92,0) 45%,rgba(166,111,142,0));
+	background: -o-linear-gradient(rgba(156,9,92,0) 45%,rgba(166,111,142,0));
+	background: linear-gradient(rgba(156,9,92,0) 45%,rgba(166,111,142,0));
+	transition: opacity .25s ease-in-out;
+	-moz-transition: opacity .25s ease-in-out;
+	-webkit-transition: opacity .25s ease-in-out;
+}
+
+.maxbutton-2.maxbutton-aa-apply-transparent.maxbutton:hover {
+	border-color: #fff;
+	background: rgba(255,255,255,1);
+	background: -webkit-gradient(linear,left top,left bottom,color-stop(45%,rgba(255,255,255,1)),color-stop(1,rgba(255,255,255,1)));
+	background: -moz-linear-gradient(rgba(255,255,255,1) 45%,rgba(255,255,255,1));
+	background: -o-linear-gradient(rgba(255,255,255,1) 45%,rgba(255,255,255,1));
+	background: linear-gradient(rgba(255,255,255,1) 45%,rgba(255,255,255,1));
+}
+
+.maxbutton-2.maxbutton-aa-apply-transparent.maxbutton .mb-text {
+	font-family: Georgia;
+	font-size: 20px;
+	text-align: center;
+	font-style: normal;
+	font-weight: normal;
+	padding-top: 32px;
+	padding-right: 18px;
+	padding-bottom: 35px;
+	padding-left: 18px;
+	line-height: 1em;
+	box-sizing: border-box;
+	display: block;
+	color: #fff;
+}
+
+.maxbutton-2.maxbutton-aa-apply-transparent.maxbutton:hover .mb-text {
+	color: #3d3d3d;
+}
+
+/* Button Apply Smaller Width*/
+.maxbutton-3.maxbutton-aa-apply-responsive.maxbutton {
+	position: relative;
+	text-decoration: none;
+	display: inline-block;
+	cursor: pointer;
+	width: 100%;
+	height: 90px;
+	border-color: #fff;
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+	border-bottom-left-radius: 5px;
+	border-bottom-right-radius: 5px;
+	border-style: solid;
+	border-width: 0;
+	background: rgba(156,9,92,1);
+	background: -webkit-gradient(linear,left top,left bottom,color-stop(45%,rgba(156,9,92,1)),color-stop(1,rgba(156,9,92,1)));
+	background: -moz-linear-gradient(rgba(156,9,92,1) 45%,rgba(156,9,92,1));
+	background: -o-linear-gradient(rgba(156,9,92,1) 45%,rgba(156,9,92,1));
+	background: linear-gradient(rgba(156,9,92,1) 45%,rgba(156,9,92,1));
+}
+
+.maxbutton-3.maxbutton-aa-apply-responsive.maxbutton:hover {
+	border-color: #fff;
+	background: rgba(171,26,69,1);
+	background: -webkit-gradient(linear,left top,left bottom,color-stop(45%,rgba(171,26,69,1)),color-stop(1,rgba(171,26,69,1)));
+	background: -moz-linear-gradient(rgba(171,26,69,1) 45%,rgba(171,26,69,1));
+	background: -o-linear-gradient(rgba(171,26,69,1) 45%,rgba(171,26,69,1));
+	background: linear-gradient(rgba(171,26,69,1) 45%,rgba(171,26,69,1));
+}
+
+.maxbutton-3.maxbutton-aa-apply-responsive.maxbutton .mb-text {
+	font-family: Tahoma;
+	font-size: 20px;
+	text-align: center;
+	font-style: normal;
+	font-weight: normal;
+	padding: 25px;
+	line-height: 1em;
+	box-sizing: border-box;
+	display: block;
+	color: #fff;
+}
+
+.maxbutton-3.maxbutton-aa-apply-responsive.maxbutton:hover .mb-text {
+	color: #fff;
+}
+
+/* Button Apply Testimonials*/
+.maxbutton-4.maxbutton-aa-apply-responsive-testimonials.maxbutton {
+	position: relative;
+	text-decoration: none;
+	display: inline-block;
+	cursor: pointer;
+	width: 600px;
+	height: 100px;
+	border-color: #fff;
+	border-top-left-radius: 0;
+	border-top-right-radius: 0;
+	border-bottom-left-radius: 0;
+	border-bottom-right-radius: 0;
+	border-style: solid;
+	border-width: 0;
+	background: rgba(217,126,0,1);
+	background: -webkit-gradient(linear,left top,left bottom,color-stop(45%,rgba(217,126,0,1)),color-stop(1,rgba(219,179,48,1)));
+	background: -moz-linear-gradient(rgba(217,126,0,1) 45%,rgba(219,179,48,1));
+	background: -o-linear-gradient(rgba(217,126,0,1) 45%,rgba(219,179,48,1));
+	background: linear-gradient(rgba(217,126,0,1) 45%,rgba(219,179,48,1));
+}
+
+.maxbutton-4.maxbutton-aa-apply-responsive-testimonials.maxbutton:hover {
+	border-color: #fff;
+	background: rgba(176,111,21,1);
+	background: -webkit-gradient(linear,left top,left bottom,color-stop(45%,rgba(176,111,21,1)),color-stop(1,rgba(217,166,0,1)));
+	background: -moz-linear-gradient(rgba(176,111,21,1) 45%,rgba(217,166,0,1));
+	background: -o-linear-gradient(rgba(176,111,21,1) 45%,rgba(217,166,0,1));
+	background: linear-gradient(rgba(176,111,21,1) 45%,rgba(217,166,0,1));
+}
+
+.maxbutton-4.maxbutton-aa-apply-responsive-testimonials.maxbutton .mb-text {
+	font-family: Tahoma;
+	font-size: 25px;
+	text-align: center;
+	font-style: normal;
+	font-weight: normal;
+	padding: 30px;
+	line-height: 1em;
+	box-sizing: border-box;
+	display: block;
+	color: #fff;
+}
+
+.maxbutton-4.maxbutton-aa-apply-responsive-testimonials.maxbutton:hover .mb-text {
+	color: #fff;
+}
+
+/*
+Thank you page
+*/
+.custom-font p {
+	font-family: 'Roboto', Helvetica, Arial, Lucida, sans-serif;
+	font-weight: 100;
+	font-size: 20px;
+	line-height: 1.5em;
+	color: #8c0451 !important;
+}
+
+/*
+Header Shadow for Slider
+*/
+.et_pb_slide_description h1,.et_pb_slide_description h2,.et_pb_slide_description h3 {
+	color: #fff !important;
+	text-shadow: 1px 1px 1px rgba(0,0,0,1);
+	font-weight: 200;
+}
+
+/*
+custom header shadow
+*/
+.custom-shadow h1,.custom-shadow h2, .custom-shadow h3,.custom-shadow h4,.custom-shadow h5,.custom-shadow h6, .custom-shadow p {
+	color: #fff !important;
+	text-shadow: 1px 1px 1px rgba(0,0,0,1);
+	font-weight: 200;
+}
+
+.custom-shadow-2 h1,.custom-shadow-2 h2, .custom-shadow-2 h3,.custom-shadow-2 h4,.custom-shadow-2 h5,.custom-shadow-2 h6, .custom-shadow-2 p {
+	color: #fff !important;
+	text-shadow: 1px 1px 1px rgba(0,0,0,.3);
+	font-weight: 200;
+}
+
+/*SurveyGizmo*/
+.custom-survey h1.sg-title {
+	display: none;
+}
+
+/*Click funnel bottom right*/
+.nodoBadge {
+	display: none !important;
+}
+
+/*
+Featured Image removal
+
+.et_post_meta_wrapper img {
+	display: none;
+}*/
+.custom-call-to-action {
+	display: none;
+}
+
+/*DROPCAP*/
+.et-dropcap {
+	font-size: 67px;
+}
+
+/*EASY SOCIAL SHARE*/
+.essb_links.essb_template_metro-retina li a {
+	padding: 25px 115px 30px 90px;
+}
+
+/* Birthday Button*/
+.is-birthday-button {
+	margin-top: 0;
+}
+
+.is-birthday-button input {
+	background: #d9346b;
+	background-image: -webkit-linear-gradient(top,#d9346b,#b3006b);
+	background-image: -moz-linear-gradient(top,#d9346b,#b3006b);
+	background-image: -ms-linear-gradient(top,#d9346b,#b3006b);
+	background-image: -o-linear-gradient(top,#d9346b,#b3006b);
+	background-image: linear-gradient(to bottom,#d9346b,#b3006b);
+	color: #ffffff;
+	font-size: 30px;
+	padding: 10px 20px;
+	text-decoration: none;
+	width: 100%;
+}
+
+.is-birthday-button input:hover {
+	background: #c20470;
+	background-image: -webkit-linear-gradient(top,#c20470,#ad004e);
+	background-image: -moz-linear-gradient(top,#c20470,#ad004e);
+	background-image: -ms-linear-gradient(top,#c20470,#ad004e);
+	background-image: -o-linear-gradient(top,#c20470,#ad004e);
+	background-image: linear-gradient(to bottom,#c20470,#ad004e);
+	text-decoration: none;
+}
+
+.css-input input {
+	width: 100%;
+	border-color: #cccccc;
+	border-style: solid;
+	padding: 10px;
+	font-size: 20px;
+	border-width: 2px;
+}
+
+.css-input input:focus {
+	outline: none;
+}
+
+.custom-ul ul {
+	color: #4c4c4c;
+	font-family: 'Open Sans';
+	font-size: 20px;
+	font-style: normal;
+	font-weight: 300;
+	line-height: 1.7 !important;
+}
+
+/*LIST ITEMS FONT
+ul li {
+	font-family: "Raleway" !important;
+	font-size: 20px;
+}*/
+/* ================================GOOGLE FORMS ================================
+.ss-form-container, .ss-resp-card {
+	background-color: rgb(255,254,254);
+}
+
+.ss-footer, .ss-response-footer {
+	background-color: rgb(255,254,254);
+}
+
+.ss-grid-row-odd {
+	background-color: rgb(242,241,241);
+}
+
+.ss-form-container, .ss-resp-card {
+	border-color: rgb(0,0,0);
+}
+
+.ss-form-title {
+	text-align: left;
+}
+
+.ss-form-title[dir="rtl"] {
+	text-align: right;
+}
+
+.ss-form-desc {
+	text-align: left;
+}
+
+.ss-form-desc[dir="rtl"] {
+	text-align: right;
+}
+
+.ss-header-image-container {
+	height: auto;
+	text-align: center;
+}
+
+.ss-header-image-image {
+	background-image: url('https://ssl.gstatic.com/docs/forms/themes/images/v1/41fd66276252e5ae803c865b0fa0c0fbee235b5fe9e213ab9972f24c069d8a65/theme_header_watercolors.png');
+}
+
+.ss-header-image-sizer {
+	padding-top: 17.403%;
+}
+
+.ss-item {
+	font-size: 1rem;
+}
+
+.ss-choices {
+	font-size: 1rem;
+}
+
+body {
+	font-family: "Raleway";
+	color: rgb(100,100,100);
+	font-weight: 400;
+	font-size: 1.25rem;
+	font-style: normal;
+}
+
+.ss-record-username-message {
+	font-family: "Raleway";
+	color: rgb(100,100,100);
+	font-weight: 400;
+	font-size: 1.25rem;
+	font-style: normal;
+}
+
+.ss-form-title {
+	font-family: "Raleway";
+	color: rgb(0,150,167);
+	font-weight: 400;
+	font-size: 2.46rem;
+	font-style: normal;
+}
+
+.ss-confirmation {
+	font-family: "Raleway";
+	color: rgb(0,135,154);
+	font-weight: 400;
+	font-size: 2.46rem;
+	font-style: normal;
+}
+
+.ss-page-title, .ss-section-title {
+	font-family: "Raleway";
+	color: rgb(0,150,167);
+	font-weight: 400;
+	font-size: 1.845rem;
+	font-style: normal;
+}
+
+.ss-form-desc, .ss-page-description, .ss-section-description {
+	font-family: "Raleway";
+	color: rgb(100,100,100);
+	font-weight: 400;
+	font-size: 1.25rem;
+	font-style: normal;
+}
+
+.ss-resp-content {
+	font-family: "Raleway";
+	color: rgb(100,100,100);
+	font-weight: 400;
+	font-size: 1.25rem;
+	font-style: normal;
+}
+
+.ss-q-title {
+	font-family: "Roboto";
+	color: rgb(0,150,167);
+	font-weight: 700;
+	font-size: 1rem;
+	font-style: normal;
+}
+
+.ss-embeddable-object-container .ss-q-title {
+	font-family: "Roboto";
+	color: rgb(0,150,167);
+	font-weight: 700;
+	font-size: 1.845rem;
+	font-style: normal;
+}
+
+.ss-q-help, .ss-q-time-hint {
+	font-family: "Roboto";
+	color: rgb(132,132,132);
+	font-weight: 400;
+	font-size: 1rem;
+	font-style: normal;
+}
+
+.ss-choice-label, .video-secondary-text, .ss-gridrow-leftlabel, .ss-gridnumber, .ss-scalenumber, .ss-leftlabel, .ss-rightlabel {
+	font-family: "Roboto";
+	color: rgb(80,80,80);
+	font-weight: 400;
+	font-size: 1rem;
+	font-style: normal;
+}
+
+.error-message, .required-message, .ss-required-asterisk {
+	font-family: "Roboto";
+	color: rgb(196,59,29);
+	font-weight: 400;
+	font-size: 1rem;
+	font-style: normal;
+}
+
+.ss-send-email-receipt {
+	font-family: "Roboto";
+	color: rgb(0,135,154);
+	font-weight: 400;
+	font-size: 1rem;
+	font-style: normal;
+}
+
+.ss-password-warning {
+	font-family: "Arial";
+	color: rgb(118,118,118);
+	font-weight: 400;
+	font-size: 1rem;
+	font-style: italic;
+}
+
+.disclaimer {
+	font-family: "Arial";
+	color: rgb(118,118,118);
+	font-weight: 400;
+	font-size: .85rem;
+	font-style: normal;
+}
+
+.ss-footer-content {
+	font-family: "Arial";
+	color: rgb(80,80,80);
+	font-weight: 400;
+	font-size: 1rem;
+	font-style: normal;
+}
+
+.progress-label {
+	font-family: "Roboto";
+	color: rgb(132,132,132);
+	font-weight: 400;
+	font-size: 1rem;
+	font-style: normal;
+}
+
+input[type='text'], input:not([type]), textarea {
+	font-size: 1rem;
+}
+
+.error, .required, .errorbox-bad {
+	border-color: rgb(196,59,29);
+}
+
+.jfk-progressBar-nonBlocking .progress-bar-thumb {
+	background-color: rgb(132,132,132);
+}
+
+.ss-logo-image {
+	background-image: url('https://ssl.gstatic.com/docs/forms/forms_logo_2_small_dark.png');
+	background-size: 108px 21px;
+	width: 108px;
+	height: 21px;
+}
+
+@media screen and (-webkit-device-pixel-ratio: 2) {
+	.ss-logo-image {
+		background-image: url('https://ssl.gstatic.com/docs/forms/forms_logo_2_small_dark_2x.png');
+	}
+}*/
+body .custom-hero-banner #tve_blank_set .thrv_lead_generation_container input[type="text"], body .custom-hero-banner #tve_blank_set .thrv_lead_generation_container input[type="email"], body .custom-hero-banner #tve_blank_set .thrv_lead_generation_container input[type="password"]{
+	font-size: 14px;
+}
+
+/* ======================END OF GOOGLE FORM========================== */
+@media only screen and (max-width: 768px) {
+	.menu-holder {
+		display: none;
+	}
+	
+	nav#top-menu-nav, #top-menu, nav.fullwidth-menu-nav, .fullwidth-menu {
+		float: right !important;
+	}
+	
+	/*EASY SOCIAL SHARE*/
+	.essb_links.essb_template_metro-retina li a {
+		width: 100%;
+		text-align: center;
+		padding: 15px 95px 20px 70px;
+	}
+	
+	body h1 {
+		font-size: 50px ;
+	}
+	
+	body h2 {
+		font-size: 40px ;
+	}
+	
+	body h3 {
+		font-size: 33px ;
+	}
+	
+	body h4 {
+		font-size: 30px ;
+	}
+	
+	body h5 {
+		font-size: 18px ;
+	}
+	
+	body h6 {
+		font-size: 48px ;
+	}
+	
+	body .custom-h6 h6 {
+		font-size: 40px ;
+	}
+	
+	body p {
+		font-size: 1.3em ;
+	}
+	
+	ul li {
+		font-size: 1.2em ;
+      	line-height: 1.7em ;
+		font-family: merryweather;
+		font-weight: 300;
+	}
+	
+	/* BLOG */
+	article h2 {
+		font-size: 30px ;
+		margin-bottom: 10px;
+	}
+	
+	.custom-divider {
+		height: 300px ;
+	}
+}
+@media only screen and (max-width: 767px) {
+	.img-with-txt .et_pb_row{
+		display: flex;
+		flex-direction: column;
+	}
+	.img-with-txt #img-block{
+		order: -1;
+		margin-bottom: 10px;
+	}
+	.img-with-txt .et_pb_column{
+		margin-bottom: 0px;
+	}
+	body .img-with-txt .et_pb_module{
+		max-width: 100%;
+	}
+	.tve-leads-two-step-trigger{
+		font-size: 20px;
+	}
+	.tve-leads-two-step-trigger picture{
+		display: block;
+    	margin-top: 10px;
+	}
+	.tve-leads-two-step-trigger .custom-button-7{
+		padding: 30px 20px;
+	}
+	.custom-hero-banner .thrv-leads-form-box.thrv_wrapper{
+		padding: 0;
+		margin-top: 0;
+	}
+	body .custom-hero-banner #tve_blank_set .thrv_lead_generation_container button {
+    	font-size: 16px;
+		    line-height: normal;
+    padding: 15px 15px;
+	}
+	body .custom-hero-banner #tve_blank_set .thrv_lead_generation_container input[type="text"], body .custom-hero-banner #tve_blank_set .thrv_lead_generation_container input[type="email"], body .custom-hero-banner #tve_blank_set .thrv_lead_generation_container input[type="password"]{
+		margin-bottom: 12px;
+		    box-shadow: none;
+    	border: 0;
+    line-height: normal;
+    padding: 13px 15px;
+	}
+	body .custom-hero-banner .thrv_wrapper.thrv-columns{
+		margin-bottom: 0;
+	}
+	.custom-hero-banner .et_pb_column .et_pb_module.et_pb_text {
+		margin-bottom: 0;
+	}
+	.custom-hero-banner .et_pb_text_0 h1,
+	.custom-hero-banner h2{
+		padding-bottom: 0;
+	}
+	.custom-hero-banner .et_pb_image {
+		margin-top: 0 !important;
+	}
+	.custom-hero-banner h2 {
+		font-weight: 400;
+		    font-size: 16px;
+	}
+	.et_header_style_left #logo {
+		max-width: 60px;
+		max-height: 100%;
+	}
+	.et_header_style_left #et-top-navigation{
+		padding-top: 20px;
+	}
+	.et_header_style_left #et-top-navigation .mobile_menu_bar {
+		padding-bottom: 20px;
+	}
+	#et-info-phone .text {
+    display: none;
+	}
+	#top-header .container,
+	#main-header .container{
+		width: 100%;
+		padding: 0 15px;
+	}
+	body .mobile_menu_bar:before{
+		color: #fff;
+	}
+	body #top-header,body  #top-header a,body  #et-secondary-nav li li a, body #top-header .et-social-icon a:before {
+		font-size: 12px;
+		font-weight: 400;
+		letter-spacing: 0;
+    	color: #fff;
+	}
+	#top-header #et-info-email:before,
+	#top-header #et-info-phone:before{
+		font-size: 8px;
+		top: 0;
+	}
+	#top-header #et-info{
+		display: flex;
+		justify-content: space-between;
+	}
+	.custom-hero-banner .et_pb_text_0 h1 {
+    margin-bottom: 15px;
+	}
+	.custom-hero-banner{
+		background-position: left;
+	}
+	body #footer-info {
+		font-size: 12px;
+		color: rgba(255, 255, 255, 0.5);
+		padding: 0;
+	}
+	body #footer-bottom {
+		padding: 7px 0;
+	}
+	body #tve_one_set .tve_one_set_v2.tve-leads-lightbox .tve_p_lb_content {
+		padding: 30px 15px !important;
+		background-image: none !important;
+		background-color: #fff;
+	}
+	#tve_one_set input[type="text"], #tve_one_set input[type="email"], #tve_one_set input[type="password"]{
+		color: #909090;
+		font-size: 16px;
+		background: #fff;
+		border: 1px solid #909090;
+		border-radius: 2px;
+		font-family: 'Lato', sans-serif;
+		line-height: normal;
+	}
+	#tve_one_set .thrv_lead_generation button {
+		box-shadow: none !important;
+		text-shadow: none !important;
+		font-weight: 500;
+		font-size: 16px;
+		letter-spacing: 0.5px;
+		text-transform: capitalize;
+	}
+	#tve_one_set .thrv_wrapper.thrv_lead_generation .tve_lead_generated_inputs_container label{
+		font-family: 'Lato', sans-serif;
+	}
+	.popup-custom-form .tve_lg_checkbox_wrapper {
+		padding: 0 !important;
+	}
+	.popup-custom-form.thrv_lead_generation [type=checkbox]+label:before, 
+	.popup-custom-form  [type=checkbox]+label:before{
+		border-radius: 2px;
+		width: 14px;
+		height: 14px;
+		flex: 0 0 14px;
+		background: #fff;
+		border: 1px solid #909090;
+	}
+	.popup-custom-form.thrv_lead_generation [type=checkbox]:checked+label:after, 
+	.popup-custom-form [type=checkbox]:checked+label:after{
+		left: 3px;
+    	top: 7px;
+	}
+	.popup-custom-form.thrv_lead_generation [type=checkbox]:checked+label:before, .popup-custom-form [type=checkbox]:checked+label:before {
+		background: #bc9c76;
+		border-color: #bc9c76;
+	}
+	#tve_one_set .tve_one_set_v2.tve-leads-lightbox .tve_p_lb_content .tve_p_lb_close{
+		font-size: 16px;
+		height: 22px;
+		width: 22px;
+		line-height: 20px;
+		top: 10px;
+		right: 10px;
+	}
+	#tve_one_set .thrv_wrapper:last-child {
+		margin-bottom: 0;
+	}
+	body #tve-lg-error-container .tve-lg-err-close{
+		top: 3px;
+    	right: 3px;
+	}
+	.et_header_style_left .logo_container{
+		left: 0;
+    	padding: 0 15px;
+	}
+}
+@media only screen and (max-width: 640px) {
+	.essb_links.essb_template_metro-retina li a {
+		width: 100%;
+		text-align: center;
+		padding: 15px 95px 20px 70px;
+	}
+ 
+	body h1 {
+		font-size: 30px ;
+	}
+	
+	.essb_links.essb_template_metro-retina li a {
+		padding: 20px 85px 25px 65px;
+	}
+	
+	body h2 {
+		font-size: 20px ;
+	}
+	
+	body h3 {
+		font-size: 19px ;
+	}
+	
+	body h4 {
+		font-size: 15px;
+	}
+	
+	body h5 {
+		font-size: 14px ;
+	}
+	
+	body h6 {
+		font-size: 38px ;
+	}
+	
+	body .custom-h6 h6 {
+		font-size: 30px ;
+	}
+	
+  	body p {
+      font-size: 16px ;
+  }
+
+  /* BLOG */
+        article h2 {
+  		font-size: 20px ;
+    	margin-bottom: 10px;
+  }
+	body .custom-divider {
+		height: 200px ;
+	}
+
+	.custom-call-to-action {
+		display: block;
+	}
+	
+}
+@media only screen and (max-width: 375px) {
+	.custom-hero-banner .et_pb_image_0 .et_pb_image_wrap img{
+		height: 100px;
+	}
+	.custom-hero-banner .et_pb_text_0 h1 {
+		margin-bottom: 10px;
+	}
+	.custom-hero-banner h2{
+		font-size: 14px;
+	}
+	.custom-hero-banner.et_pb_section_0.et_pb_section{
+		padding-top: 18px;
+	}
+	#top-header .container {
+		padding: 0 10px;
+	}
+	body .custom-hero-banner #tve_blank_set .thrv_lead_generation_container input[type="text"], body .custom-hero-banner #tve_blank_set .thrv_lead_generation_container input[type="email"], body .custom-hero-banner #tve_blank_set .thrv_lead_generation_container input[type="password"]{
+		padding: 10px 15px;
+		margin-bottom: 10px;
+	}
+	.custom-hero-banner .et_pb_text_0 h1{
+		    font-size: 22px;
+	}
+	body .custom-hero-banner #tve_blank_set .thrv_lead_generation_container button{
+		padding: 12px 15px;
+	}
+}
+h</style>
+<!-- end Simple Custom CSS and JS -->
+<!-- Start VWO Async SmartCode -->
+<link rel="preconnect" href="https://dev.visualwebsiteoptimizer.com" />
+<script type='text/javascript' id='vwoCode'>
+window._vwo_code || (function() {
+var account_id=892678,
+version=2.1,
+settings_tolerance=2000,
+hide_element='body',
+hide_element_style = 'opacity:0 !important;filter:alpha(opacity=0) !important;background:none !important',
+/* DO NOT EDIT BELOW THIS LINE */
+f=false,w=window,d=document,v=d.querySelector('#vwoCode'),cK='_vwo_'+account_id+'_settings',cc={};try{var c=JSON.parse(localStorage.getItem('_vwo_'+account_id+'_config'));cc=c&&typeof c==='object'?c:{}}catch(e){}var stT=cc.stT==='session'?w.sessionStorage:w.localStorage;code={use_existing_jquery:function(){return typeof use_existing_jquery!=='undefined'?use_existing_jquery:undefined},library_tolerance:function(){return typeof library_tolerance!=='undefined'?library_tolerance:undefined},settings_tolerance:function(){return cc.sT||settings_tolerance},hide_element_style:function(){return'{'+(cc.hES||hide_element_style)+'}'},hide_element:function(){if(performance.getEntriesByName('first-contentful-paint')[0]){return''}return typeof cc.hE==='string'?cc.hE:hide_element},getVersion:function(){return version},finish:function(e){if(!f){f=true;var t=d.getElementById('_vis_opt_path_hides');if(t)t.parentNode.removeChild(t);if(e)(new Image).src='https://dev.visualwebsiteoptimizer.com/ee.gif?a='+account_id+e}},finished:function(){return f},addScript:function(e){var t=d.createElement('script');t.type='text/javascript';if(e.src){t.src=e.src}else{t.text=e.text}d.getElementsByTagName('head')[0].appendChild(t)},load:function(e,t){var i=this.getSettings(),n=d.createElement('script'),r=this;t=t||{};if(i){n.textContent=i;d.getElementsByTagName('head')[0].appendChild(n);if(!w.VWO||VWO.caE){stT.removeItem(cK);r.load(e)}}else{var o=new XMLHttpRequest;o.open('GET',e,true);o.withCredentials=!t.dSC;o.responseType=t.responseType||'text';o.onload=function(){if(t.onloadCb){return t.onloadCb(o,e)}if(o.status===200){_vwo_code.addScript({text:o.responseText})}else{_vwo_code.finish('&e=loading_failure:'+e)}};o.onerror=function(){if(t.onerrorCb){return t.onerrorCb(e)}_vwo_code.finish('&e=loading_failure:'+e)};o.send()}},getSettings:function(){try{var e=stT.getItem(cK);if(!e){return}e=JSON.parse(e);if(Date.now()>e.e){stT.removeItem(cK);return}return e.s}catch(e){return}},init:function(){if(d.URL.indexOf('__vwo_disable__')>-1)return;var e=this.settings_tolerance();w._vwo_settings_timer=setTimeout(function(){_vwo_code.finish();stT.removeItem(cK)},e);var t;if(this.hide_element()!=='body'){t=d.createElement('style');var i=this.hide_element(),n=i?i+this.hide_element_style():'',r=d.getElementsByTagName('head')[0];t.setAttribute('id','_vis_opt_path_hides');v&&t.setAttribute('nonce',v.nonce);t.setAttribute('type','text/css');if(t.styleSheet)t.styleSheet.cssText=n;else t.appendChild(d.createTextNode(n));r.appendChild(t)}else{t=d.getElementsByTagName('head')[0];var n=d.createElement('div');n.style.cssText='z-index: 2147483647 !important;position: fixed !important;left: 0 !important;top: 0 !important;width: 100% !important;height: 100% !important;background: white !important;';n.setAttribute('id','_vis_opt_path_hides');n.classList.add('_vis_hide_layer');t.parentNode.insertBefore(n,t.nextSibling)}var o='https://dev.visualwebsiteoptimizer.com/j.php?a='+account_id+'&u='+encodeURIComponent(d.URL)+'&vn='+version;if(w.location.search.indexOf('_vwo_xhr')!==-1){this.addScript({src:o})}else{this.load(o+'&x=true')}}};w._vwo_code=code;code.init();})();
+</script>
+<!-- End VWO Async SmartCode -->
+<style>#main-header {background: #006d67 !important;}
+    #top-menu a {color: #d3b083 !important;}
+	.et_mobile_menu li a {color: #d3b083 !important;}
+	.nav li ul {margin-left: -92px;}
+	ul .u-break-words .mb-4{display:none;}
+	ul li.u-break-words {display: none;}
+</style><style type="text/css">:not(#tve) .ttfm1{font-family: 'Source Sans Pro' !important;font-weight: 400 !important;}.ttfm1 input, .ttfm1 select, .ttfm1 textarea, .ttfm1 button {font-family: 'Source Sans Pro' !important;font-weight: 400 !important;}:not(#tve) .ttfm1.bold_text,.ttfm1 .bold_text,.ttfm1 b,.ttfm1 strong{font-weight: 600 !important;}.ttfm1.bold_text,.ttfm1 .bold_text,.ttfm1 b,.ttfm1 strong input, .ttfm1.bold_text,.ttfm1 .bold_text,.ttfm1 b,.ttfm1 strong select, .ttfm1.bold_text,.ttfm1 .bold_text,.ttfm1 b,.ttfm1 strong textarea, .ttfm1.bold_text,.ttfm1 .bold_text,.ttfm1 b,.ttfm1 strong button {font-weight: 600 !important;}:not(#tve) .ttfm2{font-family: 'PT Sans' !important;font-weight: 400 !important;}.ttfm2 input, .ttfm2 select, .ttfm2 textarea, .ttfm2 button {font-family: 'PT Sans' !important;font-weight: 400 !important;}:not(#tve) .ttfm2.bold_text,.ttfm2 .bold_text,.ttfm2 b,.ttfm2 strong{font-weight: 700 !important;}.ttfm2.bold_text,.ttfm2 .bold_text,.ttfm2 b,.ttfm2 strong input, .ttfm2.bold_text,.ttfm2 .bold_text,.ttfm2 b,.ttfm2 strong select, .ttfm2.bold_text,.ttfm2 .bold_text,.ttfm2 b,.ttfm2 strong textarea, .ttfm2.bold_text,.ttfm2 .bold_text,.ttfm2 b,.ttfm2 strong button {font-weight: 700 !important;}:not(#tve) .ttfm3{font-family: 'Playfair Display' !important;font-weight: 400 !important;}.ttfm3 input, .ttfm3 select, .ttfm3 textarea, .ttfm3 button {font-family: 'Playfair Display' !important;font-weight: 400 !important;}:not(#tve) .ttfm3.bold_text,.ttfm3 .bold_text,.ttfm3 b,.ttfm3 strong{font-weight: 700 !important;}.ttfm3.bold_text,.ttfm3 .bold_text,.ttfm3 b,.ttfm3 strong input, .ttfm3.bold_text,.ttfm3 .bold_text,.ttfm3 b,.ttfm3 strong select, .ttfm3.bold_text,.ttfm3 .bold_text,.ttfm3 b,.ttfm3 strong textarea, .ttfm3.bold_text,.ttfm3 .bold_text,.ttfm3 b,.ttfm3 strong button {font-weight: 700 !important;}:not(#tve) .ttfm4{font-family: 'Lato' !important;font-weight: 300 !important;}.ttfm4 input, .ttfm4 select, .ttfm4 textarea, .ttfm4 button {font-family: 'Lato' !important;font-weight: 300 !important;}:not(#tve) .ttfm4.bold_text,.ttfm4 .bold_text,.ttfm4 b,.ttfm4 strong{font-weight: 700 !important;}.ttfm4.bold_text,.ttfm4 .bold_text,.ttfm4 b,.ttfm4 strong input, .ttfm4.bold_text,.ttfm4 .bold_text,.ttfm4 b,.ttfm4 strong select, .ttfm4.bold_text,.ttfm4 .bold_text,.ttfm4 b,.ttfm4 strong textarea, .ttfm4.bold_text,.ttfm4 .bold_text,.ttfm4 b,.ttfm4 strong button {font-weight: 700 !important;}:not(#tve) .ttfm5{font-family: 'Merriweather' !important;font-weight: 400 !important;}.ttfm5 input, .ttfm5 select, .ttfm5 textarea, .ttfm5 button {font-family: 'Merriweather' !important;font-weight: 400 !important;}:not(#tve) .ttfm5.bold_text,.ttfm5 .bold_text,.ttfm5 b,.ttfm5 strong{font-weight: 700 !important;}.ttfm5.bold_text,.ttfm5 .bold_text,.ttfm5 b,.ttfm5 strong input, .ttfm5.bold_text,.ttfm5 .bold_text,.ttfm5 b,.ttfm5 strong select, .ttfm5.bold_text,.ttfm5 .bold_text,.ttfm5 b,.ttfm5 strong textarea, .ttfm5.bold_text,.ttfm5 .bold_text,.ttfm5 b,.ttfm5 strong button {font-weight: 700 !important;}</style><style type="text/css" id="tve_global_variables">:root{--tcb-background-author-image:url(https://secure.gravatar.com/avatar/48d1171f0375667be7f4257f6ec918afb84a028e7877fc47f22e74aba6ca3873?s=256&d=mm&r=g);--tcb-background-user-image:url();--tcb-background-featured-image-thumbnail:url(../../wp-content/plugins/thrive-visual-editor/editor/css/images/featured_image.png);}</style><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" /><link rel="shortcut icon" href="../../wp-content/uploads/2016/05/16-aa-favicon.png" /><meta name="facebook-domain-verification" content="boavp5kq31xpwoqroengv3r54xrinm">
+
+<script>
+var head = document.head;
+var script = document.createElement('script');
+script.type = 'text/javascript';
+script.src = "https://179664.tracking.hyros.com/v1/lst/universal-script?ph=f2cf483ecc62918bef5da777eb9e8a0b7bf30988e1b09ca416952038fbdbbbd8&tag=!tracking";
+head.appendChild(script);
+jQuery(document).ready(function($) {
+  $("input.form-phone").on('input', function() {
+    if ($(this).data('field') === "phone") {
+      this.value = this.value.replace(/\D/g, ''); // Remove all non-digits
+    }
+  });
+});
+
+</script>
+<style>li#menu-item-537014 {background-color: #bc9c76;padding: 7px 15px;border-radius: 10px;color: #fff;
+	}
+	li#menu-item-537014 a {color:#fff !important;padding: 2px !important;text-align: center;}
+	li#menu-item-28065 {display: none !important;}
+	.dis-none {display: none !important;}
+	.et-fixed-header #top-menu #menu-item-537014 a {color:#fff !important;}
+    .thrv_wrapper.tve_wp_shortcode {margin-bottom: -1px;margin-left: -1px;}
+	.thrv_wrapper {margin-top: 0;}
+	@media (min-width: 981px) {
+		li#menu-item-537014 a {padding-right: 15px !important;}
+	}
+</style>
+
+<script type="text/javascript" src="https://jz165.infusionsoft.app/app/webTracking/getTrackingCode"></script><style type="text/css" id="thrive-default-styles"></style><link rel="stylesheet" id="et-divi-customizer-global-cached-inline-styles" href="../../wp-content/et-cache/global/et-divi-customizer-global.min%EF%B9%96ver=1774877423.css" /></head>
+<body data-rsssl=1 class="archive category category-wealth-and-abundance category-26 wp-theme-Divi et_button_no_icon et_button_custom_icon et_pb_button_helper_class et_fullwidth_nav et_fullwidth_secondary_nav et_fixed_nav et_show_nav et_secondary_nav_enabled et_secondary_nav_two_panels et_primary_nav_dropdown_animation_expand et_secondary_nav_dropdown_animation_flip et_header_style_left et_pb_footer_columns1 et_cover_background osx et_pb_gutters3 et_pb_pagebuilder_layout et_right_sidebar et_divi_theme et-db">
+
+<!-- GTM Container placement set to automatic -->
+<!-- Google Tag Manager (noscript) -->
+				<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KRPJ5GH" height="0" width="0" style="display:none;visibility:hidden" aria-hidden="true"></iframe></noscript>
+				<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WVNRH4S" height="0" width="0" style="display:none;visibility:hidden" aria-hidden="true"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->	<div id="page-container">
+
+					<div id="top-header">
+			<div class="container clearfix">
+
+			
+				<div id="et-info">
+									<span id="et-info-phone">+1 928-963-7286</span>
+				
+									<a href="mailto:success@awakenedacademy.com"><span id="et-info-email">success@awakenedacademy.com</span></a>
+				
+				<ul class="et-social-icons">
+
+
+</ul>				</div>
+
+			
+				<div id="et-secondary-menu">
+				<div class="et_duplicate_social_icons">
+								<ul class="et-social-icons">
+
+
+</ul>
+							</div>				</div>
+
+			</div>
+		</div>
+		
+	
+			<header id="main-header" data-height-onload="36">
+			<div class="container clearfix et_menu_container">
+							<div class="logo_container">
+					<span class="logo_helper"></span>
+					<a href="../../index.html">
+						<img src="../../wp-content/uploads/2022/05/AA_LOGO_MINIMAL_yogi_white.png" width="504" height="504" alt="Awakened Academy®" id="logo" data-height-percentage="60" />
+					</a>
+				</div>
+							<div id="et-top-navigation" data-height="36" data-fixed-height="36">
+											<nav id="top-menu-nav">
+						<ul id="top-menu" class="nav"><li id="menu-item-536902" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-536902"><a href="../../index.html">Home</a></li>
+<li id="menu-item-30875" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-30875"><a>About</a>
+<ul class="sub-menu">
+	<li id="menu-item-26461" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-26461"><a href="../../about/index.html">About Us</a></li>
+	<li id="menu-item-533123" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-533123"><a href="../../awakened-academy-success-stories/index.html">Success Stories – Awakened Academy®</a></li>
+	<li id="menu-item-537619" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-537619"><a href="../../origin-story/index.html">Origin Story</a></li>
+	<li id="menu-item-26439" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-26439"><a href="../../wall-of-gratitude/index.html">Gratitude</a></li>
+	<li id="menu-item-27477" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-27477"><a href="../../where-we-are-coming-from/index.html">Where Are We Coming From?</a></li>
+</ul>
+</li>
+<li id="menu-item-531377" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-531377"><a href="../../spiritual-life-coach-certification/index.html">Get Certified</a></li>
+<li id="menu-item-28792" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-28792"><a href="../../awakened-academy-reviews/index.html">Awakened Academy Reviews</a></li>
+<li id="menu-item-31004" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-31004"><a href="../../meditation-with-michael-mackintosh-arielle-hecht/index.html">Meditations</a></li>
+<li id="menu-item-26446" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-26446"><a href="../../free-gifts-for-you/index.html">Your Gifts</a>
+<ul class="sub-menu">
+	<li id="menu-item-31222" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-31222"><a href="../../theawakenedlife/index.html">Spiritual Recharge Podcast</a></li>
+	<li id="menu-item-532173" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-532173"><a href="../../manifesting-abundance/index.html">Manifest Abundance</a></li>
+	<li id="menu-item-26447" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-26447"><a href="../../ep/index.html">Online Business Course</a></li>
+	<li id="menu-item-533724" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-533724"><a href="https://premaamusic.com/">Spiritual Songs</a></li>
+</ul>
+</li>
+<li id="menu-item-537014" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-537014"><a href="../../spiritual-life-coach-certification/index.html">DOWNLOAD FREE BROCHURE</a></li>
+</ul>						</nav>
+					
+					
+					
+					
+					<div id="et_mobile_nav_menu">
+				<div class="mobile_nav closed">
+					<span class="select_page">Select Page</span>
+					<span class="mobile_menu_bar mobile_menu_bar_toggle"></span>
+				</div>
+			</div>				</div> <!-- #et-top-navigation -->
+			</div> <!-- .container -->
+					</header> <!-- #main-header -->
+			<div id="et-main-area">
+	
+<div id="main-content">
+	<div class="container">
+		<div id="content-area" class="clearfix">
+			<div id="left-area">
+		
+					<article id="post-531830" class="et_pb_post post-531830 post type-post status-publish format-standard hentry category-wealth-and-abundance">
+
+											<a class="entry-featured-image-url" href="../../manifesting-abundance/index.html">
+								<img src="../../wp-content/uploads/et_temp/LOA4-1024x683-32289_1024x675.jpg" alt="Why the Law of Attraction Doesn&#8217;t Work For Most People  (And What You Can Do To Manifest Abundance and Your Heart’s True Desires)" class="" width="1080" height="675" />							</a>
+					
+															<h2 class="entry-title"><a href="../../manifesting-abundance/index.html">Why the Law of Attraction Doesn&#8217;t Work For Most People  (And What You Can Do To Manifest Abundance and Your Heart’s True Desires)</a></h2>
+					
+					<p class="post-meta"> by <span class="author vcard"><a href="../../author/michael/index.html" title="Posts by michael" rel="author">michael</a></span> | <span class="published">Jan 24, 2021</span> | <a href="index.html" rel="category tag">Wealth and Abundance</a></p>Why the Law of Attraction doesn't work for most people (and what you can do to manifest abundance and your heart’s true desires) 37SHARESShareTweet Why are most people not manifesting what they want? &nbsp; If your life is not exactly as you&#8217;d love it to be and...				
+					</article>
+			<div class="pagination clearfix">
+	<div class="alignleft"></div>
+	<div class="alignright"></div>
+</div>			</div>
+
+					</div>
+	</div>
+</div>
+
+
+			<footer id="main-footer">
+				
+
+		
+				<div id="footer-bottom">
+					<div class="container clearfix">
+				<div id="footer-info">@2026 Awakened Academy. Sending You Love.</div>					</div>
+				</div>
+			</footer>
+		</div>
+
+
+	</div>
+
+	<script type="speculationrules">
+{"prefetch":[{"source":"document","where":{"and":[{"href_matches":"\/*"},{"not":{"href_matches":["\/wp-*.php","\/wp-admin\/*","\/wp-content\/uploads\/*","\/wp-content\/*","\/wp-content\/plugins\/*","\/wp-content\/themes\/Divi\/*","\/*\\?(.+)"]}},{"not":{"selector_matches":"a[rel~=\"nofollow\"]"}},{"not":{"selector_matches":".no-prefetch, .no-prefetch a"}}]},"eagerness":"conservative"}]}
+</script>
+<script type='text/javascript'>( $ => {
+	/**
+	 * Displays toast message from storage, it is used when the user is redirected after login
+	 */
+	if ( window.sessionStorage ) {
+		$( window ).on( 'tcb_after_dom_ready', () => {
+			const message = sessionStorage.getItem( 'tcb_toast_message' );
+
+			if ( message ) {
+				tcbToast( sessionStorage.getItem( 'tcb_toast_message' ), false );
+				sessionStorage.removeItem( 'tcb_toast_message' );
+			}
+		} );
+	}
+
+	/**
+	 * Displays toast message
+	 *
+	 * @param {string}   message  - message to display
+	 * @param {Boolean}  error    - whether the message is an error or not
+	 * @param {Function} callback - callback function to be called after the message is closed
+	 */
+	function tcbToast( message, error, callback ) {
+		/* Also allow "message" objects */
+		if ( typeof message !== 'string' ) {
+			message = message.message || message.error || message.success;
+		}
+		if ( ! error ) {
+			error = false;
+		}
+		TCB_Front.notificationElement.toggle( message, error ? 'error' : 'success', callback );
+	}
+} )( typeof ThriveGlobal === 'undefined' ? jQuery : ThriveGlobal.$j );
+</script><style id="et-builder-googlefonts-inline">/* Original: https://fonts.googleapis.com/css?family=Lato:100,100italic,300,300italic,regular,italic,700,700italic,900,900italic|Source+Sans+Pro:200,200italic,300,300italic,regular,italic,600,600italic,700,700italic,900,900italic&#038;subset=latin,latin-ext,cyrillic,cyrillic-ext,greek,greek-ext,vietnamese&#038;display=swap *//* User Agent: Mozilla/5.0 (Unknown; Linux x86_64) AppleWebKit/538.1 (KHTML, like Gecko) Safari/538.1 Daum/4.1 */@font-face {font-family: 'Lato';font-style: italic;font-weight: 100;font-display: swap;src: url(https://fonts.gstatic.com/s/lato/v25/S6u-w4BMUTPHjxsIPx-mPCc.ttf) format('truetype');}@font-face {font-family: 'Lato';font-style: italic;font-weight: 300;font-display: swap;src: url(https://fonts.gstatic.com/s/lato/v25/S6u_w4BMUTPHjxsI9w2_FQfo.ttf) format('truetype');}@font-face {font-family: 'Lato';font-style: italic;font-weight: 400;font-display: swap;src: url(https://fonts.gstatic.com/s/lato/v25/S6u8w4BMUTPHjxsAUi-v.ttf) format('truetype');}@font-face {font-family: 'Lato';font-style: italic;font-weight: 700;font-display: swap;src: url(https://fonts.gstatic.com/s/lato/v25/S6u_w4BMUTPHjxsI5wq_FQfo.ttf) format('truetype');}@font-face {font-family: 'Lato';font-style: italic;font-weight: 900;font-display: swap;src: url(https://fonts.gstatic.com/s/lato/v25/S6u_w4BMUTPHjxsI3wi_FQfo.ttf) format('truetype');}@font-face {font-family: 'Lato';font-style: normal;font-weight: 100;font-display: swap;src: url(https://fonts.gstatic.com/s/lato/v25/S6u8w4BMUTPHh30AUi-v.ttf) format('truetype');}@font-face {font-family: 'Lato';font-style: normal;font-weight: 300;font-display: swap;src: url(https://fonts.gstatic.com/s/lato/v25/S6u9w4BMUTPHh7USSwaPHA.ttf) format('truetype');}@font-face {font-family: 'Lato';font-style: normal;font-weight: 400;font-display: swap;src: url(https://fonts.gstatic.com/s/lato/v25/S6uyw4BMUTPHjxAwWw.ttf) format('truetype');}@font-face {font-family: 'Lato';font-style: normal;font-weight: 700;font-display: swap;src: url(https://fonts.gstatic.com/s/lato/v25/S6u9w4BMUTPHh6UVSwaPHA.ttf) format('truetype');}@font-face {font-family: 'Lato';font-style: normal;font-weight: 900;font-display: swap;src: url(https://fonts.gstatic.com/s/lato/v25/S6u9w4BMUTPHh50XSwaPHA.ttf) format('truetype');}@font-face {font-family: 'Source Sans Pro';font-style: italic;font-weight: 200;font-display: swap;src: url(https://fonts.gstatic.com/s/sourcesanspro/v23/6xKwdSBYKcSV-LCoeQqfX1RYOo3qPZYokSdi18E.ttf) format('truetype');}@font-face {font-family: 'Source Sans Pro';font-style: italic;font-weight: 300;font-display: swap;src: url(https://fonts.gstatic.com/s/sourcesanspro/v23/6xKwdSBYKcSV-LCoeQqfX1RYOo3qPZZMkidi18E.ttf) format('truetype');}@font-face {font-family: 'Source Sans Pro';font-style: italic;font-weight: 400;font-display: swap;src: url(https://fonts.gstatic.com/s/sourcesanspro/v23/6xK1dSBYKcSV-LCoeQqfX1RYOo3qPZ7psDc.ttf) format('truetype');}@font-face {font-family: 'Source Sans Pro';font-style: italic;font-weight: 600;font-display: swap;src: url(https://fonts.gstatic.com/s/sourcesanspro/v23/6xKwdSBYKcSV-LCoeQqfX1RYOo3qPZY4lCdi18E.ttf) format('truetype');}@font-face {font-family: 'Source Sans Pro';font-style: italic;font-weight: 700;font-display: swap;src: url(https://fonts.gstatic.com/s/sourcesanspro/v23/6xKwdSBYKcSV-LCoeQqfX1RYOo3qPZZclSdi18E.ttf) format('truetype');}@font-face {font-family: 'Source Sans Pro';font-style: italic;font-weight: 900;font-display: swap;src: url(https://fonts.gstatic.com/s/sourcesanspro/v23/6xKwdSBYKcSV-LCoeQqfX1RYOo3qPZZklydi18E.ttf) format('truetype');}@font-face {font-family: 'Source Sans Pro';font-style: normal;font-weight: 200;font-display: swap;src: url(https://fonts.gstatic.com/s/sourcesanspro/v23/6xKydSBYKcSV-LCoeQqfX1RYOo3i94_wmRdr.ttf) format('truetype');}@font-face {font-family: 'Source Sans Pro';font-style: normal;font-weight: 300;font-display: swap;src: url(https://fonts.gstatic.com/s/sourcesanspro/v23/6xKydSBYKcSV-LCoeQqfX1RYOo3ik4zwmRdr.ttf) format('truetype');}@font-face {font-family: 'Source Sans Pro';font-style: normal;font-weight: 400;font-display: swap;src: url(https://fonts.gstatic.com/s/sourcesanspro/v23/6xK3dSBYKcSV-LCoeQqfX1RYOo3qNq7g.ttf) format('truetype');}@font-face {font-family: 'Source Sans Pro';font-style: normal;font-weight: 600;font-display: swap;src: url(https://fonts.gstatic.com/s/sourcesanspro/v23/6xKydSBYKcSV-LCoeQqfX1RYOo3i54rwmRdr.ttf) format('truetype');}@font-face {font-family: 'Source Sans Pro';font-style: normal;font-weight: 700;font-display: swap;src: url(https://fonts.gstatic.com/s/sourcesanspro/v23/6xKydSBYKcSV-LCoeQqfX1RYOo3ig4vwmRdr.ttf) format('truetype');}@font-face {font-family: 'Source Sans Pro';font-style: normal;font-weight: 900;font-display: swap;src: url(https://fonts.gstatic.com/s/sourcesanspro/v23/6xKydSBYKcSV-LCoeQqfX1RYOo3iu4nwmRdr.ttf) format('truetype');}/* User Agent: Mozilla/5.0 (Windows NT 6.1; WOW64; rv:27.0) Gecko/20100101 Firefox/27.0 */@font-face {font-family: 'Lato';font-style: italic;font-weight: 100;font-display: swap;src: url(https://fonts.gstatic.com/l/font?kit=S6u-w4BMUTPHjxsIPx-mPCQ&skey=3404b88e33a27f67&v=v25) format('woff');}@font-face {font-family: 'Lato';font-style: italic;font-weight: 300;font-display: swap;src: url(https://fonts.gstatic.com/l/font?kit=S6u_w4BMUTPHjxsI9w2_FQfr&skey=8107d606b7e3d38e&v=v25) format('woff');}@font-face {font-family: 'Lato';font-style: italic;font-weight: 400;font-display: swap;src: url(https://fonts.gstatic.com/l/font?kit=S6u8w4BMUTPHjxsAUi-s&skey=51512958f8cff7a8&v=v25) format('woff');}@font-face {font-family: 'Lato';font-style: italic;font-weight: 700;font-display: swap;src: url(https://fonts.gstatic.com/l/font?kit=S6u_w4BMUTPHjxsI5wq_FQfr&skey=5334e9c0b67702e2&v=v25) format('woff');}@font-face {font-family: 'Lato';font-style: italic;font-weight: 900;font-display: swap;src: url(https://fonts.gstatic.com/l/font?kit=S6u_w4BMUTPHjxsI3wi_FQfr&skey=4066143815f8bfc2&v=v25) format('woff');}@font-face {font-family: 'Lato';font-style: normal;font-weight: 100;font-display: swap;src: url(https://fonts.gstatic.com/l/font?kit=S6u8w4BMUTPHh30AUi-s&skey=cfa1ba7b04a1ba34&v=v25) format('woff');}@font-face {font-family: 'Lato';font-style: normal;font-weight: 300;font-display: swap;src: url(https://fonts.gstatic.com/l/font?kit=S6u9w4BMUTPHh7USSwaPHw&skey=91f32e07d083dd3a&v=v25) format('woff');}@font-face {font-family: 'Lato';font-style: normal;font-weight: 400;font-display: swap;src: url(https://fonts.gstatic.com/l/font?kit=S6uyw4BMUTPHjxAwWA&skey=2d58b92a99e1c086&v=v25) format('woff');}@font-face {font-family: 'Lato';font-style: normal;font-weight: 700;font-display: swap;src: url(https://fonts.gstatic.com/l/font?kit=S6u9w4BMUTPHh6UVSwaPHw&skey=3480a19627739c0d&v=v25) format('woff');}@font-face {font-family: 'Lato';font-style: normal;font-weight: 900;font-display: swap;src: url(https://fonts.gstatic.com/l/font?kit=S6u9w4BMUTPHh50XSwaPHw&skey=d01acf708cb3b73b&v=v25) format('woff');}@font-face {font-family: 'Source Sans Pro';font-style: italic;font-weight: 200;font-display: swap;src: url(https://fonts.gstatic.com/l/font?kit=6xKwdSBYKcSV-LCoeQqfX1RYOo3qPZYokSdi18I&skey=f3dde3b4b69fc0ae&v=v23) format('woff');}@font-face {font-family: 'Source Sans Pro';font-style: italic;font-weight: 300;font-display: swap;src: url(https://fonts.gstatic.com/l/font?kit=6xKwdSBYKcSV-LCoeQqfX1RYOo3qPZZMkidi18I&skey=8215b74d5c696e49&v=v23) format('woff');}@font-face {font-family: 'Source Sans Pro';font-style: italic;font-weight: 400;font-display: swap;src: url(https://fonts.gstatic.com/l/font?kit=6xK1dSBYKcSV-LCoeQqfX1RYOo3qPZ7psDQ&skey=28c775fa366622c1&v=v23) format('woff');}@font-face {font-family: 'Source Sans Pro';font-style: italic;font-weight: 600;font-display: swap;src: url(https://fonts.gstatic.com/l/font?kit=6xKwdSBYKcSV-LCoeQqfX1RYOo3qPZY4lCdi18I&skey=1ddbb15c8706f8a1&v=v23) format('woff');}@font-face {font-family: 'Source Sans Pro';font-style: italic;font-weight: 700;font-display: swap;src: url(https://fonts.gstatic.com/l/font?kit=6xKwdSBYKcSV-LCoeQqfX1RYOo3qPZZclSdi18I&skey=7573a083f0c737cb&v=v23) format('woff');}@font-face {font-family: 'Source Sans Pro';font-style: italic;font-weight: 900;font-display: swap;src: url(https://fonts.gstatic.com/l/font?kit=6xKwdSBYKcSV-LCoeQqfX1RYOo3qPZZklydi18I&skey=28b6885887279f18&v=v23) format('woff');}@font-face {font-family: 'Source Sans Pro';font-style: normal;font-weight: 200;font-display: swap;src: url(https://fonts.gstatic.com/l/font?kit=6xKydSBYKcSV-LCoeQqfX1RYOo3i94_wmRdo&skey=f7e766e587bd9f23&v=v23) format('woff');}@font-face {font-family: 'Source Sans Pro';font-style: normal;font-weight: 300;font-display: swap;src: url(https://fonts.gstatic.com/l/font?kit=6xKydSBYKcSV-LCoeQqfX1RYOo3ik4zwmRdo&skey=e2b26fc7e9e1ade8&v=v23) format('woff');}@font-face {font-family: 'Source Sans Pro';font-style: normal;font-weight: 400;font-display: swap;src: url(https://fonts.gstatic.com/l/font?kit=6xK3dSBYKcSV-LCoeQqfX1RYOo3qNq7j&skey=1e026b1c27170b9b&v=v23) format('woff');}@font-face {font-family: 'Source Sans Pro';font-style: normal;font-weight: 600;font-display: swap;src: url(https://fonts.gstatic.com/l/font?kit=6xKydSBYKcSV-LCoeQqfX1RYOo3i54rwmRdo&skey=227a890402fab339&v=v23) format('woff');}@font-face {font-family: 'Source Sans Pro';font-style: normal;font-weight: 700;font-display: swap;src: url(https://fonts.gstatic.com/l/font?kit=6xKydSBYKcSV-LCoeQqfX1RYOo3ig4vwmRdo&skey=84e1cdfb74260b1d&v=v23) format('woff');}@font-face {font-family: 'Source Sans Pro';font-style: normal;font-weight: 900;font-display: swap;src: url(https://fonts.gstatic.com/l/font?kit=6xKydSBYKcSV-LCoeQqfX1RYOo3iu4nwmRdo&skey=cf4dfcb31d72fb0a&v=v23) format('woff');}/* User Agent: Mozilla/5.0 (Windows NT 6.3; rv:39.0) Gecko/20100101 Firefox/39.0 */@font-face {font-family: 'Lato';font-style: italic;font-weight: 100;font-display: swap;src: url(https://fonts.gstatic.com/s/lato/v25/S6u-w4BMUTPHjxsIPx-mPCI.woff2) format('woff2');}@font-face {font-family: 'Lato';font-style: italic;font-weight: 300;font-display: swap;src: url(https://fonts.gstatic.com/s/lato/v25/S6u_w4BMUTPHjxsI9w2_FQft.woff2) format('woff2');}@font-face {font-family: 'Lato';font-style: italic;font-weight: 400;font-display: swap;src: url(https://fonts.gstatic.com/s/lato/v25/S6u8w4BMUTPHjxsAUi-q.woff2) format('woff2');}@font-face {font-family: 'Lato';font-style: italic;font-weight: 700;font-display: swap;src: url(https://fonts.gstatic.com/s/lato/v25/S6u_w4BMUTPHjxsI5wq_FQft.woff2) format('woff2');}@font-face {font-family: 'Lato';font-style: italic;font-weight: 900;font-display: swap;src: url(https://fonts.gstatic.com/s/lato/v25/S6u_w4BMUTPHjxsI3wi_FQft.woff2) format('woff2');}@font-face {font-family: 'Lato';font-style: normal;font-weight: 100;font-display: swap;src: url(https://fonts.gstatic.com/s/lato/v25/S6u8w4BMUTPHh30AUi-q.woff2) format('woff2');}@font-face {font-family: 'Lato';font-style: normal;font-weight: 300;font-display: swap;src: url(https://fonts.gstatic.com/s/lato/v25/S6u9w4BMUTPHh7USSwaPGQ.woff2) format('woff2');}@font-face {font-family: 'Lato';font-style: normal;font-weight: 400;font-display: swap;src: url(https://fonts.gstatic.com/s/lato/v25/S6uyw4BMUTPHjxAwXg.woff2) format('woff2');}@font-face {font-family: 'Lato';font-style: normal;font-weight: 700;font-display: swap;src: url(https://fonts.gstatic.com/s/lato/v25/S6u9w4BMUTPHh6UVSwaPGQ.woff2) format('woff2');}@font-face {font-family: 'Lato';font-style: normal;font-weight: 900;font-display: swap;src: url(https://fonts.gstatic.com/s/lato/v25/S6u9w4BMUTPHh50XSwaPGQ.woff2) format('woff2');}@font-face {font-family: 'Source Sans Pro';font-style: italic;font-weight: 200;font-display: swap;src: url(https://fonts.gstatic.com/s/sourcesanspro/v23/6xKwdSBYKcSV-LCoeQqfX1RYOo3qPZYokSdi18Q.woff2) format('woff2');}@font-face {font-family: 'Source Sans Pro';font-style: italic;font-weight: 300;font-display: swap;src: url(https://fonts.gstatic.com/s/sourcesanspro/v23/6xKwdSBYKcSV-LCoeQqfX1RYOo3qPZZMkidi18Q.woff2) format('woff2');}@font-face {font-family: 'Source Sans Pro';font-style: italic;font-weight: 400;font-display: swap;src: url(https://fonts.gstatic.com/s/sourcesanspro/v23/6xK1dSBYKcSV-LCoeQqfX1RYOo3qPZ7psDI.woff2) format('woff2');}@font-face {font-family: 'Source Sans Pro';font-style: italic;font-weight: 600;font-display: swap;src: url(https://fonts.gstatic.com/s/sourcesanspro/v23/6xKwdSBYKcSV-LCoeQqfX1RYOo3qPZY4lCdi18Q.woff2) format('woff2');}@font-face {font-family: 'Source Sans Pro';font-style: italic;font-weight: 700;font-display: swap;src: url(https://fonts.gstatic.com/s/sourcesanspro/v23/6xKwdSBYKcSV-LCoeQqfX1RYOo3qPZZclSdi18Q.woff2) format('woff2');}@font-face {font-family: 'Source Sans Pro';font-style: italic;font-weight: 900;font-display: swap;src: url(https://fonts.gstatic.com/s/sourcesanspro/v23/6xKwdSBYKcSV-LCoeQqfX1RYOo3qPZZklydi18Q.woff2) format('woff2');}@font-face {font-family: 'Source Sans Pro';font-style: normal;font-weight: 200;font-display: swap;src: url(https://fonts.gstatic.com/s/sourcesanspro/v23/6xKydSBYKcSV-LCoeQqfX1RYOo3i94_wmRdu.woff2) format('woff2');}@font-face {font-family: 'Source Sans Pro';font-style: normal;font-weight: 300;font-display: swap;src: url(https://fonts.gstatic.com/s/sourcesanspro/v23/6xKydSBYKcSV-LCoeQqfX1RYOo3ik4zwmRdu.woff2) format('woff2');}@font-face {font-family: 'Source Sans Pro';font-style: normal;font-weight: 400;font-display: swap;src: url(https://fonts.gstatic.com/s/sourcesanspro/v23/6xK3dSBYKcSV-LCoeQqfX1RYOo3qNq7l.woff2) format('woff2');}@font-face {font-family: 'Source Sans Pro';font-style: normal;font-weight: 600;font-display: swap;src: url(https://fonts.gstatic.com/s/sourcesanspro/v23/6xKydSBYKcSV-LCoeQqfX1RYOo3i54rwmRdu.woff2) format('woff2');}@font-face {font-family: 'Source Sans Pro';font-style: normal;font-weight: 700;font-display: swap;src: url(https://fonts.gstatic.com/s/sourcesanspro/v23/6xKydSBYKcSV-LCoeQqfX1RYOo3ig4vwmRdu.woff2) format('woff2');}@font-face {font-family: 'Source Sans Pro';font-style: normal;font-weight: 900;font-display: swap;src: url(https://fonts.gstatic.com/s/sourcesanspro/v23/6xKydSBYKcSV-LCoeQqfX1RYOo3iu4nwmRdu.woff2) format('woff2');}</style><style type="text/css" id="tve_notification_styles"></style>
+<div class="tvd-toast tve-fe-message" style="display: none">
+	<div class="tve-toast-message tve-success-message">
+		<div class="tve-toast-icon-container">
+			<span class="tve_tick thrv-svg-icon"></span>
+		</div>
+		<div class="tve-toast-message-container"></div>
+	</div>
+</div><noscript><img height="1" width="1" style="display: none;" src="https://www.facebook.com/tr?id=971471062903611&amp;ev=PageView&amp;noscript=1&amp;cd%5Bpage_title%5D=Wealth+and+Abundance&amp;cd%5Bpost_type%5D=category&amp;cd%5Bpost_id%5D=26&amp;cd%5Bplugin%5D=PixelYourSite&amp;cd%5Buser_role%5D=guest&amp;cd%5Bevent_url%5D=awakenedacademy.com%2Fcategory%2Fwealth-and-abundance%2F" alt=""></noscript>
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.0";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script><script type="text/javascript" src="../../wp-includes/js/jquery/jquery.min%EF%B9%96ver=3.7.1.js" id="jquery-core-js"></script>
+<script type="text/javascript" src="../../wp-includes/js/jquery/jquery-migrate.min%EF%B9%96ver=3.4.1.js" id="jquery-migrate-js"></script>
+<script type="text/javascript" id="jquery-js-after">
+/* <![CDATA[ */
+jqueryParams.length&&$.each(jqueryParams,function(e,r){if("function"==typeof r){var n=String(r);n.replace("$","jQuery");var a=new Function("return "+n)();$(document).ready(a)}});
+/* ]]> */
+</script>
+<script type="text/javascript" id="mashsb-js-extra">
+/* <![CDATA[ */
+var mashsb = {"shares":"37","round_shares":"1","animate_shares":"0","dynamic_buttons":"0","share_url":"https:\/\/awakenedacademy.com\/manifesting-abundance\/","title":"Why+the+Law+of+Attraction+Doesn%E2%80%99t+Work+For+Most+People%C2%A0+%28And+What+You+Can+Do+To+Manifest+Abundance+and+Your+Heart%E2%80%99s+True+Desires%29","image":null,"desc":"","hashtag":"","subscribe":"content","subscribe_url":"","activestatus":"1","singular":"0","twitter_popup":"1","refresh":"0","nonce":"1f173fb0cd","postid":"","servertime":"1776795128","ajaxurl":"https:\/\/awakenedacademy.com\/wp-admin\/admin-ajax.php"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="../../wp-content/plugins/mashsharer/assets/js/mashsb.min%EF%B9%96ver=4.0.47.js" id="mashsb-js"></script>
+<script type="text/javascript" id="qppr_frontend_scripts-js-extra">
+/* <![CDATA[ */
+var qpprFrontData = {"linkData":{"https:\/\/awakenedacademy.com\/wp-content\/uploads\/2019\/01\/Awakened-Academy-Brochure-Official-2019.pdf":[0,1,""],"https:\/\/awakenedacademy.com\/yes\/":[0,0,""],"https:\/\/awakenedacademy.com\/login\/":[0,0,""],"https:\/\/awakenedacademy.com\/products\/":[0,0,""],"https:\/\/awakenedacademy.com\/spiritual-life-coach-certification-original\/":[0,0,""],"https:\/\/awakenedacademy.com\/coaches\/":[0,0,""],"https:\/\/awakenedacademy.com\/referral-gifts\/":[0,0,""],"https:\/\/awakenedacademy.com\/spiritual-life-coach-certification-bkp\/":[0,0,""],"https:\/\/awakenedacademy.com\/spiritual-life-coach-certification-original-b-2\/":[0,0,""],"https:\/\/awakenedacademy.com\/spiritual-life-coach-certification-v2-2\/":[0,0,""],"https:\/\/awakenedacademy.com\/spiritual-life-coach-certification-original-b\/":[0,0,""]},"siteURL":"https:\/\/awakenedacademy.com","siteURLq":"https:\/\/awakenedacademy.com"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="../../wp-content/plugins/rw-quick-page-and-post-redirects/js/qppr_frontend_script.min%EF%B9%96ver=1.0.1.js" id="qppr_frontend_scripts-js"></script>
+<script type="text/javascript" src="../../wp-includes/js/jquery/ui/core.min%EF%B9%96ver=1.13.3.js" id="jquery-ui-core-js"></script>
+<script type="text/javascript" src="../../wp-includes/js/jquery/ui/menu.min%EF%B9%96ver=1.13.3.js" id="jquery-ui-menu-js"></script>
+<script type="text/javascript" src="../../wp-includes/js/dist/dom-ready.min%EF%B9%96ver=f77871ff7694fffea381.js" id="wp-dom-ready-js"></script>
+<script type="text/javascript" src="../../wp-includes/js/dist/hooks.min%EF%B9%96ver=4d63a3d491d11ffd8ac6.js" id="wp-hooks-js"></script>
+<script type="text/javascript" src="../../wp-includes/js/dist/i18n.min%EF%B9%96ver=5e580eb46a90c2b997e6.js" id="wp-i18n-js"></script>
+<script type="text/javascript" id="wp-i18n-js-after">
+/* <![CDATA[ */
+wp.i18n.setLocaleData( { 'text direction\u0004ltr': [ 'ltr' ] } );
+/* ]]> */
+</script>
+<script type="text/javascript" src="../../wp-includes/js/dist/a11y.min%EF%B9%96ver=3156534cc54473497e14.js" id="wp-a11y-js"></script>
+<script type="text/javascript" src="../../wp-includes/js/jquery/ui/autocomplete.min%EF%B9%96ver=1.13.3.js" id="jquery-ui-autocomplete-js"></script>
+<script type="text/javascript" src="../../wp-includes/js/imagesloaded.min%EF%B9%96ver=5.0.0.js" id="imagesloaded-js"></script>
+<script type="text/javascript" src="../../wp-includes/js/masonry.min%EF%B9%96ver=4.2.2.js" id="masonry-js"></script>
+<script type="text/javascript" src="../../wp-includes/js/jquery/jquery.masonry.min%EF%B9%96ver=3.1.2b.js" id="jquery-masonry-js"></script>
+<script type="text/javascript" id="tve_frontend-js-extra">
+/* <![CDATA[ */
+var tve_frontend_options = {"is_editor_page":"","page_events":[],"is_single":"0","ajaxurl":"https:\/\/awakenedacademy.com\/wp-admin\/admin-ajax.php","social_fb_app_id":"622846284556631","dash_url":"https:\/\/awakenedacademy.com\/wp-content\/plugins\/thrive-visual-editor\/thrive-dashboard","translations":{"Copy":"Copy"},"user_profile_nonce":"dfd369bc99","ip":"24.156.95.185","current_user":[],"post_request_data":[],"conditional_display":{"is_tooltip_dismissed":false}};
+/* ]]> */
+</script>
+<script type="text/javascript" src="../../wp-content/plugins/thrive-visual-editor/editor/js/dist/modules/general.min%EF%B9%96ver=10.6.1.js" id="tve_frontend-js"></script>
+<script type="text/javascript" src="../../wp-content/plugins/thrive-leads/js/frontend.min%EF%B9%96ver=10.6.1.js" id="tve_leads_frontend-js"></script>
+<script type="text/javascript" id="divi-custom-script-js-extra">
+/* <![CDATA[ */
+var DIVI = {"item_count":"%d Item","items_count":"%d Items"};
+var et_builder_utils_params = {"condition":{"diviTheme":true,"extraTheme":false},"scrollLocations":["app","top"],"builderScrollLocations":{"desktop":"app","tablet":"app","phone":"app"},"onloadScrollLocation":"app","builderType":"fe"};
+var et_frontend_scripts = {"builderCssContainerPrefix":"#et-boc","builderCssLayoutPrefix":"#et-boc .et-l"};
+var et_pb_custom = {"ajaxurl":"https:\/\/awakenedacademy.com\/wp-admin\/admin-ajax.php","images_uri":"https:\/\/awakenedacademy.com\/wp-content\/themes\/Divi\/images","builder_images_uri":"https:\/\/awakenedacademy.com\/wp-content\/themes\/Divi\/includes\/builder\/images","et_frontend_nonce":"645adeefeb","subscription_failed":"Please, check the fields below to make sure you entered the correct information.","et_ab_log_nonce":"3b9ce1e024","fill_message":"Please, fill in the following fields:","contact_error_message":"Please, fix the following errors:","invalid":"Invalid email","captcha":"Captcha","prev":"Prev","previous":"Previous","next":"Next","wrong_captcha":"You entered the wrong number in captcha.","wrong_checkbox":"Checkbox","ignore_waypoints":"no","is_divi_theme_used":"1","widget_search_selector":".widget_search","ab_tests":[],"is_ab_testing_active":"","page_id":"531830","unique_test_id":"","ab_bounce_rate":"5","is_cache_plugin_active":"no","is_shortcode_tracking":"","tinymce_uri":"https:\/\/awakenedacademy.com\/wp-content\/themes\/Divi\/includes\/builder\/frontend-builder\/assets\/vendors","accent_color":"#761b57","waypoints_options":[]};
+var et_pb_box_shadow_elements = [];
+/* ]]> */
+</script>
+<script type="text/javascript" src="../../wp-content/themes/Divi/js/scripts.min%EF%B9%96ver=4.27.4.js" id="divi-custom-script-js"></script>
+<script type="text/javascript" src="../../wp-content/plugins/divi-article-cards/assets/js/scripts%EF%B9%96ver=20160602.js" id="custom-article-cards-js"></script>
+<script type="text/javascript" src="../../wp-content/plugins/duracelltomi-google-tag-manager/dist/js/gtm4wp-form-move-tracker%EF%B9%96ver=1.22.3.js" id="gtm4wp-form-move-tracker-js"></script>
+<script type="text/javascript" src="../../wp-content/plugins/popups-for-divi/scripts/front.min%EF%B9%96ver=3.2.5.js" id="js-divi-area-js"></script>
+<script type="text/javascript" id="gpls-wpsctr-simple-countdown-timer-front-countdown-timer-js-js-extra">
+/* <![CDATA[ */
+var gpls_wpsctr_simple_countdown_timer_localized_data = {"ajaxUrl":"https:\/\/awakenedacademy.com\/wp-admin\/admin-ajax.php","prefix":"gpls-wpsctr-simple-countdown-timer","classes_prefix":"gpls-wpsctr","labels":{"flipDownHeading":{"days":"Days","hours":"Hours","minutes":"Minutes","seconds":"Seconds"},"invalidEmail":"Please enter an email address"},"nonce":"4196144a54","submitFormAction":"gpls-wpsctr-subscribe-form-submit"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="../../wp-content/plugins/simple-countdown/assets/dist/js/front/front-countdown-timer.min%EF%B9%96ver=1.0.4.js" id="gpls-wpsctr-simple-countdown-timer-front-countdown-timer-js-js"></script>
+<script type="text/javascript" id="tve-dash-frontend-js-extra">
+/* <![CDATA[ */
+var tve_dash_front = {"ajaxurl":"https:\/\/awakenedacademy.com\/wp-admin\/admin-ajax.php","force_ajax_send":"1","is_crawler":"","recaptcha":[],"turnstile":[],"post_id":"531830"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="../../wp-content/plugins/thrive-visual-editor/thrive-dashboard/js/dist/frontend.min%EF%B9%96ver=10.6.1.js" id="tve-dash-frontend-js"></script>
+<script type="text/javascript" src="../../wp-content/themes/Divi/core/admin/js/es6-promise.auto.min%EF%B9%96ver=4.27.4.js" id="es6-promise-js"></script>
+<script type="text/javascript" src="https://www.google.com/recaptcha/api.js?render=6LckfZ4eAAAAAD55f5MR5byyIiTTIfho3LjESscy&amp;ver=4.27.4" id="et-recaptcha-v3-js"></script>
+<script type="text/javascript" id="et-core-api-spam-recaptcha-js-extra">
+/* <![CDATA[ */
+var et_core_api_spam_recaptcha = {"site_key":"6LckfZ4eAAAAAD55f5MR5byyIiTTIfho3LjESscy","page_action":{"action":"manifesting_abundance"}};
+/* ]]> */
+</script>
+<script type="text/javascript" src="../../wp-content/themes/Divi/core/admin/js/recaptcha%EF%B9%96ver=4.27.4.js" id="et-core-api-spam-recaptcha-js"></script>
+<script type="text/javascript" src="../../wp-content/themes/Divi/includes/builder/feature/dynamic-assets/assets/js/jquery.fitvids%EF%B9%96ver=4.27.4.js" id="fitvids-js"></script>
+<script type="text/javascript" src="../../wp-content/plugins/pixelyoursite/dist/scripts/jquery.bind-first-0.2.3.min%EF%B9%96ver=0.2.3.js" id="jquery-bind-first-js"></script>
+<script type="text/javascript" src="../../wp-content/plugins/pixelyoursite/dist/scripts/js.cookie-2.1.3.min%EF%B9%96ver=2.1.3.js" id="js-cookie-pys-js"></script>
+<script type="text/javascript" src="../../wp-content/plugins/pixelyoursite/dist/scripts/tld.min%EF%B9%96ver=2.3.1.js" id="js-tld-js"></script>
+<script type="text/javascript" id="pys-js-extra">
+/* <![CDATA[ */
+var pysOptions = {"staticEvents":{"facebook":{"init_event":[{"delay":0,"type":"static","ajaxFire":false,"name":"PageView","pixelIds":["971471062903611"],"eventID":"3c724490-10e8-44f3-a85b-a7cf812b18dc","params":{"page_title":"Wealth and Abundance","post_type":"category","post_id":26,"plugin":"PixelYourSite","user_role":"guest","event_url":"awakenedacademy.com\/category\/wealth-and-abundance\/"},"e_id":"init_event","ids":[],"hasTimeWindow":false,"timeWindow":0,"woo_order":"","edd_order":""}]}},"dynamicEvents":[],"triggerEvents":[],"triggerEventTypes":[],"facebook":{"pixelIds":["971471062903611"],"advancedMatching":[],"advancedMatchingEnabled":false,"removeMetadata":false,"wooVariableAsSimple":false,"serverApiEnabled":false,"wooCRSendFromServer":false,"send_external_id":null,"enabled_medical":false,"do_not_track_medical_param":["event_url","post_title","page_title","landing_page","content_name","categories","category_name","tags"],"meta_ldu":false},"debug":"","siteUrl":"https:\/\/awakenedacademy.com","ajaxUrl":"https:\/\/awakenedacademy.com\/wp-admin\/admin-ajax.php","ajax_event":"8f9ae751dc","enable_remove_download_url_param":"1","cookie_duration":"7","last_visit_duration":"60","enable_success_send_form":"","ajaxForServerEvent":"1","ajaxForServerStaticEvent":"1","useSendBeacon":"1","send_external_id":"1","external_id_expire":"180","track_cookie_for_subdomains":"1","google_consent_mode":"1","gdpr":{"ajax_enabled":true,"all_disabled_by_api":false,"facebook_disabled_by_api":false,"analytics_disabled_by_api":false,"google_ads_disabled_by_api":false,"pinterest_disabled_by_api":false,"bing_disabled_by_api":false,"reddit_disabled_by_api":false,"externalID_disabled_by_api":false,"facebook_prior_consent_enabled":true,"analytics_prior_consent_enabled":true,"google_ads_prior_consent_enabled":null,"pinterest_prior_consent_enabled":true,"bing_prior_consent_enabled":true,"cookiebot_integration_enabled":false,"cookiebot_facebook_consent_category":"marketing","cookiebot_analytics_consent_category":"statistics","cookiebot_tiktok_consent_category":"marketing","cookiebot_google_ads_consent_category":"marketing","cookiebot_pinterest_consent_category":"marketing","cookiebot_bing_consent_category":"marketing","consent_magic_integration_enabled":false,"real_cookie_banner_integration_enabled":false,"cookie_notice_integration_enabled":false,"cookie_law_info_integration_enabled":true,"analytics_storage":{"enabled":true,"value":"granted","filter":false},"ad_storage":{"enabled":true,"value":"granted","filter":false},"ad_user_data":{"enabled":true,"value":"granted","filter":false},"ad_personalization":{"enabled":true,"value":"granted","filter":false}},"cookie":{"disabled_all_cookie":false,"disabled_start_session_cookie":false,"disabled_advanced_form_data_cookie":false,"disabled_landing_page_cookie":false,"disabled_first_visit_cookie":false,"disabled_trafficsource_cookie":false,"disabled_utmTerms_cookie":false,"disabled_utmId_cookie":false},"tracking_analytics":{"TrafficSource":"direct","TrafficLanding":"http:\/\/undefined","TrafficUtms":[],"TrafficUtmsId":[]},"GATags":{"ga_datalayer_type":"default","ga_datalayer_name":"dataLayerPYS"},"woo":{"enabled":false},"edd":{"enabled":false},"cache_bypass":"1776795128"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="../../wp-content/plugins/pixelyoursite/dist/scripts/public%EF%B9%96ver=11.2.0.3.js" id="pys-js"></script>
+<script type="text/javascript" src="../../wp-content/plugins/smart-phone-addon-for-ninja-forms/dist/public/spn-front-vendors.min%EF%B9%96ver=1.3.1.js" id="ninja-forms-spn-addon-vendors-js"></script>
+<script type="text/javascript" src="../../wp-content/themes/Divi/core/admin/js/common%EF%B9%96ver=4.27.4.js" id="et-core-common-js"></script>
+<script type="text/javascript">var tcb_current_post_lists=JSON.parse('[]'); var tcb_post_lists=tcb_post_lists?[...tcb_post_lists,...tcb_current_post_lists]:tcb_current_post_lists;</script><script type="text/javascript">/*<![CDATA[*/if ( !window.TL_Const ) {var TL_Const={"security":"bb4a62d7f3","ajax_url":"https:\/\/awakenedacademy.com\/wp-admin\/admin-ajax.php","forms":[],"action_conversion":"tve_leads_ajax_conversion","action_impression":"tve_leads_ajax_impression","ajax_load":1,"custom_post_data":{"http_referrer":"https:\/\/awakenedacademy.com\/author\/michael\/page\/7\/"},"current_screen":{"screen_type":6,"screen_id":0},"ignored_fields":["email","_captcha_size","_captcha_theme","_captcha_type","_submit_option","_use_captcha","g-recaptcha-response","__tcb_lg_fc","__tcb_lg_msg","_state","_form_type","_error_message_option","_back_url","_submit_option","url","_asset_group","_asset_option","mailchimp_optin","tcb_token","tve_labels","tve_mapping","_api_custom_fields","_sendParams","_autofill"]};} else { window.TL_Front && TL_Front.extendConst && TL_Front.extendConst({"security":"bb4a62d7f3","ajax_url":"https:\/\/awakenedacademy.com\/wp-admin\/admin-ajax.php","forms":[],"action_conversion":"tve_leads_ajax_conversion","action_impression":"tve_leads_ajax_impression","ajax_load":1,"custom_post_data":{"http_referrer":"https:\/\/awakenedacademy.com\/author\/michael\/page\/7\/"},"current_screen":{"screen_type":6,"screen_id":0},"ignored_fields":["email","_captcha_size","_captcha_theme","_captcha_type","_submit_option","_use_captcha","g-recaptcha-response","__tcb_lg_fc","__tcb_lg_msg","_state","_form_type","_error_message_option","_back_url","_submit_option","url","_asset_group","_asset_option","mailchimp_optin","tcb_token","tve_labels","tve_mapping","_api_custom_fields","_sendParams","_autofill"]})} /*]]> */</script><script type='text/javascript'>
+/* <![CDATA[ */
+var TVE_Ult_Data = {"ajaxurl":"https:\/\/awakenedacademy.com\/wp-admin\/admin-ajax.php","ajax_load_action":"tve_ult_ajax_load","conversion_events_action":"tve_ult_conversion_event","shortcode_campaign_ids":[],"matched_display_settings":[],"campaign_ids":[],"post_id":531830,"is_singular":false,"tu_em":"","evergreen_redirects":[]};
+/* ]]> */
+</script>
+		<script type="text/javascript" src="../../wp-content/plugins/thrive-ultimatum/js/dist/no-campaign.min%EF%B9%96v=10.6.1.js"></script></body>
+</html>
