@@ -67,6 +67,11 @@ const CRISIS = [
   { title: "Coronavirus Crisis — 10 Insights", subtitle: "10 insights to find the silver lining and hidden gifts in difficult times. Recorded March 2020.", audio: audioUrl("/audio/meditations/crisis/Coronavirus-Crisis-10-Insights.mp3") },
 ];
 
+const SLEEP = [
+  { title: "16 Ways to Get Better Sleep, Starting Tonight", subtitle: "A practical talk on the habits and shifts that improve your sleep from this evening forward.", audio: audioUrl("/audio/meditations/sleep/16-Ways-to-Better-Sleep.mp3") },
+  { title: "Clearing Your Day for Better Sleep", subtitle: "A powerful method for clearing the residue of the day and waking up fresh.", audio: audioUrl("/audio/meditations/sleep/Clearing-Your-Day-Better-Sleep.mp3") },
+];
+
 const LIBRARY = [
   { title: "Self-Compassion and Worthiness", subtitle: "Soften the inner critic and remember you're enough.", audio: audioUrl("/audio/meditations/Self-Compassion-and-Worthiness-Guided-Meditation.mp3") },
   { title: "Free from Past Burdens and Mistakes", subtitle: "Let go of what's been weighing on you. Step forward lighter.", audio: audioUrl("/audio/meditations/Free-from-Past-Burdens-and-Mistakes-Meditation.mp3") },
@@ -285,6 +290,32 @@ export default function MeditationsPage() {
             {LIBRARY.map((m) => (
               <Reveal key={m.audio}>
                 <MedCard m={m} eyebrow="Practice" />
+              </Reveal>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* SLEEP */}
+      <section className="bg-warm">
+        <div className="mx-auto max-w-wide px-6 py-20">
+          <Reveal>
+            <div className="text-center">
+              <span className="eyebrow">For Sleep</span>
+              <h2 className="mt-3 font-serif text-[clamp(26px,4vw,38px)] font-light text-ink">
+                Sleep better, <em>tonight</em>
+              </h2>
+              <div className="gold-line mt-6" />
+              <p className="mx-auto mt-6 max-w-xl text-[16px] leading-[1.7] text-ink2">
+                Two short teachings on getting deeper, more restorative rest — practical methods
+                you can use the same evening.
+              </p>
+            </div>
+          </Reveal>
+          <div className="mt-12 grid gap-5 md:grid-cols-2">
+            {SLEEP.map((m) => (
+              <Reveal key={m.audio}>
+                <MedCard m={m} eyebrow="Sleep" />
               </Reveal>
             ))}
           </div>
