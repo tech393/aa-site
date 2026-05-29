@@ -1,6 +1,7 @@
 import type { MetadataRoute } from "next";
 import { SITE } from "@/lib/site-config";
 import { getAllBlogSlugs, getAllProgramSlugs } from "@/lib/content";
+import { AWAKENED_LIFE } from "@/lib/awakened-life";
 
 const STATIC_ROUTES: { path: string; priority: number; changeFreq: MetadataRoute.Sitemap[number]["changeFrequency"] }[] = [
   // Top-level conversion path
@@ -35,6 +36,7 @@ const STATIC_ROUTES: { path: string; priority: number; changeFreq: MetadataRoute
   { path: "/free-gifts-for-you", priority: 0.7, changeFreq: "monthly" },
   { path: "/meditations", priority: 0.75, changeFreq: "monthly" },
   { path: "/theawakenedlife", priority: 0.7, changeFreq: "monthly" },
+  { path: "/awakened-life", priority: 0.85, changeFreq: "monthly" },
 
   // Mentoring
   { path: "/mentoring-with-michael", priority: 0.85, changeFreq: "monthly" },
@@ -85,5 +87,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "monthly",
       priority: 0.75,
     }));
-  return [...staticEntries, ...blogEntries, ...programEntries];
+  const awakenedLifeEntries: MetadataRoute.Sitemap = AWAKENED_LIFE.map((v) => ({
+    url: `${SITE.url}/awakened-life/${v.slug}`,
+    lastModified: now,
+    changeFrequency: "monthly",
+    priority: 0.75,
+  }));
+  return [...staticEntries, ...blogEntries, ...programEntries, ...awakenedLifeEntries];
 }

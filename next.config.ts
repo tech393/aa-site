@@ -133,13 +133,16 @@ const config: NextConfig = {
     { source: "/realize-your-dharma-your-best-life-ever", destination: "/dharma", permanent: true },
     { source: "/survey-gifts", destination: "/free-gifts-for-you", permanent: true },
     { source: "/gifts", destination: "/free-gifts-for-you", permanent: true },
-    { source: "/3-worlds", destination: "/the-3-worlds", permanent: true },
-    // /the-3-worlds, /unique-soul-purpose, /video-1 are now the v13 Awakened Life video pages (static HTML in /public/)
-    // /awakened-life is the opt-in landing; its old [slug] subpaths redirect to the new root video URLs
-    { source: "/awakened-life/video-1", destination: "/video-1", permanent: true },
-    { source: "/awakened-life/the-3-worlds", destination: "/the-3-worlds", permanent: true },
-    { source: "/awakened-life/unique-soul-purpose", destination: "/unique-soul-purpose", permanent: true },
-    { source: "/awakened-life/freedom", destination: "/freedom", permanent: true },
+    // The Awakened Life 4-video series. Canonical URLs are /awakened-life/<slug>,
+    // matching the SP, EP, and Dharma course pattern. Legacy root-level URLs
+    // (/video-1, /the-3-worlds, /unique-soul-purpose, /freedom) and the older
+    // /3-worlds alias all redirect to the canonical paths. The static HTML
+    // versions in /public/<slug>/ are shadowed by these redirects.
+    { source: "/3-worlds", destination: "/awakened-life/the-3-worlds", permanent: true },
+    { source: "/video-1", destination: "/awakened-life/video-1", permanent: true },
+    { source: "/the-3-worlds", destination: "/awakened-life/the-3-worlds", permanent: true },
+    { source: "/unique-soul-purpose", destination: "/awakened-life/unique-soul-purpose", permanent: true },
+    { source: "/freedom", destination: "/awakened-life/freedom", permanent: true },
     // Old Ascension Toolkit lead magnet
     { source: "/ascension", destination: "/dharma", permanent: true },
     // Old group mentoring page; direct to canonical

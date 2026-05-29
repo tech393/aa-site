@@ -316,16 +316,18 @@ export function buildSiteMap(): SiteMap {
   if (AWAKENED_LIFE.length) {
     sections.push({
       title: "The Awakened Life — videos",
-      note: "Free 4-part video series. Opt-in at /awakened-life; videos served as static HTML from /public/.",
+      note: "Free 4-part video series. Opt-in at /awakened-life; videos at /awakened-life/<slug>.",
       links: AWAKENED_LIFE.map((v) => ({
-        href: `/${v.slug}`,
+        href: `/awakened-life/${v.slug}`,
         label: `${v.number}. ${v.title}`,
       })),
     });
   }
 
   // Don't double-list the awakened-life videos under the generic landing
-  // pages bucket — they have their own grouped section above.
+  // pages bucket — the legacy /public/<slug>/index.html files are shadowed
+  // by redirects to /awakened-life/<slug>, and the canonical pages are in
+  // their own section above.
   const awakenedLifeSlugs = new Set(AWAKENED_LIFE.map((v) => v.slug));
   const publicLandings = discoverPublicLandingPages(awakenedLifeSlugs);
   if (publicLandings.length) {
