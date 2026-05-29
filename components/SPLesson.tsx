@@ -70,11 +70,22 @@ export default function SPLesson({ lesson }: { lesson: Lesson }) {
             ) : (
               <div className="rounded-md border border-dashed border-ink/20 bg-white/60 p-7 text-center">
                 <div className="text-[11px] font-semibold uppercase tracking-[0.18em] text-soft">
-                  Audio coming back online soon
+                  Audio not currently available
                 </div>
                 <p className="mt-3 text-[14px] leading-[1.65] text-ink2">
-                  This lesson is being restored from the original 2014 recordings.
+                  The original 2014 recording isn't online right now. The lesson
+                  summary below covers the key ideas — and if you'd like a deeper
+                  walk-through, the full Certification picks this material up in
+                  more depth.
                 </p>
+                <div className="mt-5">
+                  <Link
+                    href="/contact"
+                    className="text-[12.5px] font-semibold uppercase tracking-[0.18em] text-teal underline-offset-2 hover:underline"
+                  >
+                    Email us if you'd like a copy →
+                  </Link>
+                </div>
               </div>
             )}
           </Reveal>
