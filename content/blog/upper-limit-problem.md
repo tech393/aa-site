@@ -83,7 +83,7 @@ It was the same with money. It didn't matter how hard I worked, I'd end up with 
 
 It even happened with pure bliss. I remember walking across a field at a meditation retreat in the most incredible altered state of joy (completely blissed out, *oh my God, this is so incredible*), and then something came in. Some weird addiction, or negative thinking, or randomly overeating, something that just *had* to bring it down, because it was way over the top. I've watched that same pattern play out over and over: it goes up, it hits the switch, and something comes in to smash it back down.
 
-And Arielle, my teaching partner, will tell you the same:
+And Arielle, co-founder of Awakened Academy, will tell you the same:
 
 > *"When I first met Michael, I actually got really sick. I had this fever and flu for a week straight. I couldn't even get out of bed. My environment was beautiful, everything was wonderful… and then meeting Michael, it was just too good. So I got sick."*
 > Arielle
