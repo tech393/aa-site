@@ -79,11 +79,11 @@ I want to be honest with you, because this is not theory for me.
 
 When I lived in England, a life in Hawaii was just a dream. As I understood the Upper Limit Problem and overcame it, I actually moved there: beautiful blue skies, the beach, the sunrise. A massive, massive upgrade. And when I first arrived, it was so good that I had to sabotage it. I ended up in a relationship that basically sabotaged my joy, and I stopped my spiritual practice for about six or seven months, because that practice was bringing me too much joy.
 
-It was the same with money. It didn't matter how hard I worked, I'd end up with the same amount. I'd try something different (same result, again and again) until I realised it had nothing to do with marketing or business. It was purely an Upper Limit Problem. I wasn't allowing myself to have more abundance. And I wasn't allowing myself to have more love, either, which is why meeting Arielle, and having such a pure, easy, beautiful relationship instead of constant drama, was such a huge blessing.
+It was the same with money. It didn't matter how hard I worked, I'd end up with the same amount. I'd try something different (same result, again and again) until I realised it had nothing to do with marketing or business. It was purely an Upper Limit Problem. I wasn't allowing myself to have more abundance. And I wasn't allowing myself to have more love, either. When I worked through that, the relationships that arrived afterwards were such a blessing: pure, easy and beautiful, instead of the constant drama I'd grown used to.
 
 It even happened with pure bliss. I remember walking across a field at a meditation retreat in the most incredible altered state of joy (completely blissed out, *oh my God, this is so incredible*), and then something came in. Some weird addiction, or negative thinking, or randomly overeating, something that just *had* to bring it down, because it was way over the top. I've watched that same pattern play out over and over: it goes up, it hits the switch, and something comes in to smash it back down.
 
-And Arielle will tell you the same:
+And Arielle, my teaching partner, will tell you the same:
 
 > *"When I first met Michael, I actually got really sick. I had this fever and flu for a week straight. I couldn't even get out of bed. My environment was beautiful, everything was wonderful… and then meeting Michael, it was just too good. So I got sick."*
 > Arielle
