@@ -1,7 +1,7 @@
 ---
 title: "Manifesting Abundance: The Complete Spiritual Guide"
-slug: "manifesting-abundance"
-url: "https://awakenedacademy.com/manifesting-abundance/"
+slug: "why-the-law-of-attraction-doesnt-work"
+url: "https://awakenedacademy.com/why-the-law-of-attraction-doesnt-work/"
 date: "2025-03-08"
 author: "Michael Mackintosh"
 description: "A complete guide to manifesting abundance with spiritual integrity. The principles, practices, and inner work that turn aspirations into a life of real prosperity."

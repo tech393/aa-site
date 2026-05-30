@@ -30,6 +30,8 @@ const config: NextConfig = {
     { source: "/awakened-academy-reviews", destination: "/wall-of-gratitude", permanent: true },
     // Spiritual business ideas consolidated to canonical SEO slug (May 2026 — pillar post per SEO content calendar)
     { source: "/15-profitable-spiritual-business-ideas-for-modern-entrepreneurs", destination: "/spiritual-business-ideas", permanent: true },
+    // Manifesting abundance pillar renamed to align with target keyword (May 2026 — manifestation cluster, pairs with /upper-limit-problem)
+    { source: "/manifesting-abundance", destination: "/why-the-law-of-attraction-doesnt-work", permanent: true },
     // Sacred Session CTA target (Two Mindsets post) routes to booking page until a dedicated page exists. Temporary 302.
     { source: "/sacred-session", destination: "/schedule", permanent: false },
     // Top-marketing post year bump 2025 -> 2026 (May 2026)
