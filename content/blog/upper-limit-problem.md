@@ -5,7 +5,7 @@ url: "https://awakenedacademy.com/upper-limit-problem/"
 date: "2026-05-30"
 author: "Michael Mackintosh"
 description: "The Upper Limit Problem is the hidden ceiling on your joy, success and love, the reason something always ruins it the moment life gets good. Michael Mackintosh explains what it is, why we do it, and the four steps to break through."
-hero_image: "/images/blog/alone-arms-open-sunset.jpg"
+hero_image: "/images/blog/top-marketing-arms-open-ocean.jpg"
 images: []
 ---
 
