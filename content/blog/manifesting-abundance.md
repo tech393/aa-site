@@ -222,6 +222,40 @@ Love this meditation! Lifts me up every time I practice 🙌 – Josephine
 
 7. Invest time, money and energy in your awakening and freedom. Seek to raise your level of consciousness. The more you invest in yourself, the more you’ll get back. Make sure your whole life is aligned with your values, so that you bring all of your power on board and really ground in your heart’s true desires.
 
+## Frequently Asked Questions
+
+### Does the Law of Attraction actually work?
+
+Yes — but not in the way most popular books describe it. The Law of Attraction is one piece of a larger Law of Manifestation. Visualisation and positive thinking *do* shape what you draw into your life, but they don’t override your inner state, your level of consciousness, or whether what you’re asking for is aligned with your heart’s true purpose. Most people who try the Law of Attraction and fail aren’t doing it wrong — they’re using an incomplete version. The full version includes your consciousness, your willingness to surrender, and the inspired action you take.
+
+### What’s the difference between manifesting and wishful thinking?
+
+Wishful thinking is asking the universe for something while staying in the same state of consciousness that hasn’t manifested it yet. Manifesting is what happens when your inner state, your heart’s desire, your alignment, and your action all move into coherence with what you’re calling in. The shift isn’t in the wanting — it’s in becoming the version of you that can already hold the answer. Wishing tries to pull the result toward you; manifesting changes who’s doing the pulling.
+
+### Why isn’t my manifestation working?
+
+There are four common reasons. **One**: you’re manifesting from your ego rather than your heart’s true desire — so even if it arrives, it won’t satisfy you. **Two**: your level of consciousness is below the frequency of what you’re asking for (Hawkins’ Map of Consciousness explains why). **Three**: you’re gripping the outcome rather than allowing it — and the grip itself blocks the flow. **Four**: you’re hitting an Upper Limit Problem — an unconscious ceiling that sabotages manifestations the moment they arrive. Almost always it’s one of these four, not a failure of the principle.
+
+### What is the Map of Consciousness, and how does it affect manifestation?
+
+Dr. David Hawkins mapped human consciousness on a scale from 0 to 1000. Below 200 sit closed states — shame, fear, anger, pride. Above 200 the field opens: courage, willingness, acceptance, love, joy, peace. You can only manifest at or near your current level. Trying to manifest abundance from a state of resentment (around 150) is like trying to pour the ocean into a thimble. Raise your state, and what you can hold raises with it. This is why inner work isn’t optional — it’s the actual mechanism of manifestation.
+
+### Can you manifest from the ego, or does it have to come from the heart?
+
+You can — and that’s part of the problem. Ego desires manifest, then they don’t satisfy, so you start chasing the next one. You end up successful and empty. Heart’s-desire manifestation works differently: you’re asking for what your soul actually wants, not what your conditioning, family, or culture told you to want. The clue is in how it feels. Ego desires come with grasping and comparison. Heart desires come with calm, certainty, and an inner *yes* — even when the outer mind is still figuring out the how.
+
+### Do I need to take action to manifest, or will the universe just deliver it?
+
+You need to take action — but a specific kind. The Secret-style “ask and receive” leaves out the action layer, which is why so many people stay stuck on the visualisation bench. *Inspired action* is action that comes from alignment, not from anxiety. It’s the next move your heart already knows. Surrender isn’t the same as passivity — it’s letting go of the *outcome* while still showing up for the *step*. Manifestation is co-creation: the universe brings the synchronicity; you bring the willingness to act on it.
+
+### How long does it take to manifest something?
+
+It depends on three things: the size of the gap between your current consciousness and what you’re asking for, how cleanly you can release the *how* and the *when*, and whether you’re sabotaging your good once it arrives. Small things often appear within days. Bigger life shifts can take months or years — not because the universe is slow, but because *you* need that time to become the person who can hold the new reality without dropping it. The timeline reflects the inner work, not the outer wait.
+
+### What is the Upper Limit Problem, and how does it relate to manifesting?
+
+The Upper Limit Problem, a term coined by psychologist Gay Hendricks, is the unconscious habit of sabotaging your own joy, wealth, love or success the moment it rises above the level you’re used to. It’s the hidden reason your manifestations arrive — and then collapse. You get the money, then you lose it. You meet the partner, then you pick a fight. Knowing how to manifest is only half the picture; knowing how to *hold* what you manifest is the other half. I cover this in depth in a companion article — recommended reading alongside this guide.
+
 You are amazing. You are powerful. You can create the life you love.
 
 Kauai, Hawaii and Sedona, Arizona
