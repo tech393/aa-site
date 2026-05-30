@@ -1,10 +1,10 @@
 ---
-title: "Manifesting Abundance: The Complete Spiritual Guide"
+title: "Why the Law of Attraction Doesn't Work — And What Actually Does"
 slug: "why-the-law-of-attraction-doesnt-work"
 url: "https://awakenedacademy.com/why-the-law-of-attraction-doesnt-work/"
 date: "2025-03-08"
 author: "Michael Mackintosh"
-description: "A complete guide to manifesting abundance with spiritual integrity. The principles, practices, and inner work that turn aspirations into a life of real prosperity."
+description: "Why the Law of Attraction fails most people, and the four missing secrets that make manifestation actually work: heart's desire, level of consciousness, surrender, and inspired action."
 hero_image: "/images/blog/manifesting-abundance-dusk.jpg"
 images: ["/images/blog/manifesting-abundance-body-1.jpg"]
 flags: []
