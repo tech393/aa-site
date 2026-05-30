@@ -172,7 +172,7 @@ You'll feel a deep relaxation, as if you've actually arrived at your dream desti
 
 The ceiling was never permanent. It was just a setting you inherited, and settings can be changed.
 
-*For the full positive teaching on how manifestation actually works (heart's desires, the Map of Consciousness, surrender and inspired action), see my companion guide, [Why the Law of Attraction Doesn't Work, And What Actually Does](/why-the-law-of-attraction-doesnt-work). The Upper Limit Problem is the shadow side; manifestation done well is the light side. They belong together.*
+*For the full positive teaching on how manifestation actually works (heart's desires, the Map of Consciousness, surrender and inspired action), see my companion guide, [Manifesting Abundance: The Complete Spiritual Guide](/why-the-law-of-attraction-doesnt-work). The Upper Limit Problem is the shadow side; manifestation done well is the light side. They belong together.*
 
 ## Frequently asked questions
 
