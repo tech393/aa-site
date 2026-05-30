@@ -254,7 +254,7 @@ It depends on three things: the size of the gap between your current consciousne
 
 ### What is the Upper Limit Problem, and how does it relate to manifesting?
 
-The Upper Limit Problem, a term coined by psychologist Gay Hendricks, is the unconscious habit of sabotaging your own joy, wealth, love or success the moment it rises above the level you’re used to. It’s the hidden reason your manifestations arrive — and then collapse. You get the money, then you lose it. You meet the partner, then you pick a fight. Knowing how to manifest is only half the picture; knowing how to *hold* what you manifest is the other half. I cover this in depth in a companion article — recommended reading alongside this guide.
+The Upper Limit Problem, a term coined by psychologist Gay Hendricks, is the unconscious habit of sabotaging your own joy, wealth, love or success the moment it rises above the level you’re used to. It’s the hidden reason your manifestations arrive — and then collapse. You get the money, then you lose it. You meet the partner, then you pick a fight. Knowing how to manifest is only half the picture; knowing how to *hold* what you manifest is the other half. I cover this in depth in my companion article, [The Upper Limit Problem: Why You Self-Sabotage the Moment Life Gets Good](/upper-limit-problem) — recommended reading alongside this guide.
 
 You are amazing. You are powerful. You can create the life you love.
 
