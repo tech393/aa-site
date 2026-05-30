@@ -192,7 +192,7 @@ May your days be full of inner peace, smiles and laughter as you become who you 
 
 A guided meditation to help you connect with your heart’s true desires, surrender, and allow what wants to come to you. Plus two surprise bonus meditations.
 
-[Get the free meditation →](/meditation-gifts)
+[Get the free meditation →](https://insig.ht/gm_44963)
 
 ### What people are saying about this meditation
 
@@ -210,7 +210,7 @@ Love this meditation! Lifts me up every time I practice 🙌 – Josephine
 
 1. Ask yourself the questions in this article to discover your heart’s true desires (so you avoid attracting things that cause you problems and make sure you’re attracting only your heart’s true, pure desires).
 
-2. Focus most of your energy on ascending in your level of consciousness. [Get our free Advanced Manifestation Meditation](/meditation-gifts) (plus two bonus meditations).
+2. Focus most of your energy on ascending in your level of consciousness. [Get our free Advanced Manifestation Meditation](https://insig.ht/gm_44963) (plus two bonus meditations).
 
 3. Apply the traditional Law of Attraction method of experiencing yourself in the now having attained your heart’s true desires. See it and feel it. Fully immerse yourself in the desired outcome. It is a done deal and you have already attained this for a long time and it is normal. Get to this level of familiarity with your visions.
 
